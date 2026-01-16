@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule | Jazz Bar DOLPHIN</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Sans+JP:wght@300;400;500&family=Lato:wght@300;400&display=swap"
+        rel="stylesheet">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Specific Styles for Schedule Page */
+        .page-header {
+            /* Matches Homepage Hero Style */
+            height: 40vh;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            background-color: var(--color-primary);
+            /* Green Background */
+            color: #1a1a1a;
+            position: relative;
+        }
+
+        .page-header .section-title {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            border: none;
+        }
+
+        .page-header .section-title::after {
+            display: none;
+        }
+
+        .month-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 4rem 0 3rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+
+        .month-link {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: #ccc;
+            border-bottom: 3px solid transparent;
+            padding-bottom: 0.5rem;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 700;
+        }
+
+        .month-link:hover {
+            color: var(--color-primary);
+        }
+
+        .month-link.active {
+            color: #333;
+            border-bottom-color: var(--color-primary);
+        }
+
+        .schedule-container {
+            max-width: 900px;
+            /* Slightly wider */
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hide all months initially, show active */
+        .month-schedule {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .month-schedule.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo"><a href="index.html">DOLPHIN</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="schedule.html" class="active">Schedule</a></li>
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="index.html#reservation">Reservation</a></li>
+            <li><a href="index.html#access">Access</a></li>
+        </ul>
+        <!-- Mobile Toggle reused -->
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </nav>
+
+    <header class="page-header">
+        <div class="hero-bg"></div>
+        <div style="z-index: 2;">
+            <h1 class="section-title">LIVE SCHEDULE</h1>
+            <p class="section-subtitle">Monthly Live Information</p>
+        </div>
+    </header>
+
+    <main class="schedule-container">
+        <!-- Month Navigation -->
+        <div class="month-nav">
+            <span class="month-link active" onclick="showMonth('jan')">1月 JAN</span>
+            <span class="month-link" onclick="showMonth('feb')">2月 FEB</span>
+        </div>
+
+        <!-- JAN Schedule -->
+        <div id="jan" class="month-schedule active">
+            <div class="schedule-list">
+
+                <!-- 1/17 Workshop -->
+                <article class="schedule-item">
+                    <div class="schedule-date">
+                        <span class="day">17</span>
+                        <span class="weekday">SAT</span>
+                        <span class="month">1月 JAN</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Open 13:00 / Start 14:00</div>
+                        <h3 class="schedule-artist">荻原亮 Guitar & Ensemble Workshop</h3>
+                        <div class="member-list">
+                            講師：荻原亮 / ゲストスピーカー：橋本現輝
+                        </div>
+                        <p class="schedule-charge">Charge: ¥4,500</p>
+                    </div>
+                    <div class="schedule-action">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
+
+                <!-- 1/17 Session -->
+                <article class="schedule-item">
+                    <div class="schedule-date">
+                        <span class="day">17</span>
+                        <span class="weekday">SAT</span>
+                        <span class="month">1月 JAN</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Start 20:00</div>
+                        <h3 class="schedule-artist">Saturday Jam Session 2</h3>
+                        <div class="member-list">
+                            Gt 櫻井祐ニ / Ba 中山とも
+                        </div>
+                        <p class="schedule-charge">
+                            Charge: ¥2,000 (2Drink Order)<br>
+                            Student: ¥1,000 (1Drink Order)
+                        </p>
+                    </div>
+                    <div class="schedule-action">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
+
+                <!-- 1/18 -->
+                <article class="schedule-item">
+                    <div class="schedule-date">
+                        <span class="day">18</span>
+                        <span class="weekday">SUN</span>
+                        <span class="month">1月 JAN</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Open 19:30 / Start 20:00</div>
+                        <h3 class="schedule-artist">荻原亮 Special Session</h3>
+                        <div class="member-list">
+                            Gt 荻原亮 / Ba 中山とも / Dr 橋本現輝
+                        </div>
+                        <div class="member-list">Guest: 橋本現輝</div>
+                        <p class="schedule-charge">Charge: ¥4,000</p>
+                    </div>
+                    <div class="schedule-action">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
+
+                <!-- 1/21 -->
+                <article class="schedule-item">
+                    <div class="schedule-date">
+                        <span class="day">21</span>
+                        <span class="weekday">WED</span>
+                        <span class="month">1月 JAN</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Start 20:00</div>
+                        <h3 class="schedule-artist">Monthly Voices 〜Vocal Session〜</h3>
+                        <div class="member-list">
+                            Pf 黒川薫 / Ba 中山とも / Dr 永見拓也
+                        </div>
+                        <p class="schedule-charge">
+                            Charge: ¥2,000 (2Drink Order)<br>
+                            Student: ¥1,000 (1Drink Order)
+                        </p>
+                    </div>
+                    <div class="schedule-action">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
+
+                <!-- 1/29 -->
+                <article class="schedule-item">
+                    <div class="schedule-date">
+                        <span class="day">29</span>
+                        <span class="weekday">THU</span>
+                        <span class="month">1月 JAN</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Start 20:00</div>
+                        <h3 class="schedule-artist">The Third Session</h3>
+                        <div class="member-list">
+                            Gt 櫻井祐ニ / Ba 中山とも
+                        </div>
+                        <p class="schedule-charge">
+                            Charge: ¥2,000 (2Drink Order)<br>
+                            Student: ¥1,000 (1Drink Order)
+                        </p>
+                    </div>
+                    <div class="schedule-action">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <!-- FEB Schedule -->
+        <div id="feb" class="month-schedule">
+            <div class="schedule-list">
+
+                <!-- 2/22 -->
+                <article class="schedule-item">
+                    <div class="schedule-date">
+                        <span class="day">22</span>
+                        <span class="weekday">SUN</span>
+                        <span class="month">2月 FEB</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Open 19:30 / Start 20:00</div>
+                        <h3 class="schedule-artist">Tomo Nakayama Special Birthday Session</h3>
+                        <div class="member-list">
+                            Ba 中山とも / Special Guest: Pf 坪口昌恭 etc...
+                        </div>
+                        <p class="schedule-charge">Charge: ¥3,500</p>
+                    </div>
+                    <div class="schedule-action">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
+
+                <!-- 2/23 -->
+                <article class="schedule-item">
+                    <div class="schedule-date">
+                        <span class="day">23</span>
+                        <span class="weekday">MON</span>
+                        <span class="month">2月 FEB</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Open 12:30 / Start 13:00</div>
+                        <h3 class="schedule-artist">Special Workshop “Bebop to Nu-Jazz”</h3>
+                        <div class="member-list">
+                            - From Barry Harris to Robert Glasper -<br>
+                            講師 : 坪口昌恭
+                        </div>
+                        <p class="schedule-charge">Charge: ¥4,000</p>
+                    </div>
+                    <div class="schedule-action">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div style="margin-bottom: 2rem;">
+                <a href="legal.html"
+                    style="color: #555; font-size: 0.75rem; text-decoration: underline;">特定商取引法に基づく表記</a>
+            </div>
+            <p class="copyright">&copy; Jazz & Bar DOLPHIN. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple Tab Switcher (Local override or separate script)
+        function showMonth(monthId) {
+            // Hide all
+            document.querySelectorAll('.month-schedule').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.month-link').forEach(el => el.classList.remove('active'));
+
+            // Show Target
+            document.getElementById(monthId).classList.add('active');
+
+            // Highlight Link
+            const links = document.querySelectorAll('.month-link');
+            if (monthId === 'jan') links[0].classList.add('active');
+            if (monthId === 'feb') links[1].classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,684 @@
+/* =========================================
+   Reset & Base Variables
+   ========================================= */
+:root {
+    /* Color Palette - Blue Note Style with Green Main Hero */
+    --color-primary: #b3d177;
+    /* Accent Green */
+    --color-primary-dark: #8da65b;
+
+    --bg-body: #111111;
+    /* Dark framing */
+    --bg-content: #ffffff;
+    /* White content backgrounds */
+    --bg-content-alt: #f8f8f8;
+    /* Light gray for alternating */
+
+    --color-text-body: #333333;
+    /* Dark text for white areas */
+    --color-text-heading: #000000;
+
+    --color-text-on-dark: #ffffff;
+    --bg-footer: #111111;
+
+    /* Fonts */
+    --font-heading: 'Cinzel', 'Noto Serif JP', serif;
+    --font-body: 'Lato', 'Noto Sans JP', sans-serif;
+
+    /* Spacing & Sizes */
+    --container-width: 1000px;
+    --header-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: var(--font-body);
+    color: var(--color-text-body);
+    line-height: 1.8;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    color: var(--color-text-heading);
+    letter-spacing: 0.05em;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================================
+   Opening Animation
+   ========================================= */
+#opening-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-primary);
+    /* Restored Green */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#opening-overlay.slide-out {
+    transform: translateY(-100%);
+}
+
+.opening-content {
+    text-align: center;
+    color: #1a1a1a;
+}
+
+.opening-logo-img {
+    width: 200px;
+    opacity: 0;
+    animation: animeFadeUp 1s ease forwards 0.5s;
+    margin: 0 auto;
+    /* Ensure centering for block-level img */
+}
+
+.opening-tagline {
+    color: #1a1a1a;
+    /* Dark Text */
+    font-family: var(--font-heading);
+    margin-top: 1rem;
+    letter-spacing: 0.2em;
+    text-indent: 0.2em;
+    /* Balance centering */
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    animation: animeFadeIn 1s ease forwards 1.2s;
+    font-weight: 600;
+}
+
+@keyframes animeFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animeFadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* =========================================
+   Navigation
+   ========================================= */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(17, 17, 17, 0.9);
+    /* Dark header */
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    /* Explicit white */
+    letter-spacing: 0.1em;
+}
+
+.logo a {
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-links a {
+    color: var(--color-text-on-dark);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+    opacity: 1;
+}
+
+/* Mobile Toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+/* =========================================
+   Hero Section
+   ========================================= */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    background-color: var(--color-primary);
+    /* Restored Green */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* padding-bottom removed for true centering */
+}
+
+/* Texture Pattern */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;
+    background-image: radial-gradient(#333 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    animation: fadeInUp 1s ease backwards 0.3s;
+}
+
+.main-logo-img {
+    max-width: 450px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 1;
+}
+
+.scroll-text {
+    color: #1a1a1a;
+    /* Dark Text */
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+}
+
+.line {
+    width: 1px;
+    height: 60px;
+    background: #1a1a1a;
+    /* Dark Line */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   General Section Layout (White Context)
+   ========================================= */
+.section {
+    padding: 6rem 1.5rem;
+    background-color: var(--bg-content);
+    /* White Background */
+    color: var(--color-text-body);
+}
+
+.section.alt-bg {
+    background-color: var(--bg-content-alt);
+    /* Light Gray */
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.section-subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* =========================================
+   About Section
+   ========================================= */
+#about {
+    background-color: var(--bg-content);
+    text-align: center;
+}
+
+.about-description {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 2.4;
+    color: #444;
+}
+
+.about-description p {
+    margin-bottom: 2rem;
+}
+
+/* =========================================
+   Live Schedule Section
+   ========================================= */
+#schedule-preview {
+    background-color: var(--bg-content-alt);
+}
+
+.schedule-list {
+    display: grid;
+    gap: 2rem;
+}
+
+.schedule-item {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    /* Center Vertically */
+    transition: all 0.3s ease;
+}
+
+.schedule-item:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+.schedule-date {
+    min-width: 100px;
+    text-align: center;
+    border-right: 1px solid #eee;
+    padding-right: 1.5rem;
+    margin-right: 2rem;
+}
+
+.schedule-date .month {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #888;
+}
+
+.schedule-date .day {
+    display: block;
+    font-size: 2.2rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-text-heading);
+    line-height: 1;
+}
+
+.schedule-date .weekday {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.schedule-info {
+    flex: 1;
+}
+
+.schedule-time {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+.schedule-artist {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-heading);
+}
+
+.member-list {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.schedule-charge {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.schedule-action {
+    margin-left: auto;
+    padding-left: 2rem;
+}
+
+.reserve-btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--color-text-heading);
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.reserve-btn:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* =========================================
+   Menu Section
+   ========================================= */
+#menu {
+    background-color: var(--bg-content);
+}
+
+.menu-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.menu-cat-title {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+    color: var(--color-primary-dark);
+}
+
+.menu-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 0.5rem;
+}
+
+.item-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.item-desc {
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 0.2rem;
+}
+
+.item-price {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: #333;
+}
+
+/* =========================================
+   Reservation Section
+   ========================================= */
+#reservation {
+    background-color: var(--bg-content-alt);
+}
+
+.reservation-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 3rem;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 0.05em;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    /* Clean light border */
+    background: #fdfdfd;
+    border-radius: 2px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--color-primary);
+    background: #fff;
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 700;
+    border: none;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* =========================================
+   Access & Footer
+   ========================================= */
+#access {
+    background-color: var(--bg-content);
+    border-bottom: 10px solid var(--color-primary);
+    /* Style accent */
+}
+
+.shop-name {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-heading);
+}
+
+.address {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.map-container {
+    height: 400px;
+    background: #eee;
+}
+
+/* Map filter: Normal (Color) or slightly muted, but not inverted since bg is white */
+.map-container iframe {
+    filter: grayscale(20%);
+}
+
+footer {
+    background-color: var(--bg-footer);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.footer-tel {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-tel a {
+    color: white;
+}
+
+.footer-hours {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 0.8rem;
+    opacity: 0.7;
+}
+
+.social-links a:hover {
+    opacity: 1;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: #555;
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.4s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .schedule-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .schedule-date {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-right: 0;
+        padding-bottom: 1rem;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .menu-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .reservation-form {
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jazz Bar DOLPHIN - Kanazawa</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Sans+JP:wght@300;400;500&family=Lato:wght@300;400&display=swap"
+        rel="stylesheet">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Opening Animation Overlay -->
+    <div id="opening-overlay">
+        <div class="opening-content">
+            <!-- Logo Image -->
+            <img src="logo_new.png" alt="Dolphin" class="opening-logo-img">
+            <p class="opening-tagline">MUSIC AND CULTURE IN KANAZAWA</p>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Toggle -->
+    <button class="menu-toggle" aria-label="Toggle Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">DOLPHIN</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reservation">Reservation</a></li>
+            <li><a href="#access">Access</a></li>
+        </ul>
+        <div class="nav-overlay"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content fade-in">
+            <div class="hero-logo-wrapper">
+                <a href="schedule.html" title="View Monthly Schedule">
+                    <img src="logo_new.png" alt="Jazz & Bar Dolphin" class="main-logo-img">
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container fade-in">
+            <div class="section-header">
+                <h2 class="section-title">ABOUT DOLPHIN</h2>
+                <p class="section-subtitle">金沢・片町の止まり木</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-description">
+                    <p>Dolphin（ドルフィン）は、ジャズを軸に音楽と人が自然につながるバーです。<br>
+                        店内にはジャズを中心としたレコードを揃え、アナログならではの音の温度を大切にしています。</p>
+
+                    <p>ウィスキーやジンも幅広く取り揃え、音楽とともにゆっくりと味わえる一杯をご用意しています。<br>
+                        演奏経験や知識に関係なく、誰もが自分の距離感で過ごせる空間です。</p>
+
+                    <p>聴く人も、演奏する人も、ただ居る人も。<br>
+                        音楽とお酒を通して、ジャズを「好き」でいられる時間と場所、それがドルフィンです。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Preview / Link Section -->
+    <section id="schedule-preview" class="section">
+        <div class="container fade-in">
+            <div class="section-header">
+                <h2 class="section-title">LIVE SCHEDULE</h2>
+                <p class="section-subtitle">直近のライブスケジュール</p>
+            </div>
+
+            <!-- Top 3 Schedule Items -->
+            <div class="schedule-list" style="margin-bottom: 3rem;">
+
+                <!-- 1/17 Workshop -->
+                <article class="schedule-item">
+                    <div class="schedule-date">
+                        <span class="day">17</span>
+                        <span class="weekday">SAT</span>
+                        <span class="month">1月 JAN</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Open 13:00 / Start 14:00</div>
+                        <h3 class="schedule-artist">荻原亮 Guitar & Ensemble Workshop</h3>
+                        <div class="member-list">
+                            講師：荻原亮 / ゲストスピーカー：橋本現輝
+                        </div>
+                        <p class="schedule-charge">Charge: ¥4,500</p>
+                    </div>
+                    <!-- Reserve Button Added -->
+                    <div class="schedule-action">
+                        <a href="#reservation" class="reserve-btn" onclick="selectDate('2026-01-17')">RESERVE</a>
+                    </div>
+                </article>
+
+                <!-- 1/17 Session -->
+                <article class="schedule-item">
+                    <div class="schedule-date">
+                        <span class="day">17</span>
+                        <span class="weekday">SAT</span>
+                        <span class="month">1月 JAN</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Start 20:00</div>
+                        <h3 class="schedule-artist">Saturday Jam Session 2</h3>
+                        <div class="member-list">
+                            Gt 櫻井祐ニ / Ba 中山とも
+                        </div>
+                        <p class="schedule-charge">Charge: ¥2,000 (2Drink Order)</p>
+                    </div>
+                    <!-- Reserve Button Added -->
+                    <div class="schedule-action">
+                        <a href="#reservation" class="reserve-btn" onclick="selectDate('2026-01-17')">RESERVE</a>
+                    </div>
+                </article>
+
+                <!-- 1/18 -->
+                <article class="schedule-item">
+                    <div class="schedule-date">
+                        <span class="day">18</span>
+                        <span class="weekday">SUN</span>
+                        <span class="month">1月 JAN</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Open 19:30 / Start 20:00</div>
+                        <h3 class="schedule-artist">荻原亮 Special Session</h3>
+                        <div class="member-list">
+                            Gt 荻原亮 / Ba 中山とも / Dr 橋本現輝
+                        </div>
+                        <p class="schedule-charge">Charge: ¥4,000</p>
+                    </div>
+                    <!-- Reserve Button Added -->
+                    <div class="schedule-action">
+                        <a href="#reservation" class="reserve-btn" onclick="selectDate('2026-01-18')">RESERVE</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div style="text-align: center;">
+                <a href="schedule.html" class="reserve-btn">VIEW FULL SCHEDULE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section bg-accent">
+        <div class="container fade-in">
+            <div class="section-header">
+                <h2 class="section-title">BAR SNACKS & DRINKS</h2>
+                <p class="section-subtitle">お酒を愉しむための厳選されたおつまみ</p>
+            </div>
+
+            <div class="menu-wrapper">
+                <div class="menu-column">
+                    <h3 class="menu-cat-title">SNACKS</h3>
+                    <ul class="menu-list">
+                        <li>
+                            <span class="item-name">Mixed Nuts</span>
+                            <span class="item-desc">香ばしい燻製ナッツ</span>
+                            <span class="item-price">¥600</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Assorted Cheese</span>
+                            <span class="item-desc">厳選チーズの盛り合わせ</span>
+                            <span class="item-price">¥600</span>
+                        </li>
+
+                        <li>
+                            <span class="item-name">Chocolate</span>
+                            <span class="item-desc">ビターチョコレート</span>
+                            <span class="item-price">¥600</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu-column">
+                    <h3 class="menu-cat-title">DRINKS</h3>
+                    <ul class="menu-list">
+                        <li>
+                            <span class="item-name">Whisky</span>
+                            <span class="item-desc">ウィスキー</span>
+                            <span class="item-price">¥800~</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Craft Gin</span>
+                            <span class="item-desc">クラフトジン</span>
+                            <span class="item-price">¥800~</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Cocktails</span>
+                            <span class="item-price">¥800~</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="section">
+        <div class="container fade-in">
+            <div class="section-header">
+                <h2 class="section-title">LIVE RESERVATION</h2>
+                <p class="section-subtitle">ライブのご予約</p>
+            </div>
+
+            <form class="reservation-form" id="reserveForm">
+                <div class="form-group">
+                    <label for="month">Month</label>
+                    <select id="month" name="month">
+                        <option value="">月を選択してください (Select Month)</option>
+                        <option value="jan">1月 JANUARY</option>
+                        <option value="feb">2月 FEBRUARY</option>
+                        <option value="other">OTHER</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="event">Live Event</label>
+                    <select id="event" name="event">
+                        <option value="" data-month="all">ライブを選択してください (Select Live)</option>
+                        <option value="1/17 Workshop" data-month="jan">1/17 荻原亮 Guitar & Ensemble Workshop</option>
+                        <option value="1/17 Session" data-month="jan">1/17 Saturday Jam Session 2</option>
+                        <option value="1/18 Session" data-month="jan">1/18 荻原亮 Special Session</option>
+                        <option value="1/21 Session" data-month="jan">1/21 Monthly Voices</option>
+                        <option value="1/29 Session" data-month="jan">1/29 The Third Session</option>
+                        <option value="2/22 Birthday" data-month="feb">2/22 Tomo Nakayama Birthday Session</option>
+                        <option value="2/23 Workshop" data-month="feb">2/23 Special Workshop “Bebop to Nu-Jazz”</option>
+                        <option value="Normal" data-month="other">通常営業 (Bar Only)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="お名前">
+                </div>
+                <!-- Date/Time might be redundant if event is selected, but keeping them allows user to confirm or for normal bar use. 
+                     User didn't ask to remove them, so I'll keep them but maybe simplify or leave as is. -->
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <select id="time" name="time">
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                        <option value="22:00">22:00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="people">Guests</label>
+                    <select id="people" name="people">
+                        <option value="1">1名</option>
+                        <option value="2">2名</option>
+                        <option value="3">3名</option>
+                        <option value="4">4名</option>
+                        <option value="5+">5名以上</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">SEND REQUEST</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Access Section -->
+    <section id="access" class="section bg-footer">
+        <div class="container fade-in">
+            <div class="section-header">
+                <h2 class="section-title">ACCESS</h2>
+            </div>
+
+            <div class="access-wrappeer">
+                <div class="access-info">
+                    <h3 class="shop-name">Jazz & Bar DOLPHIN</h3>
+                    <p class="address">
+                        〒920-0981<br>
+                        石川県金沢市片町2-13-11 ミリオンビル4階
+                    </p>
+                    <div class="map-container">
+                        <iframe width="100%" height="400" frameborder="0" style="border:0"
+                            src="https://maps.google.com/maps?q=石川県金沢市片町2-13-11%20ミリオンビル&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="footer-contact">
+                <p class="footer-tel">Tel: <a href="tel:08038950821">080-3895-0821</a></p>
+                <p class="footer-hours">Open: 20:00 - 02:00 / Closed: Sun (Open on Holidays)</p>
+            </div>
+            <div style="margin-bottom: 2rem;">
+                <a href="legal.html"
+                    style="color: #666; font-size: 0.75rem; text-decoration: underline;">特定商取引法に基づく表記</a>
+            </div>
+            <p class="copyright">&copy; Jazz & Bar DOLPHIN. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
