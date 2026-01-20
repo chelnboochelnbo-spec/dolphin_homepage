@@ -146,6 +146,12 @@ img {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.nav-wrapper-left {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
 .logo {
     font-family: var(--font-heading);
     font-size: 1.4rem;
@@ -183,7 +189,8 @@ img {
 
 /* Mobile Toggle */
 .menu-toggle {
-    display: none;
+    display: block;
+    /* Always show or at least confirm right side placement */
     background: none;
     border: none;
     cursor: pointer;
@@ -649,8 +656,6 @@ footer {
 
     .menu-toggle {
         display: block;
-        order: 2;
-        /* Push to the right if using flexbox, or just rely on justify-content */
     }
 
     .logo {

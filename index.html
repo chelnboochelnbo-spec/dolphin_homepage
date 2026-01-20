@@ -28,24 +28,28 @@
         </div>
     </div>
 
-    <!-- Mobile Navigation Toggle -->
-    <button class="menu-toggle" aria-label="Toggle Menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </button>
-
     <!-- Navigation -->
     <nav class="main-nav">
-        <div class="logo">DOLPHIN</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#reservation">Reservation</a></li>
-            <li><a href="#access">Access</a></li>
-        </ul>
+        <div class="nav-wrapper-left">
+            <div class="logo">DOLPHIN</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="archive.html">Archive</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#access">Access</a></li>
+            </ul>
+        </div>
+
+        <!-- Mobile Navigation Toggle moved inside -->
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
         <div class="nav-overlay"></div>
     </nav>
 
@@ -98,7 +102,7 @@
             <div class="schedule-list" style="margin-bottom: 3rem;">
 
                 <!-- 1/17 Workshop -->
-                <article class="schedule-item">
+                <article class="schedule-item" data-date="2026-01-17">
                     <div class="schedule-date">
                         <span class="day">17</span>
                         <span class="weekday">SAT</span>
@@ -119,7 +123,7 @@
                 </article>
 
                 <!-- 1/17 Session -->
-                <article class="schedule-item">
+                <article class="schedule-item" data-date="2026-01-17">
                     <div class="schedule-date">
                         <span class="day">17</span>
                         <span class="weekday">SAT</span>
@@ -140,7 +144,7 @@
                 </article>
 
                 <!-- 1/18 -->
-                <article class="schedule-item">
+                <article class="schedule-item" data-date="2026-01-18">
                     <div class="schedule-date">
                         <span class="day">18</span>
                         <span class="weekday">SUN</span>

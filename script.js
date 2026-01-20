@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    initScheduleFilter();
 
     // --- Opening Animation ---
     const overlay = document.getElementById('opening-overlay');
@@ -84,5 +85,48 @@ function selectDate(dateString) {
         formSection.scrollIntoView({ behavior: 'smooth' });
         const dateInput = document.getElementById('date');
         if (dateInput) dateInput.value = dateString;
+    }
+}
+
+// --- Schedule/Archive Filtering ---
+function initScheduleFilter() {
+    const items = document.querySelectorAll('.schedule-item[data-date]');
+    if (items.length === 0) return;
+
+    // Get today's date in YYYY-MM-DD format (local time)
+    const now = new Date();
+    const offset = now.getTimezoneOffset();
+    const localNow = new Date(now.getTime() - (offset * 60 * 1000));
+    const todayStr = localNow.toISOString().split('T')[0];
+
+    const isArchivePage = window.location.pathname.includes('archive.html');
+    let visibleCount = 0;
+
+    items.forEach(item => {
+        const itemDate = item.getAttribute('data-date');
+
+        if (isArchivePage) {
+            // Archive Page: Show past events
+            if (itemDate < todayStr) {
+                item.style.display = 'flex';
+                visibleCount++;
+            } else {
+                item.style.display = 'none';
+            }
+        } else {
+            // Schedule Page or Home Preview: Show today and future events
+            if (itemDate >= todayStr) {
+                item.style.display = 'flex';
+                visibleCount++;
+            } else {
+                item.style.display = 'none';
+            }
+        }
+    });
+
+    // Show "No events" message if applicable
+    const noEventsMsg = document.getElementById('no-events');
+    if (noEventsMsg) {
+        noEventsMsg.style.display = visibleCount === 0 ? 'block' : 'none';
     }
 }
