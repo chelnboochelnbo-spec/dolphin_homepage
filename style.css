@@ -22,7 +22,7 @@
     --bg-footer: #111111;
 
     /* Fonts */
-    --font-heading: 'Cinzel', 'Noto Serif JP', serif;
+    --font-heading: 'Playfair Display', 'Noto Serif JP', serif;
     --font-body: 'Lato', 'Noto Sans JP', sans-serif;
 
     /* Spacing & Sizes */
@@ -540,7 +540,7 @@ img {
 }
 
 .lineup-artist {
-    font-family: 'Cinzel', serif;
+    font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 700;
     font-style: italic;
