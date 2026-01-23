@@ -104,80 +104,65 @@
     <section id="schedule-preview" class="section">
         <div class="container fade-in">
             <div class="section-header">
-                <h2 class="section-title">LIVE SCHEDULE</h2>
-                <p class="section-subtitle">直近のライブスケジュール</p>
+                <h2 class="section-title">LINEUP</h2>
+                <p class="section-subtitle">Upcoming Live Information</p>
             </div>
 
             <!-- Top 3 Schedule Items -->
-            <div class="schedule-list" style="margin-bottom: 3rem;">
+            <div class="lineup-list" style="margin-bottom: 3rem;">
 
-                <!-- 1/17 Workshop -->
-                <article class="schedule-item" data-date="2026-01-17">
-                    <div class="schedule-date">
-                        <span class="day">17</span>
-                        <span class="weekday">SAT</span>
-                        <span class="month">1月 JAN</span>
-                    </div>
-                    <div class="schedule-info">
-                        <div class="schedule-time">Open 13:00 / Start 14:00</div>
-                        <h3 class="schedule-artist">荻原亮 Guitar & Ensemble Workshop</h3>
-                        <div class="member-list">
-                            講師：荻原亮 / ゲストスピーカー：橋本現輝
+                <article class="lineup-item">
+                    <div class="lineup-date">2026 1.17<span class="weekday">sat.</span></div>
+                    <div class="lineup-info">
+                        <h3 class="lineup-artist">荻原亮 Guitar & Ensemble Workshop</h3>
+                        <p class="lineup-intro">日本を代表するギタリスト荻原亮による特別ワークショップ。アンサンブルの本質に迫ります。</p>
+                        <div class="lineup-details">
+                            <span><i class="far fa-clock"></i>Start 14:00</span>
                         </div>
-                        <p class="schedule-charge">Charge: ¥4,500</p>
                     </div>
-                    <!-- Reserve Button Added -->
-                    <div class="schedule-action">
-                        <a href="#reservation" class="reserve-btn" onclick="selectDate('2026-01-17')">RESERVE</a>
+                    <div class="lineup-action">
+                        <div class="lineup-price">Charge: ¥4,500</div>
+                        <a href="#reservation" class="lineup-reserve-btn" onclick="selectDate('2026-01-17')">ONLINE
+                            RESERVATION</a>
                     </div>
                 </article>
 
-                <!-- 1/17 Session -->
-                <article class="schedule-item" data-date="2026-01-17">
-                    <div class="schedule-date">
-                        <span class="day">17</span>
-                        <span class="weekday">SAT</span>
-                        <span class="month">1月 JAN</span>
-                    </div>
-                    <div class="schedule-info">
-                        <div class="schedule-time">Start 20:00</div>
-                        <h3 class="schedule-artist">Saturday Jam Session 2</h3>
-                        <div class="member-list">
-                            Gt 櫻井祐ニ / Ba 中山とも
+                <article class="lineup-item">
+                    <div class="lineup-date">2026 1.17<span class="weekday">sat.</span></div>
+                    <div class="lineup-info">
+                        <h3 class="lineup-artist">Saturday Jam Session 2</h3>
+                        <p class="lineup-intro">土曜の夜を彩るジャムセッション。初心者からプロ志望まで、どなたでも大歓迎です。</p>
+                        <div class="lineup-details">
+                            <span><i class="far fa-clock"></i>Start 20:00</span>
                         </div>
-                        <p class="schedule-charge">Charge: ¥2,000 (2Drink Order)</p>
                     </div>
-                    <!-- Reserve Button Added -->
-                    <div class="schedule-action">
-                        <a href="#reservation" class="reserve-btn" onclick="selectDate('2026-01-17')">RESERVE</a>
+                    <div class="lineup-action">
+                        <div class="lineup-price">Charge: ¥2,000 (+2d)</div>
+                        <a href="#reservation" class="lineup-reserve-btn" onclick="selectDate('2026-01-17')">ONLINE
+                            RESERVATION</a>
                     </div>
                 </article>
 
-                <!-- 1/18 -->
-                <article class="schedule-item" data-date="2026-01-18">
-                    <div class="schedule-date">
-                        <span class="day">18</span>
-                        <span class="weekday">SUN</span>
-                        <span class="month">1月 JAN</span>
-                    </div>
-                    <div class="schedule-info">
-                        <div class="schedule-time">Open 19:30 / Start 20:00</div>
-                        <h3 class="schedule-artist">荻原亮 Special Session</h3>
-                        <div class="member-list">
-                            Gt 荻原亮 / Ba 中山とも / Dr 橋本現輝
+                <article class="lineup-item">
+                    <div class="lineup-date">2026 1.18<span class="weekday">sun.</span></div>
+                    <div class="lineup-info">
+                        <h3 class="lineup-artist">荻原亮 Special Session</h3>
+                        <p class="lineup-intro">ワークショップ翌日のスペシャルライブ。実力派メンバーによる至高のセッション。</p>
+                        <div class="lineup-details">
+                            <span><i class="far fa-clock"></i>Start 20:00</span>
                         </div>
-                        <p class="schedule-charge">Charge: ¥4,000</p>
                     </div>
-                    <!-- Reserve Button Added -->
-                    <div class="schedule-action">
-                        <a href="#reservation" class="reserve-btn" onclick="selectDate('2026-01-18')">RESERVE</a>
+                    <div class="lineup-action">
+                        <div class="lineup-price">Charge: ¥4,000</div>
+                        <a href="#reservation" class="lineup-reserve-btn" onclick="selectDate('2026-01-18')">ONLINE
+                            RESERVATION</a>
                     </div>
                 </article>
 
             </div>
 
             <div style="text-align: center;">
-                <a href="schedule.html" class="reserve-btn">VIEW FULL SCHEDULE</a>
+                <a href="schedule.html" class="lineup-reserve-btn">VIEW FULL LINEUP</a>
             </div>
         </div>
     </section>
@@ -186,51 +171,60 @@
     <section id="menu" class="section bg-accent">
         <div class="container fade-in">
             <div class="section-header">
-                <h2 class="section-title">BAR SNACKS & DRINKS</h2>
-                <p class="section-subtitle">お酒を愉しむための厳選されたおつまみ</p>
+                <h2 class="section-title">BAR SNACKS</h2>
+                <p class="section-subtitle">お酒をより豊かに愉しむ、厳選された一皿</p>
             </div>
 
             <div class="menu-wrapper">
                 <div class="menu-column">
-                    <h3 class="menu-cat-title">SNACKS</h3>
+                    <h3 class="menu-cat-title">SELECT SNACKS</h3>
                     <ul class="menu-list">
                         <li>
                             <span class="item-name">Mixed Nuts</span>
-                            <span class="item-desc">香ばしい燻製ナッツ</span>
+                            <span class="item-desc">香ばしくローストされたミックスナッツ</span>
                             <span class="item-price">¥600</span>
                         </li>
                         <li>
                             <span class="item-name">Assorted Cheese</span>
-                            <span class="item-desc">厳選チーズの盛り合わせ</span>
+                            <span class="item-desc">お酒に合わせて選んだ3種のチーズ</span>
                             <span class="item-price">¥600</span>
                         </li>
-
                         <li>
-                            <span class="item-name">Chocolate</span>
-                            <span class="item-desc">ビターチョコレート</span>
+                            <span class="item-name">Dried Fruit</span>
+                            <span class="item-desc">甘みを凝縮したドライフルーツの盛り合わせ</span>
                             <span class="item-price">¥600</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Beef Jerky</span>
+                            <span class="item-desc">スモーキーなアクセントが効いたビーフジャーキー</span>
+                            <span class="item-price">¥800</span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="menu-column">
-                    <h3 class="menu-cat-title">DRINKS</h3>
+                    <h3 class="menu-cat-title">BAR CHOICE</h3>
                     <ul class="menu-list">
                         <li>
-                            <span class="item-name">Whisky</span>
-                            <span class="item-desc">ウィスキー</span>
-                            <span class="item-price">¥800~</span>
+                            <span class="item-name">Bitter Chocolate</span>
+                            <span class="item-desc">ウィスキーとの相性抜群。カカオの深み</span>
+                            <span class="item-price">¥600</span>
                         </li>
                         <li>
-                            <span class="item-name">Craft Gin</span>
-                            <span class="item-desc">クラフトジン</span>
-                            <span class="item-price">¥800~</span>
+                            <span class="item-name">Pickles</span>
+                            <span class="item-desc">自家製ならではの、爽やかな酸味</span>
+                            <span class="item-price">¥600</span>
                         </li>
                         <li>
-                            <span class="item-name">Cocktails</span>
-                            <span class="item-price">¥800~</span>
+                            <span class="item-name">Olives</span>
+                            <span class="item-desc">ハーブの香りを纏わせたグリーンオリーブ</span>
+                            <span class="item-price">¥600</span>
                         </li>
-
+                        <li>
+                            <span class="item-name">Garlic Toast</span>
+                            <span class="item-desc">カリッと焼き上げた香ばしいトースト</span>
+                            <span class="item-price">¥600</span>
+                        </li>
                     </ul>
                 </div>
             </div>

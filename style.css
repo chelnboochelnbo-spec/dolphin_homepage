@@ -421,149 +421,153 @@ img {
 }
 
 /* =========================================
-   Live Schedule Section
+   Live Schedule Section (Blue Note Redesign)
    ========================================= */
-#schedule-preview {
-    background-color: var(--bg-content-alt);
+#schedule-preview, .schedule-container {
+    background-color: var(--bg-content);
 }
 
-.schedule-list {
-    display: grid;
-    gap: 2rem;
+.lineup-month-group {
+    margin-bottom: 6rem;
 }
 
-.schedule-item {
-    background: #fff;
-    border: 1px solid #eee;
-    padding: 2rem;
+.lineup-month-header {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    margin-bottom: 3rem;
+    padding-bottom: 0.5rem;
     display: flex;
-    align-items: center;
-    /* Center Vertically */
-    transition: all 0.3s ease;
+    align-items: baseline;
+    gap: 1rem;
 }
 
-.schedule-item:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    border-color: var(--color-primary);
-    transform: translateY(-3px);
+.lineup-month-header span {
+    font-size: 1rem;
+    color: #888;
+    text-transform: uppercase;
 }
 
-.schedule-date {
-    min-width: 100px;
-    text-align: center;
-    border-right: 1px solid #eee;
-    padding-right: 1.5rem;
-    margin-right: 2rem;
+.lineup-list {
+    display: flex;
+    flex-direction: column;
 }
 
-.schedule-date .month {
-    font-size: 0.8rem;
+.lineup-item {
+    display: flex;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #eee;
+    transition: background 0.3s;
+    align-items: flex-start;
+}
+
+.lineup-item:hover {
+    background-color: #fafafa;
+}
+
+.lineup-date {
+    min-width: 180px;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
     font-weight: 700;
+    color: #333;
+    letter-spacing: 0.05em;
+}
+
+.lineup-date .weekday {
+    font-weight: 400;
+    color: #888;
+    margin-left: 0.3rem;
+}
+
+.lineup-info {
+    flex: 2;
+    padding: 0 2rem;
+}
+
+.lineup-badge {
+    display: inline-block;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+}
+
+.lineup-artist {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #000;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.lineup-intro {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.lineup-details {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.85rem;
     color: #888;
 }
 
-.schedule-date .day {
-    display: block;
-    font-size: 2.2rem;
+.lineup-details i {
+    color: var(--color-primary);
+    margin-right: 0.5rem;
+}
+
+.lineup-action {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.lineup-price {
     font-family: var(--font-heading);
     font-weight: 700;
-    color: var(--color-text-heading);
-    line-height: 1;
+    font-size: 1rem;
+    color: #333;
 }
 
-.schedule-date .weekday {
-    font-size: 0.8rem;
-    color: #888;
-}
-
-.schedule-info {
-    flex: 1;
-}
-
-.schedule-time {
-    font-size: 0.8rem;
-    color: #666;
-    margin-bottom: 0.3rem;
-}
-
-.schedule-artist {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-text-heading);
-}
-
-.member-list {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 0.5rem;
-}
-
-.schedule-charge {
-    display: inline-block;
-    background: #f0f0f0;
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #444;
-}
-
-.schedule-action {
-    margin-left: auto;
-    padding-left: 2rem;
-}
-
-.reserve-btn {
-    display: inline-block;
-    padding: 1rem 3rem;
-    background: var(--color-text-heading);
+.lineup-reserve-btn {
+    padding: 0.8rem 2rem;
+    background: #000;
     color: #fff;
+    text-decoration: none;
     font-size: 0.8rem;
+    font-weight: 700;
     letter-spacing: 0.1em;
-    font-weight: 600;
     transition: 0.3s;
+    border: 1px solid #000;
 }
 
-.reserve-btn:hover {
+.lineup-reserve-btn:hover {
     background: var(--color-primary);
-    color: white;
+    border-color: var(--color-primary);
+    color: #000;
 }
 
-.flyer-btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: #f0f0f0;
-    color: #444;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    font-weight: 600;
-    transition: 0.3s;
-    border: 1px solid #ccc;
-    margin-right: 1rem;
-    text-align: center;
-}
-
-.flyer-btn:hover {
-    background: #e0e0e0;
-    border-color: #999;
-}
-
-.schedule-flyer {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 1rem;
+.lineup-flyer-link {
+    font-size: 0.75rem;
+    color: #888;
+    text-decoration: underline;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.schedule-flyer:hover {
-    opacity: 0.8;
 }
 
 /* =========================================
-   Menu Section
+   Menu Section (Simplified)
    ========================================= */
 #menu {
     background-color: var(--bg-content);
