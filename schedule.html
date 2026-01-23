@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule | Jazz&Bar Dolphin | 金沢片町 ジャズバー</title>
+    <title>Live Schedule | Jazz & Bar DOLPHIN</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Lato:wght@300;400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Lato:wght@300;400&family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
         rel="stylesheet">
     <!-- Main Style -->
     <link rel="stylesheet" href="style.css">
@@ -17,110 +17,83 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo_new.png">
-    <!-- Favicon -->
-    <link rel="icon" href="logo_new.png" type="image/png">
     <style>
         /* Specific Styles for Schedule Page */
-        .page-header {
-            /* Matches Homepage Hero Style */
-            height: 40vh;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            background-color: var(--color-primary);
-            /* Green Background */
-            color: #1a1a1a;
-            position: relative;
-        }
-
-        .page-header .section-title {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            border: none;
-        }
-
-        .page-header .section-title::after {
+        .lineup-month-group {
+            margin-bottom: 6rem;
             display: none;
+        }
+
+        .lineup-month-group.active {
+            display: block;
         }
 
         .month-nav {
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin: 4rem 0 3rem;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding-bottom: 1rem;
         }
 
         .month-link {
             font-family: var(--font-heading);
-            font-size: 1.2rem;
-            color: #ccc;
-            border-bottom: 3px solid transparent;
-            padding-bottom: 0.5rem;
+            font-size: 1.5rem;
+            color: #666;
             cursor: pointer;
-            transition: 0.3s;
-            font-weight: 700;
-        }
-
-        .month-link:hover {
-            color: var(--color-primary);
+            transition: color 0.3s;
+            text-decoration: none;
         }
 
         .month-link.active {
-            color: #000;
-            background-color: var(--color-primary);
-            border-bottom-color: var(--color-primary-dark);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
+            color: var(--color-primary);
+            border-bottom: 2px solid var(--color-primary);
         }
 
-        .lineup-item.is-today {
-            background-color: rgba(168, 214, 0, 0.1);
-            border-left: 4px solid var(--color-primary);
-            padding-left: 1rem;
+        .month-link:hover {
+            color: #fff;
         }
 
-        .badge-today {
-            background-color: var(--color-primary) !important;
-            color: #000 !important;
-            padding: 0.2rem 0.6rem;
-            border-radius: 2px;
-            font-weight: 800;
+        .page-header {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: linear-gradient(to bottom, #1a1a1a, #111);
+        }
+
+        .lineup-month-header {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            color: var(--color-primary);
+        }
+
+        .lineup-month-header span {
+            font-size: 1.2rem;
+            color: #888;
+            font-weight: 400;
+        }
+
+        .lineup-intro {
+            font-size: 0.95rem;
+            color: #888;
+            margin-bottom: 1rem;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .lineup-badge {
             display: inline-block;
+            background: var(--color-primary);
+            color: #000;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 8px;
             margin-bottom: 0.5rem;
-        }
-
-        .schedule-container {
-            max-width: 900px;
-            /* Slightly wider */
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Hide all months initially, show active */
-        .month-schedule {
-            display: none;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .month-schedule.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            border-radius: 2px;
         }
     </style>
 </head>
@@ -131,14 +104,11 @@
         <div class="logo">
             <a href="index.html">DOLPHIN</a>
         </div>
-
         <div class="nav-right">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="schedule.html" class="active">Schedule</a></li>
-                <li><a href="index.html#menu">Menu</a></li>
-                <li><a href="index.html#reservation">Reservation</a></li>
-                <li><a href="index.html#access">Access</a></li>
+                <li><a href="archive.html">Archive</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Toggle Menu">
                 <span class="bar"></span>
@@ -148,42 +118,38 @@
         </div>
     </nav>
 
-    <!-- Today's Ticker -->
-    <div class="ticker-wrap">
-        <div class="ticker-content"></div>
-    </div>
-
     <header class="page-header">
-        <div class="hero-bg"></div>
-        <div style="z-index: 2;">
+        <div class="container fade-in">
             <h1 class="section-title">LIVE SCHEDULE</h1>
-            <p class="section-subtitle">Monthly Live Information</p>
+            <p class="section-subtitle">Real Jazz, Real Atmosphere.</p>
         </div>
     </header>
 
-    <main class="schedule-container">
-        <!-- MONTH NAVIGATION -->
-        <div class="month-nav">
-            <button class="month-link active" data-month="jan">1<span>JAN</span></button>
-            <button class="month-link" data-month="feb">2<span>FEB</span></button>
-            <button class="month-link" data-month="mar">3<span>MAR</span></button>
-        </div>
+    <main class="container fade-in" style="margin-top: 4rem;">
 
-        <!-- MONTHLY LINEUP (Blue Note Style) -->
-        <div class="lineup-container">
+        <!-- Month Navigation -->
+        <nav class="month-nav">
+            <a onclick="showMonth('jan')" class="month-link active">JAN</a>
+            <a onclick="showMonth('feb')" class="month-link">FEB</a>
+            <a onclick="showMonth('mar')" class="month-link">MAR</a>
+        </nav>
 
+        <div class="lineup-wrapper">
             <!-- JAN -->
             <section id="jan" class="lineup-month-group active">
                 <h2 class="lineup-month-header">1<span>JANUARY 2026</span></h2>
                 <div class="lineup-list">
-
                     <article class="lineup-item" data-date="2026-01-29">
                         <div class="lineup-date">2026 1.29<span class="weekday">thu.</span></div>
-                        <div class="lineup-info">
-                            <h3 class="lineup-artist">The Third Session</h3>
-                            <div class="lineup-details">
-                                <div class="detail-item"><i class="far fa-clock"></i>Start 20:00</div>
-                                <div class="detail-item"><i class="fas fa-users"></i>Gt 櫻井祐ニ / Ba 中山とも</div>
+                        <div class="lineup-body">
+                            <img src="logo_new.png" alt="Flyer" class="lineup-flyer-thumb"
+                                onclick="window.open(this.src)">
+                            <div class="lineup-info">
+                                <h3 class="lineup-artist">The Third Session</h3>
+                                <div class="lineup-details">
+                                    <div class="detail-item"><i class="far fa-clock"></i>Start 20:00</div>
+                                    <div class="detail-item"><i class="fas fa-users"></i>Gt 櫻井祐ニ / Ba 中山とも</div>
+                                </div>
                             </div>
                         </div>
                         <div class="lineup-action">
@@ -202,7 +168,7 @@
                     <article class="lineup-item" data-date="2026-02-05">
                         <div class="lineup-date">2026 2.05<span class="weekday">thu.</span></div>
                         <div class="lineup-body">
-                            <img src="flyer_20260205.png" alt="Groove Session Flyer" class="lineup-flyer-thumb"
+                            <img src="flyer_20260205.png" alt="Session Flyer" class="lineup-flyer-thumb"
                                 onclick="window.open(this.src)">
                             <div class="lineup-info">
                                 <h3 class="lineup-artist">Open Groove Jam Session</h3>
@@ -227,13 +193,32 @@
                                 <h3 class="lineup-artist">Saturday Jam Session 1</h3>
                                 <div class="lineup-details">
                                     <div class="detail-item"><i class="far fa-clock"></i>Start 20:30</div>
-                                    <div class="detail-item"><i class="fas fa-users"></i>Sax 本間昌晃 / Gt 増田 / Pf 西村 / Ba
-                                        Ami / Dr 永見</div>
+                                    <div class="detail-item"><i class="fas fa-users"></i>Sax 本間昌晃 / Pf 西村岳大 / Ba Ami /
+                                        Dr 永見拓也</div>
                                 </div>
                             </div>
                         </div>
                         <div class="lineup-action">
                             <div class="lineup-price">Charge: ¥2,000 (+2d)</div>
+                            <a href="index.html#reservation" class="lineup-reserve-btn">ONLINE RESERVATION</a>
+                        </div>
+                    </article>
+
+                    <article class="lineup-item" data-date="2026-02-12">
+                        <div class="lineup-date">2026 2.12<span class="weekday">thu.</span></div>
+                        <div class="lineup-body">
+                            <img src="flyer_the_third_session_new.png" alt="Session Flyer" class="lineup-flyer-thumb"
+                                onclick="window.open(this.src)">
+                            <div class="lineup-info">
+                                <h3 class="lineup-artist">The Third Session 1</h3>
+                                <div class="lineup-details">
+                                    <div class="detail-item"><i class="far fa-clock"></i>Start 20:00</div>
+                                    <div class="detail-item"><i class="fas fa-users"></i>Gt 櫻井祐二 / Ba 中山とも</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lineup-action">
+                            <div class="lineup-price">¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order</div>
                             <a href="index.html#reservation" class="lineup-reserve-btn">ONLINE RESERVATION</a>
                         </div>
                     </article>
@@ -280,6 +265,25 @@
                         </div>
                     </article>
 
+                    <article class="lineup-item" data-date="2026-02-21">
+                        <div class="lineup-date">2026 2.21<span class="weekday">sat.</span></div>
+                        <div class="lineup-body">
+                            <img src="flyer_20260221.png" alt="Session Flyer" class="lineup-flyer-thumb"
+                                onclick="window.open(this.src)">
+                            <div class="lineup-info">
+                                <h3 class="lineup-artist">Saturday Jam Session 2</h3>
+                                <div class="lineup-details">
+                                    <div class="detail-item"><i class="far fa-clock"></i>Start 20:30</div>
+                                    <div class="detail-item"><i class="fas fa-users"></i>Gt 櫻井祐二 / Ba 中山とも</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lineup-action">
+                            <div class="lineup-price">Charge: ¥2,000 (+2d)</div>
+                            <a href="index.html#reservation" class="lineup-reserve-btn">ONLINE RESERVATION</a>
+                        </div>
+                    </article>
+
                     <article class="lineup-item" data-date="2026-02-22">
                         <div class="lineup-date">2026 2.22<span class="weekday">sun.</span></div>
                         <div class="lineup-body">
@@ -297,6 +301,25 @@
                         </div>
                         <div class="lineup-action">
                             <div class="lineup-price">Charge: ¥3,500</div>
+                            <a href="index.html#reservation" class="lineup-reserve-btn">ONLINE RESERVATION</a>
+                        </div>
+                    </article>
+
+                    <article class="lineup-item" data-date="2026-02-26">
+                        <div class="lineup-date">2026 2.26<span class="weekday">thu.</span></div>
+                        <div class="lineup-body">
+                            <img src="flyer_the_third_session_new.png" alt="Session Flyer" class="lineup-flyer-thumb"
+                                onclick="window.open(this.src)">
+                            <div class="lineup-info">
+                                <h3 class="lineup-artist">The Third Session 2</h3>
+                                <div class="lineup-details">
+                                    <div class="detail-item"><i class="far fa-clock"></i>Start 20:00</div>
+                                    <div class="detail-item"><i class="fas fa-users"></i>Gt 櫻井祐二 / Ba 中山とも</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lineup-action">
+                            <div class="lineup-price">¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order</div>
                             <a href="index.html#reservation" class="lineup-reserve-btn">ONLINE RESERVATION</a>
                         </div>
                     </article>
@@ -332,36 +355,57 @@
 
         </div>
 
+        <!-- Special Workshop Section (Pinned) -->
+        <section style="margin-top: 4rem; padding: 4rem; background: #1a1a1a; border-radius: 8px;">
+            <div class="lineup-date">2026 2.23<span class="weekday">mon.</span></div>
+            <h3 class="lineup-artist" style="font-size: 2.5rem; margin-top: 1rem;">Special Workshop “Bebop to Nu-Jazz”
+            </h3>
+            <p style="margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.8; color: #ccc;">
+                ジャズの伝統から現代のNu-Jazzまでを網羅する、実践的なワークショップを開催。
+            </p>
+            <div class="lineup-details">
+                <div class="detail-item"><i class="far fa-clock"></i>Open 12:30 / Start 13:00</div>
+                <div class="detail-item"><i class="fas fa-users"></i>講師 : 坪口昌恭</div>
+            </div>
+            <div style="margin-top: 2rem;">
+                <div class="lineup-price" style="font-size: 1.2rem; margin-bottom: 1rem;">参加費: ¥3,500 (+1drink) / 聴講のみ:
+                    ¥2,500 (+1drink)</div>
+                <a href="index.html#reservation" class="lineup-reserve-btn">ONLINE RESERVATION</a>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-column">
-                <h4 class="footer-heading">ACCESS</h4>
-                <p class="footer-text">〒920-0981<br>石川県金沢市片町2-13-11<br>ミリオンビル4階</p>
-                <a href="https://goo.gl/maps/..." target="_blank" class="footer-link-sub">Google Maps</a>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4 class="footer-heading">ACCESS</h4>
+                    <p class="footer-text">〒920-0981<br>石川県金沢市片町2-13-11<br>ミリオンビル4階</p>
+                    <a href="https://goo.gl/maps/..." target="_blank" class="footer-link-sub">Google Maps</a>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">SUPPORT DESK</h4>
+                    <p class="footer-text">ご予約・お問い合わせ</p>
+                    <p class="footer-tel">080-3895-0821</p>
+                    <p class="footer-text">Reception: 20:00 - 02:00</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">LEGAL</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="legal.html">特定商取引法に基づく表記</a></li>
+                        <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                        <li><a href="disclaimer.html">免責事項</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-column">
-                <h4 class="footer-heading">SUPPORT DESK</h4>
-                <p class="footer-text">ご予約・お問い合わせ</p>
-                <p class="footer-tel">080-3895-0821</p>
-                <p class="footer-text">Reception: 20:00 - 02:00</p>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <p class="copyright">&copy; Jazz&Bar Dolphin</p>
             </div>
-            <div class="footer-column">
-                <h4 class="footer-heading">LEGAL</h4>
-                <ul class="footer-links-list">
-                    <li><a href="legal.html">特定商取引法に基づく表記</a></li>
-                    <li><a href="privacy.html">PRIVACY POLICY</a></li>
-                    <li><a href="disclaimer.html">免責事項</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="social-links-footer">
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            </div>
-            <p class="copyright">&copy; Jazz&Bar Dolphin</p>
         </div>
     </footer>
 
@@ -370,17 +414,12 @@
         // Simple Tab Switcher
         function showMonth(monthId) {
             // Hide all
-            document.querySelectorAll('.month-schedule').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lineup-month-group').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.month-link').forEach(el => el.classList.remove('active'));
 
             // Show Target
             document.getElementById(monthId).classList.add('active');
-
-            // Highlight Link
-            const links = document.querySelectorAll('.month-link');
-            if (monthId === 'jan') links[0].classList.add('active');
-            if (monthId === 'feb') links[1].classList.add('active');
-            if (monthId === 'mar') links[2].classList.add('active');
+            event.target.classList.add('active');
         }
     </script>
 </body>
