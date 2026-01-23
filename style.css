@@ -637,10 +637,6 @@ img {
     min-width: 220px;
 }
 
-align-items: flex-end;
-gap: 1.5rem;
-}
-
 .lineup-price {
     font-family: var(--font-heading);
     font-weight: 700;
