@@ -1030,7 +1030,8 @@ footer li {
 }
 
 /* Compact Lineup Integration */
-.lineup-item {
+/* Compact Lineup Integration (Scoped to Homepage Preview) */
+#schedule-preview .lineup-item {
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -1038,14 +1039,14 @@ footer li {
     border-bottom: 1px solid #eee;
 }
 
-.lineup-body {
+#schedule-preview .lineup-body {
     display: flex;
     gap: 1.5rem;
     align-items: center;
     flex: 1;
 }
 
-.lineup-flyer-thumb {
+#schedule-preview .lineup-flyer-thumb {
     width: 140px;
     height: 100px;
     object-fit: contain;
@@ -1056,25 +1057,25 @@ footer li {
     border-radius: 2px;
 }
 
-.lineup-flyer-thumb:hover {
+#schedule-preview .lineup-flyer-thumb:hover {
     border-color: var(--color-primary);
     transform: scale(1.05);
 }
 
-.lineup-info {
+#schedule-preview .lineup-info {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.lineup-artist {
+#schedule-preview .lineup-artist {
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
     letter-spacing: 0.5px;
 }
 
-.lineup-action {
+#schedule-preview .lineup-action {
     min-width: 180px;
     display: flex;
     flex-direction: column;
@@ -1082,7 +1083,7 @@ footer li {
     gap: 0.5rem;
 }
 
-.lineup-reserve-btn {
+#schedule-preview .lineup-reserve-btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.85rem;
 }
