@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     initScheduleFilter();
+    initReservationSystem();
 
     // --- Opening Animation ---
     const overlay = document.getElementById('opening-overlay');
@@ -46,39 +47,119 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => observer.observe(el));
+});
 
-    // --- Mailto Reservation Logic ---
-    window.openReservationMail = function (date, artist) {
+/**
+ * Reservation System Optimization
+ */
+function initReservationSystem() {
+    const form = document.getElementById('reserveForm');
+    const monthSelect = document.getElementById('month');
+    const eventSelect = document.getElementById('event');
+    const dateInput = document.getElementById('date');
+
+    if (!form) return;
+
+    // --- 1. Dropdown Filtering ---
+    if (monthSelect && eventSelect) {
+        monthSelect.addEventListener('change', () => {
+            const selectedMonth = monthSelect.value;
+            const options = eventSelect.querySelectorAll('option');
+
+            options.forEach(opt => {
+                const optMonth = opt.dataset.month;
+                if (optMonth === 'all' || optMonth === 'other' || !selectedMonth || optMonth === selectedMonth) {
+                    opt.style.display = 'block';
+                } else {
+                    opt.style.display = 'none';
+                }
+            });
+
+            // Reset event selection if current one is hidden
+            if (eventSelect.selectedOptions[0]?.style.display === 'none') {
+                eventSelect.value = "";
+            }
+        });
+    }
+
+    // --- 2. Synchronize Event Date Input ---
+    if (eventSelect && dateInput) {
+        eventSelect.addEventListener('change', () => {
+            const selectedOpt = eventSelect.selectedOptions[0];
+            const optDate = selectedOpt?.dataset.date;
+            if (optDate) {
+                dateInput.value = optDate;
+            }
+        });
+    }
+
+    // --- 3. Form Submission (Redirect to Mailto) ---
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('name')?.value || "";
         const email = "bardolphinsince2016@gmail.com";
-        const subject = encodeURIComponent(`【Dolphinライブ予約】${date} [${artist}] 公演`);
+        const month = monthSelect?.options[monthSelect.selectedIndex]?.text || "";
+        const event = eventSelect?.options[eventSelect.selectedIndex]?.text || "";
+        const date = dateInput?.value || "";
+        const time = document.getElementById('time')?.value || "";
+        const people = document.getElementById('people')?.value || "";
+
+        const subject = encodeURIComponent(`【Dolphin予約】${date} ${event} (${name}様)`);
         const body = encodeURIComponent(
-            "お名前：\n" +
-            "人数：\n" +
-            "電話番号：\n" +
-            "備考："
+            `以下の内容で予約を承ります。\n\n` +
+            `■ライブ公演: ${event}\n` +
+            `■希望日: ${date}\n` +
+            `■希望時間: ${time}\n` +
+            `■お名前: ${name} 様\n` +
+            `■人数: ${people} 名\n\n` +
+            `※電話番号等の追加情報があれば以下にご記入ください。\n` +
+            `連絡先：\n` +
+            `備考：\n`
         );
 
         window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-    };
+    });
 
-    // Attach to reservation buttons
+    // --- 4. Global Link Handling (Teaser Buttons etc.) ---
     document.addEventListener('click', (e) => {
         const btn = e.target.closest('.lineup-reserve-btn, .reserve-btn, a[href*="reservation"]');
         if (!btn) return;
 
+        // If it's the full lineup button, don't intercept
+        if (btn.innerText.includes('FULL LINEUP')) return;
+
         const article = btn.closest('.lineup-item, .schedule-item');
         if (article) {
-            const dateText = article.querySelector('.lineup-date, .schedule-date')?.innerText.replace(/\n/g, ' ').trim() || "";
-            const artistName = article.querySelector('.lineup-artist, .schedule-artist')?.innerText.trim() || "";
+            e.preventDefault();
+            const dateStr = article.dataset.date || "";
+            const artist = article.querySelector('.lineup-artist, .schedule-artist')?.innerText.trim() || "";
 
-            e.preventDefault();
-            openReservationMail(dateText, artistName);
-        } else if (btn.innerText.includes('RESERVATION') || btn.innerText.includes('RESERVE')) {
-            e.preventDefault();
-            openReservationMail("ご希望日", "アーティスト名");
+            // Scroll and Fill
+            const targetForm = document.getElementById('reservation');
+            if (targetForm) {
+                targetForm.scrollIntoView({ behavior: 'smooth' });
+
+                if (dateInput) dateInput.value = dateStr;
+
+                // Try to auto-select month and event if matched
+                if (dateStr) {
+                    const monthKey = dateStr.split('-')[1]; // YYYY-MM-DD -> MM
+                    const monthMap = { "01": "jan", "02": "feb", "03": "mar" };
+                    if (monthSelect) {
+                        monthSelect.value = monthMap[monthKey] || "";
+                        monthSelect.dispatchEvent(new Event('change'));
+                    }
+
+                    if (eventSelect) {
+                        const opt = [...eventSelect.options].find(o => o.dataset.date === dateStr);
+                        if (opt) eventSelect.value = opt.value;
+                    }
+                }
+            }
         }
     });
-});
+}
 
 /**
  * Schedule Filtering & Tab Logic
@@ -189,14 +270,4 @@ function initScheduleFilter() {
             }
         }
     });
-}
-
-// --- Reservation Scroll Helper ---
-function selectDate(dateString) {
-    const formSection = document.getElementById('reservation');
-    if (formSection) {
-        formSection.scrollIntoView({ behavior: 'smooth' });
-        const dateInput = document.getElementById('date');
-        if (dateInput) dateInput.value = dateString;
-    }
 }
