@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jazz Bar DOLPHIN - Kanazawa</title>
+    <title>Jazz&Bar Dolphin | 金沢片町 ジャズバー</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="logo_new.png" type="image/png">
 </head>
 
 <body>
@@ -36,19 +38,27 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="archive.html">Archive</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#reservation">Reservation</a></li>
                 <li><a href="#access">Access</a></li>
             </ul>
         </div>
 
-        <!-- Mobile Navigation Toggle moved inside -->
-        <button class="menu-toggle" aria-label="Toggle Menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+        <div class="nav-right">
+            <div class="lang-switcher" id="langSwitcher">
+                <i class="fas fa-globe lang-icon"></i>
+                <div class="lang-dropdown" id="langDropdown">
+                    <button class="lang-option active" data-lang="ja">日本語</button>
+                    <button class="lang-option" data-lang="en">English</button>
+                </div>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
 
         <div class="nav-overlay"></div>
     </nav>
@@ -242,6 +252,7 @@
                         <option value="">月を選択してください (Select Month)</option>
                         <option value="jan">1月 JANUARY</option>
                         <option value="feb">2月 FEBRUARY</option>
+                        <option value="mar">3月 MARCH</option>
                         <option value="other">OTHER</option>
                     </select>
                 </div>
@@ -249,13 +260,35 @@
                     <label for="event">Live Event</label>
                     <select id="event" name="event">
                         <option value="" data-month="all">ライブを選択してください (Select Live)</option>
-                        <option value="1/17 Workshop" data-month="jan">1/17 荻原亮 Guitar & Ensemble Workshop</option>
-                        <option value="1/17 Session" data-month="jan">1/17 Saturday Jam Session 2</option>
-                        <option value="1/18 Session" data-month="jan">1/18 荻原亮 Special Session</option>
-                        <option value="1/21 Session" data-month="jan">1/21 Monthly Voices</option>
-                        <option value="1/29 Session" data-month="jan">1/29 The Third Session</option>
-                        <option value="2/22 Birthday" data-month="feb">2/22 Tomo Nakayama Birthday Session</option>
-                        <option value="2/23 Workshop" data-month="feb">2/23 Special Workshop “Bebop to Nu-Jazz”</option>
+                        <option value="1/17 Workshop" data-month="jan" data-date="2026-01-17">1/17 荻原亮 Guitar & Ensemble
+                            Workshop</option>
+                        <option value="1/17 Session" data-month="jan" data-date="2026-01-17">1/17 Saturday Jam Session 2
+                        </option>
+                        <option value="1/18 Session" data-month="jan" data-date="2026-01-18">1/18 荻原亮 Special Session
+                        </option>
+                        <option value="1/21 Session" data-month="jan" data-date="2026-01-21">1/21 Monthly Voices
+                        </option>
+                        <option value="1/29 Session" data-month="jan" data-date="2026-01-29">1/29 The Third Session
+                        </option>
+                        <option value="2/5 Session" data-month="feb" data-date="2026-02-05">2/5 Open Groove Jam Session
+                        </option>
+                        <option value="2/7 Session" data-month="feb" data-date="2026-02-07">2/7 Saturday Jam Session1
+                        </option>
+                        <option value="2/12 Session" data-month="feb" data-date="2026-02-12">2/12 The Third Session
+                        </option>
+                        <option value="2/19 Session" data-month="feb" data-date="2026-02-19">2/19 Monthly Voices 〜Vocal
+                            Session〜</option>
+                        <option value="2/20 Live" data-month="feb" data-date="2026-02-20">2/20 菅原高志北陸Tour2026</option>
+                        <option value="2/21 Session" data-month="feb" data-date="2026-02-21">2/21 Saturday Jam Session2
+                        </option>
+                        <option value="2/22 Birthday" data-month="feb" data-date="2026-02-22">2/22 Tomo Nakayama
+                            Birthday Session</option>
+                        <option value="2/23 Workshop" data-month="feb" data-date="2026-02-23">2/23 Special Workshop
+                            “Bebop to Nu-Jazz”</option>
+                        <option value="2/26 Session" data-month="feb" data-date="2026-02-26">2/26 The Third Session
+                        </option>
+                        <option value="3/12 Live" data-month="mar" data-date="2026-03-12">3/12 スガダイロー Solo Piano Live
+                        </option>
                         <option value="Normal" data-month="other">通常営業 (Bar Only)</option>
                     </select>
                 </div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>特定商取引法に基づく表記 | Jazz Bar DOLPHIN</title>
+    <title>特定商取引法に基づく表記 | Jazz&Bar Dolphin | 金沢片町 ジャズバー</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,8 @@
         rel="stylesheet">
     <!-- Main Style -->
     <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="logo_new.png" type="image/png">
     <style>
         .legal-content {
             max-width: 800px;
@@ -82,17 +84,27 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="archive.html">Archive</a></li>
                 <li><a href="index.html#menu">Menu</a></li>
                 <li><a href="index.html#reservation">Reservation</a></li>
                 <li><a href="index.html#access">Access</a></li>
             </ul>
         </div>
-        <button class="menu-toggle" aria-label="Toggle Menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+
+        <div class="nav-right">
+            <div class="lang-switcher" id="langSwitcher">
+                <i class="fas fa-globe lang-icon"></i>
+                <div class="lang-dropdown" id="langDropdown">
+                    <button class="lang-option active" data-lang="ja">日本語</button>
+                    <button class="lang-option" data-lang="en">English</button>
+                </div>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
     </nav>
 
     <header class="page-header">

@@ -146,6 +146,74 @@ img {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Language Switcher */
+.lang-switcher {
+    position: relative;
+    cursor: pointer;
+}
+
+.lang-icon {
+    color: #ffffff;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.lang-icon:hover {
+    opacity: 1;
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 150%;
+    right: 0;
+    background: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    min-width: 100px;
+    display: none;
+    flex-direction: column;
+    z-index: 1002;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.lang-dropdown.active {
+    display: flex;
+}
+
+.lang-option {
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: background 0.3s;
+    text-decoration: none;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+.lang-option:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-primary);
+}
+
+.lang-option.active {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
 .nav-wrapper-left {
     display: flex;
     align-items: center;
@@ -461,6 +529,39 @@ img {
     color: white;
 }
 
+.flyer-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #f0f0f0;
+    color: #444;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    transition: 0.3s;
+    border: 1px solid #ccc;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+.flyer-btn:hover {
+    background: #e0e0e0;
+    border-color: #999;
+}
+
+.schedule-flyer {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.schedule-flyer:hover {
+    opacity: 0.8;
+}
+
 /* =========================================
    Menu Section
    ========================================= */
@@ -685,11 +786,29 @@ footer {
     }
 
     .schedule-action {
-        margin-left: 0;
-        padding-left: 0;
         width: 100%;
+        margin-top: 1.5rem;
+        padding-left: 0;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .schedule-flyer {
+        max-width: 250px;
+        margin-bottom: 1.5rem;
+    }
+
+    .flyer-btn {
+        margin-right: 0;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .reserve-btn {
+        width: 100%;
+        max-width: 300px;
     }
 
     .schedule-date {

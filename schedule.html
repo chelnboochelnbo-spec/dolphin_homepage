@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule | Jazz Bar DOLPHIN</title>
+    <title>Schedule | Jazz&Bar Dolphin | 金沢片町 ジャズバー</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="logo_new.png" type="image/png">
     <style>
         /* Specific Styles for Schedule Page */
         .page-header {
@@ -104,23 +106,32 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="main-nav">
+    <div class="nav-wrapper-left">
         <div class="logo"><a href="index.html">DOLPHIN</a></div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="schedule.html" class="active">Schedule</a></li>
-            <li><a href="archive.html">Archive</a></li>
             <li><a href="index.html#menu">Menu</a></li>
             <li><a href="index.html#reservation">Reservation</a></li>
             <li><a href="index.html#access">Access</a></li>
         </ul>
-        <!-- Mobile Toggle reused -->
+    </div>
+
+    <div class="nav-right">
+        <div class="lang-switcher" id="langSwitcher">
+            <i class="fas fa-globe lang-icon"></i>
+            <div class="lang-dropdown" id="langDropdown">
+                <button class="lang-option active" data-lang="ja">日本語</button>
+                <button class="lang-option" data-lang="en">English</button>
+            </div>
+        </div>
+
         <button class="menu-toggle" aria-label="Toggle Menu">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </button>
+    </div>
     </nav>
 
     <header class="page-header">
@@ -136,6 +147,7 @@
         <div class="month-nav">
             <span class="month-link active" onclick="showMonth('jan')">1月 JAN</span>
             <span class="month-link" onclick="showMonth('feb')">2月 FEB</span>
+            <span class="month-link" onclick="showMonth('mar')">3月 MAR</span>
         </div>
 
         <!-- JAN Schedule -->
@@ -258,6 +270,152 @@
         <!-- FEB Schedule -->
         <div id="feb" class="month-schedule">
             <div class="schedule-list">
+                <!-- 2/5 -->
+                <article class="schedule-item" data-date="2026-02-05">
+                    <div class="schedule-date">
+                        <span class="day">5</span>
+                        <span class="weekday">THU</span>
+                        <span class="month">2月 FEB</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Open 19:30 / Start 20:00</div>
+                        <h3 class="schedule-artist">Open Groove Jam Session</h3>
+                        <div class="member-list">
+                            Gt 羽田正英 / Ba 中山とも
+                        </div>
+                        <p class="schedule-charge">
+                            Charge: ¥2,000 (2Drink Order)<br>
+                            学生: ¥1,000 (1Drink Order)
+                        </p>
+                    </div>
+                    <div class="schedule-action">
+                        <img src="flyer_20260205.png" alt="Flyer" class="schedule-flyer"
+                            onclick="window.open(this.src)">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
+
+                <!-- 2/7 -->
+                <article class="schedule-item" data-date="2026-02-07">
+                    <div class="schedule-date">
+                        <span class="day">7</span>
+                        <span class="weekday">SAT</span>
+                        <span class="month">2月 FEB</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Open 20:00 / Start 20:30</div>
+                        <h3 class="schedule-artist">Saturday Jam Session1</h3>
+                        <div class="member-list">
+                            Sax 本間昌晃 / Gt 増田勇人 / Pf 西村岳大 / Ba Ami / Dr 永見拓也
+                        </div>
+                        <p class="schedule-charge">
+                            Charge: ¥2,000 (2Drink Order)<br>
+                            学生: ¥1,000 (1Drink Order)
+                        </p>
+                    </div>
+                    <div class="schedule-action">
+                        <img src="flyer_20260207.png" alt="Flyer" class="schedule-flyer"
+                            onclick="window.open(this.src)">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
+
+                <!-- 2/12 -->
+                <article class="schedule-item" data-date="2026-02-12">
+                    <div class="schedule-date">
+                        <span class="day">12</span>
+                        <span class="weekday">THU</span>
+                        <span class="month">2月 FEB</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Start 20:00</div>
+                        <h3 class="schedule-artist">The Third Session</h3>
+                        <div class="member-list">
+                            Gt 櫻井祐二 / Ba 中山とも
+                        </div>
+                        <p class="schedule-charge">
+                            Charge: ¥2,000 (2Drink Order)<br>
+                            学生: ¥1,000 (1Drink Order)
+                        </p>
+                    </div>
+                    <div class="schedule-action">
+                        <img src="flyer_the_third_session.png" alt="Flyer" class="schedule-flyer"
+                            onclick="window.open(this.src)">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
+
+                <!-- 2/19 -->
+                <article class="schedule-item" data-date="2026-02-19">
+                    <div class="schedule-date">
+                        <span class="day">19</span>
+                        <span class="weekday">THU</span>
+                        <span class="month">2月 FEB</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Start 20:00</div>
+                        <h3 class="schedule-artist">Monthly Voices 〜Vocal Session〜</h3>
+                        <div class="member-list">
+                            Pf 黒川薫 / Ba 中山とも / Dr 永見拓也
+                        </div>
+                        <p class="schedule-charge">
+                            Charge: ¥2,000 (2Drink Order)<br>
+                            学生: ¥1,000 (1Drink Order)
+                        </p>
+                    </div>
+                    <div class="schedule-action">
+                        <img src="flyer_20260219.png" alt="Flyer" class="schedule-flyer"
+                            onclick="window.open(this.src)">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
+
+                <!-- 2/20 -->
+                <article class="schedule-item" data-date="2026-02-20">
+                    <div class="schedule-date">
+                        <span class="day">20</span>
+                        <span class="weekday">FRI</span>
+                        <span class="month">2月 FEB</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Open 19:30 / Start 20:00</div>
+                        <h3 class="schedule-artist">菅原高志北陸Tour2026 -All That Jazz!-</h3>
+                        <div class="member-list">
+                            Dr 菅原高志 / Sax 濱西公博 / Sax 林綾子 / Pf 河崎千鶴 / Ba 那須仁哉
+                        </div>
+                        <p class="schedule-charge">Charge: ¥3,500</p>
+                    </div>
+                    <div class="schedule-action">
+                        <img src="flyer_20260220.jpg" alt="Flyer" class="schedule-flyer"
+                            onclick="window.open(this.src)">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
+
+                <!-- 2/21 -->
+                <article class="schedule-item" data-date="2026-02-21">
+                    <div class="schedule-date">
+                        <span class="day">21</span>
+                        <span class="weekday">SAT</span>
+                        <span class="month">2月 FEB</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Open 20:00 / Start 20:30</div>
+                        <h3 class="schedule-artist">Saturday Jam Session2</h3>
+                        <div class="member-list">
+                            Gt 櫻井祐二 / Ba 中山とも
+                        </div>
+                        <p class="schedule-charge">
+                            Charge: ¥2,000 (2Drink Order)<br>
+                            学生: ¥1,000 (1Drink Order)
+                        </p>
+                    </div>
+                    <div class="schedule-action">
+                        <img src="flyer_20260221.png" alt="Flyer" class="schedule-flyer"
+                            onclick="window.open(this.src)">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
 
                 <!-- 2/22 -->
                 <article class="schedule-item" data-date="2026-02-22">
@@ -275,6 +433,8 @@
                         <p class="schedule-charge">Charge: ¥3,500</p>
                     </div>
                     <div class="schedule-action">
+                        <img src="flyer_20260222.jpg" alt="Flyer" class="schedule-flyer"
+                            onclick="window.open(this.src)">
                         <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
                     </div>
                 </article>
@@ -296,10 +456,63 @@
                         <p class="schedule-charge">Charge: ¥4,000</p>
                     </div>
                     <div class="schedule-action">
+                        <img src="flyer_20260222.jpg" alt="Flyer" class="schedule-flyer"
+                            onclick="window.open(this.src)">
                         <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
                     </div>
                 </article>
 
+                <!-- 2/26 -->
+                <article class="schedule-item" data-date="2026-02-26">
+                    <div class="schedule-date">
+                        <span class="day">26</span>
+                        <span class="weekday">THU</span>
+                        <span class="month">2月 FEB</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Start 20:00</div>
+                        <h3 class="schedule-artist">The Third Session</h3>
+                        <div class="member-list">
+                            Gt 櫻井祐二 / Ba 中山とも
+                        </div>
+                        <p class="schedule-charge">
+                            Charge: ¥2,000 (2Drink Order)<br>
+                            学生: ¥1,000 (1Drink Order)
+                        </p>
+                    </div>
+                    <div class="schedule-action">
+                        <img src="flyer_the_third_session.png" alt="Flyer" class="schedule-flyer"
+                            onclick="window.open(this.src)">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- MAR Schedule -->
+        <div id="mar" class="month-schedule">
+            <div class="schedule-list">
+                <!-- 3/12 -->
+                <article class="schedule-item" data-date="2026-03-12">
+                    <div class="schedule-date">
+                        <span class="day">12</span>
+                        <span class="weekday">THU</span>
+                        <span class="month">3月 MAR</span>
+                    </div>
+                    <div class="schedule-info">
+                        <div class="schedule-time">Open 19:30 / Start 20:00</div>
+                        <h3 class="schedule-artist">スガダイロー Solo Piano Live</h3>
+                        <div class="member-list">
+                            Pf スガダイロー
+                        </div>
+                        <p class="schedule-charge">前売り ¥4,000 / 当日 ¥4,500</p>
+                    </div>
+                    <div class="schedule-action">
+                        <img src="flyer_20260312.jpg" alt="Flyer" class="schedule-flyer"
+                            onclick="window.open(this.src)">
+                        <a href="index.html#reservation" class="reserve-btn">RESERVE</a>
+                    </div>
+                </article>
             </div>
         </div>
 
@@ -321,7 +534,7 @@
 
     <script src="script.js"></script>
     <script>
-        // Simple Tab Switcher (Local override or separate script)
+        // Simple Tab Switcher
         function showMonth(monthId) {
             // Hide all
             document.querySelectorAll('.month-schedule').forEach(el => el.classList.remove('active'));
@@ -334,6 +547,7 @@
             const links = document.querySelectorAll('.month-link');
             if (monthId === 'jan') links[0].classList.add('active');
             if (monthId === 'feb') links[1].classList.add('active');
+            if (monthId === 'mar') links[2].classList.add('active');
         }
     </script>
 </body>

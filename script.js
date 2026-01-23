@@ -33,6 +33,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Language Switcher ---
+    const langSwitcher = document.getElementById('langSwitcher');
+    const langDropdown = document.getElementById('langDropdown');
+    const langOptions = document.querySelectorAll('.lang-option');
+
+    if (langSwitcher && langDropdown) {
+        langSwitcher.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('active');
+        });
+
+        document.addEventListener('click', () => {
+            langDropdown.classList.remove('active');
+        });
+
+        langOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const lang = option.getAttribute('data-lang');
+                console.log('Language switched to:', lang);
+
+                // Update active state in UI
+                langOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+
+                // Base for translation logic could go here
+                // For now, it just updates the UI state
+            });
+        });
+    }
+
     // --- Fade In Animation ---
     const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries, observer) => {
@@ -128,5 +158,19 @@ function initScheduleFilter() {
     const noEventsMsg = document.getElementById('no-events');
     if (noEventsMsg) {
         noEventsMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    // --- Dynamic Reservation Form Cleanup ---
+    // Remove past events from the reservation dropdown
+    const eventSelect = document.getElementById('event');
+    if (eventSelect) {
+        const options = Array.from(eventSelect.options);
+        options.forEach(option => {
+            const date = option.getAttribute('data-date');
+            if (date && date < todayStr) {
+                // If it's a past event, hide it or remove it.
+                option.remove();
+            }
+        });
     }
 }
