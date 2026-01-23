@@ -839,8 +839,14 @@ footer li {
    Responsive Adjustments (Mobile-First Polish)
    ========================================= */
 @media (max-width: 768px) {
+    .logo {
+        display: none;
+    }
+
     .main-nav {
         padding: 0 1.2rem;
+        justify-content: flex-end;
+        /* Push menu toggle to the right */
     }
 
     .menu-toggle {
