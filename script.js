@@ -33,36 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Language Switcher ---
-    const langSwitcher = document.getElementById('langSwitcher');
-    const langDropdown = document.getElementById('langDropdown');
-    const langOptions = document.querySelectorAll('.lang-option');
-
-    if (langSwitcher && langDropdown) {
-        langSwitcher.addEventListener('click', (e) => {
-            e.stopPropagation();
-            langDropdown.classList.toggle('active');
-        });
-
-        document.addEventListener('click', () => {
-            langDropdown.classList.remove('active');
-        });
-
-        langOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                const lang = option.getAttribute('data-lang');
-                console.log('Language switched to:', lang);
-
-                // Update active state in UI
-                langOptions.forEach(opt => opt.classList.remove('active'));
-                option.classList.add('active');
-
-                // Base for translation logic could go here
-                // For now, it just updates the UI state
-            });
-        });
-    }
-
     // --- Fade In Animation ---
     const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries, observer) => {
@@ -77,36 +47,149 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => observer.observe(el));
 
-    // --- Reservation Logic (Month Filter) ---
-    const monthSelect = document.getElementById('month');
-    const eventSelect = document.getElementById('event');
+    // --- Mailto Reservation Logic ---
+    window.openReservationMail = function (date, artist) {
+        const email = "bardolphinsince2016@gmail.com";
+        const subject = encodeURIComponent(`【Dolphinライブ予約】${date} [${artist}] 公演`);
+        const body = encodeURIComponent(
+            "お名前：\n" +
+            "人数：\n" +
+            "電話番号：\n" +
+            "備考："
+        );
 
-    if (monthSelect && eventSelect) {
-        const allOptions = Array.from(eventSelect.options);
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    };
 
-        monthSelect.addEventListener('change', () => {
-            const selectedMonth = monthSelect.value;
-            // Reset event selection
-            eventSelect.value = "";
+    // Attach to reservation buttons
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.lineup-reserve-btn, .reserve-btn, a[href*="reservation"]');
+        if (!btn) return;
 
-            allOptions.forEach(option => {
-                const monthData = option.getAttribute('data-month');
+        const article = btn.closest('.lineup-item, .schedule-item');
+        if (article) {
+            const dateText = article.querySelector('.lineup-date, .schedule-date')?.innerText.replace(/\n/g, ' ').trim() || "";
+            const artistName = article.querySelector('.lineup-artist, .schedule-artist')?.innerText.trim() || "";
 
-                if (selectedMonth === "") {
-                    // If no month selected, show all (or could hide all except prompt)
-                    option.style.display = "block";
-                } else {
-                    if (monthData === selectedMonth || monthData === "all") {
-                        option.style.display = "block";
-                    } else {
-                        option.style.display = "none";
-                    }
-                }
-            });
+            e.preventDefault();
+            openReservationMail(dateText, artistName);
+        } else if (btn.innerText.includes('RESERVATION') || btn.innerText.includes('RESERVE')) {
+            e.preventDefault();
+            openReservationMail("ご希望日", "アーティスト名");
+        }
+    });
+});
+
+/**
+ * Schedule Filtering & Tab Logic
+ */
+function initScheduleFilter() {
+    const filterBtns = document.querySelectorAll('.month-link');
+    const monthGroups = document.querySelectorAll('.lineup-month-group');
+
+    // --- Tab Switching Logic ---
+    function setActiveTab(targetId) {
+        filterBtns.forEach(btn => {
+            if (btn.dataset.month === targetId) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        monthGroups.forEach(group => {
+            if (group.id === targetId) {
+                group.classList.add('active');
+                group.style.display = 'block';
+            } else {
+                group.classList.remove('active');
+                group.style.display = 'none';
+            }
         });
     }
 
-});
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            setActiveTab(btn.dataset.month);
+        });
+    });
+
+    // --- Date Acquisition ---
+    const now = new Date();
+    const todayStr = now.getFullYear() + '-' +
+        String(now.getMonth() + 1).padStart(2, '0') + '-' +
+        String(now.getDate()).padStart(2, '0');
+    const currentMonthNum = now.getMonth() + 1;
+
+    // --- Schedule Item Logic (Hide Past, Highlight Today) ---
+    const items = document.querySelectorAll('.lineup-item[data-date]');
+    let todayEventTitle = "";
+
+    items.forEach(item => {
+        const itemDateStr = item.dataset.date;
+        if (!itemDateStr) return;
+
+        if (itemDateStr < todayStr) {
+            // 2. 過去の公演の自動非表示ロジック
+            item.style.display = 'none';
+            item.classList.add('past-event');
+        } else if (itemDateStr === todayStr) {
+            // 3. 当日の強調 (TODAYバッジ)
+            item.classList.add('is-today');
+            const info = item.querySelector('.lineup-info');
+            if (info && !info.querySelector('.badge-today')) {
+                const badge = document.createElement('span');
+                badge.className = 'badge-today';
+                badge.innerText = 'TODAY';
+                info.prepend(badge);
+            }
+
+            // Ticker data
+            const artist = item.querySelector('.lineup-artist')?.innerText || "";
+            const time = item.querySelector('.lineup-details')?.innerText.match(/\d{2}:\d{2}/)?.[0] || "";
+            todayEventTitle += `【TODAY】${time} ${artist} `;
+        }
+    });
+
+    // Update Ticker
+    const ticker = document.querySelector('.ticker-content');
+    if (ticker) {
+        if (todayEventTitle) {
+            ticker.innerText = "TODAY'S EVENT: " + todayEventTitle + " | 皆様のご来店をお待ちしております。";
+        } else {
+            ticker.innerText = "Enjoy Jazz & Bar Dolphin - Open tonight from 20:00. | 今夜も20時より営業。皆様のご来店をお待ちしております。";
+        }
+    }
+
+    // --- 3. 月別タブの自動選択 (当月) ---
+    const monthNames = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+    const currentMonthId = monthNames[currentMonthNum - 1];
+    const currentTab = document.querySelector(`.month-link[data-month="${currentMonthId}"]`);
+
+    if (currentTab) {
+        setActiveTab(currentMonthId);
+    } else if (filterBtns.length > 0) {
+        // Fallback to first tab if current month not found
+        setActiveTab(filterBtns[0].dataset.month);
+    }
+
+    // --- Empty Month Message ---
+    monthGroups.forEach(group => {
+        const visibleItems = group.querySelectorAll('.lineup-item:not(.past-event)');
+        if (visibleItems.length === 0) {
+            const list = group.querySelector('.lineup-list');
+            if (list && !list.querySelector('.no-events-msg')) {
+                const msg = document.createElement('p');
+                msg.className = 'no-events-msg';
+                msg.style.padding = '2rem';
+                msg.style.textAlign = 'center';
+                msg.style.color = '#888';
+                msg.innerText = '公演情報は現在準備中です。';
+                list.appendChild(msg);
+            }
+        }
+    });
+}
 
 // --- Reservation Scroll Helper ---
 function selectDate(dateString) {
@@ -115,62 +198,5 @@ function selectDate(dateString) {
         formSection.scrollIntoView({ behavior: 'smooth' });
         const dateInput = document.getElementById('date');
         if (dateInput) dateInput.value = dateString;
-    }
-}
-
-// --- Schedule/Archive Filtering ---
-function initScheduleFilter() {
-    const items = document.querySelectorAll('.schedule-item[data-date]');
-    if (items.length === 0) return;
-
-    // Get today's date in YYYY-MM-DD format (local time)
-    const now = new Date();
-    const offset = now.getTimezoneOffset();
-    const localNow = new Date(now.getTime() - (offset * 60 * 1000));
-    const todayStr = localNow.toISOString().split('T')[0];
-
-    const isArchivePage = window.location.pathname.includes('archive.html');
-    let visibleCount = 0;
-
-    items.forEach(item => {
-        const itemDate = item.getAttribute('data-date');
-
-        if (isArchivePage) {
-            // Archive Page: Show past events
-            if (itemDate < todayStr) {
-                item.style.display = 'flex';
-                visibleCount++;
-            } else {
-                item.style.display = 'none';
-            }
-        } else {
-            // Schedule Page or Home Preview: Show today and future events
-            if (itemDate >= todayStr) {
-                item.style.display = 'flex';
-                visibleCount++;
-            } else {
-                item.style.display = 'none';
-            }
-        }
-    });
-
-    // Show "No events" message if applicable
-    const noEventsMsg = document.getElementById('no-events');
-    if (noEventsMsg) {
-        noEventsMsg.style.display = visibleCount === 0 ? 'block' : 'none';
-    }
-
-    // --- Dynamic Reservation Form Cleanup ---
-    // Remove past events from the reservation dropdown
-    const eventSelect = document.getElementById('event');
-    if (eventSelect) {
-        const options = Array.from(eventSelect.options);
-        options.forEach(option => {
-            const date = option.getAttribute('data-date');
-            if (date && date < todayStr) {
-                // If it's a past event, hide it or remove it.
-                option.remove();
-            }
-        });
     }
 }
