@@ -573,14 +573,23 @@ img {
 
 .lineup-details {
     display: flex;
-    gap: 2rem;
-    font-size: 0.85rem;
-    color: #888;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.detail-item {
+    display: flex;
+    align-items: baseline;
 }
 
 .lineup-details i {
     color: var(--color-primary);
-    margin-right: 0.5rem;
+    margin-right: 0.8rem;
+    width: 1.2rem;
+    text-align: center;
 }
 
 .lineup-action {
