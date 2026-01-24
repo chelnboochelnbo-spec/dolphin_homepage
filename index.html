@@ -219,6 +219,26 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="month">MONTH / 月</label>
+                    <select id="month" name="month">
+                        <option value="">Select Month</option>
+                        <option value="jan">1月 JANUARY</option>
+                        <option value="feb">2月 FEBRUARY</option>
+                        <option value="mar">3月 MARCH</option>
+                        <option value="apr">4月 APRIL</option>
+                        <option value="may">5月 MAY</option>
+                        <option value="jun">6月 JUNE</option>
+                        <option value="jul">7月 JULY</option>
+                        <option value="aug">8月 AUGUST</option>
+                        <option value="sep">9月 SEPTEMBER</option>
+                        <option value="oct">10月 OCTOBER</option>
+                        <option value="nov">11月 NOVEMBER</option>
+                        <option value="dec">12月 DECEMBER</option>
+                        <option value="other">OTHER</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
                     <label for="event">DATE / 公演日</label>
                     <select id="event" name="event">
                         <option value="" data-month="all">選択してください</option>
@@ -252,10 +272,6 @@
                         <option value="3/12 Live" data-month="mar" data-date="2026-03-12">3/12 スガダイロー Solo Piano Live
                         </option>
                         <option value="Normal" data-month="other">通常営業 (Bar Only)</option>
-                    </select>
-                    <!-- Hidden helpers for logic -->
-                    <select id="month" name="month" style="display:none;">
-                        <option value="all">ALL</option>
                     </select>
                     <input type="hidden" id="date" name="date">
                 </div>

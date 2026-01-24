@@ -80,6 +80,16 @@ function initReservationSystem() {
                 eventSelect.value = "";
             }
         });
+
+        // Auto-select current month and trigger filter
+        const now = new Date();
+        const monthNames = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+        const currentMonth = monthNames[now.getMonth()];
+        // Check if the option exists to avoid errors later in the year if option is missing
+        if (monthSelect.querySelector(`option[value="${currentMonth}"]`)) {
+            monthSelect.value = currentMonth;
+        }
+        monthSelect.dispatchEvent(new Event('change'));
     }
 
     // --- 2. Synchronize Event Date Input ---
