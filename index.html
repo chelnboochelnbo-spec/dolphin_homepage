@@ -257,11 +257,14 @@
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required placeholder="お名前">
                 </div>
-                <!-- Date/Time might be redundant if event is selected, but keeping them allows user to confirm or for normal bar use. 
-                     User didn't ask to remove them, so I'll keep them but maybe simplify or leave as is. -->
+                <div class="form-group">
+                    <label for="tel">Phone Number</label>
+                    <input type="tel" id="tel" name="tel" required placeholder="お電話番号">
+                </div>
+                <!-- Date/Time might be redundant if event is selected, but keeping them allows user to confirm or for normal bar use. -->
                 <div class="form-group">
                     <label for="date">Date</label>
-                    <input type="date" id="date" name="date">
+                    <input type="date" id="date" name="date" required>
                 </div>
                 <div class="form-group">
                     <label for="time">Time</label>

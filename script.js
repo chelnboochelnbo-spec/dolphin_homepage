@@ -98,24 +98,22 @@ function initReservationSystem() {
         e.preventDefault();
 
         const name = document.getElementById('name')?.value || "";
+        const tel = document.getElementById('tel')?.value || "";
         const email = "bardolphinsince2016@gmail.com";
-        const month = monthSelect?.options[monthSelect.selectedIndex]?.text || "";
         const event = eventSelect?.options[eventSelect.selectedIndex]?.text || "";
         const date = dateInput?.value || "";
         const time = document.getElementById('time')?.value || "";
         const people = document.getElementById('people')?.value || "";
 
-        const subject = encodeURIComponent(`【Dolphin予約】${date} ${event} (${name}様)`);
+        const subject = encodeURIComponent(`【Dolphin ライブ予約】${date} ${event}`);
         const body = encodeURIComponent(
-            `以下の内容で予約を承ります。\n\n` +
-            `■ライブ公演: ${event}\n` +
-            `■希望日: ${date}\n` +
-            `■希望時間: ${time}\n` +
-            `■お名前: ${name} 様\n` +
-            `■人数: ${people} 名\n\n` +
-            `※電話番号等の追加情報があれば以下にご記入ください。\n` +
-            `連絡先：\n` +
-            `備考：\n`
+            `以下の内容で予約メールを送信します。\n\n` +
+            `お名前：${name} 様\n` +
+            `人数：${people} 名\n` +
+            `お電話番号：${tel}\n` +
+            `希望日：${date}\n` +
+            `希望時間：${time}\n` +
+            `備考：`
         );
 
         window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
