@@ -150,13 +150,11 @@ function initReservationSystem() {
             const email = "bardolphinsince2016@gmail.com";
             const subject = encodeURIComponent(`【Dolphin ライブ予約】${dateStr} ${artist}`);
             const body = encodeURIComponent(
-                `以下の内容で予約メールを送信します。\n` +
-                `（※必要事項をご記入の上、送信してください）\n\n` +
+                `以下のテンプレートを記入して送信してください。\n\n` +
                 `お名前：\n` +
-                `メール：\n` +
                 `人数：\n` +
                 `お電話番号：\n` +
-                `備考・ご要望：`
+                `備考：`
             );
 
             window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
