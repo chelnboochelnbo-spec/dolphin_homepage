@@ -20,8 +20,8 @@
     <style>
         /* Specific Styles for Schedule Page */
         body {
-            background-color: #111;
-            color: #eee;
+            background-color: #fff;
+            color: #333;
         }
 
         .lineup-month-group {
@@ -38,14 +38,14 @@
             justify-content: center;
             gap: 2rem;
             margin-bottom: 4rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             padding-bottom: 1rem;
         }
 
         .month-link {
             font-family: var(--font-heading);
             font-size: 1.5rem;
-            color: #666;
+            color: #999;
             cursor: pointer;
             transition: color 0.3s;
             text-decoration: none;
@@ -63,7 +63,16 @@
         .page-header {
             padding: 8rem 0 4rem;
             text-align: center;
-            background: linear-gradient(to bottom, #1a1a1a, #111);
+            background: #fff;
+            /* Changed from gradient */
+        }
+
+        .section-title {
+            color: #000;
+        }
+
+        .section-subtitle {
+            color: #666;
         }
 
         .lineup-month-header {
@@ -84,7 +93,7 @@
 
         .lineup-intro {
             font-size: 0.95rem;
-            color: #888;
+            color: #666;
             margin-bottom: 1rem;
             max-width: 600px;
             line-height: 1.6;
@@ -101,8 +110,21 @@
             border-radius: 2px;
         }
 
+        .lineup-artist {
+            color: #000 !important;
+            /* Force black on white */
+        }
+
+        .lineup-details {
+            color: #555 !important;
+        }
+
+        .lineup-date .weekday {
+            color: #555 !important;
+        }
+
         .lineup-price {
-            color: #fff !important;
+            color: #333 !important;
         }
     </style>
 </head>
@@ -134,7 +156,7 @@
         </div>
     </header>
 
-    <main class="container fade-in" style="margin-top: 4rem; background: #111;">
+    <main class="container fade-in" style="margin-top: 4rem; background: #fff;">
 
         <!-- Month Navigation -->
         <nav class="month-nav">
@@ -440,8 +462,8 @@
                 <div class="detail-item"><i class="fas fa-users"></i>講師 : 坪口昌恭</div>
             </div>
             <div style="margin-top: 2rem;">
-                <div class="lineup-price" style="font-size: 1.2rem; margin-bottom: 1rem;">参加費: ¥3,500 (+1drink) / 聴講のみ:
-                    ¥2,500 (+1drink)</div>
+                <div class="lineup-price" style="font-size: 1.2rem; margin-bottom: 1rem;">参加費: ¥3,500 (+1drink)
+                </div>
                 <a href="index.html#reservation" class="lineup-reserve-btn">ONLINE RESERVATION</a>
             </div>
         </section>

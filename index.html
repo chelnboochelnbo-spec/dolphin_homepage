@@ -199,28 +199,29 @@
     </section>
 
     <!-- Reservation Section -->
+    <!-- Reservation Section -->
     <section id="reservation" class="section">
         <div class="container fade-in">
             <div class="section-header">
-                <h2 class="section-title">LIVE RESERVATION</h2>
-                <p class="section-subtitle">ライブのご予約</p>
+                <h2 class="section-title">RESERVATION</h2>
+                <p class="section-subtitle">Join us for the night</p>
             </div>
 
             <form class="reservation-form" id="reserveForm">
                 <div class="form-group">
-                    <label for="month">Month</label>
-                    <select id="month" name="month">
-                        <option value="">月を選択してください (Select Month)</option>
-                        <option value="jan">1月 JANUARY</option>
-                        <option value="feb">2月 FEBRUARY</option>
-                        <option value="mar">3月 MARCH</option>
-                        <option value="other">OTHER</option>
-                    </select>
+                    <label for="name">NAME / お名前</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
                 </div>
+
                 <div class="form-group">
-                    <label for="event">Live Event</label>
+                    <label for="email">EMAIL / メール</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="event">DATE / 公演日</label>
                     <select id="event" name="event">
-                        <option value="" data-month="all">ライブを選択してください (Select Live)</option>
+                        <option value="" data-month="all">選択してください</option>
                         <option value="1/17 Workshop" data-month="jan" data-date="2026-01-17">1/17 荻原亮 Guitar & Ensemble
                             Workshop</option>
                         <option value="1/17 Session" data-month="jan" data-date="2026-01-17">1/17 Saturday Jam Session 2
@@ -252,62 +253,68 @@
                         </option>
                         <option value="Normal" data-month="other">通常営業 (Bar Only)</option>
                     </select>
-                </div>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required placeholder="お名前">
-                </div>
-                <div class="form-group">
-                    <label for="tel">Phone Number</label>
-                    <input type="tel" id="tel" name="tel" required placeholder="お電話番号">
-                </div>
-                <!-- Date/Time might be redundant if event is selected, but keeping them allows user to confirm or for normal bar use. -->
-                <div class="form-group">
-                    <label for="date">Date</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="time">Time</label>
-                    <select id="time" name="time">
-                        <option value="20:00">20:00</option>
-                        <option value="20:30">20:30</option>
-                        <option value="21:00">21:00</option>
-                        <option value="22:00">22:00</option>
+                    <!-- Hidden helpers for logic -->
+                    <select id="month" name="month" style="display:none;">
+                        <option value="all">ALL</option>
                     </select>
+                    <input type="hidden" id="date" name="date">
                 </div>
+
                 <div class="form-group">
-                    <label for="people">Guests</label>
+                    <label for="people">PEOPLE / 人数</label>
                     <select id="people" name="people">
                         <option value="1">1名</option>
                         <option value="2">2名</option>
                         <option value="3">3名</option>
                         <option value="4">4名</option>
-                        <option value="5+">5名以上</option>
+                        <option value="5">5名</option>
+                        <option value="6+">6名以上</option>
                     </select>
                 </div>
-                <button type="submit" class="submit-btn">SEND REQUEST</button>
+
+                <div class="form-group">
+                    <label for="tel">PHONE / お電話番号</label>
+                    <input type="tel" id="tel" name="tel" required placeholder="090-0000-0000">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">MESSAGE / その他ご要望</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">SEND RESERVATION</button>
             </form>
         </div>
     </section>
 
     <!-- Access Section -->
-    <section id="access" class="section bg-footer">
+    <section id="access" class="section">
         <div class="container fade-in">
-            <div class="section-header">
-                <h2 class="section-title">ACCESS</h2>
+            <!-- Map Container (Full Width like image) -->
+            <div class="map-container-large">
+                <iframe width="100%" height="450" frameborder="0" style="border:0"
+                    src="https://maps.google.com/maps?q=石川県金沢市片町2-13-11%20ミリオンビル&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    allowfullscreen></iframe>
             </div>
 
-            <div class="access-wrappeer">
-                <div class="access-info">
-                    <h3 class="shop-name">Jazz & Bar DOLPHIN</h3>
-                    <p class="address">
-                        〒920-0981<br>
-                        石川県金沢市片町2-13-11 ミリオンビル4階
-                    </p>
-                    <div class="map-container">
-                        <iframe width="100%" height="400" frameborder="0" style="border:0"
-                            src="https://maps.google.com/maps?q=石川県金沢市片町2-13-11%20ミリオンビル&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            allowfullscreen></iframe>
+            <div class="access-details">
+                <h3 class="shop-title">Jazz & Bar DOLPHIN</h3>
+                <div class="access-info-list">
+                    <p class="access-item">〒920-0981</p>
+                    <p class="access-item">石川県金沢市片町2-13-11</p>
+                    <p class="access-item">ミリオンビル4階</p>
+
+                    <div class="access-item-row" style="margin-top: 1.5rem;">
+                        <i class="far fa-clock"></i>
+                        <span>Open: 20:00 - 02:00</span>
+                    </div>
+                    <div class="access-item-row">
+                        <span>Closed: Irregular Holidays</span>
+                    </div>
+
+                    <div class="access-item-row" style="margin-top: 1rem;">
+                        <i class="fas fa-phone-alt"></i>
+                        <span class="access-tel">080-3895-0821</span>
                     </div>
                 </div>
             </div>

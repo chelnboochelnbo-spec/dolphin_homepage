@@ -98,7 +98,10 @@ function initReservationSystem() {
         e.preventDefault();
 
         const name = document.getElementById('name')?.value || "";
+        const userEmail = document.getElementById('email')?.value || "";
         const tel = document.getElementById('tel')?.value || "";
+        const message = document.getElementById('message')?.value || "";
+
         const email = "bardolphinsince2016@gmail.com";
         const event = eventSelect?.options[eventSelect.selectedIndex]?.text || "";
         const date = dateInput?.value || "";
@@ -109,11 +112,12 @@ function initReservationSystem() {
         const body = encodeURIComponent(
             `以下の内容で予約メールを送信します。\n\n` +
             `お名前：${name} 様\n` +
+            `メール：${userEmail}\n` +
             `人数：${people} 名\n` +
             `お電話番号：${tel}\n` +
             `希望日：${date}\n` +
-            `希望時間：${time}\n` +
-            `備考：`
+            `希望時間：${time}\n\n` +
+            `その他ご要望：\n${message}`
         );
 
         window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
