@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jazz & Bar DOLPHIN | 金沢・片町のジャズバー</title>
+    <title>Jazz&Bar Dolphin | 金沢片町 ジャズバー</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Lato:wght@300;400&family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Lato:wght@300;400&display=swap"
         rel="stylesheet">
     <!-- Main Style -->
     <link rel="stylesheet" href="style.css">
@@ -17,10 +17,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo_new.png">
+    <!-- Favicon -->
+    <link rel="icon" href="logo_new.png" type="image/png">
 </head>
 
 <body>
 
+    <!-- Opening Animation Overlay -->
+    <div id="opening-overlay">
+        <div class="opening-content">
+            <!-- Logo Image -->
+            <img src="logo_new.png" alt="Dolphin" class="opening-logo-img">
+            <p class="opening-tagline">MUSIC AND CULTURE IN KANAZAWA</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
     <nav class="main-nav">
         <div class="logo">
             <a href="index.html">DOLPHIN</a>
@@ -49,20 +61,12 @@
     </div>
 
     <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-overlay"></div>
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
         <div class="hero-content fade-in">
-            <h1 class="hero-title">JAZZ & BAR DOLPHIN</h1>
-            <p class="hero-tagline">Good Music, Good Drinks, Good Time.</p>
-            <div class="hero-cta">
-                <a href="schedule.html" class="btn btn-primary">VIEW SCHEDULE</a>
-                <a href="#reservation" class="btn btn-outline" style="margin-left: 1rem;">RESERVE NOW</a>
-            </div>
-
-            <div class="scroll-down">
-                <a href="#about">
-                    <span class="mouse"></span>
-                    <span class="arrow"></span>
+            <div class="hero-logo-wrapper">
+                <a href="schedule.html" title="View Monthly Schedule">
+                    <img src="logo_new.png" alt="Jazz & Bar Dolphin" class="main-logo-img">
                 </a>
             </div>
 
@@ -80,20 +84,14 @@
 
             <div class="about-content">
                 <div class="about-description">
-                    <p>Dolphin（ドルフィン）は、<br>
-                        ジャズを軸に音楽と人が自然につながるバーです。<br>
-                        店内にはジャズを中心としたレコードを揃え、<br>
-                        アナログならではの音の温度を大切にしています。</p>
+                    <p>Dolphin（ドルフィン）は、ジャズを軸に音楽と人が自然につながるバーです。<br>
+                        店内にはジャズを中心としたレコードを揃え、アナログならではの音の温度を大切にしています。</p>
 
-                    <p>ウィスキーやジンも幅広く取り揃え、<br>
-                        音楽とともにゆっくりと味わえる一杯をご用意しています。<br>
-                        演奏経験や知識に関係なく、<br>
-                        誰もが自分の距離感で過ごせる空間です。</p>
+                    <p>ウィスキーやジンも幅広く取り揃え、音楽とともにゆっくりと味わえる一杯をご用意しています。<br>
+                        演奏経験や知識に関係なく、誰もが自分の距離感で過ごせる空間です。</p>
 
                     <p>聴く人も、演奏する人も、ただ居る人も。<br>
-                        音楽とお酒を通して、<br>
-                        ジャズを「好き」でいられる時間と場所、<br>
-                        それがドルフィンです。</p>
+                        音楽とお酒を通して、ジャズを「好き」でいられる時間と場所、それがドルフィンです。</p>
                 </div>
             </div>
         </div>
@@ -110,7 +108,6 @@
             <!-- Top 3 Upcoming Schedule Items -->
             <div class="lineup-list" style="margin-bottom: 3rem;">
 
-                <!-- Example Preview 1 -->
                 <article class="lineup-item" data-date="2026-01-29">
                     <div class="lineup-date">2026 1.29<span class="weekday">thu.</span></div>
                     <div class="lineup-body">
@@ -138,33 +135,66 @@
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="section section-dark">
+    <section id="menu" class="section bg-accent">
         <div class="container fade-in">
             <div class="section-header">
-                <h2 class="section-title">DRINK MENU</h2>
-                <p class="section-subtitle">A Curated Collection</p>
+                <h2 class="section-title">BAR SNACKS</h2>
+                <p class="section-subtitle">お酒をより豊かに愉しむ、厳選された一皿</p>
             </div>
 
-            <div class="menu-grid">
-                <div class="menu-category">
-                    <h3>WHISKY</h3>
+            <div class="menu-wrapper">
+                <div class="menu-column">
+                    <h3 class="menu-cat-title">SELECT SNACKS</h3>
                     <ul class="menu-list">
-                        <li><span>Scotch Whisky</span> <span>¥800 ~</span></li>
-                        <li><span>Bourbon Whisky</span> <span>¥800 ~</span></li>
-                        <li><span>Japanese Whisky</span> <span>¥1,000 ~</span></li>
+                        <li>
+                            <span class="item-name">Mixed Nuts</span>
+                            <span class="item-desc">香ばしくローストされたミックスナッツ</span>
+                            <span class="item-price">¥600</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Assorted Cheese</span>
+                            <span class="item-desc">お酒に合わせて選んだ3種のチーズ</span>
+                            <span class="item-price">¥600</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Dried Fruit</span>
+                            <span class="item-desc">甘みを凝縮したドライフルーツの盛り合わせ</span>
+                            <span class="item-price">¥600</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Beef Jerky</span>
+                            <span class="item-desc">スモーキーなアクセントが効いたビーフジャーキー</span>
+                            <span class="item-price">¥800</span>
+                        </li>
                     </ul>
                 </div>
-                <div class="menu-category">
-                    <h3>OTHERS</h3>
+
+                <div class="menu-column">
+                    <h3 class="menu-cat-title">BAR CHOICE</h3>
                     <ul class="menu-list">
-                        <li><span>Craft Gin</span> <span>¥900 ~</span></li>
-                        <li><span>Craft Beer</span> <span>¥800 ~</span></li>
-                        <li><span>Soft Drinks</span> <span>¥600 ~</span></li>
+                        <li>
+                            <span class="item-name">Bitter Chocolate</span>
+                            <span class="item-desc">ウィスキーとの相性抜群。カカオの深み</span>
+                            <span class="item-price">¥600</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Pickles</span>
+                            <span class="item-desc">自家製ならではの、爽やかな酸味</span>
+                            <span class="item-price">¥600</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Olives</span>
+                            <span class="item-desc">ハーブの香りを纏わせたグリーンオリーブ</span>
+                            <span class="item-price">¥600</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Garlic Toast</span>
+                            <span class="item-desc">カリッと焼き上げた香ばしいトースト</span>
+                            <span class="item-price">¥600</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 2rem; color: #888;">* Table Charge: ¥500 (Cover charge for live
-                performance varies)</p>
         </div>
     </section>
 
@@ -172,109 +202,143 @@
     <section id="reservation" class="section">
         <div class="container fade-in">
             <div class="section-header">
-                <h2 class="section-title">RESERVATION</h2>
-                <p class="section-subtitle">Join us for the night</p>
+                <h2 class="section-title">LIVE RESERVATION</h2>
+                <p class="section-subtitle">ライブのご予約</p>
             </div>
 
-            <div class="reservation-form-container">
-                <form id="res-form" class="res-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="res-name">NAME / お名前</label>
-                            <input type="text" id="res-name" name="name" required placeholder="John Doe">
-                        </div>
-                        <div class="form-group">
-                            <label for="res-email">EMAIL / メール</label>
-                            <input type="email" id="res-email" name="email" required placeholder="john@example.com">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="res-date">DATE / 公演日</label>
-                            <select id="res-date" name="date" required>
-                                <option value="" disabled selected>選択してください</option>
-                                <option value="2026-01-29">2026.1.29 - The Third Session</option>
-                                <option value="2026-02-05">2026.2.05 - Open Groove Jam Session</option>
-                                <option value="2026-02-07">2026.2.07 - Saturday Jam Session 1</option>
-                                <option value="2026-02-12">2026.2.12 - The Third Session 1</option>
-                                <option value="2026-02-19">2026.2.19 - Monthly Voices</option>
-                                <option value="2026-02-20">2026.2.20 - Suga Takashi Northland Tour</option>
-                                <option value="2026-02-21">2026.2.21 - Saturday Jam Session 2</option>
-                                <option value="2026-02-22">2026.2.22 - Tomo Nakayama Special Birthday Session</option>
-                                <option value="2026-02-23">2026.2.23 - Special Workshop</option>
-                                <option value="2026-02-26">2026.2.26 - The Third Session 2</option>
-                                <option value="2026-03-12">2026.3.12 - Suga Daiiro Solo</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="res-people">PEOPLE / 人数</label>
-                            <input type="number" id="res-people" name="people" min="1" max="10" value="1" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="res-message">MESSAGE / その他ご要望</label>
-                        <textarea id="res-message" name="message" rows="4"
-                            placeholder="Any special requests?"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">SEND RESERVATION</button>
-                    <div id="form-status" class="form-status"></div>
-                </form>
-            </div>
+            <form class="reservation-form" id="reserveForm">
+                <div class="form-group">
+                    <label for="month">Month</label>
+                    <select id="month" name="month">
+                        <option value="">月を選択してください (Select Month)</option>
+                        <option value="jan">1月 JANUARY</option>
+                        <option value="feb">2月 FEBRUARY</option>
+                        <option value="mar">3月 MARCH</option>
+                        <option value="other">OTHER</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="event">Live Event</label>
+                    <select id="event" name="event">
+                        <option value="" data-month="all">ライブを選択してください (Select Live)</option>
+                        <option value="1/17 Workshop" data-month="jan" data-date="2026-01-17">1/17 荻原亮 Guitar & Ensemble
+                            Workshop</option>
+                        <option value="1/17 Session" data-month="jan" data-date="2026-01-17">1/17 Saturday Jam Session 2
+                        </option>
+                        <option value="1/18 Session" data-month="jan" data-date="2026-01-18">1/18 荻原亮 Special Session
+                        </option>
+                        <option value="1/21 Session" data-month="jan" data-date="2026-01-21">1/21 Monthly Voices
+                        </option>
+                        <option value="1/29 Session" data-month="jan" data-date="2026-01-29">1/29 The Third Session
+                        </option>
+                        <option value="2/5 Session" data-month="feb" data-date="2026-02-05">2/5 Open Groove Jam Session
+                        </option>
+                        <option value="2/7 Session" data-month="feb" data-date="2026-02-07">2/7 Saturday Jam Session1
+                        </option>
+                        <option value="2/12 Session" data-month="feb" data-date="2026-02-12">2/12 The Third Session
+                        </option>
+                        <option value="2/19 Session" data-month="feb" data-date="2026-02-19">2/19 Monthly Voices 〜Vocal
+                            Session〜</option>
+                        <option value="2/20 Live" data-month="feb" data-date="2026-02-20">2/20 菅原高志北陸Tour2026</option>
+                        <option value="2/21 Session" data-month="feb" data-date="2026-02-21">2/21 Saturday Jam Session2
+                        </option>
+                        <option value="2/22 Birthday" data-month="feb" data-date="2026-02-22">2/22 Tomo Nakayama
+                            Birthday Session</option>
+                        <option value="2/23 Workshop" data-month="feb" data-date="2026-02-23">2/23 Special Workshop
+                            “Bebop to Nu-Jazz”</option>
+                        <option value="2/26 Session" data-month="feb" data-date="2026-02-26">2/26 The Third Session
+                        </option>
+                        <option value="3/12 Live" data-month="mar" data-date="2026-03-12">3/12 スガダイロー Solo Piano Live
+                        </option>
+                        <option value="Normal" data-month="other">通常営業 (Bar Only)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="お名前">
+                </div>
+                <!-- Date/Time might be redundant if event is selected, but keeping them allows user to confirm or for normal bar use. 
+                     User didn't ask to remove them, so I'll keep them but maybe simplify or leave as is. -->
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <select id="time" name="time">
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                        <option value="22:00">22:00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="people">Guests</label>
+                    <select id="people" name="people">
+                        <option value="1">1名</option>
+                        <option value="2">2名</option>
+                        <option value="3">3名</option>
+                        <option value="4">4名</option>
+                        <option value="5+">5名以上</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">SEND REQUEST</button>
+            </form>
         </div>
     </section>
 
     <!-- Access Section -->
-    <section id="access" class="section section-dark">
+    <section id="access" class="section bg-footer">
         <div class="container fade-in">
             <div class="section-header">
                 <h2 class="section-title">ACCESS</h2>
-                <p class="section-subtitle">Find us in Katamachi</p>
             </div>
 
-            <div class="access-grid">
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.620021674311!2d136.6508!3d36.56!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff83307b226066d%3A0xe4c424bc306c8270!2sDolphin!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
-                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
-                </div>
-                <div class="address-card">
-                    <h3>Jazz & Bar DOLPHIN</h3>
-                    <p class="address-text">〒920-0981<br>石川県金沢市片町2-13-11<br>ミリオンビル4階</p>
-                    <div class="access-info">
-                        <div class="info-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <p>Open: 20:00 - 02:00</p>
-                                <p>Closed: Irregular Holidays</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <p>080-3895-0821</p>
-                            </div>
-                        </div>
+            <div class="access-wrappeer">
+                <div class="access-info">
+                    <h3 class="shop-name">Jazz & Bar DOLPHIN</h3>
+                    <p class="address">
+                        〒920-0981<br>
+                        石川県金沢市片町2-13-11 ミリオンビル4階
+                    </p>
+                    <div class="map-container">
+                        <iframe width="100%" height="400" frameborder="0" style="border:0"
+                            src="https://maps.google.com/maps?q=石川県金沢市片町2-13-11%20ミリオンビル&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <div class="social-links">
-                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                </div>
-                <div class="footer-legal-links">
-                    <a href="legal.html">特定商取引法に基づく表記</a>
-                    <a href="privacy.html">PRIVACY POLICY</a>
-                    <a href="disclaimer.html">免責事項</a>
-                </div>
-                <p class="copyright">&copy; Jazz&Bar Dolphin</p>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4 class="footer-heading">ACCESS</h4>
+                <p class="footer-text">〒920-0981<br>石川県金沢市片町2-13-11<br>ミリオンビル4階</p>
+                <a href="https://goo.gl/maps/dSt7S6Kz2mH2" target="_blank" class="footer-link-sub">Google Maps</a>
             </div>
+            <div class="footer-column">
+                <h4 class="footer-heading">SUPPORT DESK</h4>
+                <p class="footer-text">ご予約・お問い合わせ</p>
+                <p class="footer-tel">080-3895-0821</p>
+                <p class="footer-text">Reception: 20:00 - 02:00</p>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-heading">LEGAL</h4>
+                <ul class="footer-links-list">
+                    <li><a href="legal.html">特定商取引法に基づく表記</a></li>
+                    <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                    <li><a href="disclaimer.html">免責事項</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links-footer">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p class="copyright">&copy; Jazz&Bar Dolphin</p>
         </div>
     </footer>
 

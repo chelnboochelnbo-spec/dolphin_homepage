@@ -121,9 +121,9 @@ function initReservationSystem() {
         window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
     });
 
-    // --- 4. Global Link Handling (Teaser Buttons etc.) ---
+    // --- 4. Global Link Handling (mailto Redesign) ---
     document.addEventListener('click', (e) => {
-        const btn = e.target.closest('.lineup-reserve-btn, .reserve-btn, a[href*="reservation"]');
+        const btn = e.target.closest('.lineup-reserve-btn, .reserve-btn');
         if (!btn) return;
 
         // If it's the full lineup button, don't intercept
@@ -135,28 +135,17 @@ function initReservationSystem() {
             const dateStr = article.dataset.date || "";
             const artist = article.querySelector('.lineup-artist, .schedule-artist')?.innerText.trim() || "";
 
-            // Scroll and Fill
-            const targetForm = document.getElementById('reservation');
-            if (targetForm) {
-                targetForm.scrollIntoView({ behavior: 'smooth' });
+            const email = "bardolphinsince2016@gmail.com";
+            const subject = encodeURIComponent(`【Dolphin ライブ予約】${dateStr} ${artist}`);
+            const body = encodeURIComponent(
+                `以下のテンプレートを記入して送信してください。\n\n` +
+                `お名前：\n` +
+                `人数：\n` +
+                `お電話番号：\n` +
+                `備考：`
+            );
 
-                if (dateInput) dateInput.value = dateStr;
-
-                // Try to auto-select month and event if matched
-                if (dateStr) {
-                    const monthKey = dateStr.split('-')[1]; // YYYY-MM-DD -> MM
-                    const monthMap = { "01": "jan", "02": "feb", "03": "mar" };
-                    if (monthSelect) {
-                        monthSelect.value = monthMap[monthKey] || "";
-                        monthSelect.dispatchEvent(new Event('change'));
-                    }
-
-                    if (eventSelect) {
-                        const opt = [...eventSelect.options].find(o => o.dataset.date === dateStr);
-                        if (opt) eventSelect.value = opt.value;
-                    }
-                }
-            }
+            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
         }
     });
 }

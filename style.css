@@ -886,13 +886,13 @@ footer li {
    ========================================= */
 @media (max-width: 768px) {
     .logo {
-        display: none;
+        display: block;
+        font-size: 1.1rem;
     }
 
     .main-nav {
-        padding: 0 1.2rem;
-        justify-content: flex-end;
-        /* Push menu toggle to the right */
+        padding: 0 1.5rem;
+        justify-content: space-between;
     }
 
     .menu-toggle {
@@ -982,11 +982,30 @@ footer li {
 /* Month Navigation */
 .month-nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    /* Standard for scrolling */
     gap: 1.5rem;
-    margin: 3rem 0;
+    margin: 2rem 0;
     border-bottom: 1px solid #333;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.month-nav::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.month-nav {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .month-link {

@@ -19,6 +19,11 @@
     <link rel="icon" type="image/png" href="logo_new.png">
     <style>
         /* Specific Styles for Schedule Page */
+        body {
+            background-color: #111;
+            color: #eee;
+        }
+
         .lineup-month-group {
             margin-bottom: 6rem;
             display: none;
@@ -52,7 +57,7 @@
         }
 
         .month-link:hover {
-            color: #fff;
+            color: var(--color-primary);
         }
 
         .page-header {
@@ -95,6 +100,10 @@
             margin-bottom: 0.5rem;
             border-radius: 2px;
         }
+
+        .lineup-price {
+            color: #fff !important;
+        }
     </style>
 </head>
 
@@ -125,18 +134,27 @@
         </div>
     </header>
 
-    <main class="container fade-in" style="margin-top: 4rem;">
+    <main class="container fade-in" style="margin-top: 4rem; background: #111;">
 
         <!-- Month Navigation -->
         <nav class="month-nav">
-            <a onclick="showMonth('jan')" class="month-link active">JAN</a>
-            <a onclick="showMonth('feb')" class="month-link">FEB</a>
-            <a onclick="showMonth('mar')" class="month-link">MAR</a>
+            <a data-month="jan" class="month-link">JAN</a>
+            <a data-month="feb" class="month-link">FEB</a>
+            <a data-month="mar" class="month-link">MAR</a>
+            <a data-month="apr" class="month-link">APR</a>
+            <a data-month="may" class="month-link">MAY</a>
+            <a data-month="jun" class="month-link">JUN</a>
+            <a data-month="jul" class="month-link">JUL</a>
+            <a data-month="aug" class="month-link">AUG</a>
+            <a data-month="sep" class="month-link">SEP</a>
+            <a data-month="oct" class="month-link">OCT</a>
+            <a data-month="nov" class="month-link">NOV</a>
+            <a data-month="dec" class="month-link">DEC</a>
         </nav>
 
         <div class="lineup-wrapper">
             <!-- JAN -->
-            <section id="jan" class="lineup-month-group active">
+            <section id="jan" class="lineup-month-group">
                 <h2 class="lineup-month-header">1<span>JANUARY 2026</span></h2>
                 <div class="lineup-list">
                     <article class="lineup-item" data-date="2026-01-29">
@@ -353,6 +371,60 @@
                 </div>
             </section>
 
+            <!-- APR -->
+            <section id="apr" class="lineup-month-group">
+                <h2 class="lineup-month-header">4<span>APRIL 2026</span></h2>
+                <div class="lineup-list"></div>
+            </section>
+
+            <!-- MAY -->
+            <section id="may" class="lineup-month-group">
+                <h2 class="lineup-month-header">5<span>MAY 2026</span></h2>
+                <div class="lineup-list"></div>
+            </section>
+
+            <!-- JUN -->
+            <section id="jun" class="lineup-month-group">
+                <h2 class="lineup-month-header">6<span>JUNE 2026</span></h2>
+                <div class="lineup-list"></div>
+            </section>
+
+            <!-- JUL -->
+            <section id="jul" class="lineup-month-group">
+                <h2 class="lineup-month-header">7<span>JULY 2026</span></h2>
+                <div class="lineup-list"></div>
+            </section>
+
+            <!-- AUG -->
+            <section id="aug" class="lineup-month-group">
+                <h2 class="lineup-month-header">8<span>AUGUST 2026</span></h2>
+                <div class="lineup-list"></div>
+            </section>
+
+            <!-- SEP -->
+            <section id="sep" class="lineup-month-group">
+                <h2 class="lineup-month-header">9<span>SEPTEMBER 2026</span></h2>
+                <div class="lineup-list"></div>
+            </section>
+
+            <!-- OCT -->
+            <section id="oct" class="lineup-month-group">
+                <h2 class="lineup-month-header">10<span>OCTOBER 2026</span></h2>
+                <div class="lineup-list"></div>
+            </section>
+
+            <!-- NOV -->
+            <section id="nov" class="lineup-month-group">
+                <h2 class="lineup-month-header">11<span>NOVEMBER 2026</span></h2>
+                <div class="lineup-list"></div>
+            </section>
+
+            <!-- DEC -->
+            <section id="dec" class="lineup-month-group">
+                <h2 class="lineup-month-header">12<span>DECEMBER 2026</span></h2>
+                <div class="lineup-list"></div>
+            </section>
+
         </div>
 
         <!-- Special Workshop Section (Pinned) -->
@@ -382,7 +454,7 @@
                 <div class="footer-column">
                     <h4 class="footer-heading">ACCESS</h4>
                     <p class="footer-text">〒920-0981<br>石川県金沢市片町2-13-11<br>ミリオンビル4階</p>
-                    <a href="https://goo.gl/maps/..." target="_blank" class="footer-link-sub">Google Maps</a>
+                    <a href="https://goo.gl/maps/dSt7S6Kz2mH2" target="_blank" class="footer-link-sub">Google Maps</a>
                 </div>
                 <div class="footer-column">
                     <h4 class="footer-heading">SUPPORT DESK</h4>
@@ -410,18 +482,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Simple Tab Switcher
-        function showMonth(monthId) {
-            // Hide all
-            document.querySelectorAll('.lineup-month-group').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.month-link').forEach(el => el.classList.remove('active'));
-
-            // Show Target
-            document.getElementById(monthId).classList.add('active');
-            event.target.classList.add('active');
-        }
-    </script>
 </body>
 
 </html>
