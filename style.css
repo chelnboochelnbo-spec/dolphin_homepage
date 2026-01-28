@@ -532,10 +532,10 @@ img {
 }
 
 .lineup-flyer-thumb {
-    max-width: 200px;
-    width: auto;
-    height: auto;
-    background-color: transparent;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    background-color: #000;
     border: 1px solid #333;
     cursor: pointer;
     transition: 0.3s;
