@@ -534,7 +534,7 @@ img {
 .lineup-flyer-thumb {
     width: 200px;
     height: 250px;
-    object-fit: cover;
+    object-fit: contain;
     background-color: #000;
     border: 1px solid #333;
     cursor: pointer;
