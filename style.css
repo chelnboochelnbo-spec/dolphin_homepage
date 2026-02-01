@@ -588,14 +588,14 @@ img {
 
 .lineup-artist {
     font-family: var(--font-heading);
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
     font-style: italic;
     color: #fff;
-    line-height: 1.3;
+    line-height: 1.2;
     white-space: normal;
     word-break: break-all;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
 }
 
@@ -610,10 +610,11 @@ img {
 .lineup-details {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.8rem;
     font-size: 1rem;
     color: #ddd;
     line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
 .detail-item {
@@ -629,27 +630,25 @@ img {
 }
 
 .lineup-action {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 1rem;
-    min-width: 220px;
+    display: none;
 }
 
 .lineup-price {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #333;
+    margin-top: 0.5rem;
 }
 
 .lineup-reserve-btn {
-    padding: 0.8rem 2rem;
+    display: inline-block;
+    width: fit-content;
+    padding: 1rem 3rem;
     background: #000;
     color: #fff;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     transition: 0.3s;
@@ -1028,6 +1027,7 @@ footer li {
     }
 
     .lineup-reserve-btn {
+        display: block;
         width: 100%;
         text-align: center;
         padding: 0.8rem;
