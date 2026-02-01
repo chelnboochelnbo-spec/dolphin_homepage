@@ -514,7 +514,7 @@ img {
 .lineup-item {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 1.5rem;
     padding: 2.5rem 0;
     border-bottom: 1px solid #222;
     transition: background 0.3s;
@@ -526,7 +526,7 @@ img {
 
 .lineup-body {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
     flex: 1;
 }
@@ -548,7 +548,7 @@ img {
 }
 
 .lineup-date {
-    min-width: 180px;
+    min-width: 140px;
     font-family: var(--font-body);
     font-size: 1.1rem;
     font-weight: 700;
