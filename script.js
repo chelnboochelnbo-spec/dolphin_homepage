@@ -243,22 +243,18 @@ function initScheduleFilter() {
         }
     }
 
-    // --- 3. 月別タブの自動選択 (当月) ---
-    const monthNames = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
-    const currentMonthId = monthNames[currentMonthNum - 1];
-    const currentTab = document.querySelector(`.month-link[data-month="${currentMonthId}"]`);
+    // --- Empty Month Message & Dynamic Button Visibility ---
+    let firstAvailableMonthId = null;
 
-    if (currentTab) {
-        setActiveTab(currentMonthId);
-    } else if (filterBtns.length > 0) {
-        // Fallback to first tab if current month not found
-        setActiveTab(filterBtns[0].dataset.month);
-    }
-
-    // --- Empty Month Message ---
     monthGroups.forEach(group => {
         const visibleItems = group.querySelectorAll('.lineup-item:not(.past-event)');
+        const monthId = group.id;
+        const btn = document.querySelector(`.month-link[data-month="${monthId}"]`);
+
         if (visibleItems.length === 0) {
+            // Hide the button if no future events
+            if (btn) btn.style.display = 'none';
+
             const list = group.querySelector('.lineup-list');
             if (list && !list.querySelector('.no-events-msg')) {
                 const msg = document.createElement('p');
@@ -269,6 +265,29 @@ function initScheduleFilter() {
                 msg.innerText = '公演情報は現在準備中です。';
                 list.appendChild(msg);
             }
+        } else {
+            // Show the button and track the first available month
+            if (btn) btn.style.display = 'inline-block';
+            if (!firstAvailableMonthId) {
+                firstAvailableMonthId = monthId;
+            }
         }
     });
+
+    // --- 3. 月別タブの自動選択 (当月または有効な最初の月) ---
+    const monthNames = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+    const currentMonthId = monthNames[currentMonthNum - 1];
+
+    // Check if current month has events, if not, use the first available month
+    const currentMonthGroup = document.getElementById(currentMonthId);
+    const currentMonthHasEvents = currentMonthGroup && currentMonthGroup.querySelectorAll('.lineup-item:not(.past-event)').length > 0;
+
+    if (currentMonthHasEvents) {
+        setActiveTab(currentMonthId);
+    } else if (firstAvailableMonthId) {
+        setActiveTab(firstAvailableMonthId);
+    } else if (filterBtns.length > 0) {
+        // Fallback to first tab if nothing else found (shouldn't happen with normal data)
+        setActiveTab(filterBtns[0].dataset.month);
+    }
 }
