@@ -12,6 +12,7 @@ on:
       - 'event-types.css'
       - 'automation/render_events.py'
       - 'automation/render_artists.py'
+      - 'automation/clean_generated.py'
       - 'automation/event.schema.json'
       - 'automation/artist.schema.json'
       - '.github/workflows/event-pipeline.yml'
@@ -26,6 +27,7 @@ on:
       - 'event-types.css'
       - 'automation/render_events.py'
       - 'automation/render_artists.py'
+      - 'automation/clean_generated.py'
       - 'automation/event.schema.json'
       - 'automation/artist.schema.json'
       - '.github/workflows/event-pipeline.yml'
@@ -50,6 +52,9 @@ jobs:
 
       - name: Render artists archive and linked event pages
         run: python automation/render_artists.py
+
+      - name: Normalize generated markup
+        run: python automation/clean_generated.py
 
       - name: Validate rendered diff
         run: git diff --check
