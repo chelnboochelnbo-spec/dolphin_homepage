@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "timezone": "Asia/Tokyo",
   "website": {
     "production_branch": "main",
@@ -7,12 +7,21 @@
     "home_schedule_file": "index.html",
     "full_schedule_file": "schedule.html",
     "archive_file": "archive.html",
+    "archive_route": "/archive/",
+    "archive_legacy_route": "/archive.html",
     "artist_data_file": "data/artists.json",
     "event_data_file": "data/events.json",
     "artist_route": "/artists/",
     "event_route": "/events/",
     "flyer_directory": "assets/flyers",
     "legacy_flyer_directory": "/"
+  },
+  "event_lifecycle": {
+    "source_of_truth": "data/events.json",
+    "schedule_rule": "event end_date (or date) is today or later in Asia/Tokyo",
+    "archive_rule": "event end_date (or date) is earlier than today in Asia/Tokyo",
+    "archive_copy_data": false,
+    "daily_rebuild_jst": "03:30"
   },
   "flyer": {
     "modes": ["canva_ai", "human"],
@@ -39,6 +48,7 @@
     "require_flyer_before_social_schedule": true,
     "require_event_validation": true,
     "never_fabricate_artist_profile_or_external_links": true,
+    "never_generate_missing_archive_photos": true,
     "deduplicate_artists_by_id_and_name": true
   }
 }
