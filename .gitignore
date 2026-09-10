@@ -1,0 +1,58 @@
+# =============================================
+# DOLPHIN Homepage - .gitignore
+# =============================================
+
+# --- 秘密情報・環境変数 ---
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# --- OS生成ファイル ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# --- エディタ設定 ---
+.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Node.js（将来のビルド環境用） ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- ビルド成果物（将来用） ---
+dist/
+build/
+.cache/
+
+# --- 一時ファイル ---
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# --- ログファイル ---
+*.log
+
+# --- PowerShell一時ファイル ---
+# crop_image.ps1 はリポジトリに含めるが、実行結果は除外
+*.ps1.tmp

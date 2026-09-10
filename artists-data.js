@@ -1,0 +1,311 @@
+﻿/**
+ * DOLPHIN アーティストデータ
+ * ============================================================
+ * このファイルを編集することで、ARTISTSページが自動的に更新されます。
+ *
+ * 【新しいアーティストを追加する場合】
+ * 配列の末尾に新しいオブジェクトを追加してください。
+ *
+ * 【既存アーティストに出演履歴を追加する場合】
+ * 該当アーティストの appearances 配列に追加してください。
+ *
+ * 【フィールド説明】
+ * id             : URLに使用するスラッグ（半角英数・ハイフンのみ）
+ * artist_name    : アーティスト名（日本語）
+ * artist_name_en : アーティスト名（英語・ローマ字）
+ * instrument     : 楽器（Piano / Guitar / Bass / Drums / Vocal / Sax / Trumpet / Other）
+ * photo          : 写真ファイルパス（artists/フォルダ内に配置）。なければ "" で OK
+ * profile        : プロフィール文（空欄可）
+ * website        : 公式サイトURL（空欄可）
+ * instagram      : InstagramプロフィールURL（空欄可）
+ * youtube        : YouTubeチャンネルURL（空欄可）
+ * appearances    : 出演履歴
+ *   - date       : 日付（YYYY-MM-DD形式）
+ *   - event_title: イベント名
+ *   - event_url  : 詳細ページURL（空欄可）
+ */
+
+const ARTISTS_DATA = [
+
+  // Bass
+  {
+    id: "tomo-nakayama",
+    artist_name: "中山とも",
+    artist_name_en: "Tomo Nakayama",
+    instrument: "Bass",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-09-17", event_title: "Monthly Voices 〜Vocal Session〜", event_url: "" },
+      { date: "2026-08-20", event_title: "Monthly Voices 〜Vocal Session〜", event_url: "" },
+      { date: "2026-07-16", event_title: "Monthly Voices", event_url: "" },
+      { date: "2026-06-18", event_title: "Monthly Voices", event_url: "" },
+      { date: "2026-05-21", event_title: "Monthly Voices", event_url: "" },
+      { date: "2026-04-16", event_title: "Monthly Voices", event_url: "" },
+      { date: "2026-03-19", event_title: "Monthly Voices 〜Vocal Session〜", event_url: "" },
+      { date: "2026-02-22", event_title: "Tomo Nakayama Birthday Session", event_url: "" },
+      { date: "2026-02-19", event_title: "Monthly Voices 〜Vocal Session〜", event_url: "" },
+      { date: "2026-01-21", event_title: "Monthly Voices", event_url: "" }
+    ]
+  },
+
+  // Piano
+  {
+    id: "kaoru-kurokawa",
+    artist_name: "黒川薫",
+    artist_name_en: "Kaoru Kurokawa",
+    instrument: "Piano",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-09-17", event_title: "Monthly Voices 〜Vocal Session〜", event_url: "" },
+      { date: "2026-08-20", event_title: "Monthly Voices 〜Vocal Session〜", event_url: "" },
+      { date: "2026-07-16", event_title: "Monthly Voices", event_url: "" },
+      { date: "2026-06-18", event_title: "Monthly Voices", event_url: "" },
+      { date: "2026-05-21", event_title: "Monthly Voices", event_url: "" },
+      { date: "2026-04-16", event_title: "Monthly Voices", event_url: "" },
+      { date: "2026-03-19", event_title: "Monthly Voices 〜Vocal Session〜", event_url: "" },
+      { date: "2026-02-19", event_title: "Monthly Voices 〜Vocal Session〜", event_url: "" },
+      { date: "2026-01-21", event_title: "Monthly Voices", event_url: "" }
+    ]
+  },
+
+  {
+    id: "sugadairo",
+    artist_name: "スガダイロー",
+    artist_name_en: "Sugadairo",
+    instrument: "Piano",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-03-12", event_title: "スガダイロー Solo Piano Live", event_url: "" }
+    ]
+  },
+
+  {
+    id: "mikiko-nagami",
+    artist_name: "永武幹子",
+    artist_name_en: "Mikiko Nagami",
+    instrument: "Piano",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-03-29", event_title: "永武幹子 Special Live & Session", event_url: "" }
+    ]
+  },
+
+  {
+    id: "akemi-uogashi",
+    artist_name: "魚返明未",
+    artist_name_en: "Akemi Uogashi",
+    instrument: "Piano",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-07-11", event_title: "魚返明未 Live & Session", event_url: "" },
+      { date: "2026-07-10", event_title: "魚返明未 Solo & Duo", event_url: "" }
+    ]
+  },
+
+  {
+    id: "jun-furuya",
+    artist_name: "古谷淳",
+    artist_name_en: "Jun Furuya",
+    instrument: "Piano",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-04-24", event_title: "古谷淳トリオ", event_url: "" }
+    ]
+  },
+
+  {
+    id: "aaron-choulai",
+    artist_name: "Aaron Choulai",
+    artist_name_en: "Aaron Choulai",
+    instrument: "Piano",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-05-04", event_title: "Aaron Choulai Piano Solo Set", event_url: "" }
+    ]
+  },
+
+  // Drums
+  {
+    id: "takuya-nagami",
+    artist_name: "永見拓也",
+    artist_name_en: "Takuya Nagami",
+    instrument: "Drums",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-08-22", event_title: "永見拓也 26th Birthday Live & Session", event_url: "" },
+      { date: "2026-09-17", event_title: "Monthly Voices 〜Vocal Session〜", event_url: "" },
+      { date: "2026-08-20", event_title: "Monthly Voices 〜Vocal Session〜", event_url: "" },
+      { date: "2026-07-16", event_title: "Monthly Voices", event_url: "" },
+      { date: "2026-06-18", event_title: "Monthly Voices", event_url: "" },
+      { date: "2026-05-21", event_title: "Monthly Voices", event_url: "" },
+      { date: "2026-04-16", event_title: "Monthly Voices", event_url: "" },
+      { date: "2026-03-19", event_title: "Monthly Voices 〜Vocal Session〜", event_url: "" },
+      { date: "2026-02-19", event_title: "Monthly Voices 〜Vocal Session〜", event_url: "" },
+      { date: "2026-01-21", event_title: "Monthly Voices", event_url: "" }
+    ]
+  },
+
+  // Guitar
+  {
+    id: "masahide-haneda",
+    artist_name: "羽田正英",
+    artist_name_en: "Masahide Haneda",
+    instrument: "Guitar",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-09-03", event_title: "Open Groove Night Jam Session", event_url: "" },
+      { date: "2026-08-06", event_title: "Open Groove Night Jam Session", event_url: "" },
+      { date: "2026-07-02", event_title: "Open Groove Night Jam Session", event_url: "" },
+      { date: "2026-06-04", event_title: "Open Groove Night Jam Session", event_url: "" },
+      { date: "2026-05-07", event_title: "Open Groove Night Jam Session", event_url: "" },
+      { date: "2026-04-02", event_title: "Open Groove Night Jam Session", event_url: "" },
+      { date: "2026-03-05", event_title: "Open Groove Night Jam Session", event_url: "" },
+      { date: "2026-02-05", event_title: "Open Groove Night Jam Session", event_url: "" }
+    ]
+  },
+
+  {
+    id: "ryo-ogihara",
+    artist_name: "荻原亮",
+    artist_name_en: "Ryo Ogihara",
+    instrument: "Guitar",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-01-18", event_title: "荻原亮 Special Session", event_url: "" },
+      { date: "2026-01-17", event_title: "荻原亮 Guitar & Ensemble Workshop", event_url: "" }
+    ]
+  },
+
+  // Vocal
+  {
+    id: "mikiko",
+    artist_name: "MIKIKO",
+    artist_name_en: "MIKIKO",
+    instrument: "Vocal",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-11-03", event_title: "MIKIKO & GRIGORIS TRIO JAPAN TOUR 2026", event_url: "" }
+    ]
+  },
+
+  // Other
+  {
+    id: "takashi-sugawara",
+    artist_name: "菅原高志",
+    artist_name_en: "Takashi Sugawara",
+    instrument: "Other",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-02-20", event_title: "菅原高志 北陸Tour2026", event_url: "" }
+    ]
+  },
+
+  {
+    id: "mikio-kawashima",
+    artist_name: "川嶋幹男",
+    artist_name_en: "Mikio Kawashima",
+    instrument: "Other",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-05-30", event_title: "Mikio Kawashima Birthday Live & Session", event_url: "" }
+    ]
+  },
+
+  {
+    id: "taiko-kikuchi",
+    artist_name: "菊池太光",
+    artist_name_en: "Taiko Kikuchi",
+    instrument: "Other",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-08-07", event_title: "菊池太光 Live & Session", event_url: "" }
+    ]
+  },
+
+  {
+    id: "shuma-midorikawa",
+    artist_name: "緑川柊麻",
+    artist_name_en: "Shuma Midorikawa",
+    instrument: "Other",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-08-21", event_title: "緑川柊麻 Quartet", event_url: "" }
+    ]
+  },
+
+  {
+    id: "chiaki-suzuki",
+    artist_name: "鈴木千明",
+    artist_name_en: "Chiaki Suzuki",
+    instrument: "Other",
+    photo: "",
+    profile: "",
+    website: "",
+    instagram: "",
+    youtube: "",
+    appearances: [
+      { date: "2026-10-16", event_title: "鈴木千明 Live & Session", event_url: "" }
+    ]
+  }
+
+];
