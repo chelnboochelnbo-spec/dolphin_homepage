@@ -1,0 +1,31 @@
+{
+  "timezone": "Asia/Tokyo",
+  "platforms": ["instagram", "facebook"],
+  "default_publish_time": "19:00",
+  "rules": {
+    "LIVE": {
+      "lead_days": [21, 7],
+      "notes": "Initial announcement and one reminder"
+    },
+    "SESSION": {
+      "lead_days": [7],
+      "notes": "One announcement unless manually overridden"
+    },
+    "LIVE&SESSION": {
+      "lead_days": [14, 3],
+      "notes": "Two announcements balancing live and participation messaging"
+    }
+  },
+  "important_event_override": {
+    "enabled": true,
+    "lead_days": [30, 14, 3]
+  },
+  "minimum_gap_hours": 24,
+  "same_asset_for_instagram_and_facebook": true,
+  "generate_platform_specific_copy": true,
+  "do_not_schedule_if": [
+    "event status is draft or cancelled",
+    "flyer asset is missing",
+    "required event fields are missing"
+  ]
+}
