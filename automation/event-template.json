@@ -1,0 +1,40 @@
+{
+  "id": "2026-11-20-example-event",
+  "status": "draft",
+  "date": "2026-11-20",
+  "end_date": null,
+  "title": "Example Event",
+  "type": "LIVE",
+  "important": false,
+  "open_time": "19:30",
+  "start_time": "20:00",
+  "performers": [
+    {"instrument": "Pf", "name": "Artist Name"}
+  ],
+  "description": "",
+  "charge": "Charge ¥3,500",
+  "reservation": {
+    "enabled": true,
+    "notes": ""
+  },
+  "flyer": {
+    "mode": "canva_ai",
+    "asset_path": null,
+    "canva_design_id": null,
+    "source_assets": [],
+    "status": "pending"
+  },
+  "social": {
+    "override_schedule": null,
+    "copy_notes": "",
+    "instagram": {"caption": null, "scheduled_at": [], "post_ids": []},
+    "facebook": {"caption": null, "scheduled_at": [], "post_ids": []}
+  },
+  "publication": {
+    "website": {"status": "pending", "commit_sha": null, "vercel_status": null},
+    "social": {
+      "instagram": {"status": "pending"},
+      "facebook": {"status": "pending"}
+    }
+  }
+}
