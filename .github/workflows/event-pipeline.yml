@@ -1,6 +1,12 @@
 name: DOLPHIN Event Pipeline
 
 on:
+  pull_request:
+    paths:
+      - 'data/events.json'
+      - 'assets/flyers/**'
+      - 'automation/render_events.py'
+      - '.github/workflows/event-pipeline.yml'
   push:
     branches: [main]
     paths:
@@ -26,7 +32,11 @@ jobs:
       - name: Render event pages
         run: python automation/render_events.py
 
+      - name: Validate rendered diff
+        run: git diff --check
+
       - name: Commit rendered pages
+        if: github.event_name != 'pull_request'
         run: |
           if git diff --quiet -- index.html schedule.html archive.html; then
             echo "No rendered page changes."
