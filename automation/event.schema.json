@@ -2,16 +2,21 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "DOLPHIN Event",
   "type": "object",
-  "required": ["id", "date", "title", "type", "status", "flyer"],
+  "required": ["id", "date", "title", "event_type", "status", "flyer"],
   "properties": {
     "id": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}_[a-z0-9-]+$"},
     "date": {"type": "string", "format": "date"},
     "title": {"type": "string", "minLength": 1},
-    "type": {"enum": ["LIVE", "SESSION", "LIVE&SESSION"]},
+    "event_type": {"enum": ["live", "session", "live_session"]},
     "importance": {"enum": ["normal", "important"], "default": "normal"},
     "open": {"type": ["string", "null"]},
     "start": {"type": ["string", "null"]},
     "charge": {"type": ["string", "null"]},
+    "artist_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[a-z0-9-]+$"}
+    },
     "performers": {
       "type": "array",
       "items": {
@@ -19,7 +24,8 @@
         "required": ["name"],
         "properties": {
           "instrument": {"type": ["string", "null"]},
-          "name": {"type": "string"}
+          "name": {"type": "string"},
+          "artist_id": {"type": ["string", "null"], "pattern": "^[a-z0-9-]+$"}
         }
       }
     },
