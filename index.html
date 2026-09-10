@@ -13,6 +13,7 @@
         rel="stylesheet">
     <!-- Main Style -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="event-types.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Favicon -->
@@ -46,6 +47,7 @@
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#reservation">Reservation</a></li>
                 <li><a href="#access">Access</a></li>
+                <li><a href="/artists/">Artists</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Toggle Menu">
                 <span class="bar"></span>
@@ -108,7 +110,8 @@
             <!-- Top 3 Upcoming Schedule Items -->
             <div class="lineup-list" style="margin-bottom: 3rem;">
 
-<article class="lineup-item" data-date="2026-09-10">
+<article class="lineup-item" data-date="2026-09-10" data-event-type="session">
+                        <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 9.10<span class="weekday">thu.</span></div>
                         <div class="lineup-body">
                             <img src="flyer_20260910_24.png" alt="Kiraku Jam Flyer" class="lineup-flyer-thumb"
@@ -125,7 +128,8 @@
                         </div>
                     </article>
 
-<article class="lineup-item" data-date="2026-09-17">
+<article class="lineup-item" data-date="2026-09-17" data-event-type="session">
+                        <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 9.17<span class="weekday">thu.</span></div>
                         <div class="lineup-body">
                             <img src="flyer_20260917.png" alt="Monthly Voices 〜Vocal Session〜 Flyer" class="lineup-flyer-thumb"
@@ -142,7 +146,8 @@
                         </div>
                     </article>
 
-<article class="lineup-item" data-date="2026-09-19">
+<article class="lineup-item" data-date="2026-09-19" data-event-type="session">
+                        <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 9.19<span class="weekday">sat.</span> - 9.21<span class="weekday">mon.</span></div>
                         <div class="lineup-body">
                             <img src="flyer_20260919.png" alt="Jazz Street 〜Day&Night Jam Session〜 Flyer" class="lineup-flyer-thumb"
@@ -167,6 +172,8 @@
             </div>
         </div>
     </section>
+
+    <!-- ARTISTS FEATURE SLOT: set featured=true in data/artists.json to activate -->
 
     <!-- Menu Section -->
     <section id="menu" class="section bg-accent">
