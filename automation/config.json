@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "timezone": "Asia/Tokyo",
   "website": {
     "production_branch": "main",
@@ -7,7 +7,10 @@
     "home_schedule_file": "index.html",
     "full_schedule_file": "schedule.html",
     "archive_file": "archive.html",
-    "artist_data_file": "artists-data.js",
+    "artist_data_file": "data/artists.json",
+    "event_data_file": "data/events.json",
+    "artist_route": "/artists/",
+    "event_route": "/events/",
     "flyer_directory": "assets/flyers",
     "legacy_flyer_directory": "/"
   },
@@ -18,7 +21,11 @@
     "social_aspect_ratio": "4:5",
     "social_size": "1080x1350"
   },
-  "event_types": ["LIVE", "SESSION", "LIVE&SESSION"],
+  "event_types": {
+    "live": "LIVE",
+    "session": "SESSION",
+    "live_session": "LIVE & SESSION"
+  },
   "publishing": {
     "normal_live": [30, 7],
     "important_live": [30, 14, 3],
@@ -30,6 +37,8 @@
     "use_pull_request_for_structural_changes": true,
     "direct_main_updates_allowed_for_event_content": true,
     "require_flyer_before_social_schedule": true,
-    "require_event_validation": true
+    "require_event_validation": true,
+    "never_fabricate_artist_profile_or_external_links": true,
+    "deduplicate_artists_by_id_and_name": true
   }
 }
