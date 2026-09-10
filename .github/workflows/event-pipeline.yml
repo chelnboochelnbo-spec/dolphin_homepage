@@ -1,18 +1,36 @@
-name: DOLPHIN Event Pipeline
+name: DOLPHIN Content Pipeline
 
 on:
   pull_request:
     paths:
       - 'data/events.json'
+      - 'data/artists.json'
       - 'assets/flyers/**'
+      - 'artists/**'
+      - 'artists.css'
+      - 'artists.js'
+      - 'event-types.css'
       - 'automation/render_events.py'
+      - 'automation/render_artists.py'
+      - 'automation/clean_generated.py'
+      - 'automation/event.schema.json'
+      - 'automation/artist.schema.json'
       - '.github/workflows/event-pipeline.yml'
   push:
     branches: [main]
     paths:
       - 'data/events.json'
+      - 'data/artists.json'
       - 'assets/flyers/**'
+      - 'artists.css'
+      - 'artists.js'
+      - 'event-types.css'
       - 'automation/render_events.py'
+      - 'automation/render_artists.py'
+      - 'automation/clean_generated.py'
+      - 'automation/event.schema.json'
+      - 'automation/artist.schema.json'
+      - '.github/workflows/event-pipeline.yml'
   schedule:
     - cron: '15 0 * * *'
   workflow_dispatch:
@@ -29,8 +47,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Render event pages
+      - name: Render event schedule and badges
         run: python automation/render_events.py
+
+      - name: Render artists archive and linked event pages
+        run: python automation/render_artists.py
+
+      - name: Normalize generated markup
+        run: python automation/clean_generated.py
 
       - name: Validate rendered diff
         run: git diff --check
@@ -38,12 +62,12 @@ jobs:
       - name: Commit rendered pages
         if: github.event_name != 'pull_request'
         run: |
-          if git diff --quiet -- index.html schedule.html archive.html; then
+          if git diff --quiet -- index.html schedule.html archive.html artists events; then
             echo "No rendered page changes."
             exit 0
           fi
-          git config user.name "dolphin-event-bot"
+          git config user.name "dolphin-content-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add index.html schedule.html archive.html
-          git commit -m "chore: render event pages from event registry"
+          git add index.html schedule.html archive.html artists events
+          git commit -m "chore: render DOLPHIN content from structured data"
           git push
