@@ -27,6 +27,13 @@ def root_asset(path: str) -> str:
     return "/" + path.lstrip("/")
 
 
+def event_flyer_path(event: dict) -> str:
+    path = (event.get("flyer") or {}).get("github_path") or ""
+    if event.get("legacy_imported") and path.lstrip("/") == "logo_new.png":
+        return ""
+    return root_asset(path)
+
+
 def event_url(event: dict) -> str:
     return f"/events/{event['id']}/"
 
@@ -62,7 +69,7 @@ def json_ld(event: dict, artists_by_id: dict[str, dict]) -> str:
     }
     if event.get("description"):
         payload["description"] = event["description"]
-    flyer = root_asset((event.get("flyer") or {}).get("github_path") or "")
+    flyer = event_flyer_path(event)
     if flyer:
         payload["image"] = [f"{BASE_URL}{flyer}"]
     performers = []
@@ -85,7 +92,7 @@ def render(event: dict, artists_by_id: dict[str, dict]) -> str:
     title = f"{event['title']} | Jazz & Bar DOLPHIN 金沢"
     fallback = f"{start.year}年{start.month}月{start.day}日、Jazz & Bar DOLPHIN（金沢）で開催{'した' if is_past else '予定の'}「{event['title']}」。"
     description = event.get("description") or fallback
-    flyer = root_asset((event.get("flyer") or {}).get("github_path") or "")
+    flyer = event_flyer_path(event)
     og_image = f"{BASE_URL}{flyer}" if flyer else f"{BASE_URL}/logo_new.png"
 
     if flyer:
@@ -134,55 +141,57 @@ def render(event: dict, artists_by_id: dict[str, dict]) -> str:
 
     action = '<a class="event-action" href="/archive/">BACK TO LIVE ARCHIVE</a>' if is_past else '<a class="event-action" href="/#reservation">RESERVATION</a>'
     status = "PAST EVENT" if is_past else "UPCOMING"
+    description_html = f'<p class="event-description">{escape(event.get("description") or "")}</p>' if event.get("description") else ""
+    extras_html = "".join(extras)
 
-    return f'''<!-- GENERATED: DOLPHIN EVENT -->
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{escape(title)}</title>
-<meta name="description" content="{escape(description, quote=True)}">
-<link rel="canonical" href="{canonical}">
-<meta property="og:type" content="website">
-<meta property="og:title" content="{escape(title, quote=True)}">
-<meta property="og:description" content="{escape(description, quote=True)}">
-<meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{og_image}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/event-types.css">
-<link rel="stylesheet" href="/event-page.css">
-<link rel="icon" type="image/png" href="/logo_new.png">
-<script type="application/ld+json">{json_ld(event, artists_by_id)}</script>
-</head>
-<body class="event-page">
-<nav class="main-nav">
-<div class="logo"><a href="/">DOLPHIN</a></div>
-<div class="nav-right"><ul class="nav-links">
-<li><a href="/">Home</a></li><li><a href="/schedule.html">Schedule</a></li><li><a href="/artists/">Artists</a></li><li><a href="/archive/">Archive</a></li>
-</ul><button class="menu-toggle" aria-label="Toggle Menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button></div>
-</nav>
-<main class="event-detail">
-<div class="event-detail-grid">
-<div class="event-media">{media}</div>
-<div class="event-copy">
-<div class="event-status-row"><span class="event-type-inline">{event_type_label(event)}</span><span class="event-status">{status}</span></div>
-<p class="event-date">{date_text}</p>
-<h1>{escape(event["title"])}</h1>
-<p class="event-meta">{escape(" / ".join(meta))}</p>
-<ul class="event-performers">{performer_html}</ul>
-{f'<p class="event-description">{escape(event.get("description") or "")}</p>' if event.get("description") else ''}
-{action}
-</div>
-</div>
-{''.join(extras)}
-</main>
-<script src="/script.js"></script>
-</body>
-</html>'''
+    lines = [
+        '<!-- GENERATED: DOLPHIN EVENT -->',
+        '<!DOCTYPE html>',
+        '<html lang="ja">',
+        '<head>',
+        '<meta charset="UTF-8">',
+        '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+        f'<title>{escape(title)}</title>',
+        f'<meta name="description" content="{escape(description, quote=True)}">',
+        f'<link rel="canonical" href="{canonical}">',
+        '<meta property="og:type" content="website">',
+        f'<meta property="og:title" content="{escape(title, quote=True)}">',
+        f'<meta property="og:description" content="{escape(description, quote=True)}">',
+        f'<meta property="og:url" content="{canonical}">',
+        f'<meta property="og:image" content="{og_image}">',
+        '<link rel="preconnect" href="https://fonts.googleapis.com">',
+        '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
+        '<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet">',
+        '<link rel="stylesheet" href="/style.css">',
+        '<link rel="stylesheet" href="/event-types.css">',
+        '<link rel="stylesheet" href="/event-page.css">',
+        '<link rel="icon" type="image/png" href="/logo_new.png">',
+        f'<script type="application/ld+json">{json_ld(event, artists_by_id)}</script>',
+        '</head>',
+        '<body class="event-page">',
+        '<nav class="main-nav">',
+        '<div class="logo"><a href="/">DOLPHIN</a></div>',
+        '<div class="nav-right"><ul class="nav-links">',
+        '<li><a href="/">Home</a></li><li><a href="/schedule.html">Schedule</a></li><li><a href="/artists/">Artists</a></li><li><a href="/archive/">Archive</a></li>',
+        '</ul><button class="menu-toggle" aria-label="Toggle Menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button></div>',
+        '</nav>',
+        '<main class="event-detail">',
+        '<div class="event-detail-grid">',
+        f'<div class="event-media">{media}</div>',
+        '<div class="event-copy">',
+        f'<div class="event-status-row"><span class="event-type-inline">{event_type_label(event)}</span><span class="event-status">{status}</span></div>',
+        f'<p class="event-date">{date_text}</p>',
+        f'<h1>{escape(event["title"])}</h1>',
+        f'<p class="event-meta">{escape(" / ".join(meta))}</p>',
+        f'<ul class="event-performers">{performer_html}</ul>',
+    ]
+    if description_html:
+        lines.append(description_html)
+    lines.extend([action, '</div>', '</div>'])
+    if extras_html:
+        lines.append(extras_html)
+    lines.extend(['</main>', '<script src="/script.js"></script>', '</body>', '</html>'])
+    return "\n".join(lines)
 
 
 def main() -> None:
