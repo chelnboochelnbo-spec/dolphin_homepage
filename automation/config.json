@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "timezone": "Asia/Tokyo",
+  "website": {
+    "production_branch": "main",
+    "hosting": "vercel",
+    "home_schedule_file": "index.html",
+    "full_schedule_file": "schedule.html",
+    "archive_file": "archive.html",
+    "artist_data_file": "artists-data.js",
+    "flyer_directory": "assets/flyers",
+    "legacy_flyer_directory": "/"
+  },
+  "flyer": {
+    "modes": ["canva_ai", "human"],
+    "default_mode": "canva_ai",
+    "filename_pattern": "flyer_YYYYMMDD_slug.png",
+    "social_aspect_ratio": "4:5",
+    "social_size": "1080x1350"
+  },
+  "event_types": ["LIVE", "SESSION", "LIVE&SESSION"],
+  "publishing": {
+    "normal_live": [30, 7],
+    "important_live": [30, 14, 3],
+    "session": [7],
+    "post_time": "18:00",
+    "channels": ["instagram", "facebook"]
+  },
+  "safety": {
+    "use_pull_request_for_structural_changes": true,
+    "direct_main_updates_allowed_for_event_content": true,
+    "require_flyer_before_social_schedule": true,
+    "require_event_validation": true
+  }
+}
