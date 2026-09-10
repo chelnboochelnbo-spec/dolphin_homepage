@@ -15,16 +15,42 @@ ARCHIVE_FILE = ROOT / "archive.html"
 MONTH_IDS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
 WEEKDAYS = ["mon.", "tue.", "wed.", "thu.", "fri.", "sat.", "sun."]
 WEEKDAYS_UPPER = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
+EVENT_TYPE_LABELS = {
+    "live": "LIVE",
+    "session": "SESSION",
+    "live_session": "LIVE & SESSION",
+}
+
+
+def normalize_event_type(event: dict) -> str:
+    value = event.get("event_type")
+    if value in EVENT_TYPE_LABELS:
+        return value
+
+    # Transitional support for the first automation schema.
+    legacy = str(event.get("type") or "").strip().upper().replace(" ", "")
+    if "LIVE" in legacy and "SESSION" in legacy:
+        return "live_session"
+    if "SESSION" in legacy:
+        return "session"
+    if legacy == "LIVE":
+        return "live"
+    raise ValueError(f"Unknown event_type for {event.get('id')}: {value or event.get('type')}")
+
+
+def event_type_label(value: str) -> str:
+    return EVENT_TYPE_LABELS[value]
 
 
 def load_events() -> list[dict]:
-    payload = json.loads(EVENTS_FILE.read_text(encoding="utf-8"))
+    payload = json.loads(EVENTS_FILE.read_text(encoding="utf-8-sig"))
     events = payload.get("events", [])
     seen = set()
     for event in events:
-        for key in ("id", "date", "title", "type", "status", "flyer"):
+        for key in ("id", "date", "title", "status", "flyer"):
             if key not in event:
                 raise ValueError(f"Event missing required field: {key}")
+        normalize_event_type(event)
         if event["id"] in seen:
             raise ValueError(f"Duplicate event id: {event['id']}")
         seen.add(event["id"])
@@ -32,13 +58,19 @@ def load_events() -> list[dict]:
     return events
 
 
-def performer_text(event: dict) -> str:
+def performer_html(event: dict) -> str:
     parts = []
-    for p in event.get("performers") or []:
-        name = p.get("name") or ""
-        inst = p.get("instrument") or ""
-        if name:
-            parts.append(f"{inst} {name}".strip())
+    for performer in event.get("performers") or []:
+        name = performer.get("name") or ""
+        instrument = performer.get("instrument") or ""
+        if not name:
+            continue
+        label = escape(f"{instrument} {name}".strip())
+        artist_id = performer.get("artist_id")
+        if artist_id:
+            parts.append(f'<a class="performer-link" href="/artists/{escape(artist_id, quote=True)}/">{label}</a>')
+        else:
+            parts.append(label)
     return " / ".join(parts)
 
 
@@ -56,32 +88,37 @@ def flyer_path(event: dict) -> str:
     return flyer.get("github_path") or "logo_new.png"
 
 
+def event_page_url(event: dict) -> str:
+    return f"/events/{event['id']}/"
+
+
 def render_schedule_article(event: dict) -> str:
     d = date.fromisoformat(event["date"])
-    performers = performer_text(event)
+    performers = performer_html(event)
     time = time_text(event)
     charge = event.get("charge") or ""
-    badge = escape(event["type"])
+    event_type = normalize_event_type(event)
+    badge = event_type_label(event_type)
     reserve_url = event.get("reservation_url") or "index.html#reservation"
     details = []
     if time:
         details.append(f'                                    <div class="detail-item"><i class="far fa-clock"></i>{escape(time)}</div>')
     if performers:
-        details.append(f'                                    <div class="detail-item"><i class="fas fa-users"></i>{escape(performers)}</div>')
+        details.append(f'                                    <div class="detail-item"><i class="fas fa-users"></i>{performers}</div>')
     if charge:
         details.append(f'                                    <div class="lineup-price">{escape(charge)}</div>')
     detail_html = "\n".join(details)
-    return f'''                    <article class="lineup-item" data-date="{event['date']}" data-event-id="{escape(event['id'])}">
+    return f'''                    <article class="lineup-item" data-date="{event['date']}" data-event-id="{escape(event['id'])}" data-event-type="{event_type}">
+                        <span class="event-type-badge">{badge}</span>
                         <div class="lineup-date">{d.year} {d.month}.{d.day:02d}<span class="weekday">{WEEKDAYS[d.weekday()]}</span></div>
                         <div class="lineup-body">
-                            <img src="{escape(flyer_path(event))}" alt="{escape(event['title'])} Flyer" class="lineup-flyer-thumb" onclick="window.open(this.src)">
+                            <img src="{escape(flyer_path(event), quote=True)}" alt="{escape(event['title'], quote=True)} Flyer" class="lineup-flyer-thumb" onclick="window.open(this.src)">
                             <div class="lineup-info">
-                                <span class="lineup-badge">{badge}</span>
-                                <h3 class="lineup-artist">{escape(event['title'])}</h3>
+                                <h3 class="lineup-artist"><a href="{event_page_url(event)}">{escape(event['title'])}</a></h3>
                                 <div class="lineup-details">
 {detail_html}
                                 </div>
-                                <a href="{escape(reserve_url)}" class="lineup-reserve-btn">RESERVATION</a>
+                                <a href="{escape(reserve_url, quote=True)}" class="lineup-reserve-btn">RESERVATION</a>
                             </div>
                         </div>
                     </article>'''
@@ -89,17 +126,17 @@ def render_schedule_article(event: dict) -> str:
 
 def render_archive_article(event: dict) -> str:
     d = date.fromisoformat(event["date"])
-    performers = performer_text(event)
+    performers = performer_html(event)
     time = time_text(event)
     detail_parts = []
     if time:
         detail_parts.append(f'                        <div class="detail-item"><i class="far fa-clock"></i>{escape(time)}</div>')
-    detail_parts.append(f'                        <h3 class="schedule-artist">{escape(event["title"])}</h3>')
+    detail_parts.append(f'                        <h3 class="schedule-artist"><a href="{event_page_url(event)}">{escape(event["title"])}</a></h3>')
     if performers:
-        detail_parts.append(f'                        <div class="detail-item"><i class="fas fa-users"></i>{escape(performers)}</div>')
+        detail_parts.append(f'                        <div class="detail-item"><i class="fas fa-users"></i>{performers}</div>')
     details = "\n".join(detail_parts)
     month_en = MONTH_IDS[d.month - 1].upper()
-    return f'''            <article class="schedule-item" data-date="{event['date']}" data-event-id="{escape(event['id'])}">
+    return f'''            <article class="schedule-item" data-date="{event['date']}" data-event-id="{escape(event['id'])}" data-event-type="{normalize_event_type(event)}">
                 <div class="schedule-date">
                     <span class="day">{d.day}</span>
                     <span class="weekday">{WEEKDAYS_UPPER[d.weekday()]}</span>
@@ -136,8 +173,8 @@ def upsert_schedule_event(html: str, event: dict) -> str:
     new_article = render_schedule_article(event)
 
     candidates = []
-    for m in re.finditer(r'<article class="lineup-item"[^>]*data-date="(\d{4}-\d{2}-\d{2})"', section):
-        candidates.append((m.start(), m.group(1)))
+    for match in re.finditer(r'<article class="lineup-item"[^>]*data-date="(\d{4}-\d{2}-\d{2})"', section):
+        candidates.append((match.start(), match.group(1)))
 
     insert_pos_rel = None
     for pos, existing_date in candidates:
@@ -167,13 +204,56 @@ def upsert_archive_event(html: str, event: dict) -> str:
     return html[:pos] + "\n" + render_archive_article(event) + "\n" + html[pos:]
 
 
+def classify_legacy_title(title: str) -> str:
+    normalized = title.casefold().replace("＆", "&").replace("＋", "+")
+    has_live = "live" in normalized or "ライブ" in normalized
+    has_session = "session" in normalized or "セッション" in normalized
+    if has_live and has_session:
+        return "live_session"
+    if has_session or " jam" in f" {normalized}" or "jam " in normalized or normalized.endswith("jam"):
+        return "session"
+    if "workshop" in normalized or "ワークショップ" in normalized:
+        return "session"
+    return "live"
+
+
+def add_legacy_event_badges(html: str) -> str:
+    pattern = re.compile(r'(<article class="lineup-item"[^>]*>)(.*?</article>)', re.S)
+
+    def decorate(match: re.Match[str]) -> str:
+        opening = match.group(1)
+        rest = match.group(2)
+        if "event-type-badge" in rest:
+            return match.group(0)
+        title_match = re.search(r'<h3 class="lineup-artist">(?:<a[^>]*>)?(.*?)(?:</a>)?</h3>', rest, re.S)
+        if not title_match:
+            return match.group(0)
+        title = re.sub(r"<[^>]+>", "", title_match.group(1)).strip()
+        value = classify_legacy_title(title)
+        label = event_type_label(value)
+        if "data-event-type=" not in opening:
+            opening = opening[:-1] + f' data-event-type="{value}">'
+        return opening + f'\n                        <span class="event-type-badge">{label}</span>' + rest
+
+    return pattern.sub(decorate, html)
+
+
+def ensure_event_stylesheet(html: str) -> str:
+    if "event-types.css" in html:
+        return html
+    marker = '<link rel="stylesheet" href="style.css">'
+    if marker in html:
+        return html.replace(marker, marker + '\n    <link rel="stylesheet" href="event-types.css">', 1)
+    return html.replace("</head>", '    <link rel="stylesheet" href="event-types.css">\n</head>', 1)
+
+
 def rebuild_home_preview(index_html: str, schedule_html: str) -> str:
     today = date.today().isoformat()
     articles = []
-    for m in re.finditer(r'(<article class="lineup-item"[^>]*data-date="(\d{4}-\d{2}-\d{2})"[^>]*>.*?</article>)', schedule_html, re.S):
-        if m.group(2) >= today:
-            articles.append((m.group(2), m.group(1)))
-    articles.sort(key=lambda x: x[0])
+    for match in re.finditer(r'(<article class="lineup-item"[^>]*data-date="(\d{4}-\d{2}-\d{2})"[^>]*>.*?</article>)', schedule_html, re.S):
+        if match.group(2) >= today:
+            articles.append((match.group(2), match.group(1)))
+    articles.sort(key=lambda item: item[0])
     preview = "\n\n".join(article for _, article in articles[:3])
 
     pattern = re.compile(
@@ -182,16 +262,16 @@ def rebuild_home_preview(index_html: str, schedule_html: str) -> str:
     )
     if not pattern.search(index_html):
         raise ValueError("Could not find home lineup preview block")
-    return pattern.sub(lambda m: m.group(1) + "\n\n" + preview + m.group(3), index_html, count=1)
+    return pattern.sub(lambda match: match.group(1) + "\n\n" + preview + match.group(3), index_html, count=1)
 
 
 def main() -> None:
     events = load_events()
-    schedule_html = SCHEDULE_FILE.read_text(encoding="utf-8")
+    schedule_html = SCHEDULE_FILE.read_text(encoding="utf-8-sig")
     archive_html = ARCHIVE_FILE.read_text(encoding="utf-8-sig")
 
     today = date.today()
-    for event in sorted(events, key=lambda e: e["date"]):
+    for event in sorted(events, key=lambda item: item["date"]):
         event_date = date.fromisoformat(event["date"])
         is_ready = event["status"] in {"ready", "published", "archived"}
         if not is_ready:
@@ -203,8 +283,12 @@ def main() -> None:
             archive_html = remove_auto_article(archive_html, event["id"], "schedule-item")
             schedule_html = upsert_schedule_event(schedule_html, event)
 
-    index_html = INDEX_FILE.read_text(encoding="utf-8")
+    schedule_html = add_legacy_event_badges(schedule_html)
+    schedule_html = ensure_event_stylesheet(schedule_html)
+
+    index_html = INDEX_FILE.read_text(encoding="utf-8-sig")
     index_html = rebuild_home_preview(index_html, schedule_html)
+    index_html = ensure_event_stylesheet(index_html)
 
     SCHEDULE_FILE.write_text(schedule_html, encoding="utf-8")
     INDEX_FILE.write_text(index_html, encoding="utf-8")
