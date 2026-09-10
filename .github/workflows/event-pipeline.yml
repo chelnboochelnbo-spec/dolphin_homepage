@@ -7,11 +7,19 @@ on:
       - 'data/artists.json'
       - 'assets/flyers/**'
       - 'artists/**'
+      - 'archive/**'
       - 'artists.css'
       - 'artists.js'
+      - 'archive.css'
+      - 'archive.js'
       - 'event-types.css'
+      - 'event-page.css'
+      - 'event-runtime.js'
+      - 'automation/event_utils.py'
       - 'automation/render_events.py'
       - 'automation/render_artists.py'
+      - 'automation/render_event_pages.py'
+      - 'automation/render_archive.py'
       - 'automation/clean_generated.py'
       - 'automation/event.schema.json'
       - 'automation/artist.schema.json'
@@ -24,15 +32,23 @@ on:
       - 'assets/flyers/**'
       - 'artists.css'
       - 'artists.js'
+      - 'archive.css'
+      - 'archive.js'
       - 'event-types.css'
+      - 'event-page.css'
+      - 'event-runtime.js'
+      - 'automation/event_utils.py'
       - 'automation/render_events.py'
       - 'automation/render_artists.py'
+      - 'automation/render_event_pages.py'
+      - 'automation/render_archive.py'
       - 'automation/clean_generated.py'
       - 'automation/event.schema.json'
       - 'automation/artist.schema.json'
       - '.github/workflows/event-pipeline.yml'
   schedule:
-    - cron: '15 0 * * *'
+    # 03:30 JST. By this time the previous local event day has fully ended, including DOLPHIN's late-night hours.
+    - cron: '30 18 * * *'
   workflow_dispatch:
 
 permissions:
@@ -47,11 +63,17 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Render event schedule and badges
+      - name: Render current and future schedule from EVENT database
         run: python automation/render_events.py
 
-      - name: Render artists archive and linked event pages
+      - name: Render artists archive
         run: python automation/render_artists.py
+
+      - name: Render persistent event pages
+        run: python automation/render_event_pages.py
+
+      - name: Render LIVE ARCHIVE from the same EVENT database
+        run: python automation/render_archive.py
 
       - name: Normalize generated markup
         run: python automation/clean_generated.py
@@ -59,15 +81,15 @@ jobs:
       - name: Validate rendered diff
         run: git diff --check
 
-      - name: Commit rendered pages
+      - name: Commit generated views
         if: github.event_name != 'pull_request'
         run: |
-          if git diff --quiet -- index.html schedule.html archive.html artists events; then
-            echo "No rendered page changes."
+          if git diff --quiet -- index.html schedule.html archive.html archive artists events; then
+            echo "No generated view changes."
             exit 0
           fi
           git config user.name "dolphin-content-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add index.html schedule.html archive.html artists events
-          git commit -m "chore: render DOLPHIN content from structured data"
+          git add index.html schedule.html archive.html archive artists events
+          git commit -m "chore: render DOLPHIN schedule and live archive"
           git push

@@ -6,40 +6,15 @@ from datetime import date
 from pathlib import Path
 from html import escape
 
+from event_utils import current_jst_date, event_end_date, event_is_past, event_type_label, normalize_event_type
+
 ROOT = Path(__file__).resolve().parents[1]
 EVENTS_FILE = ROOT / "data" / "events.json"
 INDEX_FILE = ROOT / "index.html"
 SCHEDULE_FILE = ROOT / "schedule.html"
-ARCHIVE_FILE = ROOT / "archive.html"
 
 MONTH_IDS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
 WEEKDAYS = ["mon.", "tue.", "wed.", "thu.", "fri.", "sat.", "sun."]
-WEEKDAYS_UPPER = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
-EVENT_TYPE_LABELS = {
-    "live": "LIVE",
-    "session": "SESSION",
-    "live_session": "LIVE & SESSION",
-}
-
-
-def normalize_event_type(event: dict) -> str:
-    value = event.get("event_type")
-    if value in EVENT_TYPE_LABELS:
-        return value
-
-    # Transitional support for the first automation schema.
-    legacy = str(event.get("type") or "").strip().upper().replace(" ", "")
-    if "LIVE" in legacy and "SESSION" in legacy:
-        return "live_session"
-    if "SESSION" in legacy:
-        return "session"
-    if legacy == "LIVE":
-        return "live"
-    raise ValueError(f"Unknown event_type for {event.get('id')}: {value or event.get('type')}")
-
-
-def event_type_label(value: str) -> str:
-    return EVENT_TYPE_LABELS[value]
 
 
 def load_events() -> list[dict]:
@@ -54,7 +29,10 @@ def load_events() -> list[dict]:
         if event["id"] in seen:
             raise ValueError(f"Duplicate event id: {event['id']}")
         seen.add(event["id"])
-        date.fromisoformat(event["date"])
+        start = date.fromisoformat(event["date"])
+        end = event_end_date(event)
+        if end < start:
+            raise ValueError(f"end_date is before date for {event['id']}")
     return events
 
 
@@ -85,20 +63,30 @@ def time_text(event: dict) -> str:
 
 def flyer_path(event: dict) -> str:
     flyer = event.get("flyer") or {}
-    return flyer.get("github_path") or "logo_new.png"
+    return flyer.get("github_path") or ""
 
 
 def event_page_url(event: dict) -> str:
     return f"/events/{event['id']}/"
 
 
+def date_display(event: dict) -> str:
+    start = date.fromisoformat(event["date"])
+    end = event_end_date(event)
+    start_html = f'{start.year} {start.month}.{start.day:02d}<span class="weekday">{WEEKDAYS[start.weekday()]}</span>'
+    if end == start:
+        return start_html
+    if end.year == start.year:
+        return start_html + f' - {end.month}.{end.day:02d}<span class="weekday">{WEEKDAYS[end.weekday()]}</span>'
+    return start_html + f' - {end.year} {end.month}.{end.day:02d}<span class="weekday">{WEEKDAYS[end.weekday()]}</span>'
+
+
 def render_schedule_article(event: dict) -> str:
-    d = date.fromisoformat(event["date"])
     performers = performer_html(event)
     time = time_text(event)
     charge = event.get("charge") or ""
     event_type = normalize_event_type(event)
-    badge = event_type_label(event_type)
+    badge = event_type_label(event)
     reserve_url = event.get("reservation_url") or "index.html#reservation"
     details = []
     if time:
@@ -108,11 +96,19 @@ def render_schedule_article(event: dict) -> str:
     if charge:
         details.append(f'                                    <div class="lineup-price">{escape(charge)}</div>')
     detail_html = "\n".join(details)
-    return f'''                    <article class="lineup-item" data-date="{event['date']}" data-event-id="{escape(event['id'])}" data-event-type="{event_type}">
+    flyer = flyer_path(event)
+    if flyer:
+        flyer_html = (
+            f'<img src="{escape(flyer, quote=True)}" alt="{escape(event["title"], quote=True)} Flyer" '
+            'class="lineup-flyer-thumb" onclick="window.open(this.src)">'
+        )
+    else:
+        flyer_html = '<div class="lineup-flyer-thumb lineup-flyer-empty" aria-label="Flyer not registered"></div>'
+    return f'''                    <article class="lineup-item" data-date="{event['date']}" data-end-date="{event_end_date(event).isoformat()}" data-event-id="{escape(event['id'])}" data-event-type="{event_type}">
                         <span class="event-type-badge">{badge}</span>
-                        <div class="lineup-date">{d.year} {d.month}.{d.day:02d}<span class="weekday">{WEEKDAYS[d.weekday()]}</span></div>
+                        <div class="lineup-date">{date_display(event)}</div>
                         <div class="lineup-body">
-                            <img src="{escape(flyer_path(event), quote=True)}" alt="{escape(event['title'], quote=True)} Flyer" class="lineup-flyer-thumb" onclick="window.open(this.src)">
+                            {flyer_html}
                             <div class="lineup-info">
                                 <h3 class="lineup-artist"><a href="{event_page_url(event)}">{escape(event['title'])}</a></h3>
                                 <div class="lineup-details">
@@ -124,57 +120,34 @@ def render_schedule_article(event: dict) -> str:
                     </article>'''
 
 
-def render_archive_article(event: dict) -> str:
-    d = date.fromisoformat(event["date"])
-    performers = performer_html(event)
-    time = time_text(event)
-    detail_parts = []
-    if time:
-        detail_parts.append(f'                        <div class="detail-item"><i class="far fa-clock"></i>{escape(time)}</div>')
-    detail_parts.append(f'                        <h3 class="schedule-artist"><a href="{event_page_url(event)}">{escape(event["title"])}</a></h3>')
-    if performers:
-        detail_parts.append(f'                        <div class="detail-item"><i class="fas fa-users"></i>{performers}</div>')
-    details = "\n".join(detail_parts)
-    month_en = MONTH_IDS[d.month - 1].upper()
-    return f'''            <article class="schedule-item" data-date="{event['date']}" data-event-id="{escape(event['id'])}" data-event-type="{normalize_event_type(event)}">
-                <div class="schedule-date">
-                    <span class="day">{d.day}</span>
-                    <span class="weekday">{WEEKDAYS_UPPER[d.weekday()]}</span>
-                    <span class="month">{d.month}月 {month_en}</span>
-                </div>
-                <div class="schedule-info">
-                    <div class="lineup-details">
-{details}
-                    </div>
-                </div>
-            </article>'''
-
-
-def remove_auto_article(html: str, event_id: str, class_name: str) -> str:
+def remove_auto_article(html: str, event_id: str) -> str:
     pattern = re.compile(
-        rf'\s*<article class="{re.escape(class_name)}"[^>]*data-event-id="{re.escape(event_id)}"[^>]*>.*?</article>\s*',
+        rf'\s*<article class="lineup-item"[^>]*data-event-id="{re.escape(event_id)}"[^>]*>.*?</article>\s*',
         re.S,
     )
     return pattern.sub("\n", html)
 
 
 def upsert_schedule_event(html: str, event: dict) -> str:
-    html = remove_auto_article(html, event["id"], "lineup-item")
-    d = date.fromisoformat(event["date"])
-    month_id = MONTH_IDS[d.month - 1]
+    html = remove_auto_article(html, event["id"])
+    start = date.fromisoformat(event["date"])
+    month_id = MONTH_IDS[start.month - 1]
     section_start = html.find(f'<section id="{month_id}" class="lineup-month-group">')
     if section_start < 0:
-        raise ValueError(f"Could not find month section: {month_id}")
+        raise ValueError(
+            f"Could not find month section {month_id} for {event['id']}. "
+            "Schedule year scaffolding must be extended before publishing this event."
+        )
     section_end = html.find("</section>", section_start)
     if section_end < 0:
         raise ValueError(f"Could not find end of month section: {month_id}")
 
     section = html[section_start:section_end]
     new_article = render_schedule_article(event)
-
-    candidates = []
-    for match in re.finditer(r'<article class="lineup-item"[^>]*data-date="(\d{4}-\d{2}-\d{2})"', section):
-        candidates.append((match.start(), match.group(1)))
+    candidates = [
+        (match.start(), match.group(1))
+        for match in re.finditer(r'<article class="lineup-item"[^>]*data-date="(\d{4}-\d{2}-\d{2})"', section)
+    ]
 
     insert_pos_rel = None
     for pos, existing_date in candidates:
@@ -192,16 +165,6 @@ def upsert_schedule_event(html: str, event: dict) -> str:
 
     insert_pos = section_start + insert_pos_rel
     return html[:insert_pos] + new_article + "\n\n" + html[insert_pos:]
-
-
-def upsert_archive_event(html: str, event: dict) -> str:
-    html = remove_auto_article(html, event["id"], "schedule-item")
-    marker = '<div class="archive-list">'
-    pos = html.find(marker)
-    if pos < 0:
-        raise ValueError("Could not find archive-list")
-    pos += len(marker)
-    return html[:pos] + "\n" + render_archive_article(event) + "\n" + html[pos:]
 
 
 def classify_legacy_title(title: str) -> str:
@@ -238,21 +201,31 @@ def add_legacy_event_badges(html: str) -> str:
     return pattern.sub(decorate, html)
 
 
-def ensure_event_stylesheet(html: str) -> str:
-    if "event-types.css" in html:
-        return html
-    marker = '<link rel="stylesheet" href="style.css">'
-    if marker in html:
-        return html.replace(marker, marker + '\n    <link rel="stylesheet" href="event-types.css">', 1)
-    return html.replace("</head>", '    <link rel="stylesheet" href="event-types.css">\n</head>', 1)
+def ensure_event_assets(html: str) -> str:
+    if "event-types.css" not in html:
+        marker = '<link rel="stylesheet" href="style.css">'
+        if marker in html:
+            html = html.replace(marker, marker + '\n    <link rel="stylesheet" href="event-types.css">', 1)
+        else:
+            html = html.replace("</head>", '    <link rel="stylesheet" href="event-types.css">\n</head>', 1)
+    if "event-runtime.js" not in html:
+        html = html.replace("</body>", '    <script src="event-runtime.js"></script>\n</body>', 1)
+    return html
 
 
 def rebuild_home_preview(index_html: str, schedule_html: str) -> str:
-    today = date.today().isoformat()
+    today = current_jst_date().isoformat()
     articles = []
-    for match in re.finditer(r'(<article class="lineup-item"[^>]*data-date="(\d{4}-\d{2}-\d{2})"[^>]*>.*?</article>)', schedule_html, re.S):
-        if match.group(2) >= today:
-            articles.append((match.group(2), match.group(1)))
+    for match in re.finditer(
+        r'(<article class="lineup-item"[^>]*data-date="(\d{4}-\d{2}-\d{2})"[^>]*>.*?</article>)',
+        schedule_html,
+        re.S,
+    ):
+        article = match.group(1)
+        end_match = re.search(r'data-end-date="(\d{4}-\d{2}-\d{2})"', article)
+        end_date = end_match.group(1) if end_match else match.group(2)
+        if end_date >= today:
+            articles.append((match.group(2), article))
     articles.sort(key=lambda item: item[0])
     preview = "\n\n".join(article for _, article in articles[:3])
 
@@ -268,31 +241,26 @@ def rebuild_home_preview(index_html: str, schedule_html: str) -> str:
 def main() -> None:
     events = load_events()
     schedule_html = SCHEDULE_FILE.read_text(encoding="utf-8-sig")
-    archive_html = ARCHIVE_FILE.read_text(encoding="utf-8-sig")
 
-    today = date.today()
-    for event in sorted(events, key=lambda item: item["date"]):
-        event_date = date.fromisoformat(event["date"])
-        is_ready = event["status"] in {"ready", "published", "archived"}
-        if not is_ready:
+    for event in events:
+        schedule_html = remove_auto_article(schedule_html, event["id"])
+
+    for event in sorted(events, key=lambda item: (item["date"], item["title"])):
+        if event.get("status") not in {"ready", "published", "archived"}:
             continue
-        if event_date < today or event["status"] == "archived":
-            schedule_html = remove_auto_article(schedule_html, event["id"], "lineup-item")
-            archive_html = upsert_archive_event(archive_html, event)
-        else:
-            archive_html = remove_auto_article(archive_html, event["id"], "schedule-item")
-            schedule_html = upsert_schedule_event(schedule_html, event)
+        if event_is_past(event):
+            continue
+        schedule_html = upsert_schedule_event(schedule_html, event)
 
     schedule_html = add_legacy_event_badges(schedule_html)
-    schedule_html = ensure_event_stylesheet(schedule_html)
+    schedule_html = ensure_event_assets(schedule_html)
 
     index_html = INDEX_FILE.read_text(encoding="utf-8-sig")
     index_html = rebuild_home_preview(index_html, schedule_html)
-    index_html = ensure_event_stylesheet(index_html)
+    index_html = ensure_event_assets(index_html)
 
     SCHEDULE_FILE.write_text(schedule_html, encoding="utf-8")
     INDEX_FILE.write_text(index_html, encoding="utf-8")
-    ARCHIVE_FILE.write_text(archive_html, encoding="utf-8")
 
 
 if __name__ == "__main__":

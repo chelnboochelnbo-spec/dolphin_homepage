@@ -1,4 +1,3925 @@
 {
-  "schema_version": 1,
-  "events": []
+  "schema_version": 2,
+  "events": [
+    {
+      "id": "2026-01-29_legacy-40ca7dbe73",
+      "date": "2026-01-29",
+      "title": "The Third Session",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge: ¥2,000 (+2d)",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐ニ"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-02-05_legacy-231d23780f",
+      "date": "2026-02-05",
+      "title": "Open Groove Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge: ¥2,000 (+2d)",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "羽田正英",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260205.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-02-07_legacy-41acceb6fb",
+      "date": "2026-02-07",
+      "title": "Saturday Jam Session 1",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:30",
+      "charge": "Charge: ¥2,000 (+2d)",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "本間昌晃"
+        },
+        {
+          "instrument": "Pf",
+          "name": "西村岳大"
+        },
+        {
+          "instrument": "Ba",
+          "name": "Ami"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260207.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-02-12_legacy-c75c6960ba",
+      "date": "2026-02-12",
+      "title": "The Third Session 1",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_the_third_session_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-02-14_legacy-e99d6088fc",
+      "date": "2026-02-14",
+      "title": "Tribute to Sonny Rollins Live&Session",
+      "event_type": "live_session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "濱西公博"
+        },
+        {
+          "instrument": "Pf",
+          "name": "黒川薫",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "酒井朝日"
+        },
+        {
+          "instrument": "Dr",
+          "name": "横山勇斗"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260214.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-02-19_legacy-0e65210014",
+      "date": "2026-02-19",
+      "title": "Monthly Voices 〜Vocal Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge: ¥2,000 (+2d)",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "黒川薫",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ヴォーカリストが主役の月例セッション。あなたの歌声を聞かせてください。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260219.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-02-20_legacy-8f661ab667",
+      "date": "2026-02-20",
+      "title": "菅原高志北陸Tour2026 -All That Jazz!-",
+      "event_type": "live",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge: ¥3,500",
+      "performers": [
+        {
+          "instrument": "Dr",
+          "name": "菅原高志",
+          "artist_id": "takashi-sugawara"
+        },
+        {
+          "instrument": "Sax",
+          "name": "濱西公博"
+        },
+        {
+          "instrument": "Sax",
+          "name": "林綾子"
+        },
+        {
+          "instrument": "Pf",
+          "name": "河崎千鶴"
+        },
+        {
+          "instrument": "Ba",
+          "name": "那須仁哉"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260220.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-02-21_legacy-35aab24bca",
+      "date": "2026-02-21",
+      "title": "Saturday Jam Session 2",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:30",
+      "charge": "Charge: ¥2,000 (+2d)",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260221.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-02-22_legacy-f505c9a1d9",
+      "date": "2026-02-22",
+      "title": "Nakayama Tomo Special Birthday Session",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge: ¥3,500",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Pf",
+          "name": "坪口昌恭 etc."
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260222.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-02-23_legacy-de85cf7982",
+      "date": "2026-02-23",
+      "title": "Special Workshop“Bebop to Nu-Jazz”- From Barry Harris to Robert Glasper -",
+      "event_type": "session",
+      "status": "published",
+      "open": "12:30",
+      "start": "13:00",
+      "charge": "Charge: ¥4,000",
+      "performers": [
+        {
+          "instrument": "講師",
+          "name": "坪口昌恭"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260223.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-02-26_legacy-393d72a58d",
+      "date": "2026-02-26",
+      "title": "The Third Session 2",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_the_third_session_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-03-05_legacy-11659c16e6",
+      "date": "2026-03-05",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "羽田正英",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260305.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-03-07_legacy-3ed8229c16",
+      "date": "2026-03-07",
+      "title": "Saturday Jam Session 1",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 +2Drink Order / 学生 ¥1,000 +1Drink Order",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "吉田茉莉花"
+        },
+        {
+          "instrument": "Gt",
+          "name": "増田勇人"
+        },
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Ba",
+          "name": "那須仁哉"
+        },
+        {
+          "instrument": "Dr",
+          "name": "西村涼太"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260307.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-03-12_legacy-a587681ac7",
+      "date": "2026-03-12",
+      "title": "スガダイロー Solo Piano Live",
+      "event_type": "live",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "前売り ¥4,000 / 当日 ¥4,500",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "スガダイロー",
+          "artist_id": "sugadairo"
+        }
+      ],
+      "description": "孤高のピアニスト、スガダイローが放つ圧倒的な音世界。一音一音に宿る魂を体感せよ。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260312.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-03-18_legacy-fe04a03a65",
+      "date": "2026-03-18",
+      "title": "祝！卒業 卒業ライブ＆セッション\"New Beginnings!\"",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 +2Drink Order / 学生 ¥1,000 +1Drink Order",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "西村岳大"
+        },
+        {
+          "instrument": "Ba",
+          "name": "清水徹也"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260318.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-03-19_legacy-c95b965b4b",
+      "date": "2026-03-19",
+      "title": "Monthly Voices 〜Vocal Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "黒川薫",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260319.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-03-21_legacy-64abc4201b",
+      "date": "2026-03-21",
+      "title": "Saturday Jam Session 2",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260321.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-03-22_legacy-6da8a095ca",
+      "date": "2026-03-22",
+      "title": "Tribute to Pat Metheny Live&Session",
+      "event_type": "live_session",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 +2Drink Order / 学生 ¥1,000 +1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "増田勇人"
+        },
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Ba",
+          "name": "ヤマト"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260322.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-03-26_legacy-642ca2519f",
+      "date": "2026-03-26",
+      "title": "The Third Session",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260326.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-03-27_legacy-c3700d724e",
+      "date": "2026-03-27",
+      "title": "Hybrid Jazz Night",
+      "event_type": "live",
+      "status": "published",
+      "open": null,
+      "start": "19:30",
+      "charge": "Charge: ¥1,000 ＋投げ銭",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "彼谷宏"
+        },
+        {
+          "instrument": "Ba",
+          "name": "那須仁哉"
+        },
+        {
+          "instrument": "Dr",
+          "name": "ナカジマケント"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260327.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-03-29_legacy-6b9388661b",
+      "date": "2026-03-29",
+      "title": "永武幹子 Special Live&Session",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge: ¥3,500",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "永武幹子",
+          "artist_id": "mikiko-nagami"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260329.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-04-02_legacy-7248dbac7e",
+      "date": "2026-04-02",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "羽田正英",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260402.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-04-04_legacy-7d4e513cdd",
+      "date": "2026-04-04",
+      "title": "Saturday Jam Session 1",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 +2Drink Order / 学生 ¥1,000 +1Drink Order",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "吉田茉莉花"
+        },
+        {
+          "instrument": "Gt",
+          "name": "増田勇人"
+        },
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Ba",
+          "name": "Ami"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260404.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-04-09_legacy-4335f6e1e0",
+      "date": "2026-04-09",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260409_23.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-04-16_legacy-185f4361d6",
+      "date": "2026-04-16",
+      "title": "Monthly Voices 〜Vocal Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "黒川薫",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260416.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-04-18_legacy-7385db4f5e",
+      "date": "2026-04-18",
+      "title": "Saturday Jam Session 2",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260418.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-04-23_legacy-a587a4774b",
+      "date": "2026-04-23",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260409_23.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-04-24_legacy-5543541a60",
+      "date": "2026-04-24",
+      "title": "古谷淳トリオ",
+      "event_type": "live",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "前売 ¥4,000 / 当日 ¥4,500",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "古谷淳",
+          "artist_id": "jun-furuya"
+        },
+        {
+          "instrument": "Ba",
+          "name": "工藤精"
+        },
+        {
+          "instrument": "Dr",
+          "name": "大村亘"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260424.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-05-01_legacy-895fa5214f",
+      "date": "2026-05-01",
+      "title": "GW Special Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 +2Drink Order / 学生 ¥1,000 +1Drink Order",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "吉田茉莉花"
+        },
+        {
+          "instrument": "Gt",
+          "name": "増田勇人"
+        },
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Ba",
+          "name": "Ami"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260501.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-05-02_legacy-e04efa6aaf",
+      "date": "2026-05-02",
+      "title": "赤斬月",
+      "event_type": "live",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "前売 ¥5,000 / 当日 ¥5,500",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "スガダイロー",
+          "artist_id": "sugadairo"
+        },
+        {
+          "instrument": "Dr",
+          "name": "中村達也"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260502.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-05-04_legacy-9fdc416572",
+      "date": "2026-05-04",
+      "title": "Aaron Choulai Piano Solo Set",
+      "event_type": "live",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge: ¥5,000",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "Aaron Choulai",
+          "artist_id": "aaron-choulai"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260504.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-05-07_legacy-471cbd9bfa",
+      "date": "2026-05-07",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "羽田正英",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260507.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-05-09_legacy-cdbf275c70",
+      "date": "2026-05-09",
+      "title": "Tribute to Anita O'Day",
+      "event_type": "live",
+      "status": "published",
+      "open": null,
+      "start": "19:30",
+      "charge": "Charge: MC ¥2,000",
+      "performers": [
+        {
+          "instrument": "Vo",
+          "name": "KAZU"
+        },
+        {
+          "instrument": "Pf",
+          "name": "安部誠彦"
+        },
+        {
+          "instrument": "Ba",
+          "name": "山内健司"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260509.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-05-14_legacy-cc138c6072",
+      "date": "2026-05-14",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260514_28.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-05-16_legacy-9834340f92",
+      "date": "2026-05-16",
+      "title": "Saturday Jam Session 2",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260516.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-05-21_legacy-f3253ce96e",
+      "date": "2026-05-21",
+      "title": "Monthly Voices 〜Vocal Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "黒川薫",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260521.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-05-28_legacy-092701831e",
+      "date": "2026-05-28",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260514_28.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-05-29_legacy-de572348e2",
+      "date": "2026-05-29",
+      "title": "JAZZ TONIGHT",
+      "event_type": "live",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge: ¥2,000",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "MOJO ODA"
+        },
+        {
+          "instrument": "Pf",
+          "name": "平尾隆"
+        },
+        {
+          "instrument": "Ba",
+          "name": "武田悟"
+        },
+        {
+          "instrument": "Dr",
+          "name": "ナカジマケント"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260529.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-05-30_legacy-97fad6cf65",
+      "date": "2026-05-30",
+      "title": "Mikio Kawashima Birthday Live&Session",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:30",
+      "charge": "Charge ¥2,000",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "カワシマミキオ"
+        },
+        {
+          "instrument": "Gt",
+          "name": "久保幹尚"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "やまごん"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260530.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-06-04_legacy-55eb8628ba",
+      "date": "2026-06-04",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "羽田正英",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260604.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-06-06_legacy-cddf81d4ec",
+      "date": "2026-06-06",
+      "title": "Saturday Jam Session 1",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "本間昌晃"
+        },
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Ba",
+          "name": "Ami"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260606.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-06-11_legacy-ddf849dcd9",
+      "date": "2026-06-11",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260611.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-06-18_legacy-0b5e25f283",
+      "date": "2026-06-18",
+      "title": "Monthly Voices 〜Vocal Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "黒川薫",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260618.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-06-20_legacy-05b52a16c1",
+      "date": "2026-06-20",
+      "title": "Saturday Jam Session 2",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "MC ¥2,000 +2Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260620.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-06-25_legacy-789be84bef",
+      "date": "2026-06-25",
+      "title": "Odd Pulse Lab",
+      "event_type": "live",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "MC ¥2,500",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "濱西公博"
+        },
+        {
+          "instrument": "Gt",
+          "name": "彼谷宏"
+        },
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "ナカジマケント"
+        },
+        {
+          "instrument": "Vo",
+          "name": "Yukari Kawada"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260625.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-06-27_legacy-ba5bc5800f",
+      "date": "2026-06-27",
+      "title": "Tribute to Benny Golson",
+      "event_type": "live",
+      "status": "published",
+      "open": null,
+      "start": "20:30",
+      "charge": "Charge ¥2,000",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "吉田茉莉花"
+        },
+        {
+          "instrument": "Sax",
+          "name": "芳沢彩喜"
+        },
+        {
+          "instrument": "Pf",
+          "name": "村中千晶"
+        },
+        {
+          "instrument": "Ba",
+          "name": "吉村葵"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260627.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-06-28_legacy-ca0767d750",
+      "date": "2026-06-28",
+      "title": "Rhythm Workshop",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "13:00",
+      "charge": "参加費 ¥5,000",
+      "performers": [
+        {
+          "instrument": "講師",
+          "name": "大村亘"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260628.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-07-02_legacy-f734677e60",
+      "date": "2026-07-02",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "羽田正英",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "Ba",
+          "name": "川東優紀"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260702.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-07-04_legacy-69ea151ade",
+      "date": "2026-07-04",
+      "title": "Saturday Jam Session 1",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "吉田茉莉花"
+        },
+        {
+          "instrument": "Pf",
+          "name": "宇野秀哉"
+        },
+        {
+          "instrument": "Gt",
+          "name": "増田隼人"
+        },
+        {
+          "instrument": "Ba",
+          "name": "Ami"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260704.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-07-09_legacy-a1a653222d",
+      "date": "2026-07-09",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260709_23.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-07-10_legacy-04fc97c3d8",
+      "date": "2026-07-10",
+      "title": "魚返明未 Solo & Duo",
+      "event_type": "live",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge: ¥4,000",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "魚返明未",
+          "artist_id": "akemi-uogashi"
+        },
+        {
+          "instrument": "Vo",
+          "name": "中本美智子"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260710_11.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-07-11_legacy-aec948fc88",
+      "date": "2026-07-11",
+      "title": "魚返明未 Live＆Session",
+      "event_type": "live_session",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge: ¥4,000",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "魚返明未",
+          "artist_id": "akemi-uogashi"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260710_11.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-07-16_legacy-df86aeee1e",
+      "date": "2026-07-16",
+      "title": "Monthly Voices 〜Vocal Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "黒川薫",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260716.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-07-18_legacy-a590fec1d8",
+      "date": "2026-07-18",
+      "title": "Saturday Jam Session 2",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "那須仁哉"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260718.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-07-23_legacy-dcf1d870d5",
+      "date": "2026-07-23",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260709_23.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-07-24_legacy-93a0557c22",
+      "date": "2026-07-24",
+      "title": "Tribute to Miles Davis",
+      "event_type": "live",
+      "status": "published",
+      "open": null,
+      "start": "20:30",
+      "charge": "MC ¥2,000",
+      "performers": [
+        {
+          "instrument": "Tp",
+          "name": "丸杉俊彦"
+        },
+        {
+          "instrument": "Sax",
+          "name": "黒田忍"
+        },
+        {
+          "instrument": "Gt",
+          "name": "彼谷宏"
+        },
+        {
+          "instrument": "Ba",
+          "name": "岡本勝之"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260724.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-08-01_legacy-a13adc2927",
+      "date": "2026-08-01",
+      "title": "Saturday Jam Session 1",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "吉田茉莉花"
+        },
+        {
+          "instrument": "Pf",
+          "name": "西田楓"
+        },
+        {
+          "instrument": "Gt",
+          "name": "増田勇人"
+        },
+        {
+          "instrument": "Ba",
+          "name": "吉村葵"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260801.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-08-06_legacy-72951f8757",
+      "date": "2026-08-06",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "羽田正英",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260806.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-08-07_legacy-5fffd921aa",
+      "date": "2026-08-07",
+      "title": "菊池太光 Live & Session",
+      "event_type": "live_session",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥4,000",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "菊池太光",
+          "artist_id": "taiko-kikuchi"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260807.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-08-11_legacy-5389f9027d",
+      "date": "2026-08-11",
+      "title": "ADvance",
+      "event_type": "live",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥1,000 + Choose Your Price",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "岩田朋子"
+        },
+        {
+          "instrument": "Ba",
+          "name": "畝村幸長"
+        },
+        {
+          "instrument": "Dr",
+          "name": "Takezo"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260811.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-08-13_legacy-430c12529c",
+      "date": "2026-08-13",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "山根幸二"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260813.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-08-15_legacy-3166a80ca1",
+      "date": "2026-08-15",
+      "title": "Odd Pulse Quartet Tribute to Ofri Nehemya",
+      "event_type": "live",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥2,000",
+      "performers": [
+        {
+          "instrument": "Dr",
+          "name": "ナカジマケント"
+        },
+        {
+          "instrument": "Gt",
+          "name": "増田勇人"
+        },
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260815.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-08-20_legacy-01c931add7",
+      "date": "2026-08-20",
+      "title": "Monthly Voices 〜Vocal Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "黒川薫",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260820.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-08-21_legacy-7b13fc225d",
+      "date": "2026-08-21",
+      "title": "緑川柊麻 Quartet",
+      "event_type": "live",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥1,000 + Choose Your Price",
+      "performers": [
+        {
+          "instrument": "Dr",
+          "name": "緑川柊麻",
+          "artist_id": "shuma-midorikawa"
+        },
+        {
+          "instrument": "Sax",
+          "name": "紺野壮一朗"
+        },
+        {
+          "instrument": "Pf",
+          "name": "中口航志"
+        },
+        {
+          "instrument": "Ba",
+          "name": "吉村葵"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260821.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-08-22_legacy-5719ad1823",
+      "date": "2026-08-22",
+      "title": "永見拓也 26th Birthday Live & Session",
+      "event_type": "live_session",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥1,000 + Choose Your Price",
+      "performers": [
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        },
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260822.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-08-27_legacy-d274d068c5",
+      "date": "2026-08-27",
+      "title": "Sax Madness",
+      "event_type": "live",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥1,000 + Choose Your Price",
+      "performers": [
+        {
+          "instrument": "",
+          "name": "A.Sax 上野大摂"
+        },
+        {
+          "instrument": "",
+          "name": "T.Sax 小山淳一"
+        },
+        {
+          "instrument": "Pf",
+          "name": "東たかお"
+        },
+        {
+          "instrument": "Ba",
+          "name": "吉村葵"
+        },
+        {
+          "instrument": "Dr",
+          "name": "清水靖博"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260827.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-09-03_legacy-48e28f3e34",
+      "date": "2026-09-03",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "羽田正英",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260903.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-09-05_legacy-2b1fce0ef6",
+      "date": "2026-09-05",
+      "title": "Saturday Jam Session 1",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "本間昌晃"
+        },
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Ba",
+          "name": "川場莉佳"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260905.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-09-10_legacy-ab7dad0fe3",
+      "date": "2026-09-10",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260910_24.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-09-17_legacy-0b59053438",
+      "date": "2026-09-17",
+      "title": "Monthly Voices 〜Vocal Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "黒川薫",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260917.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-09-19_legacy-860e02187a",
+      "date": "2026-09-19",
+      "title": "Jazz Street 〜Day&Night Jam Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": "11:00",
+      "start": "12:00",
+      "charge": "DAY & NIGHT ¥3,000 / 1DAY ¥3,500 / 3DAYS ¥7,000",
+      "performers": [],
+      "description": "9/19（土）〜9/21（月） 3DAYS JAM SESSION！",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260919.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true,
+      "end_date": "2026-09-21"
+    },
+    {
+      "id": "2026-09-24_legacy-6e79ceec7f",
+      "date": "2026-09-24",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260910_24.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-09-25_legacy-403238edb9",
+      "date": "2026-09-25",
+      "title": "Stephane Grappelli Tribute Live",
+      "event_type": "live",
+      "status": "published",
+      "open": null,
+      "start": "20:30",
+      "charge": "Charge ¥2,500",
+      "performers": [
+        {
+          "instrument": "",
+          "name": "Vl. Vaughan Hughes"
+        },
+        {
+          "instrument": "Ba",
+          "name": ". 中山とも"
+        },
+        {
+          "instrument": "Pf",
+          "name": ". 岩村入吹"
+        },
+        {
+          "instrument": "Dr",
+          "name": ". 永見拓也"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260925.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-10-01_legacy-c322e0c8f2",
+      "date": "2026-10-01",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:00",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "羽田正英",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20261001.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-10-03_legacy-e6cea4b32b",
+      "date": "2026-10-03",
+      "title": "Saturday Jam Session 1",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-10-08_legacy-532326f862",
+      "date": "2026-10-08",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20261008_22.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-10-09_legacy-6c888cbbf2",
+      "date": "2026-10-09",
+      "title": "Towards No Words",
+      "event_type": "live",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥1,000 + 投げ銭",
+      "performers": [
+        {
+          "instrument": "Dr",
+          "name": "ums 青木駿"
+        },
+        {
+          "instrument": "",
+          "name": "Electronics 東山一二三"
+        }
+      ],
+      "description": "西田幾多郎記念哲学館 展示並行パフォーマンス",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20261009.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-10-10_legacy-67df69dc7c",
+      "date": "2026-10-10",
+      "title": "ABEma Special LIVE and SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "19:30",
+      "charge": "Charge ¥3,000",
+      "performers": [
+        {
+          "instrument": "",
+          "name": "① ABEmaトリオ：Pf. 安部誠彦"
+        },
+        {
+          "instrument": "Ba",
+          "name": ". 山内健司"
+        },
+        {
+          "instrument": "Dr",
+          "name": ". 川北隆博"
+        }
+      ],
+      "description": "〜トリオ＆昭和歌謡＆ミニビッグバンド祭〜",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20261010.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-10-13_legacy-25e2d5dd60",
+      "date": "2026-10-13",
+      "title": "Dolphin 1st Anniversary Special Live #4Special Jam Session Featuring 橋本現輝・小室響",
+      "event_type": "live_session",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥4,500",
+      "performers": [
+        {
+          "instrument": "Dr",
+          "name": ". 橋本現輝"
+        },
+        {
+          "instrument": "Pf",
+          "name": ". 小室響"
+        },
+        {
+          "instrument": "Ba",
+          "name": ". 中山とも"
+        }
+      ],
+      "description": "ジャズを中心に様々なフィールドで活躍する二人の俊英を迎えるスペシャルなジャムセッション。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20261013.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-10-17_legacy-24ea07afe6",
+      "date": "2026-10-17",
+      "title": "Saturday Jam Session 2",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:00",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20261017.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-10-22_legacy-a52e331b05",
+      "date": "2026-10-22",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20261008_22.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-10-29_legacy-9db856b953",
+      "date": "2026-10-29",
+      "title": "Monthly Voices 〜Vocal Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": ". 黒川薫"
+        },
+        {
+          "instrument": "Ba",
+          "name": ". 中山とも"
+        },
+        {
+          "instrument": "Dr",
+          "name": ". 永見拓也"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20261029.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-11-03_legacy-4985767288",
+      "date": "2026-11-03",
+      "title": "永武幹子トリオ",
+      "event_type": "live",
+      "status": "published",
+      "open": null,
+      "start": null,
+      "charge": "",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-11-05_legacy-b9d9d68919",
+      "date": "2026-11-05",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "羽田正英",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-11-07_legacy-36889e2bc9",
+      "date": "2026-11-07",
+      "title": "Saturday Jam Session 1",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-11-12_legacy-fdb0f9e98b",
+      "date": "2026-11-12",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-11-13_legacy-54c9cb6b6b",
+      "date": "2026-11-13",
+      "title": "B-Slope",
+      "event_type": "live",
+      "status": "published",
+      "open": null,
+      "start": null,
+      "charge": "",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-11-19_legacy-99e2aaedcf",
+      "date": "2026-11-19",
+      "title": "Monthly Voices 〜Vocal Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260820.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-11-20_legacy-9a3be933aa",
+      "date": "2026-11-20",
+      "title": "若井優也 Piano Solo",
+      "event_type": "live",
+      "status": "published",
+      "open": null,
+      "start": null,
+      "charge": "",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-11-21_legacy-3369aef530",
+      "date": "2026-11-21",
+      "title": "若井優也 Live&Session",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": null,
+      "charge": "",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-11-26_legacy-b780fe732c",
+      "date": "2026-11-26",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-12-03_legacy-29f4da2759",
+      "date": "2026-12-03",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "羽田正英",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-12-05_legacy-b917c90b19",
+      "date": "2026-12-05",
+      "title": "Saturday Jam Session 1",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-12-10_legacy-79edb22069",
+      "date": "2026-12-10",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-12-17_legacy-8372a6f691",
+      "date": "2026-12-17",
+      "title": "Monthly Voices 〜Vocal Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "flyer_20260820.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-12-19_legacy-a1e1b5e732",
+      "date": "2026-12-19",
+      "title": "Saturday Jam Session 2",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "桜井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    },
+    {
+      "id": "2026-12-24_legacy-c1a6d03617",
+      "date": "2026-12-24",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "legacy_schedule_migration",
+        "github_path": "logo_new.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "legacy_imported": true
+    }
+  ]
 }
