@@ -29,6 +29,15 @@ def root_asset(path: str) -> str:
     return "/" + path.lstrip("/")
 
 
+def event_flyer_path(event: dict) -> str:
+    path = (event.get("flyer") or {}).get("github_path") or ""
+    # Some old schedule cards used the DOLPHIN logo as an image fallback.
+    # Treat that as "no event image" in the archive rather than presenting it as a live photo/flyer.
+    if event.get("legacy_imported") and path.lstrip("/") == "logo_new.png":
+        return ""
+    return root_asset(path)
+
+
 def performer_labels(event: dict) -> list[str]:
     labels = []
     for performer in event.get("performers") or []:
@@ -62,7 +71,7 @@ def event_card(event: dict) -> str:
 
     performers = performer_labels(event)
     search_text = " ".join([event.get("title", ""), *performers]).strip()
-    flyer = root_asset((event.get("flyer") or {}).get("github_path") or "")
+    flyer = event_flyer_path(event)
     if flyer:
         media = (
             f'<a class="archive-card-media" href="{event_url(event)}">'
@@ -85,28 +94,37 @@ def event_card(event: dict) -> str:
     if performers:
         performers_html = f'<p class="archive-card-performers">{escape(" / ".join(performers))}</p>'
 
-    return f'''<article class="{card_class}" data-archive-card data-year="{start.year}" data-event-type="{normalize_event_type(event)}" data-search="{escape(search_text, quote=True)}">
-    {media}
-    <div class="archive-card-body">
-        <div class="archive-card-topline">
-            <time datetime="{event['date']}" class="archive-card-date">{date_text}</time>
-            <span class="archive-type">{event_type_label(event)}</span>
-        </div>
-        <h2 class="archive-card-title"><a href="{event_url(event)}">{escape(event['title'])}</a></h2>
-        {performers_html}
-        <div class="archive-card-meta">{''.join(meta)}</div>
-        <a class="archive-card-link" href="{event_url(event)}">VIEW EVENT</a>
-    </div>
-</article>'''
+    card_lines = [
+        f'<article class="{card_class}" data-archive-card data-year="{start.year}" data-event-type="{normalize_event_type(event)}" data-search="{escape(search_text, quote=True)}">',
+    ]
+    if media:
+        card_lines.append(media)
+    card_lines.extend([
+        '<div class="archive-card-body">',
+        '<div class="archive-card-topline">',
+        f'<time datetime="{event["date"]}" class="archive-card-date">{date_text}</time>',
+        f'<span class="archive-type">{event_type_label(event)}</span>',
+        '</div>',
+        f'<h2 class="archive-card-title"><a href="{event_url(event)}">{escape(event["title"])}</a></h2>',
+    ])
+    if performers_html:
+        card_lines.append(performers_html)
+    card_lines.extend([
+        f'<div class="archive-card-meta">{"".join(meta)}</div>',
+        f'<a class="archive-card-link" href="{event_url(event)}">VIEW EVENT</a>',
+        '</div>',
+        '</article>',
+    ])
+    return "\n".join(card_lines)
 
 
 def render_archive(events: list[dict]) -> str:
     past = sorted(
-        (e for e in events if event_is_past(e)),
-        key=lambda e: (e.get("end_date") or e["date"], e["date"], e["title"]),
+        (event for event in events if event_is_past(event)),
+        key=lambda event: (event.get("end_date") or event["date"], event["date"], event["title"]),
         reverse=True,
     )
-    years = sorted({date.fromisoformat(e["date"]).year for e in past}, reverse=True)
+    years = sorted({date.fromisoformat(event["date"]).year for event in past}, reverse=True)
 
     year_controls = ""
     if len(years) > 1:
@@ -125,11 +143,12 @@ def render_archive(events: list[dict]) -> str:
         '<button type="button" class="archive-filter" data-archive-type="live_session">LIVE &amp; SESSION</button>'
         '</div>'
     )
+    controls_html = "\n        ".join(control for control in (year_controls, type_controls) if control)
 
     sections = []
     for year in years:
         cards = "\n".join(
-            event_card(e) for e in past if date.fromisoformat(e["date"]).year == year
+            event_card(event) for event in past if date.fromisoformat(event["date"]).year == year
         )
         sections.append(f'''<section class="archive-year" data-archive-year-section="{year}">
     <h2 class="archive-year-title">{year}</h2>
@@ -190,8 +209,7 @@ def render_archive(events: list[dict]) -> str:
 <main class="archive-main">
     <div class="archive-tools">
         <input type="search" class="archive-search" placeholder="イベント名・アーティスト名で検索" aria-label="アーカイブを検索" data-archive-search>
-        {year_controls}
-        {type_controls}
+        {controls_html}
     </div>
     {''.join(sections)}
     <p class="archive-no-results" data-archive-empty>該当するイベントはありません。</p>
