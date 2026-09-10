@@ -3017,7 +3017,21 @@
         "external_links": []
       },
       "legacy_imported": true,
-      "end_date": "2026-09-21"
+      "end_date": "2026-09-21",
+      "display": {
+        "badge": "SPECIAL EVENT",
+        "intro": "9/19（土）〜9/21（月） 3DAYS JAM SESSION！",
+        "detail_lines": [
+          {
+            "icon": "clock",
+            "text": "【DAY】Open 11:00 / Start 12:00 / Close 18:00 (Charge ¥1,500)"
+          },
+          {
+            "icon": "clock",
+            "text": "【NIGHT】Open 19:00 / Start 20:00 / Until Close (Charge ¥2,500)"
+          }
+        ]
+      }
     },
     {
       "id": "2026-09-24_legacy-6e79ceec7f",
@@ -3248,7 +3262,10 @@
         "instagram": "",
         "external_links": []
       },
-      "legacy_imported": true
+      "legacy_imported": true,
+      "display": {
+        "intro": "西田幾多郎記念哲学館　展示並行パフォーマンス"
+      }
     },
     {
       "id": "2026-10-10_legacy-67df69dc7c",
@@ -3261,16 +3278,40 @@
       "charge": "Charge ¥3,000",
       "performers": [
         {
-          "instrument": "",
-          "name": "① ABEmaトリオ：Pf. 安部誠彦"
+          "instrument": "Pf.",
+          "name": "安部誠彦"
         },
         {
-          "instrument": "Ba",
-          "name": ". 山内健司"
+          "instrument": "Ba.",
+          "name": "山内健司"
         },
         {
-          "instrument": "Dr",
-          "name": ". 川北隆博"
+          "instrument": "Dr.",
+          "name": "川北隆博"
+        },
+        {
+          "instrument": "Vo.",
+          "name": "村上恵"
+        },
+        {
+          "instrument": "Vo.",
+          "name": "宮下美貴子"
+        },
+        {
+          "instrument": "Sax.",
+          "name": "芳沢彩喜"
+        },
+        {
+          "instrument": "Sax.",
+          "name": "吉田茉莉花"
+        },
+        {
+          "instrument": "Tb.",
+          "name": "谷村佳之"
+        },
+        {
+          "instrument": "Tp.",
+          "name": "木下力"
         }
       ],
       "description": "〜トリオ＆昭和歌謡＆ミニビッグバンド祭〜",
@@ -3290,12 +3331,34 @@
         "instagram": "",
         "external_links": []
       },
-      "legacy_imported": true
+      "legacy_imported": true,
+      "display": {
+        "badge": "SPECIAL EVENT",
+        "intro": "〜トリオ＆昭和歌謡＆ミニビッグバンド祭〜",
+        "detail_lines": [
+          {
+            "icon": "clock",
+            "text": "Start 19:30"
+          },
+          {
+            "icon": "users",
+            "text": "① ABEmaトリオ：Pf. 安部誠彦 / Ba. 山内健司 / Dr. 川北隆博"
+          },
+          {
+            "icon": "users",
+            "text": "② 唱和姉妹：Vo. 村上恵 / Vo. 宮下美貴子 / Pf. 安部誠彦 / Ba. 山内健司"
+          },
+          {
+            "icon": "users",
+            "text": "③ あ・カウントベイシー楽団：Sax. 芳沢彩喜 / Sax. 吉田茉莉花 / Tb. 谷村佳之 / Tp. 木下力 / Pf. 安部誠彦 / Ba. 山内健司 / Dr. 川北隆博"
+          }
+        ]
+      }
     },
     {
       "id": "2026-10-13_legacy-25e2d5dd60",
       "date": "2026-10-13",
-      "title": "Dolphin 1st Anniversary Special Live #4Special Jam Session Featuring 橋本現輝・小室響",
+      "title": "Dolphin 1st Anniversary Special Live #4",
       "event_type": "live_session",
       "status": "published",
       "open": "19:30",
@@ -3332,7 +3395,12 @@
         "instagram": "",
         "external_links": []
       },
-      "legacy_imported": true
+      "legacy_imported": true,
+      "display": {
+        "badge": "SPECIAL EVENT",
+        "subtitle": "Special Jam Session Featuring 橋本現輝・小室響",
+        "intro": "ジャズを中心に様々なフィールドで活躍する二人の俊英を迎えるスペシャルなジャムセッション。"
+      }
     },
     {
       "id": "2026-10-17_legacy-24ea07afe6",
