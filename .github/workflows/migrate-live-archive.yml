@@ -1,0 +1,41 @@
+name: Migrate Legacy Events to EVENT Database
+
+on:
+  push:
+    branches: [feature/live-archive]
+    paths:
+      - 'automation/import_legacy_events.py'
+      - '.github/workflows/migrate-live-archive.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/live-archive
+          fetch-depth: 0
+
+      - name: Import existing schedule into data/events.json
+        run: python automation/import_legacy_events.py
+
+      - name: Validate migration
+        run: |
+          python -m json.tool data/events.json > /dev/null
+          git diff --check
+
+      - name: Commit migrated EVENT database
+        run: |
+          if git diff --quiet -- data/events.json schedule.html; then
+            echo "No legacy events needed migration."
+            exit 0
+          fi
+          git config user.name "dolphin-content-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/events.json schedule.html
+          git commit -m "chore: migrate legacy schedule into EVENT database"
+          git push origin HEAD:feature/live-archive
