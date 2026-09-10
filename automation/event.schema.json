@@ -31,6 +31,25 @@
       }
     },
     "description": {"type": ["string", "null"]},
+    "display": {
+      "type": "object",
+      "properties": {
+        "badge": {"type": ["string", "null"]},
+        "subtitle": {"type": ["string", "null"]},
+        "intro": {"type": ["string", "null"]},
+        "detail_lines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["text"],
+            "properties": {
+              "icon": {"enum": ["clock", "users", "utensils", "info"]},
+              "text": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
     "reservation_url": {"type": ["string", "null"]},
     "status": {"enum": ["draft", "ready", "published", "archived"]},
     "flyer": {

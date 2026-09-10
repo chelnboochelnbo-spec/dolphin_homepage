@@ -15,6 +15,12 @@ SCHEDULE_FILE = ROOT / "schedule.html"
 
 MONTH_IDS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
 WEEKDAYS = ["mon.", "tue.", "wed.", "thu.", "fri.", "sat.", "sun."]
+DETAIL_ICONS = {
+    "clock": "far fa-clock",
+    "users": "fas fa-users",
+    "utensils": "fas fa-utensils",
+    "info": "fas fa-circle-info",
+}
 
 
 def load_events() -> list[dict]:
@@ -81,22 +87,46 @@ def date_display(event: dict) -> str:
     return start_html + f' - {end.year} {end.month}.{end.day:02d}<span class="weekday">{WEEKDAYS[end.weekday()]}</span>'
 
 
-def render_schedule_article(event: dict) -> str:
-    performers = performer_html(event)
-    time = time_text(event)
-    charge = event.get("charge") or ""
-    event_type = normalize_event_type(event)
-    badge = event_type_label(event)
-    reserve_url = event.get("reservation_url") or "index.html#reservation"
+def display_detail_html(event: dict) -> list[str]:
+    display = event.get("display") or {}
+    override_lines = display.get("detail_lines") or []
+    if override_lines:
+        details = []
+        for item in override_lines:
+            text = (item or {}).get("text") or ""
+            if not text:
+                continue
+            icon = DETAIL_ICONS.get((item or {}).get("icon") or "info", DETAIL_ICONS["info"])
+            details.append(
+                f'                                    <div class="detail-item"><i class="{icon}"></i>{escape(text)}</div>'
+            )
+        return details
+
     details = []
+    time = time_text(event)
+    performers = performer_html(event)
     if time:
         details.append(f'                                    <div class="detail-item"><i class="far fa-clock"></i>{escape(time)}</div>')
     if performers:
         details.append(f'                                    <div class="detail-item"><i class="fas fa-users"></i>{performers}</div>')
+    return details
+
+
+def render_schedule_article(event: dict) -> str:
+    charge = event.get("charge") or ""
+    event_type = normalize_event_type(event)
+    type_badge = event_type_label(event)
+    reserve_url = event.get("reservation_url") or "index.html#reservation"
+    display = event.get("display") or {}
+
+    details = display_detail_html(event)
     if charge:
         details.append(f'                                    <div class="lineup-price">{escape(charge)}</div>')
     detail_html = "\n".join(details)
+
     flyer = flyer_path(event)
+    if event.get("legacy_imported") and flyer.lstrip("/") == "logo_new.png":
+        flyer = ""
     if flyer:
         flyer_html = (
             f'<img src="{escape(flyer, quote=True)}" alt="{escape(event["title"], quote=True)} Flyer" '
@@ -104,18 +134,42 @@ def render_schedule_article(event: dict) -> str:
         )
     else:
         flyer_html = '<div class="lineup-flyer-thumb lineup-flyer-empty" aria-label="Flyer not registered"></div>'
+
+    highlight_html = ""
+    if display.get("badge"):
+        highlight_html = f'<span class="lineup-badge">{escape(display["badge"])}</span>'
+
+    subtitle_html = ""
+    if display.get("subtitle"):
+        subtitle_html = f'<span class="lineup-title-subtitle">{escape(display["subtitle"])}</span>'
+
+    intro_html = ""
+    if display.get("intro"):
+        intro_html = f'<p class="lineup-intro">{escape(display["intro"])}</p>'
+
+    info_lines = ['                            <div class="lineup-info">']
+    if highlight_html:
+        info_lines.append(f'                                {highlight_html}')
+    info_lines.append(
+        f'                                <h3 class="lineup-artist"><a href="{event_page_url(event)}">{escape(event["title"])}</a>{subtitle_html}</h3>'
+    )
+    if intro_html:
+        info_lines.append(f'                                {intro_html}')
+    info_lines.extend([
+        '                                <div class="lineup-details">',
+        detail_html,
+        '                                </div>',
+        f'                                <a href="{escape(reserve_url, quote=True)}" class="lineup-reserve-btn">RESERVATION</a>',
+        '                            </div>',
+    ])
+    info_html = "\n".join(line for line in info_lines if line != "")
+
     return f'''                    <article class="lineup-item" data-date="{event['date']}" data-end-date="{event_end_date(event).isoformat()}" data-event-id="{escape(event['id'])}" data-event-type="{event_type}">
-                        <span class="event-type-badge">{badge}</span>
+                        <span class="event-type-badge">{type_badge}</span>
                         <div class="lineup-date">{date_display(event)}</div>
                         <div class="lineup-body">
                             {flyer_html}
-                            <div class="lineup-info">
-                                <h3 class="lineup-artist"><a href="{event_page_url(event)}">{escape(event['title'])}</a></h3>
-                                <div class="lineup-details">
-{detail_html}
-                                </div>
-                                <a href="{escape(reserve_url, quote=True)}" class="lineup-reserve-btn">RESERVATION</a>
-                            </div>
+{info_html}
                         </div>
                     </article>'''
 
