@@ -3188,6 +3188,44 @@
       "legacy_imported": true
     },
     {
+      "id": "2026-10-06_free-improvisation-jam-session",
+      "date": "2026-10-06",
+      "title": "Free Improvisation Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥1,500",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "owner_supplied",
+        "github_path": "assets/flyers/flyer_20261006_free-improvisation-jam-session.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
       "id": "2026-10-08_legacy-532326f862",
       "date": "2026-10-08",
       "title": "Kiraku Jam",
