@@ -3748,20 +3748,25 @@
     {
       "id": "2026-11-20_legacy-9a3be933aa",
       "date": "2026-11-20",
-      "title": "若井優也 Piano Solo",
+      "title": "若井優也 Solo",
       "event_type": "live",
       "status": "published",
-      "open": null,
-      "start": null,
-      "charge": "",
-      "performers": [],
-      "description": "",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥5,000",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "若井優也"
+        }
+      ],
+      "description": "椎名林檎を感嘆させたテクニックと豊かな音楽的知性。ジャズとクラシックの伝統を受け継ぎながら、常に新しい表現へと挑み続ける若きマエストロが金沢ドルフィンに初登場。",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
         "status": "ready",
-        "source": "legacy_schedule_migration",
-        "github_path": "logo_new.png",
+        "source": "owner_supplied",
+        "github_path": "assets/flyers/flyer_20261120_wakai-yuya-special-2days.jpg",
         "canva_design_id": null
       },
       "archive": {
@@ -3772,25 +3777,44 @@
         "instagram": "",
         "external_links": []
       },
-      "legacy_imported": true
+      "legacy_imported": true,
+      "display": {
+        "badge": "SPECIAL EVENT",
+        "subtitle": "Dolphin 1st Anniversary Special Live #5",
+        "intro": "椎名林檎を感嘆させたテクニックと豊かな音楽的知性。ジャズとクラシックの伝統を受け継ぎながら、常に新しい表現へと挑み続ける若きマエストロが金沢ドルフィンに初登場。"
+      }
     },
     {
       "id": "2026-11-21_legacy-3369aef530",
       "date": "2026-11-21",
-      "title": "若井優也 Live&Session",
-      "event_type": "live_session",
+      "title": "若井優也 Jam Session",
+      "event_type": "session",
       "status": "published",
-      "open": null,
-      "start": null,
-      "charge": "",
-      "performers": [],
-      "description": "",
+      "open": "19:30",
+      "start": "20:00",
+      "charge": "Charge ¥5,000",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "若井優也"
+        },
+        {
+          "instrument": "Bass",
+          "name": "那須仁哉"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "椎名林檎を感嘆させたテクニックと豊かな音楽的知性。ジャズとクラシックの伝統を受け継ぎながら、常に新しい表現へと挑み続ける若きマエストロが金沢ドルフィンに初登場。",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
         "status": "ready",
-        "source": "legacy_schedule_migration",
-        "github_path": "logo_new.png",
+        "source": "owner_supplied",
+        "github_path": "assets/flyers/flyer_20261120_wakai-yuya-special-2days.jpg",
         "canva_design_id": null
       },
       "archive": {
@@ -3801,7 +3825,12 @@
         "instagram": "",
         "external_links": []
       },
-      "legacy_imported": true
+      "legacy_imported": true,
+      "display": {
+        "badge": "SPECIAL EVENT",
+        "subtitle": "Dolphin 1st Anniversary Special Live #5",
+        "intro": "椎名林檎を感嘆させたテクニックと豊かな音楽的知性。ジャズとクラシックの伝統を受け継ぎながら、常に新しい表現へと挑み続ける若きマエストロが金沢ドルフィンに初登場。"
+      }
     },
     {
       "id": "2026-11-26_legacy-b780fe732c",
