@@ -3489,6 +3489,24 @@
         "badge": "SPECIAL EVENT",
         "subtitle": "The Music Of Robert Glasper",
         "intro": "Jazz × Hip-Hop × Neo Soul"
+      },
+      "social": {
+        "instagram_caption": "Stakes Is High\nThe Music Of Robert Glasper\nJazz × Hip-Hop × Neo Soul\n\n2026.10.15 Thu.\nOpen 20:00 / Start 20:30\nCharge ¥3,000\n\nKeys 小室響\nVo momo（from momoholic）\nBass 中山とも\nDrum 沢田周一\n\nJazz & Bar DOLPHIN\n\nご予約\nhttps://www.bardolphin-kanazawa.com/#reservation\n\n石川県金沢市片町2-13-11 ミリオンビル4階\n080-3895-0821\n\nLive Schedule\nhttps://www.bardolphin-kanazawa.com/schedule.html\n\n#StakesIsHigh #RobertGlasper #小室響 #momoholic #中山とも #沢田周一 #金沢ジャズ #金沢ライブ #金沢バー #ジャズバー #JazzBarDolphin",
+        "facebook_caption": "Stakes Is High\nThe Music Of Robert Glasper\nJazz × Hip-Hop × Neo Soul\n\n2026.10.15 Thu.\nOpen 20:00 / Start 20:30\nCharge ¥3,000\n\nKeys 小室響\nVo momo（from momoholic）\nBass 中山とも\nDrum 沢田周一\n\nJazz & Bar DOLPHIN\n\nご予約\nhttps://www.bardolphin-kanazawa.com/#reservation\n\n石川県金沢市片町2-13-11 ミリオンビル4階\n080-3895-0821\n\nLive Schedule\nhttps://www.bardolphin-kanazawa.com/schedule.html\n\n#StakesIsHigh #RobertGlasper #小室響 #momoholic #中山とも #沢田周一 #金沢ジャズ #金沢ライブ #金沢バー #ジャズバー #JazzBarDolphin",
+        "schedule": [
+          {
+            "channel": "instagram",
+            "publish_at": "2026-09-11T16:12:00+09:00",
+            "status": "published",
+            "external_id": "https://www.instagram.com/p/DdI2LvulufR/"
+          },
+          {
+            "channel": "facebook",
+            "publish_at": "2026-09-11T16:12:00+09:00",
+            "status": "published",
+            "external_id": "122195214824795126"
+          }
+        ]
       }
     },
     {
