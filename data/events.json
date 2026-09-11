@@ -3441,6 +3441,57 @@
       }
     },
     {
+      "id": "2026-10-15_stakes-is-high",
+      "date": "2026-10-15",
+      "title": "Stakes Is High",
+      "event_type": "live",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥3,000",
+      "performers": [
+        {
+          "instrument": "Keys",
+          "name": "小室響"
+        },
+        {
+          "instrument": "Vo",
+          "name": "momo（from momoholic）"
+        },
+        {
+          "instrument": "Bass",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Drum",
+          "name": "沢田周一"
+        }
+      ],
+      "description": "The Music Of Robert Glasper - Jazz × Hip-Hop × Neo Soul -",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "owner_supplied",
+        "github_path": "assets/flyers/flyer_20261015_stakes-is-high.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "display": {
+        "badge": "SPECIAL EVENT",
+        "subtitle": "The Music Of Robert Glasper",
+        "intro": "Jazz × Hip-Hop × Neo Soul"
+      }
+    },
+    {
       "id": "2026-10-17_legacy-24ea07afe6",
       "date": "2026-10-17",
       "title": "Saturday Jam Session 2",
