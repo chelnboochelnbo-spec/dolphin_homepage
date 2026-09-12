@@ -3630,6 +3630,79 @@
       "legacy_imported": true
     },
     {
+      "id": "2026-10-31_sounds-demo-after-session",
+      "date": "2026-10-31",
+      "title": "Sounds Demo / After Session",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥4,000",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "高木沙耶"
+        },
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Gt",
+          "name": "増田勇人"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "10月最後の夜、Sounds DemoからそのままAfter Sessionへ。Sounds Demoの熱量を、Dolphinでゆっくりお楽しみください。「ISHIKAWA BRILLIANT SOUNDS DEMO」のイベントチケットをDolphinで購入した方は、本ライブのチャージ無料。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "owner_supplied",
+        "github_path": "assets/flyers/flyer_20261031_sounds-demo-after-session.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "display": {
+        "badge": "SPECIAL EVENT",
+        "intro": "10月最後の夜、Sounds DemoからそのままAfter Sessionへ。Sounds Demoの熱量を、Dolphinでゆっくりお楽しみください。「ISHIKAWA BRILLIANT SOUNDS DEMO」のイベントチケットをDolphinで購入した方は、本ライブのチャージ無料。"
+      },
+      "social": {
+        "instagram_caption": "Sounds Demo / After Session\n\n10月最後の夜、Sounds DemoからそのままAfter Sessionへ。\nSounds Demoの熱量を、Dolphinでゆっくりお楽しみください。\n\n2026.10.31 Sat.\nStart 20:00\nCharge ¥4,000\n\nSax. 高木沙耶\nPf. 岩村入吹\nGt. 増田勇人\nBa. 中山とも\nDr. 永見拓也\n\n【Special】\n「ISHIKAWA BRILLIANT SOUNDS DEMO」のイベントチケットをDolphinで購入した方は、本ライブのチャージ無料。\n\nご予約\nhttps://www.bardolphin-kanazawa.com/#reservation\n\nJazz & Bar DOLPHIN\n石川県金沢市片町2-13-11 ミリオンビル4階\n080-3895-0821\nOpen 20:00–26:00\n\nLive Schedule\nhttps://www.bardolphin-kanazawa.com/schedule.html\n\n#SoundsDemo #AfterSession #高木沙耶 #岩村入吹 #増田勇人 #中山とも #永見拓也 #金沢ジャズ #金沢ライブ #金沢バー #ジャズバー #JazzBarDolphin",
+        "facebook_caption": "Sounds Demo / After Session\n\n10月最後の夜、Sounds DemoからそのままAfter Sessionへ。\nSounds Demoの熱量を、Dolphinでゆっくりお楽しみください。\n\n2026.10.31 Sat.\nStart 20:00\nCharge ¥4,000\n\nSax. 高木沙耶\nPf. 岩村入吹\nGt. 増田勇人\nBa. 中山とも\nDr. 永見拓也\n\n【Special】\n「ISHIKAWA BRILLIANT SOUNDS DEMO」のイベントチケットをDolphinで購入した方は、本ライブのチャージ無料。\n\nご予約\nhttps://www.bardolphin-kanazawa.com/#reservation\n\nJazz & Bar DOLPHIN\n石川県金沢市片町2-13-11 ミリオンビル4階\n080-3895-0821\nOpen 20:00–26:00\n\nLive Schedule\nhttps://www.bardolphin-kanazawa.com/schedule.html\n\n#SoundsDemo #AfterSession #高木沙耶 #岩村入吹 #増田勇人 #中山とも #永見拓也 #金沢ジャズ #金沢ライブ #金沢バー #ジャズバー #JazzBarDolphin",
+        "schedule": [
+          {
+            "channel": "instagram",
+            "publish_at": "2026-09-30T18:00:00+09:00",
+            "status": "scheduled",
+            "external_id": "374757265"
+          },
+          {
+            "channel": "facebook",
+            "publish_at": "2026-09-30T18:00:00+09:00",
+            "status": "scheduled",
+            "external_id": "374757265"
+          }
+        ]
+      }
+    },
+    {
       "id": "2026-11-03_legacy-4985767288",
       "date": "2026-11-03",
       "title": "永武幹子トリオ",
