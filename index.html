@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jazz&Bar Dolphin | 金沢片町 ジャズバー</title>
+    <meta name="description" content="金沢・片町、ミリオンビル4階の隠れ家ジャズバー。生演奏、ジャムセッション、通常営業の今夜の予定と料金をご案内します。">
+    <title>Jazz & Bar DOLPHIN | 金沢・片町4Fの隠れ家ジャズバー</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,15 +24,6 @@
 </head>
 
 <body>
-
-    <!-- Opening Animation Overlay -->
-    <div id="opening-overlay">
-        <div class="opening-content">
-            <!-- Logo Image -->
-            <img src="logo_new.png" alt="Dolphin" class="opening-logo-img">
-            <p class="opening-tagline">MUSIC AND CULTURE IN KANAZAWA</p>
-        </div>
-    </div>
 
     <!-- Navigation -->
     <nav class="main-nav">
@@ -66,13 +58,51 @@
     <section id="home" class="hero">
         <div class="hero-bg"></div>
         <div class="hero-content fade-in">
-            <div class="hero-logo-wrapper">
-                <a href="schedule.html" title="View Monthly Schedule">
-                    <img src="logo_new.png" alt="Jazz & Bar Dolphin" class="main-logo-img">
-                </a>
+            <p class="hero-kicker">HIDDEN JAZZ BAR · LIVE MUSIC · KANAZAWA NIGHT</p>
+            <h1>片町の4階。<br>扉の向こうにジャズがあります。</h1>
+            <p class="hero-lead">金沢・片町の隠れ家ジャズバー、DOLPHIN。<br>生演奏の夜も、音楽と一杯を楽しむ夜も。今夜の予定を確かめて、お越しください。</p>
+            <div class="hero-actions">
+                <a href="#tonight" class="hero-btn hero-btn-primary">今夜の予定を見る</a>
+                <a href="#access" class="hero-btn">4Fへの行き方</a>
             </div>
+        </div>
+    </section>
 
+    <!-- Tonight Section -->
+    <section id="tonight" class="section tonight-section" aria-live="polite">
+        <div class="container fade-in">
+            <div class="tonight-heading">
+                <p class="tonight-eyebrow">TONIGHT AT DOLPHIN</p>
+                <p id="tonight-date" class="tonight-date">本日の情報を確認しています</p>
+            </div>
+            <div id="tonight-card" class="tonight-card" data-state="loading">
+                <div>
+                    <span id="tonight-type" class="tonight-type">CHECKING</span>
+                    <h2 id="tonight-title">今夜の予定を確認しています</h2>
+                    <p id="tonight-note">最新情報を読み込んでいます。</p>
+                </div>
+                <div class="tonight-facts">
+                    <p><span>OPEN</span><strong id="tonight-open">19:00</strong></p>
+                    <p><span>PRICE</span><strong id="tonight-price">通常チャージ ¥500</strong></p>
+                </div>
+                <a id="tonight-link" href="schedule.html" class="tonight-link">詳しく見る</a>
+            </div>
+            <p class="tonight-caution">不定休です。臨時休業・貸切はこの欄でお知らせします。</p>
+        </div>
+    </section>
 
+    <!-- Price & Visit Basics -->
+    <section id="visit-basics" class="section visit-basics-section">
+        <div class="container fade-in">
+            <div class="section-header">
+                <h2 class="section-title">PRICE & VISIT BASICS</h2>
+                <p class="section-subtitle">席に着く前に、今夜の料金を。</p>
+            </div>
+            <div class="visit-basics-grid">
+                <div class="visit-basic-card"><span>BAR NIGHT</span><strong>通常チャージ ¥500</strong><p>ドリンク・フード代は別途。</p></div>
+                <div class="visit-basic-card"><span>LIVE / JAM</span><strong>イベント料金 ¥1,000〜</strong><p>公演ごとの料金はTonight・Scheduleに表示します。</p></div>
+                <div class="visit-basic-card"><span>PAYMENT</span><strong>現金・クレジット・QRコード</strong><p>店頭でお支払いいただけます。</p></div>
+            </div>
         </div>
     </section>
 
@@ -237,13 +267,55 @@
         </div>
     </section>
 
+    <!-- First Visit FAQ -->
+    <section id="first-visit" class="section first-visit-section">
+        <div class="container fade-in">
+            <div class="section-header">
+                <h2 class="section-title">FIRST VISIT</h2>
+                <p class="section-subtitle">初めての方へ</p>
+            </div>
+            <div class="faq-grid">
+                <details open><summary>一人でも入れますか？</summary><p>はい。お一人で音楽やお酒を楽しむ方も歓迎しています。</p></details>
+                <details><summary>ジャズ初心者でも大丈夫ですか？</summary><p>大丈夫です。知識や演奏経験を問わず、ご自身の距離感でお楽しみください。</p></details>
+                <details><summary>聴くだけでも大丈夫ですか？</summary><p>はい。セッションの日も、聴くだけでお楽しみいただけます。参加は必須ではありません。</p></details>
+                <details><summary>料金はいくらですか？</summary><p>通常営業はチャージ¥500です。イベント日は¥1,000〜で、公演ごとの料金をTonightとScheduleに表示します。</p></details>
+                <details><summary>支払方法は？</summary><p>現金、クレジットカード、QRコード決済をご利用いただけます。</p></details>
+                <details><summary>撮影できますか？</summary><p>店内撮影は可能です。</p></details>
+                <details><summary>4Fへはどう行きますか？</summary><p>DOLPHINは片町2-13-11、ミリオンビル4階です。建物入口から4階へお上がりください。</p></details>
+                <details><summary>イベント日と通常営業の違いは？</summary><p>LIVE・JAMの日は開演時間とイベント料金があります。通常営業日はBAR NIGHTとして、レコードとお酒を中心にお楽しみいただけます。</p></details>
+            </div>
+        </div>
+    </section>
+
+    <!-- English Guide -->
+    <section id="english-guide" class="section english-guide-section" lang="en">
+        <div class="container fade-in">
+            <div class="english-card">
+                <p class="english-eyebrow">HIDDEN JAZZ BAR IN KANAZAWA</p>
+                <h2>Jazz & Bar DOLPHIN</h2>
+                <p>Katamachi · Million Building · 4F</p>
+                <div class="english-points">
+                    <p><strong>Tonight</strong><br>Check the LIVE / JAM / BAR NIGHT information above.</p>
+                    <p><strong>Price</strong><br>Bar charge ¥500. Event admission starts from ¥1,000; see each event for the exact price.</p>
+                    <p><strong>First visit</strong><br>Solo visitors are welcome. Listening only is OK.</p>
+                    <p><strong>Payment</strong><br>Cash, credit cards and QR-code payments accepted.</p>
+                    <p><strong>Find us</strong><br>Enter Million Building at 2-13-11 Katamachi and come up to the 4th floor.</p>
+                </div>
+                <div class="hero-actions">
+                    <a href="schedule.html" class="hero-btn hero-btn-primary">TONIGHT & SCHEDULE</a>
+                    <a href="#reservation" class="hero-btn">CONTACT / RESERVATION</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Reservation Section -->
     <!-- Reservation Section -->
     <section id="reservation" class="section">
         <div class="container fade-in">
             <div class="section-header">
                 <h2 class="section-title">RESERVATION</h2>
-                <p class="section-subtitle">Join us for the night</p>
+                <p class="section-subtitle">入力後、メールアプリが開きます。まだ送信・予約確定ではありません。</p>
             </div>
 
             <form class="reservation-form" id="reserveForm">
@@ -445,7 +517,7 @@
                     <textarea id="message" name="message" rows="4"></textarea>
                 </div>
 
-                <button type="submit" class="submit-btn">SEND RESERVATION</button>
+                <button type="submit" class="submit-btn">予約メールを作成</button>
             </form>
         </div>
     </section>
@@ -469,7 +541,7 @@
 
                     <div class="access-item-row" style="margin-top: 1.5rem;">
                         <i class="far fa-clock"></i>
-                        <span>Open: 20:00 - 02:00</span>
+                        <span>Open: 19:00 - 01:00</span>
                     </div>
                     <div class="access-item-row">
                         <span>Closed: Irregular Holidays</span>
@@ -489,13 +561,13 @@
             <div class="footer-column">
                 <h4 class="footer-heading">ACCESS</h4>
                 <p class="footer-text">〒920-0981<br>石川県金沢市片町2-13-11<br>ミリオンビル4階</p>
-                <a href="https://goo.gl/maps/dSt7S6Kz2mH2" target="_blank" class="footer-link-sub">Google Maps</a>
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=Jazz%20%26%20Bar%20Dolphin%20%E9%87%91%E6%B2%A2%E5%B8%82%E7%89%87%E7%94%BA2-13-11%20%E3%83%9F%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%93%E3%83%AB4F" target="_blank" rel="noopener" class="footer-link-sub">Google Maps</a>
             </div>
             <div class="footer-column">
                 <h4 class="footer-heading">SUPPORT DESK</h4>
                 <p class="footer-text">ご予約・お問い合わせ</p>
                 <p class="footer-tel">080-3895-0821</p>
-                <p class="footer-text">Reception: 20:00 - 02:00</p>
+                <p class="footer-text">Open: 19:00 - 01:00 / 不定休</p>
             </div>
             <div class="footer-column">
                 <h4 class="footer-heading">LEGAL</h4>
@@ -510,7 +582,7 @@
             <div class="social-links-footer">
                 <a href="https://www.instagram.com/dolphin_kanazawa" target="_blank"><i
                         class="fab fa-instagram"></i></a>
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/p/Jazz-Bar-Dolphin-61573853794592/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             </div>
             <p class="copyright">&copy; Jazz&Bar Dolphin</p>
         </div>
