@@ -6,6 +6,16 @@ This directory defines the operating contract for automating event publication a
 ## Single source of truth
 New events are registered in `data/events.json` and must conform to `automation/event.schema.json`.
 
+Store-wide facts and the day-by-day operating state are registered in `data/operations.json`. The homepage Tonight panel treats the standard state as `BAR NIGHT`, unless a published event exists or the date is listed under `overrides`.
+
+For an irregular closure or private booking, add the date before publication:
+
+```json
+"2026-09-30": { "state": "closed", "note": "臨時休業" }
+```
+
+Allowed override states are `closed` and `private`. Do not leave a known closure unregistered, because an unlisted date is displayed as regular BAR NIGHT.
+
 Existing legacy events in `index.html` / `schedule.html` are preserved during migration. New automated events are managed from `data/events.json`.
 
 ## Input flow
