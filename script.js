@@ -1,19 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initScheduleFilter();
     initReservationSystem();
-
-    // --- Opening Animation ---
-    const overlay = document.getElementById('opening-overlay');
-
-    if (overlay) {
-        document.body.classList.add('no-scroll');
-        setTimeout(() => {
-            overlay.classList.add('slide-out');
-            setTimeout(() => {
-                document.body.classList.remove('no-scroll');
-            }, 1200);
-        }, 3500);
-    }
+    initTonight();
 
     // --- Mobile Menu Toggle ---
     const menuToggle = document.querySelector('.menu-toggle');
@@ -49,6 +37,111 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeElements.forEach(el => observer.observe(el));
 });
 
+function getTokyoDateString() {
+    const formatter = new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'Asia/Tokyo',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+    });
+    return formatter.format(new Date());
+}
+
+function formatTonightDate(dateString) {
+    const [year, month, day] = dateString.split('-').map(Number);
+    const date = new Date(Date.UTC(year, month - 1, day, 12));
+    return new Intl.DateTimeFormat('ja-JP', {
+        timeZone: 'Asia/Tokyo',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        weekday: 'short'
+    }).format(date);
+}
+
+async function initTonight() {
+    const card = document.getElementById('tonight-card');
+    if (!card) return;
+
+    const dateEl = document.getElementById('tonight-date');
+    const typeEl = document.getElementById('tonight-type');
+    const titleEl = document.getElementById('tonight-title');
+    const noteEl = document.getElementById('tonight-note');
+    const openEl = document.getElementById('tonight-open');
+    const priceEl = document.getElementById('tonight-price');
+    const linkEl = document.getElementById('tonight-link');
+    const ticker = document.querySelector('.ticker-content');
+    const today = getTokyoDateString();
+
+    dateEl.textContent = formatTonightDate(today);
+
+    try {
+        const [operationsResponse, eventsResponse] = await Promise.all([
+            fetch('data/operations.json', { cache: 'no-store' }),
+            fetch('data/events.json', { cache: 'no-store' })
+        ]);
+        if (!operationsResponse.ok || !eventsResponse.ok) throw new Error('Today data unavailable');
+
+        const operations = await operationsResponse.json();
+        const eventData = await eventsResponse.json();
+        const override = operations.overrides?.[today] || null;
+        const event = (eventData.events || []).find(item => {
+            const end = item.end_date || item.date;
+            return ['ready', 'published'].includes(item.status) && item.date <= today && end >= today;
+        });
+
+        if (override?.state === 'closed' || override?.state === 'private') {
+            const isClosed = override.state === 'closed';
+            card.dataset.state = override.state;
+            typeEl.textContent = isClosed ? 'CLOSED' : 'PRIVATE';
+            titleEl.textContent = isClosed ? '本日は休業します' : '本日は貸切営業です';
+            noteEl.textContent = override.note || '次回の営業情報はScheduleでご確認ください。';
+            openEl.textContent = '—';
+            priceEl.textContent = '—';
+            linkEl.href = 'schedule.html';
+            linkEl.textContent = '今後の予定を見る';
+            if (ticker) ticker.textContent = `${typeEl.textContent} | ${titleEl.textContent}`;
+            return;
+        }
+
+        if (event) {
+            const typeLabels = { live: 'LIVE', session: 'JAM', live_session: 'LIVE & JAM' };
+            const open = event.open || operations.standard_hours.open;
+            const timeLabel = event.start ? `Open ${open} / Start ${event.start}` : `Open ${open}`;
+            card.dataset.state = 'event';
+            typeEl.textContent = typeLabels[event.event_type] || 'EVENT';
+            titleEl.textContent = event.title;
+            noteEl.textContent = timeLabel;
+            openEl.textContent = open;
+            priceEl.textContent = event.charge || `イベント料金 ${operations.event_price_from}〜`;
+            linkEl.href = `/events/${event.id}/`;
+            linkEl.textContent = 'イベント詳細';
+            if (ticker) ticker.textContent = `TONIGHT: ${typeEl.textContent} · ${event.title} · ${timeLabel}`;
+            return;
+        }
+
+        card.dataset.state = 'bar';
+        typeEl.textContent = 'BAR NIGHT';
+        titleEl.textContent = '音楽と一杯を、片町の4階で。';
+        noteEl.textContent = `通常営業 ${operations.standard_hours.open}–${operations.standard_hours.close}`;
+        openEl.textContent = operations.standard_hours.open;
+        priceEl.textContent = `通常チャージ ${operations.bar_charge}`;
+        linkEl.href = '#access';
+        linkEl.textContent = 'アクセスを見る';
+        if (ticker) ticker.textContent = `TONIGHT: BAR NIGHT · ${operations.standard_hours.open}–${operations.standard_hours.close} · 通常チャージ ${operations.bar_charge}`;
+    } catch (error) {
+        card.dataset.state = 'unknown';
+        typeEl.textContent = 'CHECK BEFORE VISITING';
+        titleEl.textContent = '本日の営業情報は確認中です';
+        noteEl.textContent = 'ご来店前に電話またはメールでお問い合わせください。';
+        openEl.textContent = '—';
+        priceEl.textContent = '—';
+        linkEl.href = '#reservation';
+        linkEl.textContent = '問い合わせる';
+        if (ticker) ticker.textContent = '本日の営業情報は確認中です。ご来店前にお問い合わせください。';
+    }
+}
+
 /**
  * Reservation System Optimization
  */
@@ -82,7 +175,7 @@ function initReservationSystem() {
         });
 
         // Auto-select current month and trigger filter
-        const now = new Date();
+        const now = new Date(`${getTokyoDateString()}T12:00:00+09:00`);
         const monthNames = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
         const currentMonth = monthNames[now.getMonth()];
         // Check if the option exists to avoid errors later in the year if option is missing
@@ -197,10 +290,8 @@ function initScheduleFilter() {
     });
 
     // --- Date Acquisition ---
-    const now = new Date();
-    const todayStr = now.getFullYear() + '-' +
-        String(now.getMonth() + 1).padStart(2, '0') + '-' +
-        String(now.getDate()).padStart(2, '0');
+    const now = new Date(`${getTokyoDateString()}T12:00:00+09:00`);
+    const todayStr = getTokyoDateString();
     const currentMonthNum = now.getMonth() + 1;
 
     // --- Schedule Item Logic (Hide Past, Highlight Today) ---
@@ -239,7 +330,7 @@ function initScheduleFilter() {
         if (todayEventTitle) {
             ticker.innerText = "TODAY'S EVENT: " + todayEventTitle + " | 皆様のご来店をお待ちしております。";
         } else {
-            ticker.innerText = "Enjoy Jazz & Bar Dolphin - Open tonight from 20:00. | 今夜も20時より営業。皆様のご来店をお待ちしております。";
+            ticker.innerText = "本日の営業情報を確認しています。";
         }
     }
 
