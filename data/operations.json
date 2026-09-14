@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "timezone": "Asia/Tokyo",
+  "standard_hours": {
+    "open": "19:00",
+    "close": "01:00"
+  },
+  "closed_policy": "irregular",
+  "bar_charge": "¥500",
+  "event_price_from": "¥1,000",
+  "payments": [
+    "cash",
+    "credit_card",
+    "qr_code"
+  ],
+  "photography": "allowed",
+  "overrides": {}
+}
