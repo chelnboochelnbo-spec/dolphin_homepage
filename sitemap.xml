@@ -1,19 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bardolphin-kanazawa.com/</loc>
-    <lastmod>2026-01-16</lastmod>
+    <loc>https://www.bardolphin-kanazawa.com/</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.bardolphin-kanazawa.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bardolphin-kanazawa.com/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.bardolphin-kanazawa.com/zh-tw/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bardolphin-kanazawa.com/" />
   </url>
   <url>
-    <loc>https://bardolphin-kanazawa.com/schedule.html</loc>
-    <lastmod>2026-01-16</lastmod>
+    <loc>https://www.bardolphin-kanazawa.com/en/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.bardolphin-kanazawa.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bardolphin-kanazawa.com/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.bardolphin-kanazawa.com/zh-tw/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bardolphin-kanazawa.com/" />
+  </url>
+  <url>
+    <loc>https://www.bardolphin-kanazawa.com/zh-tw/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.bardolphin-kanazawa.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bardolphin-kanazawa.com/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.bardolphin-kanazawa.com/zh-tw/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bardolphin-kanazawa.com/" />
+  </url>
+  <url>
+    <loc>https://www.bardolphin-kanazawa.com/schedule.html</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bardolphin-kanazawa.com/legal.html</loc>
+    <loc>https://www.bardolphin-kanazawa.com/legal.html</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
