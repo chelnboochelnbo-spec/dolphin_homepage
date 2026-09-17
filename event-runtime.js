@@ -31,4 +31,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // Temporary operational notice for Kanazawa Jazz Street 2026.
+    // Only the 9/20 daytime session is cancelled; the night session and all other dates remain unchanged.
+    document.querySelectorAll('[data-event-id="2026-09-19_legacy-860e02187a"]').forEach(eventCard => {
+        const info = eventCard.querySelector('.lineup-info');
+        if (!info || info.querySelector('.jazz-street-update-notice')) return;
+
+        const notice = document.createElement('p');
+        notice.className = 'lineup-intro jazz-street-update-notice';
+        notice.setAttribute('role', 'status');
+        notice.style.fontWeight = '700';
+        notice.style.borderLeft = '3px solid #b51f24';
+        notice.style.paddingLeft = '0.85rem';
+        notice.style.marginTop = '0.8rem';
+        notice.textContent = '【重要】9/20（土）のDAY SESSIONのみ中止となりました。NIGHT SESSIONは告知通り開催します。9/19（土）・9/21（月）を含むその他の内容に変更はありません。';
+
+        const details = info.querySelector('.lineup-details');
+        if (details) {
+            info.insertBefore(notice, details);
+        } else {
+            info.appendChild(notice);
+        }
+
+        eventCard.querySelectorAll('.detail-item').forEach(detail => {
+            if (detail.textContent.includes('【DAY】') && !detail.textContent.includes('9/20')) {
+                detail.append(' ※9/20（土）のみ中止');
+            }
+        });
+    });
 });
