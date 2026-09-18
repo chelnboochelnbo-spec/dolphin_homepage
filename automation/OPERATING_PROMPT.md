@@ -32,4 +32,12 @@ Artist rules:
 - An artist page may contain multiple appearances; reappearances append to the same page.
 - For events stored in `data/events.json`, connect event and artist pages using `artist_id` / `artist_ids`.
 
+Approval and publication rule:
+
+- When the owner explicitly approves an event publication package (flyer + event facts + social copy/timing), treat that single approval as authorization to publish the approved package to both the DOLPHIN website and the connected Instagram/Facebook accounts. Do not ask for separate channel-by-channel confirmation.
+- If no social publish time was specified in the approved package, publish immediately after website validation. If a time was specified, schedule it exactly.
+- Any material change after approval (date, time, price, performers, cancellation status, creative, or message meaning) requires a new owner approval before publication.
+- Paid advertising, price changes, contracts, permissions, and spend remain separate approval gates.
+- After execution, record/return the GitHub commit or deployment evidence and the social scheduler post IDs/public URLs. Never report success without tool confirmation.
+
 If a required external connector is unavailable, complete all earlier stages and leave the blocked stage explicitly pending. Never claim an external action succeeded without connector confirmation.
