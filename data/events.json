@@ -2995,17 +2995,17 @@
       "title": "Jazz Street 〜Day&Night Jam Session〜",
       "event_type": "session",
       "status": "published",
-      "open": "11:00",
-      "start": "12:00",
-      "charge": "DAY & NIGHT ¥3,000 / 1DAY ¥3,500 / 3DAYS ¥7,000",
+      "open": "19:00",
+      "start": "20:00",
+      "charge": "DAY ¥1,500 / NIGHT ¥2,500 / DAY & NIGHT ¥3,000 / 1DAY ¥3,500 / 3DAYS ¥7,000",
       "performers": [],
-      "description": "【重要】9/19（土）のDAY SESSIONのみ中止。NIGHT SESSIONは告知通り開催します。9/20（日）・9/21（月）は変更ありません。",
+      "description": "9/19（土）はNIGHT SESSIONのみ。9/20（日）・9/21（月）はDAY & NIGHTで開催します。",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
         "status": "ready",
-        "source": "legacy_schedule_migration",
-        "github_path": "flyer_20260919.png",
+        "source": "approved_chat_creative",
+        "github_path": "https://static.metricool.com/planner/202609/6910064-file-11328815618760498529.png",
         "canva_design_id": null
       },
       "archive": {
@@ -3020,15 +3020,31 @@
       "end_date": "2026-09-21",
       "display": {
         "badge": "SPECIAL EVENT",
-        "intro": "【重要】9/19（土）のDAY SESSIONのみ中止。NIGHT SESSIONは告知通り開催します。9/20（日）・9/21（月）は変更ありません。",
+        "intro": "9/19（土）はNIGHT SESSIONのみ。9/20（日）・9/21（月）はDAY & NIGHTで開催します。",
         "detail_lines": [
           {
-            "icon": "clock",
-            "text": "【DAY】Open 11:00 / Start 12:00 / Close 18:00 (Charge ¥1,500) ※9/19（土）のみ中止"
+            "icon": "info",
+            "text": "9/19（土） NIGHT SESSION ONLY"
           },
           {
             "icon": "clock",
-            "text": "【NIGHT】Open 19:00 / Start 20:00 / Until Close (Charge ¥2,500)"
+            "text": "NIGHT：Open 19:00 / Start 20:00 / Until Close（Charge ¥2,500）"
+          },
+          {
+            "icon": "info",
+            "text": "9/20（日）・9/21（月） DAY & NIGHT"
+          },
+          {
+            "icon": "clock",
+            "text": "DAY：Open 11:00 / Start 12:00 / Close 18:00（Charge ¥1,500）"
+          },
+          {
+            "icon": "clock",
+            "text": "NIGHT：Open 19:00 / Start 20:00 / Until Close（Charge ¥2,500）"
+          },
+          {
+            "icon": "info",
+            "text": "DAY & NIGHT ¥3,000 / 1DAY ¥3,500 / 3DAYS ¥7,000"
           }
         ]
       }
