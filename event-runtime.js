@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Temporary operational notice for Kanazawa Jazz Street 2026.
-    // Only the 9/20 daytime session is cancelled; the night session and all other dates remain unchanged.
+    // Only the 9/19 daytime session is cancelled; the night session and all other dates remain unchanged.
     document.querySelectorAll('[data-event-id="2026-09-19_legacy-860e02187a"]').forEach(eventCard => {
         const info = eventCard.querySelector('.lineup-info');
         if (!info || info.querySelector('.jazz-street-update-notice')) return;
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         notice.style.borderLeft = '3px solid #b51f24';
         notice.style.paddingLeft = '0.85rem';
         notice.style.marginTop = '0.8rem';
-        notice.textContent = '【重要】9/20（土）のDAY SESSIONのみ中止となりました。NIGHT SESSIONは告知通り開催します。9/19（土）・9/21（月）を含むその他の内容に変更はありません。';
+        notice.textContent = '【重要】9/19（土）のDAY SESSIONのみ中止となりました。NIGHT SESSIONは告知通り開催します。9/20（日）・9/21（月）を含むその他の内容に変更はありません。';
 
         const details = info.querySelector('.lineup-details');
         if (details) {
@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         eventCard.querySelectorAll('.detail-item').forEach(detail => {
-            if (detail.textContent.includes('【DAY】') && !detail.textContent.includes('9/20')) {
-                detail.append(' ※9/20（土）のみ中止');
+            if (detail.textContent.includes('【DAY】') && !detail.textContent.includes('9/19')) {
+                detail.append(' ※9/19（土）のみ中止');
             }
         });
     });
