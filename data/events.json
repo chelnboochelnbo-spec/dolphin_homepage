@@ -2999,7 +2999,7 @@
       "start": "12:00",
       "charge": "DAY & NIGHT ¥3,000 / 1DAY ¥3,500 / 3DAYS ¥7,000",
       "performers": [],
-      "description": "9/19（土）〜9/21（月） 3DAYS JAM SESSION！",
+      "description": "【重要】9/19（土）のDAY SESSIONのみ中止。NIGHT SESSIONは告知通り開催します。9/20（日）・9/21（月）は変更ありません。",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
@@ -3020,11 +3020,11 @@
       "end_date": "2026-09-21",
       "display": {
         "badge": "SPECIAL EVENT",
-        "intro": "9/19（土）〜9/21（月） 3DAYS JAM SESSION！",
+        "intro": "【重要】9/19（土）のDAY SESSIONのみ中止。NIGHT SESSIONは告知通り開催します。9/20（日）・9/21（月）は変更ありません。",
         "detail_lines": [
           {
             "icon": "clock",
-            "text": "【DAY】Open 11:00 / Start 12:00 / Close 18:00 (Charge ¥1,500)"
+            "text": "【DAY】Open 11:00 / Start 12:00 / Close 18:00 (Charge ¥1,500) ※9/19（土）のみ中止"
           },
           {
             "icon": "clock",
