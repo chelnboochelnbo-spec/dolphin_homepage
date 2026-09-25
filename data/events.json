@@ -3180,17 +3180,35 @@
       "title": "Saturday Jam Session 1",
       "event_type": "session",
       "status": "published",
-      "open": "20:00",
-      "start": "20:30",
-      "charge": "Charge ¥2,000 + 2Drink Order",
-      "performers": [],
-      "description": "",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "吉田茉莉花"
+        },
+        {
+          "instrument": "Pf",
+          "name": "中口航志"
+        },
+        {
+          "instrument": "Ba",
+          "name": "吉村葵"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "Fresh Players, Fresh Sound. 若いプレイヤーたちが集まる、土曜のジャム・セッション。",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
         "status": "ready",
-        "source": "legacy_schedule_migration",
-        "github_path": "logo_new.png",
+        "source": "approved_2026-09-25",
+        "github_path": "https://static.metricool.com/planner/202609/6910064-file-10790965137575817615.png",
         "canva_design_id": null
       },
       "archive": {
@@ -3201,7 +3219,7 @@
         "instagram": "",
         "external_links": []
       },
-      "legacy_imported": true
+      "legacy_imported": false
     },
     {
       "id": "2026-10-06_free-improvisation-jam-session",
