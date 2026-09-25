@@ -3428,6 +3428,53 @@
       }
     },
     {
+      "id": "2026-10-11_chiaki-suzuki-quartet-live-session",
+      "date": "2026-10-11",
+      "title": "鈴木千明 Quartet Live & Session",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥1,000 + 投げ銭",
+      "performers": [
+        {
+          "instrument": "Tp",
+          "name": "鈴木千明",
+          "artist_id": "chiaki-suzuki"
+        },
+        {
+          "instrument": "Pf",
+          "name": "宮本葉月"
+        },
+        {
+          "instrument": "Ba",
+          "name": "那須仁哉"
+        },
+        {
+          "instrument": "Dr",
+          "name": "緑川柊麻",
+          "artist_id": "shuma-midorikawa"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": "artist_photo_pending",
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
       "id": "2026-10-13_legacy-25e2d5dd60",
       "date": "2026-10-13",
       "title": "Dolphin 1st Anniversary Special Live #4",
