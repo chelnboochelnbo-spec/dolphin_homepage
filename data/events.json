@@ -3460,9 +3460,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": "artist_photo_pending",
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_supplied",
+        "github_path": "assets/flyers/flyer_20261011_chiaki-suzuki-quartet-live-session.png",
         "canva_design_id": null
       },
       "archive": {
