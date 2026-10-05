@@ -21,6 +21,14 @@ class Options(HTMLParser):
             self.ids.append(attrs['value'])
 
 class Reservations(unittest.TestCase):
+    def test_month_headers_cross_year_boundary(self):
+        html = '<section id="jan" class="lineup-month-group">\n<h2 class="lineup-month-header">1<span>JANUARY 2026</span></h2>'
+        events = [{'date': '2027-01-02', 'status': 'published'}]
+        with patch('event_utils.current_jst_date', return_value=date(2026, 10, 5)):
+            rendered = render_events.sync_month_years(html, events)
+            self.assertIn('JANUARY 2027', rendered)
+            self.assertEqual(rendered, render_events.sync_month_years(rendered, events))
+
     def test_options_and_regeneration(self):
         events = json.loads((ROOT / 'data/events.json').read_text(encoding='utf-8'))['events']
         html = '<select id="event"><option>Old event</option></select>'

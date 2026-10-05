@@ -4327,6 +4327,426 @@
         "external_links": []
       },
       "legacy_imported": true
+    },
+    {
+      "id": "2027-01-02_saturday-jam-session-1",
+      "date": "2027-01-02",
+      "title": "Saturday Jam Session 1",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-01-14_kiraku-jam",
+      "date": "2027-01-14",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-01-16_saturday-jam-session-2",
+      "date": "2027-01-16",
+      "title": "Saturday Jam Session 2",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-01-21_monthly-voices-vocal-session",
+      "date": "2027-01-21",
+      "title": "Monthly Voices 〜Vocal Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-01-28_kiraku-jam",
+      "date": "2027-01-28",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-06_saturday-jam-session-1",
+      "date": "2027-02-06",
+      "title": "Saturday Jam Session 1",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-11_kiraku-jam",
+      "date": "2027-02-11",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-18_monthly-voices-vocal-session",
+      "date": "2027-02-18",
+      "title": "Monthly Voices 〜Vocal Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-20_saturday-jam-session-2",
+      "date": "2027-02-20",
+      "title": "Saturday Jam Session 2",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-25_kiraku-jam",
+      "date": "2027-02-25",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-06_saturday-jam-session-1",
+      "date": "2027-03-06",
+      "title": "Saturday Jam Session 1",
+      "event_type": "session",
+      "status": "published",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-11_kiraku-jam",
+      "date": "2027-03-11",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-18_monthly-voices-vocal-session",
+      "date": "2027-03-18",
+      "title": "Monthly Voices 〜Vocal Session〜",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-20_saturday-jam-session-2",
+      "date": "2027-03-20",
+      "title": "Saturday Jam Session 2",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-25_kiraku-jam",
+      "date": "2027-03-25",
+      "title": "Kiraku Jam",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
     }
   ]
 }

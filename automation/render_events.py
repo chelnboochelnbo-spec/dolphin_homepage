@@ -307,6 +307,23 @@ def sync_reservation_options(html: str, events: list[dict]) -> str:
     return pattern.sub(lambda match: match[1] + "\n" + "\n".join(options) + "\n" + match[2], html, count=1)
 
 
+def sync_month_years(html: str, events: list[dict]) -> str:
+    # Month tabs are reused across the year boundary; derive header years from
+    # the same visible event records instead of keeping the original 2026 label.
+    for month, month_id in enumerate(MONTH_IDS, 1):
+        years = sorted({event['date'][:4] for event in events
+                        if int(event['date'][5:7]) == month
+                        and event.get('status') in {'ready', 'published', 'archived'}
+                        and not event_is_past(event)})
+        if not years:
+            continue
+        pattern = re.compile(rf'(<section id="{month_id}" class="lineup-month-group">\s*<h2 class="lineup-month-header">{month}<span>[A-Z]+) [^<]*(</span></h2>)')
+        html, count = pattern.subn(lambda match: match[1] + ' ' + ' / '.join(years) + match[2], html, count=1)
+        if count != 1:
+            raise ValueError(f'Month header missing: {month_id}')
+    return html
+
+
 def main() -> None:
     events = load_events()
     schedule_html = SCHEDULE_FILE.read_text(encoding="utf-8-sig")
@@ -323,6 +340,7 @@ def main() -> None:
 
     schedule_html = add_legacy_event_badges(schedule_html)
     schedule_html = ensure_event_assets(schedule_html)
+    schedule_html = sync_month_years(schedule_html, events)
 
     index_html = INDEX_FILE.read_text(encoding="utf-8-sig")
     index_html = rebuild_home_preview(index_html, schedule_html)
