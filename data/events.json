@@ -3926,14 +3926,35 @@
     {
       "id": "2026-11-13_legacy-54c9cb6b6b",
       "date": "2026-11-13",
-      "title": "B-Slope",
+      "title": "B. Slope",
       "event_type": "live",
       "status": "published",
       "open": null,
-      "start": null,
-      "charge": "",
-      "performers": [],
-      "description": "",
+      "start": "20:00",
+      "charge": "Charge ¥2,000",
+      "performers": [
+        {
+          "instrument": "AS",
+          "name": "大谷俊久"
+        },
+        {
+          "instrument": "Gt",
+          "name": "Mojo Oda"
+        },
+        {
+          "instrument": "P",
+          "name": "今村さゆる"
+        },
+        {
+          "instrument": "Ba",
+          "name": "板坂正豪"
+        },
+        {
+          "instrument": "Ds",
+          "name": "伊藤昇"
+        }
+      ],
+      "description": "Jazz live at Dolphin",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
@@ -3950,7 +3971,10 @@
         "instagram": "",
         "external_links": []
       },
-      "legacy_imported": true
+      "legacy_imported": true,
+      "display": {
+        "subtitle": "Jazz live at Dolphin"
+      }
     },
     {
       "id": "2026-11-19_legacy-99e2aaedcf",
