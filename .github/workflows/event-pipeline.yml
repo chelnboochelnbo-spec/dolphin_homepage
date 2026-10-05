@@ -5,6 +5,7 @@ on:
     paths:
       - 'data/events.json'
       - 'data/artists.json'
+      - 'data/operations.json'
       - 'assets/flyers/**'
       - 'artists/**'
       - 'archive/**'
@@ -21,6 +22,7 @@ on:
       - 'tests/**'
       - 'automation/event_utils.py'
       - 'automation/render_events.py'
+      - 'automation/render_operating_schedule.py'
       - 'automation/render_artists.py'
       - 'automation/render_event_pages.py'
       - 'automation/render_archive.py'
@@ -33,6 +35,7 @@ on:
     paths:
       - 'data/events.json'
       - 'data/artists.json'
+      - 'data/operations.json'
       - 'assets/flyers/**'
       - 'artists.css'
       - 'artists.js'
@@ -47,6 +50,7 @@ on:
       - 'tests/**'
       - 'automation/event_utils.py'
       - 'automation/render_events.py'
+      - 'automation/render_operating_schedule.py'
       - 'automation/render_artists.py'
       - 'automation/render_event_pages.py'
       - 'automation/render_archive.py'
@@ -76,6 +80,9 @@ jobs:
 
       - name: Render current and future schedule from EVENT database
         run: python automation/render_events.py
+
+      - name: Render regular opening days and closures from operations data
+        run: python automation/render_operating_schedule.py
 
       - name: Render artists archive
         run: python automation/render_artists.py
