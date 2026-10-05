@@ -272,6 +272,7 @@ function initScheduleFilter() {
             }
         } else {
             // Show the button and track the first available month
+            group.querySelector('.no-events-msg')?.remove();
             if (btn) btn.style.display = 'inline-block';
             if (!firstAvailableMonthId) {
                 firstAvailableMonthId = monthId;
