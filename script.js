@@ -148,17 +148,40 @@ async function initTonight() {
 /**
  * Schedule Filtering & Tab Logic
  */
+function firstUpcomingDate(items, today) {
+    return items.filter(item => (item.endDate || item.date) >= today)
+        .map(item => item.date).sort()[0] || '9999-12-31';
+}
+
 function initScheduleFilter() {
     const filterBtns = document.querySelectorAll('.month-link');
-    const monthGroups = document.querySelectorAll('.lineup-month-group');
+    const todayStr = getTokyoDateString();
+    const monthGroups = Array.from(document.querySelectorAll('.lineup-month-group'));
+    const firstDate = group => firstUpcomingDate(Array.from(group.querySelectorAll('.lineup-item[data-date]'), item => item.dataset), todayStr);
+    monthGroups.sort((a, b) => firstDate(a).localeCompare(firstDate(b)));
+    monthGroups.forEach(group => {
+        // Move the existing nodes: preserve their links, content and listeners.
+        group.parentElement.appendChild(group);
+        const items = Array.from(group.querySelectorAll('.lineup-item[data-date]'));
+        items.sort((a, b) => a.dataset.date.localeCompare(b.dataset.date));
+        items.forEach(item => item.parentElement.appendChild(item));
+        const button = document.querySelector('.month-link[data-month="' + group.id + '"]');
+        if (button) {
+            button.parentElement.appendChild(button);
+            const date = firstDate(group);
+            if (date !== '9999-12-31') button.textContent = date.slice(0, 4) + ' ' + group.id.toUpperCase();
+        }
+    });
 
     // --- Tab Switching Logic ---
     function setActiveTab(targetId) {
         filterBtns.forEach(btn => {
             if (btn.dataset.month === targetId) {
                 btn.classList.add('active');
+                btn.setAttribute('aria-current', 'date');
             } else {
                 btn.classList.remove('active');
+                btn.removeAttribute('aria-current');
             }
         });
 
@@ -180,9 +203,7 @@ function initScheduleFilter() {
     });
 
     // --- Date Acquisition ---
-    const now = new Date(`${getTokyoDateString()}T12:00:00+09:00`);
-    const todayStr = getTokyoDateString();
-    const currentMonthNum = now.getMonth() + 1;
+
 
     // --- Schedule Item Logic (Hide Past, Highlight Today) ---
     const items = document.querySelectorAll('.lineup-item[data-date]');
@@ -192,7 +213,10 @@ function initScheduleFilter() {
         const itemDateStr = item.dataset.date;
         if (!itemDateStr) return;
 
-        if (itemDateStr < todayStr) {
+        const endDateStr = item.dataset.endDate || itemDateStr;
+        item.classList.remove('past-event');
+        item.style.display = '';
+        if (endDateStr < todayStr) {
             // 2. 過去の公演の自動非表示ロジック
             item.style.display = 'none';
             item.classList.add('past-event');
@@ -255,20 +279,12 @@ function initScheduleFilter() {
         }
     });
 
-    // --- 3. 月別タブの自動選択 (当月または有効な最初の月) ---
-    const monthNames = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
-    const currentMonthId = monthNames[currentMonthNum - 1];
-
-    // Check if current month has events, if not, use the first available month
-    const currentMonthGroup = document.getElementById(currentMonthId);
-    const currentMonthHasEvents = currentMonthGroup && currentMonthGroup.querySelectorAll('.lineup-item:not(.past-event)').length > 0;
-
-    if (currentMonthHasEvents) {
-        setActiveTab(currentMonthId);
-    } else if (firstAvailableMonthId) {
+    // The earliest upcoming event determines the initial tab, even across years.
+    if (firstAvailableMonthId) {
         setActiveTab(firstAvailableMonthId);
+        const nav = document.querySelector('.month-nav');
+        if (nav) nav.scrollLeft = 0;
     } else if (filterBtns.length > 0) {
-        // Fallback to first tab if nothing else found (shouldn't happen with normal data)
         setActiveTab(filterBtns[0].dataset.month);
     }
 }
