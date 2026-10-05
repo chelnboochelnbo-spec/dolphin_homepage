@@ -4354,6 +4354,34 @@
       "legacy_imported": true
     },
     {
+      "id": "2027-01-02_saturday-jam-session-1",
+      "date": "2027-01-02",
+      "title": "Saturday Jam Session 1",
+      "event_type": "session",
+      "status": "draft",
+      "open": "20:00",
+      "start": "20:30",
+      "charge": "Charge ¥2,000 + 2Drink Order",
+      "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
       "id": "2027-01-14_kiraku-jam",
       "date": "2027-01-14",
       "title": "Kiraku Jam",
