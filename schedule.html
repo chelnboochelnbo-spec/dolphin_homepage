@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Schedule | Jazz & Bar DOLPHIN</title>
+    <title>Schedule | Jazz & Bar DOLPHIN</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -133,6 +133,19 @@
             color: #fff !important;
         }
     </style>
+<style id="operating-schedule-styles">
+.operating-schedule-note{color:#555;font-size:.9rem;line-height:1.8;margin:0 0 2rem}
+.lineup-item.operating-day{display:flex;align-items:center;gap:1.5rem;padding:1rem 1.25rem;min-height:0;border-bottom:1px solid #ddd}
+.operating-day .lineup-date{font-size:1.2rem;min-width:145px;margin:0;padding:0;flex-shrink:0}
+.operating-day .lineup-date .weekday{font-size:.85rem;margin-left:.4rem}
+.operating-day .lineup-body{display:block;min-width:0;flex:1}
+.operating-day .lineup-artist{font-size:1.05rem;line-height:1.5;margin:0}
+.operating-day .lineup-details{font-size:.85rem;line-height:1.6;margin:.25rem 0 0}
+.lineup-item.operating-day--closed{background:#f2f2f2;border-left:4px solid #666}
+.lineup-item.operating-day--private{background:#f7f4ec;border-left:4px solid #8b7651}
+.operating-day a{color:inherit}
+@media(max-width:600px){.lineup-item.operating-day{gap:.75rem;padding:.85rem .65rem}.operating-day .lineup-date{min-width:105px;font-size:1rem}.operating-day .lineup-artist{font-size:.95rem}}
+</style>
 </head>
 
 <body>
@@ -159,14 +172,15 @@
 
     <header class="page-header">
         <div class="container fade-in">
-            <h1 class="section-title">LIVE SCHEDULE</h1>
+            <h1 class="section-title">SCHEDULE</h1>
             <p class="section-subtitle">Real Jazz, Real Atmosphere.</p>
         </div>
     </header>
 
     <main class="container fade-in" style="margin-top: 4rem; background: #fff;">
 
-        <!-- Month Navigation -->
+        <p id="operating-schedule-note" class="operating-schedule-note">ライブ・セッション・通常営業・休業日をご案内します。日付は営業開始日を表示しています。休業日は「休業」と表示します（不定休）。</p>
+<!-- Month Navigation -->
         <nav class="month-nav">
             <a data-month="jan" class="month-link">JAN</a>
             <a data-month="feb" class="month-link">FEB</a>
@@ -185,8 +199,14 @@
         <div class="lineup-wrapper">
             <!-- JAN -->
             <section id="jan" class="lineup-month-group">
-                <h2 class="lineup-month-header">1<span>JANUARY 2027</span></h2>
-                <div class="lineup-list">
+<h2 class="lineup-month-header">1<span>JANUARY 2027</span></h2>
+<div class="lineup-list">
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-01" data-end-date="2027-01-01" data-operating-state="bar"><div class="lineup-date">2027 1.01<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-02" data-end-date="2027-01-02" data-operating-state="bar"><div class="lineup-date">2027 1.02<span class="weekday">（土）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-03" data-end-date="2027-01-03" data-operating-state="bar"><div class="lineup-date">2027 1.03<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-04" data-end-date="2027-01-04" data-operating-state="bar"><div class="lineup-date">2027 1.04<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-05" data-end-date="2027-01-05" data-operating-state="bar"><div class="lineup-date">2027 1.05<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-06" data-end-date="2027-01-06" data-operating-state="bar"><div class="lineup-date">2027 1.06<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-01-07" data-end-date="2027-01-07" data-event-id="2027-01-07_open-groove-night-jam-session" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 1.07<span class="weekday">thu.</span></div>
@@ -203,6 +223,12 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-08" data-end-date="2027-01-08" data-operating-state="bar"><div class="lineup-date">2027 1.08<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-09" data-end-date="2027-01-09" data-operating-state="bar"><div class="lineup-date">2027 1.09<span class="weekday">（土）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-10" data-end-date="2027-01-10" data-operating-state="bar"><div class="lineup-date">2027 1.10<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-11" data-end-date="2027-01-11" data-operating-state="bar"><div class="lineup-date">2027 1.11<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-12" data-end-date="2027-01-12" data-operating-state="bar"><div class="lineup-date">2027 1.12<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-13" data-end-date="2027-01-13" data-operating-state="bar"><div class="lineup-date">2027 1.13<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-01-14" data-end-date="2027-01-14" data-event-id="2027-01-14_kiraku-jam" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 1.14<span class="weekday">thu.</span></div>
@@ -218,6 +244,7 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-15" data-end-date="2027-01-15" data-operating-state="bar"><div class="lineup-date">2027 1.15<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-01-16" data-end-date="2027-01-16" data-event-id="2027-01-16_saturday-jam-session-2" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 1.16<span class="weekday">sat.</span></div>
@@ -233,6 +260,10 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-17" data-end-date="2027-01-17" data-operating-state="bar"><div class="lineup-date">2027 1.17<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-18" data-end-date="2027-01-18" data-operating-state="bar"><div class="lineup-date">2027 1.18<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-19" data-end-date="2027-01-19" data-operating-state="bar"><div class="lineup-date">2027 1.19<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-20" data-end-date="2027-01-20" data-operating-state="bar"><div class="lineup-date">2027 1.20<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-01-21" data-end-date="2027-01-21" data-event-id="2027-01-21_monthly-voices-vocal-session" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 1.21<span class="weekday">thu.</span></div>
@@ -248,6 +279,12 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-22" data-end-date="2027-01-22" data-operating-state="bar"><div class="lineup-date">2027 1.22<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-23" data-end-date="2027-01-23" data-operating-state="bar"><div class="lineup-date">2027 1.23<span class="weekday">（土）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-24" data-end-date="2027-01-24" data-operating-state="bar"><div class="lineup-date">2027 1.24<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-25" data-end-date="2027-01-25" data-operating-state="bar"><div class="lineup-date">2027 1.25<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-26" data-end-date="2027-01-26" data-operating-state="bar"><div class="lineup-date">2027 1.26<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-27" data-end-date="2027-01-27" data-operating-state="bar"><div class="lineup-date">2027 1.27<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-01-28" data-end-date="2027-01-28" data-event-id="2027-01-28_kiraku-jam" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 1.28<span class="weekday">thu.</span></div>
@@ -263,13 +300,19 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-29" data-end-date="2027-01-29" data-operating-state="bar"><div class="lineup-date">2027 1.29<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-30" data-end-date="2027-01-30" data-operating-state="bar"><div class="lineup-date">2027 1.30<span class="weekday">（土）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-01-31" data-end-date="2027-01-31" data-operating-state="bar"><div class="lineup-date">2027 1.31<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
 </div>
-            </section>
+</section>
 
             <!-- FEB -->
             <section id="feb" class="lineup-month-group">
-                <h2 class="lineup-month-header">2<span>FEBRUARY 2027</span></h2>
-                <div class="lineup-list">
+<h2 class="lineup-month-header">2<span>FEBRUARY 2027</span></h2>
+<div class="lineup-list">
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-01" data-end-date="2027-02-01" data-operating-state="bar"><div class="lineup-date">2027 2.01<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-02" data-end-date="2027-02-02" data-operating-state="bar"><div class="lineup-date">2027 2.02<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-03" data-end-date="2027-02-03" data-operating-state="bar"><div class="lineup-date">2027 2.03<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-02-04" data-end-date="2027-02-04" data-event-id="2027-02-04_open-groove-night-jam-session" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 2.04<span class="weekday">thu.</span></div>
@@ -286,6 +329,7 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-05" data-end-date="2027-02-05" data-operating-state="bar"><div class="lineup-date">2027 2.05<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-02-06" data-end-date="2027-02-06" data-event-id="2027-02-06_saturday-jam-session-1" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 2.06<span class="weekday">sat.</span></div>
@@ -301,6 +345,10 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-07" data-end-date="2027-02-07" data-operating-state="bar"><div class="lineup-date">2027 2.07<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-08" data-end-date="2027-02-08" data-operating-state="bar"><div class="lineup-date">2027 2.08<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-09" data-end-date="2027-02-09" data-operating-state="bar"><div class="lineup-date">2027 2.09<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-10" data-end-date="2027-02-10" data-operating-state="bar"><div class="lineup-date">2027 2.10<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-02-11" data-end-date="2027-02-11" data-event-id="2027-02-11_kiraku-jam" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 2.11<span class="weekday">thu.</span></div>
@@ -316,6 +364,12 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-12" data-end-date="2027-02-12" data-operating-state="bar"><div class="lineup-date">2027 2.12<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-13" data-end-date="2027-02-13" data-operating-state="bar"><div class="lineup-date">2027 2.13<span class="weekday">（土）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-14" data-end-date="2027-02-14" data-operating-state="bar"><div class="lineup-date">2027 2.14<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-15" data-end-date="2027-02-15" data-operating-state="bar"><div class="lineup-date">2027 2.15<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-16" data-end-date="2027-02-16" data-operating-state="bar"><div class="lineup-date">2027 2.16<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-17" data-end-date="2027-02-17" data-operating-state="bar"><div class="lineup-date">2027 2.17<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-02-18" data-end-date="2027-02-18" data-event-id="2027-02-18_monthly-voices-vocal-session" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 2.18<span class="weekday">thu.</span></div>
@@ -331,6 +385,7 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-19" data-end-date="2027-02-19" data-operating-state="bar"><div class="lineup-date">2027 2.19<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-02-20" data-end-date="2027-02-20" data-event-id="2027-02-20_saturday-jam-session-2" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 2.20<span class="weekday">sat.</span></div>
@@ -346,6 +401,10 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-21" data-end-date="2027-02-21" data-operating-state="bar"><div class="lineup-date">2027 2.21<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-22" data-end-date="2027-02-22" data-operating-state="bar"><div class="lineup-date">2027 2.22<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-23" data-end-date="2027-02-23" data-operating-state="bar"><div class="lineup-date">2027 2.23<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-24" data-end-date="2027-02-24" data-operating-state="bar"><div class="lineup-date">2027 2.24<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-02-25" data-end-date="2027-02-25" data-event-id="2027-02-25_kiraku-jam" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 2.25<span class="weekday">thu.</span></div>
@@ -361,13 +420,19 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-26" data-end-date="2027-02-26" data-operating-state="bar"><div class="lineup-date">2027 2.26<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-27" data-end-date="2027-02-27" data-operating-state="bar"><div class="lineup-date">2027 2.27<span class="weekday">（土）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-02-28" data-end-date="2027-02-28" data-operating-state="bar"><div class="lineup-date">2027 2.28<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
 </div>
-            </section>
+</section>
 
             <!-- MAR -->
             <section id="mar" class="lineup-month-group">
-                <h2 class="lineup-month-header">3<span>MARCH 2027</span></h2>
-                <div class="lineup-list">
+<h2 class="lineup-month-header">3<span>MARCH 2027</span></h2>
+<div class="lineup-list">
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-01" data-end-date="2027-03-01" data-operating-state="bar"><div class="lineup-date">2027 3.01<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-02" data-end-date="2027-03-02" data-operating-state="bar"><div class="lineup-date">2027 3.02<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-03" data-end-date="2027-03-03" data-operating-state="bar"><div class="lineup-date">2027 3.03<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-03-04" data-end-date="2027-03-04" data-event-id="2027-03-04_open-groove-night-jam-session" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 3.04<span class="weekday">thu.</span></div>
@@ -384,6 +449,7 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-05" data-end-date="2027-03-05" data-operating-state="bar"><div class="lineup-date">2027 3.05<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-03-06" data-end-date="2027-03-06" data-event-id="2027-03-06_saturday-jam-session-1" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 3.06<span class="weekday">sat.</span></div>
@@ -399,6 +465,10 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-07" data-end-date="2027-03-07" data-operating-state="bar"><div class="lineup-date">2027 3.07<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-08" data-end-date="2027-03-08" data-operating-state="bar"><div class="lineup-date">2027 3.08<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-09" data-end-date="2027-03-09" data-operating-state="bar"><div class="lineup-date">2027 3.09<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-10" data-end-date="2027-03-10" data-operating-state="bar"><div class="lineup-date">2027 3.10<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-03-11" data-end-date="2027-03-11" data-event-id="2027-03-11_kiraku-jam" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 3.11<span class="weekday">thu.</span></div>
@@ -414,6 +484,12 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-12" data-end-date="2027-03-12" data-operating-state="bar"><div class="lineup-date">2027 3.12<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-13" data-end-date="2027-03-13" data-operating-state="bar"><div class="lineup-date">2027 3.13<span class="weekday">（土）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-14" data-end-date="2027-03-14" data-operating-state="bar"><div class="lineup-date">2027 3.14<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-15" data-end-date="2027-03-15" data-operating-state="bar"><div class="lineup-date">2027 3.15<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-16" data-end-date="2027-03-16" data-operating-state="bar"><div class="lineup-date">2027 3.16<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-17" data-end-date="2027-03-17" data-operating-state="bar"><div class="lineup-date">2027 3.17<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-03-18" data-end-date="2027-03-18" data-event-id="2027-03-18_monthly-voices-vocal-session" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 3.18<span class="weekday">thu.</span></div>
@@ -429,6 +505,7 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-19" data-end-date="2027-03-19" data-operating-state="bar"><div class="lineup-date">2027 3.19<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-03-20" data-end-date="2027-03-20" data-event-id="2027-03-20_saturday-jam-session-2" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 3.20<span class="weekday">sat.</span></div>
@@ -444,6 +521,10 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-21" data-end-date="2027-03-21" data-operating-state="bar"><div class="lineup-date">2027 3.21<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-22" data-end-date="2027-03-22" data-operating-state="bar"><div class="lineup-date">2027 3.22<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-23" data-end-date="2027-03-23" data-operating-state="bar"><div class="lineup-date">2027 3.23<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-24" data-end-date="2027-03-24" data-operating-state="bar"><div class="lineup-date">2027 3.24<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2027-03-25" data-end-date="2027-03-25" data-event-id="2027-03-25_kiraku-jam" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2027 3.25<span class="weekday">thu.</span></div>
@@ -459,55 +540,68 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-26" data-end-date="2027-03-26" data-operating-state="bar"><div class="lineup-date">2027 3.26<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-27" data-end-date="2027-03-27" data-operating-state="bar"><div class="lineup-date">2027 3.27<span class="weekday">（土）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-28" data-end-date="2027-03-28" data-operating-state="bar"><div class="lineup-date">2027 3.28<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-29" data-end-date="2027-03-29" data-operating-state="bar"><div class="lineup-date">2027 3.29<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-30" data-end-date="2027-03-30" data-operating-state="bar"><div class="lineup-date">2027 3.30<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2027-03-31" data-end-date="2027-03-31" data-operating-state="bar"><div class="lineup-date">2027 3.31<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
 </div>
-            </section>
+</section>
 
             <!-- APR -->
             <section id="apr" class="lineup-month-group">
-                <h2 class="lineup-month-header">4<span>APRIL 2026</span></h2>
-                <div class="lineup-list">
+<h2 class="lineup-month-header">4<span>APRIL 2027</span></h2>
+<div class="lineup-list">
+<p class="operating-schedule-note">この月のスケジュールは順次更新します。</p>
 </div>
-            </section>
+</section>
 
             <!-- MAY -->
             <section id="may" class="lineup-month-group">
-                <h2 class="lineup-month-header">5<span>MAY 2026</span></h2>
-                <div class="lineup-list">
+<h2 class="lineup-month-header">5<span>MAY 2027</span></h2>
+<div class="lineup-list">
+<p class="operating-schedule-note">この月のスケジュールは順次更新します。</p>
 </div>
-            </section>
+</section>
 
             <!-- JUN -->
             <section id="jun" class="lineup-month-group">
-                <h2 class="lineup-month-header">6<span>JUNE 2026</span></h2>
-                <div class="lineup-list">
+<h2 class="lineup-month-header">6<span>JUNE 2027</span></h2>
+<div class="lineup-list">
+<p class="operating-schedule-note">この月のスケジュールは順次更新します。</p>
 </div>
-            </section>
+</section>
 
             <!-- JUL -->
             <section id="jul" class="lineup-month-group">
-                <h2 class="lineup-month-header">7<span>JULY 2026</span></h2>
-                <div class="lineup-list">
+<h2 class="lineup-month-header">7<span>JULY 2027</span></h2>
+<div class="lineup-list">
+<p class="operating-schedule-note">この月のスケジュールは順次更新します。</p>
 </div>
-            </section>
+</section>
 
             <!-- AUG -->
             <section id="aug" class="lineup-month-group">
-                <h2 class="lineup-month-header">8<span>AUGUST 2026</span></h2>
-                <div class="lineup-list">
+<h2 class="lineup-month-header">8<span>AUGUST 2027</span></h2>
+<div class="lineup-list">
+<p class="operating-schedule-note">この月のスケジュールは順次更新します。</p>
 </div>
-            </section>
+</section>
 
             <!-- SEP -->
             <section id="sep" class="lineup-month-group">
-                <h2 class="lineup-month-header">9<span>SEPTEMBER 2026</span></h2>
-                <div class="lineup-list">
+<h2 class="lineup-month-header">9<span>SEPTEMBER 2027</span></h2>
+<div class="lineup-list">
+<p class="operating-schedule-note">この月のスケジュールは順次更新します。</p>
 </div>
-            </section>
+</section>
 
             <!-- OCT -->
             <section id="oct" class="lineup-month-group">
-                <h2 class="lineup-month-header">10<span>OCTOBER 2026</span></h2>
-                <div class="lineup-list">
+<h2 class="lineup-month-header">10<span>OCTOBER 2026</span></h2>
+<div class="lineup-list">
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-05" data-end-date="2026-10-05" data-operating-state="bar"><div class="lineup-date">2026 10.05<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-10-06" data-end-date="2026-10-06" data-event-id="2026-10-06_free-improvisation-jam-session" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 10.06<span class="weekday">tue.</span></div>
@@ -524,6 +618,7 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-07" data-end-date="2026-10-07" data-operating-state="bar"><div class="lineup-date">2026 10.07<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-10-08" data-end-date="2026-10-08" data-event-id="2026-10-08_legacy-532326f862" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 10.08<span class="weekday">thu.</span></div>
@@ -593,6 +688,7 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-12" data-end-date="2026-10-12" data-operating-state="bar"><div class="lineup-date">2026 10.12<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-10-13" data-end-date="2026-10-13" data-event-id="2026-10-13_legacy-25e2d5dd60" data-event-type="live_session">
                         <span class="event-type-badge">LIVE & SESSION</span>
                         <div class="lineup-date">2026 10.13<span class="weekday">tue.</span></div>
@@ -611,6 +707,7 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-14" data-end-date="2026-10-14" data-operating-state="bar"><div class="lineup-date">2026 10.14<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-10-15" data-end-date="2026-10-15" data-event-id="2026-10-15_stakes-is-high" data-event-type="live">
                         <span class="event-type-badge">LIVE</span>
                         <div class="lineup-date">2026 10.15<span class="weekday">thu.</span></div>
@@ -629,6 +726,7 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-16" data-end-date="2026-10-16" data-operating-state="bar"><div class="lineup-date">2026 10.16<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-10-17" data-end-date="2026-10-17" data-event-id="2026-10-17_legacy-24ea07afe6" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 10.17<span class="weekday">sat.</span></div>
@@ -645,6 +743,10 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-18" data-end-date="2026-10-18" data-operating-state="bar"><div class="lineup-date">2026 10.18<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-19" data-end-date="2026-10-19" data-operating-state="bar"><div class="lineup-date">2026 10.19<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-20" data-end-date="2026-10-20" data-operating-state="bar"><div class="lineup-date">2026 10.20<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-21" data-end-date="2026-10-21" data-operating-state="bar"><div class="lineup-date">2026 10.21<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-10-22" data-end-date="2026-10-22" data-event-id="2026-10-22_legacy-a52e331b05" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 10.22<span class="weekday">thu.</span></div>
@@ -661,6 +763,12 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-23" data-end-date="2026-10-23" data-operating-state="bar"><div class="lineup-date">2026 10.23<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-24" data-end-date="2026-10-24" data-operating-state="bar"><div class="lineup-date">2026 10.24<span class="weekday">（土）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-25" data-end-date="2026-10-25" data-operating-state="bar"><div class="lineup-date">2026 10.25<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-26" data-end-date="2026-10-26" data-operating-state="bar"><div class="lineup-date">2026 10.26<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-27" data-end-date="2026-10-27" data-operating-state="bar"><div class="lineup-date">2026 10.27<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-28" data-end-date="2026-10-28" data-operating-state="bar"><div class="lineup-date">2026 10.28<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-10-29" data-end-date="2026-10-29" data-event-id="2026-10-29_legacy-9db856b953" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 10.29<span class="weekday">thu.</span></div>
@@ -677,6 +785,7 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-10-30" data-end-date="2026-10-30" data-operating-state="bar"><div class="lineup-date">2026 10.30<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-10-31" data-end-date="2026-10-31" data-event-id="2026-10-31_sounds-demo-after-session" data-event-type="live_session">
                         <span class="event-type-badge">LIVE & SESSION</span>
                         <div class="lineup-date">2026 10.31<span class="weekday">sat.</span></div>
@@ -696,12 +805,14 @@
                         </div>
                     </article>
 </div>
-            </section>
+</section>
 
             <!-- NOV -->
             <section id="nov" class="lineup-month-group">
-                <h2 class="lineup-month-header">11<span>NOVEMBER 2026</span></h2>
-                <div class="lineup-list">
+<h2 class="lineup-month-header">11<span>NOVEMBER 2026</span></h2>
+<div class="lineup-list">
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-01" data-end-date="2026-11-01" data-operating-state="bar"><div class="lineup-date">2026 11.01<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-02" data-end-date="2026-11-02" data-operating-state="bar"><div class="lineup-date">2026 11.02<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-11-03" data-end-date="2026-11-03" data-event-id="2026-11-03_legacy-4985767288" data-event-type="live_session">
                         <span class="event-type-badge">LIVE & SESSION</span>
                         <div class="lineup-date">2026 11.03<span class="weekday">tue.</span></div>
@@ -719,6 +830,7 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-04" data-end-date="2026-11-04" data-operating-state="bar"><div class="lineup-date">2026 11.04<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-11-05" data-end-date="2026-11-05" data-event-id="2026-11-05_legacy-b9d9d68919" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 11.05<span class="weekday">thu.</span></div>
@@ -735,6 +847,7 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-06" data-end-date="2026-11-06" data-operating-state="bar"><div class="lineup-date">2026 11.06<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-11-07" data-end-date="2026-11-07" data-event-id="2026-11-07_legacy-36889e2bc9" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 11.07<span class="weekday">sat.</span></div>
@@ -750,6 +863,10 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-08" data-end-date="2026-11-08" data-operating-state="bar"><div class="lineup-date">2026 11.08<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-09" data-end-date="2026-11-09" data-operating-state="bar"><div class="lineup-date">2026 11.09<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-10" data-end-date="2026-11-10" data-operating-state="bar"><div class="lineup-date">2026 11.10<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-11" data-end-date="2026-11-11" data-operating-state="bar"><div class="lineup-date">2026 11.11<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-11-12" data-end-date="2026-11-12" data-event-id="2026-11-12_legacy-fdb0f9e98b" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 11.12<span class="weekday">thu.</span></div>
@@ -781,6 +898,11 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-14" data-end-date="2026-11-14" data-operating-state="bar"><div class="lineup-date">2026 11.14<span class="weekday">（土）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-15" data-end-date="2026-11-15" data-operating-state="bar"><div class="lineup-date">2026 11.15<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-16" data-end-date="2026-11-16" data-operating-state="bar"><div class="lineup-date">2026 11.16<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-17" data-end-date="2026-11-17" data-operating-state="bar"><div class="lineup-date">2026 11.17<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-18" data-end-date="2026-11-18" data-operating-state="bar"><div class="lineup-date">2026 11.18<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-11-19" data-end-date="2026-11-19" data-event-id="2026-11-19_legacy-99e2aaedcf" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 11.19<span class="weekday">thu.</span></div>
@@ -832,6 +954,10 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-22" data-end-date="2026-11-22" data-operating-state="bar"><div class="lineup-date">2026 11.22<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-23" data-end-date="2026-11-23" data-operating-state="bar"><div class="lineup-date">2026 11.23<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-24" data-end-date="2026-11-24" data-operating-state="bar"><div class="lineup-date">2026 11.24<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-25" data-end-date="2026-11-25" data-operating-state="bar"><div class="lineup-date">2026 11.25<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-11-26" data-end-date="2026-11-26" data-event-id="2026-11-26_legacy-b780fe732c" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 11.26<span class="weekday">thu.</span></div>
@@ -847,13 +973,19 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-27" data-end-date="2026-11-27" data-operating-state="bar"><div class="lineup-date">2026 11.27<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-28" data-end-date="2026-11-28" data-operating-state="bar"><div class="lineup-date">2026 11.28<span class="weekday">（土）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-29" data-end-date="2026-11-29" data-operating-state="bar"><div class="lineup-date">2026 11.29<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-11-30" data-end-date="2026-11-30" data-operating-state="bar"><div class="lineup-date">2026 11.30<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
 </div>
-            </section>
+</section>
 
             <!-- DEC -->
             <section id="dec" class="lineup-month-group">
-                <h2 class="lineup-month-header">12<span>DECEMBER 2026</span></h2>
-                <div class="lineup-list">
+<h2 class="lineup-month-header">12<span>DECEMBER 2026</span></h2>
+<div class="lineup-list">
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-01" data-end-date="2026-12-01" data-operating-state="bar"><div class="lineup-date">2026 12.01<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-02" data-end-date="2026-12-02" data-operating-state="bar"><div class="lineup-date">2026 12.02<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-12-03" data-end-date="2026-12-03" data-event-id="2026-12-03_legacy-29f4da2759" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 12.03<span class="weekday">thu.</span></div>
@@ -870,6 +1002,7 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-04" data-end-date="2026-12-04" data-operating-state="bar"><div class="lineup-date">2026 12.04<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-12-05" data-end-date="2026-12-05" data-event-id="2026-12-05_legacy-b917c90b19" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 12.05<span class="weekday">sat.</span></div>
@@ -885,6 +1018,10 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-06" data-end-date="2026-12-06" data-operating-state="bar"><div class="lineup-date">2026 12.06<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-07" data-end-date="2026-12-07" data-operating-state="bar"><div class="lineup-date">2026 12.07<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-08" data-end-date="2026-12-08" data-operating-state="bar"><div class="lineup-date">2026 12.08<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-09" data-end-date="2026-12-09" data-operating-state="bar"><div class="lineup-date">2026 12.09<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-12-10" data-end-date="2026-12-10" data-event-id="2026-12-10_legacy-79edb22069" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 12.10<span class="weekday">thu.</span></div>
@@ -900,6 +1037,12 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-11" data-end-date="2026-12-11" data-operating-state="bar"><div class="lineup-date">2026 12.11<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-12" data-end-date="2026-12-12" data-operating-state="bar"><div class="lineup-date">2026 12.12<span class="weekday">（土）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-13" data-end-date="2026-12-13" data-operating-state="bar"><div class="lineup-date">2026 12.13<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-14" data-end-date="2026-12-14" data-operating-state="bar"><div class="lineup-date">2026 12.14<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-15" data-end-date="2026-12-15" data-operating-state="bar"><div class="lineup-date">2026 12.15<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-16" data-end-date="2026-12-16" data-operating-state="bar"><div class="lineup-date">2026 12.16<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-12-17" data-end-date="2026-12-17" data-event-id="2026-12-17_legacy-8372a6f691" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 12.17<span class="weekday">thu.</span></div>
@@ -915,6 +1058,7 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-18" data-end-date="2026-12-18" data-operating-state="bar"><div class="lineup-date">2026 12.18<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-12-19" data-end-date="2026-12-19" data-event-id="2026-12-19_legacy-a1e1b5e732" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 12.19<span class="weekday">sat.</span></div>
@@ -931,6 +1075,10 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-20" data-end-date="2026-12-20" data-operating-state="bar"><div class="lineup-date">2026 12.20<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-21" data-end-date="2026-12-21" data-operating-state="bar"><div class="lineup-date">2026 12.21<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-22" data-end-date="2026-12-22" data-operating-state="bar"><div class="lineup-date">2026 12.22<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-23" data-end-date="2026-12-23" data-operating-state="bar"><div class="lineup-date">2026 12.23<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
                     <article class="lineup-item" data-date="2026-12-24" data-end-date="2026-12-24" data-event-id="2026-12-24_legacy-c1a6d03617" data-event-type="session">
                         <span class="event-type-badge">SESSION</span>
                         <div class="lineup-date">2026 12.24<span class="weekday">thu.</span></div>
@@ -946,8 +1094,15 @@
                             </div>
                         </div>
                     </article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-25" data-end-date="2026-12-25" data-operating-state="bar"><div class="lineup-date">2026 12.25<span class="weekday">（金）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-26" data-end-date="2026-12-26" data-operating-state="bar"><div class="lineup-date">2026 12.26<span class="weekday">（土）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-27" data-end-date="2026-12-27" data-operating-state="bar"><div class="lineup-date">2026 12.27<span class="weekday">（日）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-28" data-end-date="2026-12-28" data-operating-state="bar"><div class="lineup-date">2026 12.28<span class="weekday">（月）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-29" data-end-date="2026-12-29" data-operating-state="bar"><div class="lineup-date">2026 12.29<span class="weekday">（火）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-30" data-end-date="2026-12-30" data-operating-state="bar"><div class="lineup-date">2026 12.30<span class="weekday">（水）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
+<article class="lineup-item operating-day operating-day--bar" data-date="2026-12-31" data-end-date="2026-12-31" data-operating-state="bar"><div class="lineup-date">2026 12.31<span class="weekday">（木）</span></div><div class="lineup-body"><div class="lineup-info"><h3 class="lineup-artist">通常営業</h3><div class="lineup-details">19:00–翌01:00</div></div></div></article>
 </div>
-            </section>
+</section>
 
         </div>
 
