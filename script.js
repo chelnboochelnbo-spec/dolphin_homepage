@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     initScheduleFilter();
-    initReservationSystem();
+
     initTonight();
 
     // --- Mobile Menu Toggle ---
@@ -145,116 +145,6 @@ async function initTonight() {
 /**
  * Reservation System Optimization
  */
-function initReservationSystem() {
-    const form = document.getElementById('reserveForm');
-    const monthSelect = document.getElementById('month');
-    const eventSelect = document.getElementById('event');
-    const dateInput = document.getElementById('date');
-
-    if (!form) return;
-
-    // --- 1. Dropdown Filtering ---
-    if (monthSelect && eventSelect) {
-        monthSelect.addEventListener('change', () => {
-            const selectedMonth = monthSelect.value;
-            const options = eventSelect.querySelectorAll('option');
-
-            options.forEach(opt => {
-                const optMonth = opt.dataset.month;
-                if (optMonth === 'all' || optMonth === 'other' || !selectedMonth || optMonth === selectedMonth) {
-                    opt.style.display = 'block';
-                } else {
-                    opt.style.display = 'none';
-                }
-            });
-
-            // Reset event selection if current one is hidden
-            if (eventSelect.selectedOptions[0]?.style.display === 'none') {
-                eventSelect.value = "";
-            }
-        });
-
-        // Auto-select current month and trigger filter
-        const now = new Date(`${getTokyoDateString()}T12:00:00+09:00`);
-        const monthNames = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
-        const currentMonth = monthNames[now.getMonth()];
-        // Check if the option exists to avoid errors later in the year if option is missing
-        if (monthSelect.querySelector(`option[value="${currentMonth}"]`)) {
-            monthSelect.value = currentMonth;
-        }
-        monthSelect.dispatchEvent(new Event('change'));
-    }
-
-    // --- 2. Synchronize Event Date Input ---
-    if (eventSelect && dateInput) {
-        eventSelect.addEventListener('change', () => {
-            const selectedOpt = eventSelect.selectedOptions[0];
-            const optDate = selectedOpt?.dataset.date;
-            if (optDate) {
-                dateInput.value = optDate;
-            }
-        });
-    }
-
-    // --- 3. Form Submission (Redirect to Mailto) ---
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const name = document.getElementById('name')?.value || "";
-        const userEmail = document.getElementById('email')?.value || "";
-        const tel = document.getElementById('tel')?.value || "";
-        const message = document.getElementById('message')?.value || "";
-
-        const email = "bardolphinsince2016@gmail.com";
-        const event = eventSelect?.options[eventSelect.selectedIndex]?.text || "";
-        const date = dateInput?.value || "";
-        const time = document.getElementById('time')?.value || "";
-        const people = document.getElementById('people')?.value || "";
-
-        const subject = encodeURIComponent(`【Dolphin ライブ予約】${date} ${event}`);
-        const body = encodeURIComponent(
-            `以下の内容で予約メールを送信します。\n\n` +
-            `お名前：${name} 様\n` +
-            `メール：${userEmail}\n` +
-            `人数：${people} 名\n` +
-            `お電話番号：${tel}\n` +
-            `希望日：${date}\n` +
-            `希望時間：${time}\n\n` +
-            `その他ご要望：\n${message}`
-        );
-
-        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-    });
-
-    // --- 4. Global Link Handling (mailto Redesign) ---
-    document.addEventListener('click', (e) => {
-        const btn = e.target.closest('.lineup-reserve-btn, .reserve-btn');
-        if (!btn) return;
-
-        // If it's the full lineup button, don't intercept
-        if (btn.innerText.includes('FULL LINEUP')) return;
-
-        const article = btn.closest('.lineup-item, .schedule-item');
-        if (article) {
-            e.preventDefault();
-            const dateStr = article.dataset.date || "";
-            const artist = article.querySelector('.lineup-artist, .schedule-artist')?.innerText.trim() || "";
-
-            const email = "bardolphinsince2016@gmail.com";
-            const subject = encodeURIComponent(`【Dolphin ライブ予約】${dateStr} ${artist}`);
-            const body = encodeURIComponent(
-                `以下のテンプレートを記入して送信してください。\n\n` +
-                `お名前：\n` +
-                `人数：\n` +
-                `お電話番号：\n` +
-                `備考：`
-            );
-
-            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-        }
-    });
-}
-
 /**
  * Schedule Filtering & Tab Logic
  */

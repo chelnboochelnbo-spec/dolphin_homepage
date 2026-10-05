@@ -32,6 +32,8 @@
         </div>
 
         <div class="nav-right">
+            <a class="language-link" href="/en/" lang="en" hreflang="en">English</a>
+            <a class="language-link" href="/zh-tw/" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -350,7 +352,7 @@
 
                 <div class="form-group">
                     <label for="event">DATE / 公演日</label>
-                    <select id="event" name="event">
+                    <select id="event" name="event" required>
                         <option value="" data-month="all">選択してください</option>
                         <option value="1/17 Workshop" data-month="jan" data-date="2026-01-17">1/17 荻原亮 Guitar & Ensemble
                             Workshop</option>
@@ -516,6 +518,7 @@
                     <textarea id="message" name="message" rows="4"></textarea>
                 </div>
 
+                <p id="reservationStatus" role="status">メールアプリで送信後、お店からの返信をもって予約をご確認ください。</p>
                 <button type="submit" class="submit-btn">予約メールを作成</button>
             </form>
         </div>
@@ -589,6 +592,7 @@
 
     <script src="script.js"></script>
     <script src="event-runtime.js"></script>
+    <script src="/reservations.js"></script>
 </body>
 
 </html>

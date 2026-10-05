@@ -2177,3 +2177,7 @@ footer li {
     .faq-grid,
     .english-points { grid-template-columns: 1fr; }
 }
+
+/* Visible language links also remain available beside the mobile menu. */
+.language-link { color: #f2f2f2; font-size: .85rem; white-space: nowrap; margin-right: .7rem; }
+@media (max-width: 480px) { .main-nav { padding-left: 1rem; padding-right: 1rem; } .language-link { font-size: .8rem; margin-right: .4rem; } }

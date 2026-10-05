@@ -19,7 +19,7 @@
     const link = event.target.closest('a[data-track]');
     if (!link) return;
     window.gtag('event', link.dataset.track, {
-      link_url: link.href,
+      link_type: link.protocol === 'tel:' ? 'phone' : link.protocol === 'mailto:' ? 'email' : 'navigation',
       language_variant: document.documentElement.lang || 'unknown'
     });
   });
