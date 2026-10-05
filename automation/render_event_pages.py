@@ -5,6 +5,7 @@ import shutil
 from datetime import date
 from html import escape
 from pathlib import Path
+from urllib.parse import quote
 
 from event_utils import event_end_date, event_is_past, event_type_label
 
@@ -139,7 +140,7 @@ def render(event: dict, artists_by_id: dict[str, dict]) -> str:
     if external:
         extras.append(f'<section class="event-extra"><h2>LINKS</h2><div class="event-links">{"".join(external)}</div></section>')
 
-    action = '<a class="event-action" href="/archive/">BACK TO LIVE ARCHIVE</a>' if is_past else '<a class="event-action" href="/#reservation">RESERVATION</a>'
+    action = '<a class="event-action" href="/archive/">BACK TO LIVE ARCHIVE</a>' if is_past else f'<a class="event-action" href="/?event_id={quote(event["id"])}#reservation">RESERVATION</a> <a class="event-action" href="/en/?event_id={quote(event["id"])}#reservation" lang="en">Reserve in English</a>'
     status = "PAST EVENT" if is_past else "UPCOMING"
     description_html = f'<p class="event-description">{escape(event.get("description") or "")}</p>' if event.get("description") else ""
     extras_html = "".join(extras)

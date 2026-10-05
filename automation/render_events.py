@@ -5,6 +5,7 @@ import re
 from datetime import date
 from pathlib import Path
 from html import escape
+from urllib.parse import quote
 
 from event_utils import current_jst_date, event_end_date, event_is_past, event_type_label, normalize_event_type
 
@@ -116,7 +117,7 @@ def render_schedule_article(event: dict) -> str:
     charge = event.get("charge") or ""
     event_type = normalize_event_type(event)
     type_badge = event_type_label(event)
-    reserve_url = event.get("reservation_url") or "index.html#reservation"
+    reserve_url = f"/?event_id={quote(event['id'])}#reservation"
     display = event.get("display") or {}
 
     details = display_detail_html(event)
@@ -292,6 +293,20 @@ def rebuild_home_preview(index_html: str, schedule_html: str) -> str:
     return pattern.sub(lambda match: match.group(1) + "\n\n" + preview + match.group(3), index_html, count=1)
 
 
+def sync_reservation_options(html: str, events: list[dict]) -> str:
+    options = ['<option value="" data-month="all">公演を選択してください</option>']
+    for event in sorted(events, key=lambda item: (item["date"], item["title"])):
+        if event.get("status") not in {"ready", "published", "archived"} or event_is_past(event):
+            continue
+        month = MONTH_IDS[int(event["date"][5:7]) - 1]
+        options.append(f'<option value="{escape(event["id"], quote=True)}" data-month="{month}" data-date="{event["date"]}">{event["date"]} — {escape(event["title"])}</option>')
+    options.append('<option value="Normal" data-month="other">通常営業・その他のお問い合わせ</option>')
+    pattern = re.compile(r'(<select id="event"[^>]*>).*?(</select>)', re.S)
+    if not pattern.search(html):
+        raise ValueError("Reservation event select is missing")
+    return pattern.sub(lambda match: match[1] + "\n" + "\n".join(options) + "\n" + match[2], html, count=1)
+
+
 def main() -> None:
     events = load_events()
     schedule_html = SCHEDULE_FILE.read_text(encoding="utf-8-sig")
@@ -312,6 +327,7 @@ def main() -> None:
     index_html = INDEX_FILE.read_text(encoding="utf-8-sig")
     index_html = rebuild_home_preview(index_html, schedule_html)
     index_html = ensure_event_assets(index_html)
+    index_html = sync_reservation_options(index_html, events)
 
     SCHEDULE_FILE.write_text(schedule_html, encoding="utf-8")
     INDEX_FILE.write_text(index_html, encoding="utf-8")
