@@ -3831,18 +3831,18 @@
       "title": "Open Groove Night Jam Session",
       "event_type": "session",
       "status": "published",
-      "open": "19:30",
+      "open": "19:00",
       "start": "20:00",
-      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
       "performers": [
         {
-          "instrument": "Gt",
-          "name": "羽田正英",
+          "instrument": "gt",
+          "name": "masahide haneda",
           "artist_id": "masahide-haneda"
         },
         {
-          "instrument": "Ba",
-          "name": "中山とも",
+          "instrument": "ba",
+          "name": "tomo nakayama",
           "artist_id": "tomo-nakayama"
         }
       ],
@@ -4139,18 +4139,18 @@
       "title": "Open Groove Night Jam Session",
       "event_type": "session",
       "status": "published",
-      "open": "19:30",
+      "open": "19:00",
       "start": "20:00",
-      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
       "performers": [
         {
-          "instrument": "Gt",
-          "name": "羽田正英",
+          "instrument": "gt",
+          "name": "masahide haneda",
           "artist_id": "masahide-haneda"
         },
         {
-          "instrument": "Ba",
-          "name": "中山とも",
+          "instrument": "ba",
+          "name": "tomo nakayama",
           "artist_id": "tomo-nakayama"
         }
       ],
@@ -4730,6 +4730,123 @@
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-01-07_open-groove-night-jam-session",
+      "date": "2027-01-07",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:00",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
+      "performers": [
+        {
+          "instrument": "gt",
+          "name": "masahide haneda",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "ba",
+          "name": "tomo nakayama",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-04_open-groove-night-jam-session",
+      "date": "2027-02-04",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:00",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
+      "performers": [
+        {
+          "instrument": "gt",
+          "name": "masahide haneda",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "ba",
+          "name": "tomo nakayama",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-04_open-groove-night-jam-session",
+      "date": "2027-03-04",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:00",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
+      "performers": [
+        {
+          "instrument": "gt",
+          "name": "masahide haneda",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "ba",
+          "name": "tomo nakayama",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
