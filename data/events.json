@@ -3787,7 +3787,7 @@
       "id": "2026-11-03_legacy-4985767288",
       "date": "2026-11-03",
       "title": "MIKIKO & GRIGORIS TRIO JAPAN TOUR 2026",
-      "event_type": "live",
+      "event_type": "live_session",
       "status": "published",
       "open": "19:00",
       "start": "19:30",
@@ -3803,7 +3803,7 @@
           "name": "服部正嗣"
         }
       ],
-      "description": "2026年11月3日（火・祝）／会場：Jazz & Bar DOLPHIN（金沢市片町2丁目13-11 ミリオンビル4階）／お問い合わせ：080-3895-0821",
+      "description": "Live & Session／2026年11月3日（火・祝）／会場：Jazz & Bar DOLPHIN（金沢市片町2丁目13-11 ミリオンビル4階）／お問い合わせ：080-3895-0821",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
@@ -3822,7 +3822,8 @@
       },
       "legacy_imported": true,
       "display": {
-        "intro": "2026年11月3日（火・祝）／会場：Jazz & Bar DOLPHIN（金沢市片町2丁目13-11 ミリオンビル4階）／お問い合わせ：080-3895-0821"
+        "intro": "2026年11月3日（火・祝）／会場：Jazz & Bar DOLPHIN（金沢市片町2丁目13-11 ミリオンビル4階）／お問い合わせ：080-3895-0821",
+        "subtitle": "Live & Session"
       }
     },
     {

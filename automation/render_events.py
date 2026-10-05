@@ -299,7 +299,9 @@ def sync_reservation_options(html: str, events: list[dict]) -> str:
         if event.get("status") not in {"ready", "published", "archived"} or event_is_past(event):
             continue
         month = MONTH_IDS[int(event["date"][5:7]) - 1]
-        options.append(f'<option value="{escape(event["id"], quote=True)}" data-month="{month}" data-date="{event["date"]}">{event["date"]} — {escape(event["title"])}</option>')
+        subtitle = (event.get('display') or {}).get('subtitle')
+        label = event['title'] + (f' — {subtitle}' if subtitle else '')
+        options.append(f'<option value="{escape(event["id"], quote=True)}" data-month="{month}" data-date="{event["date"]}">{event["date"]} — {escape(label)}</option>')
     options.append('<option value="Normal" data-month="other">通常営業・その他のお問い合わせ</option>')
     pattern = re.compile(r'(<select id="event"[^>]*>).*?(</select>)', re.S)
     if not pattern.search(html):

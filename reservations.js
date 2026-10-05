@@ -47,7 +47,8 @@
             select.replaceChildren(new Option(english ? 'Choose an event' : '公演を選択してください', ''));
             for (const e of events) {
                 if (month?.value && months[Number(e.date.slice(5,7))-1] !== month.value) continue;
-                const option = new Option(`${english ? dateEN(e.date) : e.date} — ${e.title}`, e.id);
+                const subtitle = e.display?.subtitle ? ` — ${e.display.subtitle}` : '';
+                const option = new Option(`${english ? dateEN(e.date) : e.date} — ${e.title}${subtitle}`, e.id);
                 option.dataset.date = e.date;
                 select.add(option);
             }
@@ -68,7 +69,7 @@
             list.replaceChildren();
             for (const e of events) {
                 const card = document.createElement('article'); card.className = 'card';
-                const title = document.createElement('h3'); title.textContent = e.title;
+                const title = document.createElement('h3'); title.textContent = e.title + (e.display?.subtitle ? ` — ${e.display.subtitle}` : '');
                 const details = document.createElement('p'); details.className = 'small';
                 const when = `${dateEN(e.date)}${e.end_date && e.end_date !== e.date ? ` – ${dateEN(e.end_date)}` : ''}`;
                 details.textContent = `${when} · ${e.open ? `Doors ${e.open} / ` : ''}${e.start ? `Starts ${e.start}` : 'Start time to be confirmed'} (Japan time)`;
