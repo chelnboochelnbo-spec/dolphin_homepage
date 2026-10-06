@@ -133,9 +133,11 @@ class PublicationGuard(unittest.TestCase):
         self.assertFalse(self.assess().allowed)
 
     def test_duplicate_media_attestations_fail(self):
-        duplicate = copy.deepcopy(self.ledger["reviews"][0]); duplicate["review_id"] = "duplicate"
+        duplicate = copy.deepcopy(self.ledger["reviews"][0])
         duplicate["targets"] = {self.events[1]["id"]: {}}
         self.ledger["reviews"].append(duplicate); self.persist()
+        self.assertFalse(self.assess().allowed)
+        duplicate["review_id"] = "duplicate"; self.persist()
         self.assertFalse(self.assess().allowed)
 
     def test_cancelled_january_2_cannot_be_revived_or_renamed(self):

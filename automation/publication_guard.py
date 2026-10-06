@@ -136,7 +136,7 @@ def assess(event: dict, root: Path = ROOT, *, events=None, ledger=None) -> Decis
                     or (date.fromisoformat(max(dates))-date.fromisoformat(min(dates))).days != 1):
                 raise ValueError("shared image requires explicit two-day target approval")
         # A second attestation cannot silently reuse this media for another date.
-        if any(r.get("image_sha256") == digest and r.get("review_id") != review["review_id"]
+        if any(r is not review and (r.get("image_sha256") == digest or r.get("review_id") == review["review_id"])
                for r in ledger["reviews"]):
             raise ValueError("duplicate media attestation; use one explicit target set")
         return Decision(True, "verified", path, digest, review["review_id"], tuple(sorted(targets)))
