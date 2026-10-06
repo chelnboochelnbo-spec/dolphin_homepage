@@ -72,6 +72,7 @@ body .lineup-item .lineup-intro,
 body .lineup-item:hover .lineup-intro,
 body .lineup-item .weekday,
 body .lineup-item:hover .weekday,
+body .lineup-item:hover .lineup-date .weekday,
 body .lineup-item .lineup-details i { color: #5c5c5c !important; }
 body .lineup-item .performer-link:hover,
 body .lineup-item .lineup-artist > a:hover { color: #171717; text-decoration: underline; }
