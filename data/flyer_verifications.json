@@ -1277,6 +1277,53 @@
           "observed_text": "Saturday Jam Session 2; Gt 櫻井祐二 / Ba 中山とも; 10/17 Sat; Open 19:00 Start 20:00; MC 2,000Yen + 2Drinks. Year and student rate not printed; year bound to the existing 2026 event context, not transcribed from pixels."
         }
       }
+    },
+    {
+      "review_id": "visual-20261007-balloon-vine-trio-20261128-start2000",
+      "kind": "visual_review",
+      "reviewer": "Codex visual reviewer: actual supplied PNG pixels opened with view_image",
+      "reviewed_at": "2026-10-06T23:45:18+00:00",
+      "pixels_inspected": true,
+      "transcription": "Balloon vine Trio; LIVE & SESSION; 2026.11.28 SAT; START 20:00; ¥2,000; Piano: 宇野秀哉; Bass: 帆苅拓哉; Drums: 横山隼斗; Jazz & Bar Dolphin. No OPEN time or drink-order condition printed.",
+      "image_path": "assets/flyers/flyer_20261128_balloon-vine-trio.png",
+      "image_sha256": "3eaed179973ab36b66727c5db0f5b7db947bd85dc852f907b264c164789e36fa",
+      "covered_dates": [
+        "2026-11-28"
+      ],
+      "targets": {
+        "2026-11-28_balloon-vine-trio": {
+          "facts": {
+            "id": "2026-11-28_balloon-vine-trio",
+            "date": "2026-11-28",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000",
+            "performers": [
+              {
+                "instrument": "Piano",
+                "name": "宇野秀哉"
+              },
+              {
+                "instrument": "Bass",
+                "name": "帆苅拓哉"
+              },
+              {
+                "instrument": "Drums",
+                "name": "横山隼斗"
+              }
+            ],
+            "title": "Balloon vine Trio",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "a9c2344fcf64e4c6c24605acba0b72ab32af94ee55b92611e4f5e0e91c7ebf51",
+          "observed_text": "Balloon vine Trio; LIVE & SESSION; 2026.11.28 SAT; START 20:00; ¥2,000; Piano: 宇野秀哉; Bass: 帆苅拓哉; Drums: 横山隼斗; Jazz & Bar Dolphin. No OPEN time or drink-order condition printed."
+        }
+      }
     }
   ]
 }

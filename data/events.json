@@ -5203,8 +5203,8 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "github_path": "",
+        "status": "ready",
+        "github_path": "assets/flyers/flyer_20261128_balloon-vine-trio.png",
         "source": null,
         "canva_design_id": null
       },
