@@ -4562,9 +4562,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270121_monthly-voices.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4710,9 +4710,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270218_monthly-voices.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4896,9 +4896,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270318_monthly-voices.png",
         "canva_design_id": null
       },
       "archive": {
