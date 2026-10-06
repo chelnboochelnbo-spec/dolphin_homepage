@@ -189,12 +189,12 @@ class PublicationGuard(unittest.TestCase):
         with self.assertRaises(ValueError): self.package()
 
     def test_existing_legacy_id_requires_update(self):
-        self.events[0]["social"]["schedule"] = [{"channel": "instagram", "channel_id": "TEST-ACCOUNT", "external_id": "EXISTING", "status": "scheduled"}]
+        self.events[0]["social"]["schedule"] = [{"channel": "instagram", "channel_id": "TEST-ACCOUNT", "external_id": "EXISTING", "status": "scheduled", "days_before": 14}]
         self.persist(); self.assertEqual(self.package()["action"], "update")
         self.assertEqual(self.package()["external_id"], "EXISTING")
 
     def test_existing_post_account_must_be_resolved(self):
-        self.events[0]["social"]["schedule"] = [{"channel": "instagram", "external_id": "EXISTING", "status": "scheduled"}]
+        self.events[0]["social"]["schedule"] = [{"channel": "instagram", "external_id": "EXISTING", "status": "scheduled", "days_before": 14}]
         self.persist()
         with self.assertRaisesRegex(ValueError, "account unresolved"): self.package()
 
@@ -235,7 +235,7 @@ class PublicationGuard(unittest.TestCase):
     def test_duplicate_media_and_external_id_rejected(self):
         package = self.package(); duplicate = {**package, "key": "other", "event_ids": ["other"]}
         with self.assertRaises(ValueError): self.package({"records": [duplicate]})
-        self.events[0]["social"]["schedule"] = [{"channel": "instagram", "external_id": "EXISTING", "status": "scheduled"}]
+        self.events[0]["social"]["schedule"] = [{"channel": "instagram", "external_id": "EXISTING", "status": "scheduled", "days_before": 14}]
         self.persist(); duplicate.update(image_sha256="different", external_id="EXISTING")
         with self.assertRaises(ValueError): self.package({"records": [duplicate]})
 

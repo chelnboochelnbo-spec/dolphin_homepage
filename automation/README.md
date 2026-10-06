@@ -83,7 +83,7 @@ For each planned slot:
 4. Schedule each post through the connected social scheduler.
 5. Record scheduled state and external IDs in the event object when available.
 
-Do not schedule a social post before the flyer is visually verified. Use the guarded SNS package and readback contract; this repository has no connected production sender.
+Do not schedule a new social post before the flyer is visually verified. HP-only migration baselines do not grant SNS permission. The frozen October Kiraku exception only preserves its identified existing reservation. Use the guarded SNS package and readback contract; this repository has no connected production sender.
 
 ## Archive lifecycle
 After the event date has passed:

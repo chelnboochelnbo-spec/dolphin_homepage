@@ -80,6 +80,7 @@ class Decision:
     sha256: str = ""
     review_id: str = ""
     targets: tuple[str, ...] = ()
+    evidence_kind: str = "visual_review"
 
 
 def assess(event: dict, root: Path = ROOT, *, events=None, ledger=None) -> Decision:
@@ -144,8 +145,67 @@ def assess(event: dict, root: Path = ROOT, *, events=None, ledger=None) -> Decis
         return Decision(False, str(exc))
 
 
+def strict_website_scope(event: dict, root: Path = ROOT) -> bool:
+    config = read_json(root / "automation/config.json", {})
+    titles = {title for series in config.get("publishing", {}).get("recurring_series", [])
+              for title in series["titles"]}
+    return event.get("date", "") >= "2026-10-07" and event.get("title") in titles
+
+
+def migration_decision(event: dict, root: Path = ROOT, *, october=False) -> Decision:
+    """Frozen existing publication evidence, never a new visual verification."""
+    try:
+        if not event_publishable(event, root):
+            raise ValueError("inactive event")
+        name = "october_kiraku_migration.json" if october else "website_image_baseline.json"
+        document = read_json(root / "data" / name, {"records": []})
+        matches = [r for r in document["records"] if event["id"] in r.get("targets", {})]
+        if len(matches) != 1:
+            raise ValueError("no unique migration record")
+        record = matches[0]
+        if not october and strict_website_scope(event, root):
+            raise ValueError("future recurring image requires visual verification")
+        if october and (set(record.get("covered_dates", [])) != {"2026-10-08", "2026-10-22"}
+                        or not record.get("approval_reference")):
+            raise ValueError("not the approved October exception")
+        events = {e["id"]: e for e in read_json(root / "data/events.json", {"events": []})["events"]}
+        events[event["id"]] = event
+        dates = set()
+        for event_id, evidence in record["targets"].items():
+            target = events[event_id]
+            if not event_publishable(target, root) or evidence["facts"] != event_facts(target) or evidence["fingerprint"] != fingerprint(target):
+                raise ValueError("migration facts changed")
+            if (target.get("flyer") or {}).get("github_path") != record["source_path"]:
+                raise ValueError("migration source path changed")
+            if october and target.get("title") != "Kiraku Jam":
+                raise ValueError("October exception is Kiraku only")
+            dates.add(target["date"])
+        if sorted(dates) != sorted(record["covered_dates"]):
+            raise ValueError("migration date set changed")
+        path = record["image_path"]
+        if image_sha(image_file(path, root)) != record["image_sha256"]:
+            raise ValueError("migration image bytes changed")
+        kind = "october_existing_publication" if october else "website_baseline_unverified"
+        return Decision(True, kind, path, record["image_sha256"], record["record_id"],
+                        tuple(sorted(record["targets"])), kind)
+    except (KeyError, ValueError, TypeError, OSError) as exc:
+        return Decision(False, str(exc))
+
+
+def website_decision(event: dict, root: Path = ROOT, *, events=None) -> Decision:
+    verified = assess(event, root, events=events)
+    if verified.allowed:
+        return verified
+    october = migration_decision(event, root, october=True)
+    if october.allowed:
+        return october
+    return migration_decision(event, root)
+
+
 def verified_flyer_path(event: dict, root: Path = ROOT) -> str:
-    return assess(event, root).path
+    # Historical name retained for renderer compatibility; callers must not
+    # interpret website baseline permission as visual/SNS verification.
+    return website_decision(event, root).path
 
 
 def audit(root: Path = ROOT) -> list[dict]:
@@ -154,8 +214,9 @@ def audit(root: Path = ROOT) -> list[dict]:
     for event in events:
         if is_tombstoned(event, root) and event.get("status") in PUBLIC_STATUSES:
             raise ValueError(f"Cancelled event revived: {event['id']}")
-    return [{"event_id": e["id"], "image_allowed": (d := assess(e, root, events=events)).allowed,
-             "reason": d.reason} for e in events]
+    return [{"event_id": e["id"], "image_allowed": (d := website_decision(e, root, events=events)).allowed,
+             "reason": d.reason, "evidence_kind": d.evidence_kind,
+             "visual_verified": assess(e, root, events=events).allowed} for e in events]
 
 
 if __name__ == "__main__":

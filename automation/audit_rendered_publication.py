@@ -3,7 +3,7 @@ import json
 from html.parser import HTMLParser
 from pathlib import Path
 
-from publication_guard import ROOT, assess, event_publishable, read_json
+from publication_guard import ROOT, website_decision, event_publishable, read_json
 
 
 class Media(HTMLParser):
@@ -50,7 +50,7 @@ def audit(root: Path = ROOT):
             if page.exists(): raise ValueError(f"Inactive event page remains: {event['id']}")
             continue
         parsed = Media(); parsed.feed(page.read_text(encoding="utf-8-sig"))
-        result = assess(event, root, events=events)
+        result = website_decision(event, root, events=events)
         expected = ["/"+result.path.lstrip("/")] if result.allowed else []
         if parsed.images != expected: raise ValueError(f"Unverified detail image: {event['id']}")
         urls = ["https://www.bardolphin-kanazawa.com"+p for p in expected]
@@ -64,7 +64,7 @@ def audit(root: Path = ROOT):
             event = by_id.get(event_id)
             if not event or not event_publishable(event, root):
                 raise ValueError(f"Inactive card: {event_id}")
-            result = assess(event, root, events=events)
+            result = website_decision(event, root, events=events)
             expected = [result.path.lstrip("/")] if result.allowed else []
             if [p.lstrip("/") for p in images] != expected:
                 raise ValueError(f"Unverified card image: {event_id}")

@@ -1,0 +1,3941 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-06T18:26:19.353494+00:00",
+  "note": "Frozen already-published bytes/facts. NOT visual verification. HP only; no new SNS use.",
+  "records": [
+    {
+      "record_id": "website-baseline-2026-02-05_legacy-231d23780f",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260205.png",
+      "image_path": "flyer_20260205.png",
+      "image_sha256": "6672761098df3373f6cd6d31b020416086740e0a251f5a24abf0a73664a5e903",
+      "covered_dates": [
+        "2026-02-05"
+      ],
+      "targets": {
+        "2026-02-05_legacy-231d23780f": {
+          "facts": {
+            "id": "2026-02-05_legacy-231d23780f",
+            "date": "2026-02-05",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge: ¥2,000 (+2d)",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "羽田正英",
+                "artist_id": "masahide-haneda"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Open Groove Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "6dc4894b42937fe9f367c8a4b6ca7921ef539b7a5237a7d576993505bc832ed4"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-02-07_legacy-41acceb6fb",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260207.png",
+      "image_path": "flyer_20260207.png",
+      "image_sha256": "4599ab468a65c99f8b827e14adb3fba3fc58d2dedc5f93cdd799c310ecf25fcf",
+      "covered_dates": [
+        "2026-02-07"
+      ],
+      "targets": {
+        "2026-02-07_legacy-41acceb6fb": {
+          "facts": {
+            "id": "2026-02-07_legacy-41acceb6fb",
+            "date": "2026-02-07",
+            "end_date": null,
+            "open": null,
+            "start": "20:30",
+            "charge": "Charge: ¥2,000 (+2d)",
+            "performers": [
+              {
+                "instrument": "Sax",
+                "name": "本間昌晃"
+              },
+              {
+                "instrument": "Pf",
+                "name": "西村岳大"
+              },
+              {
+                "instrument": "Ba",
+                "name": "Ami"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Saturday Jam Session 1",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "1b0af2eea72137bdd352d22f11bda3e7c30008f960e5a96646b7b3ce591adc8b"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-02-12_legacy-c75c6960ba",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_the_third_session_new.png",
+      "image_path": "flyer_the_third_session_new.png",
+      "image_sha256": "9829d37005e867a6d0d8d09eaaef01c8c5f102953c08a7b7da31192c26796ff6",
+      "covered_dates": [
+        "2026-02-12"
+      ],
+      "targets": {
+        "2026-02-12_legacy-c75c6960ba": {
+          "facts": {
+            "id": "2026-02-12_legacy-c75c6960ba",
+            "date": "2026-02-12",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "The Third Session 1",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "49b9d79773eb702618d3cbdb92d16564d47330c2b0d4d473e98645983fce00d4"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-02-14_legacy-e99d6088fc",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260214.png",
+      "image_path": "flyer_20260214.png",
+      "image_sha256": "5db48884f1306ac51adcf44dadd1484b9dd549a5173b7cb598849d6a2cd46322",
+      "covered_dates": [
+        "2026-02-14"
+      ],
+      "targets": {
+        "2026-02-14_legacy-e99d6088fc": {
+          "facts": {
+            "id": "2026-02-14_legacy-e99d6088fc",
+            "date": "2026-02-14",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Sax",
+                "name": "濱西公博"
+              },
+              {
+                "instrument": "Pf",
+                "name": "黒川薫",
+                "artist_id": "kaoru-kurokawa"
+              },
+              {
+                "instrument": "Ba",
+                "name": "酒井朝日"
+              },
+              {
+                "instrument": "Dr",
+                "name": "横山勇斗"
+              }
+            ],
+            "title": "Tribute to Sonny Rollins Live&Session",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "f4dece080a1ef2074d17c88e3a3cdbba6826c20b44f60328cd71b3aab3f5fcda"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-02-19_legacy-0e65210014",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260219.png",
+      "image_path": "flyer_20260219.png",
+      "image_sha256": "5c1ca8e198e9210a60d35d6c7c04ee724b021a5581c3c7c00157b76b4a9ce0bc",
+      "covered_dates": [
+        "2026-02-19"
+      ],
+      "targets": {
+        "2026-02-19_legacy-0e65210014": {
+          "facts": {
+            "id": "2026-02-19_legacy-0e65210014",
+            "date": "2026-02-19",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge: ¥2,000 (+2d)",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "黒川薫",
+                "artist_id": "kaoru-kurokawa"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Monthly Voices 〜Vocal Session〜",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "e5e3bf1191e4a54de0b8a5ea71ec8cbb8114e3230331b545ec3b3fa9e67df016"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-02-20_legacy-8f661ab667",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260220.jpg",
+      "image_path": "flyer_20260220.jpg",
+      "image_sha256": "8c1a2a83137a2e8f619deb1aafa2c95d63fea06f7401ca808dab12b84ff748ec",
+      "covered_dates": [
+        "2026-02-20"
+      ],
+      "targets": {
+        "2026-02-20_legacy-8f661ab667": {
+          "facts": {
+            "id": "2026-02-20_legacy-8f661ab667",
+            "date": "2026-02-20",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge: ¥3,500",
+            "performers": [
+              {
+                "instrument": "Dr",
+                "name": "菅原高志",
+                "artist_id": "takashi-sugawara"
+              },
+              {
+                "instrument": "Sax",
+                "name": "濱西公博"
+              },
+              {
+                "instrument": "Sax",
+                "name": "林綾子"
+              },
+              {
+                "instrument": "Pf",
+                "name": "河崎千鶴"
+              },
+              {
+                "instrument": "Ba",
+                "name": "那須仁哉"
+              }
+            ],
+            "title": "菅原高志北陸Tour2026 -All That Jazz!-",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "a846ed8d8cf400e9845fed8bf3d912f0ccfc849e2e7022351c1f231f22659e9f"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-02-21_legacy-35aab24bca",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260221.png",
+      "image_path": "flyer_20260221.png",
+      "image_sha256": "a4dd4110770bfe77f6e7ae2354b2a360cfb43f848dbb44e022270bb29c04deb8",
+      "covered_dates": [
+        "2026-02-21"
+      ],
+      "targets": {
+        "2026-02-21_legacy-35aab24bca": {
+          "facts": {
+            "id": "2026-02-21_legacy-35aab24bca",
+            "date": "2026-02-21",
+            "end_date": null,
+            "open": null,
+            "start": "20:30",
+            "charge": "Charge: ¥2,000 (+2d)",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Saturday Jam Session 2",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "4e680dbb2332e86c159af4530a5943b3328fd799290618748f567a63dd8a1f69"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-02-22_legacy-f505c9a1d9",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260222.jpg",
+      "image_path": "flyer_20260222.jpg",
+      "image_sha256": "e145bdb88d4fbbb414d3eada5f437d2365120c77146c6dbf1711432af5463b78",
+      "covered_dates": [
+        "2026-02-22"
+      ],
+      "targets": {
+        "2026-02-22_legacy-f505c9a1d9": {
+          "facts": {
+            "id": "2026-02-22_legacy-f505c9a1d9",
+            "date": "2026-02-22",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge: ¥3,500",
+            "performers": [
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Pf",
+                "name": "坪口昌恭 etc."
+              }
+            ],
+            "title": "Nakayama Tomo Special Birthday Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "5965e606ac53c9aedd21d809294fbaeed47f0c5a14da0b4afb4c9b8fda102140"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-02-23_legacy-de85cf7982",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260223.jpg",
+      "image_path": "flyer_20260223.jpg",
+      "image_sha256": "e59d4cdd0583233c00a4370feae7fd5821727c8bcb2b890410c5e8b212551e7f",
+      "covered_dates": [
+        "2026-02-23"
+      ],
+      "targets": {
+        "2026-02-23_legacy-de85cf7982": {
+          "facts": {
+            "id": "2026-02-23_legacy-de85cf7982",
+            "date": "2026-02-23",
+            "end_date": null,
+            "open": "12:30",
+            "start": "13:00",
+            "charge": "Charge: ¥4,000",
+            "performers": [
+              {
+                "instrument": "講師",
+                "name": "坪口昌恭"
+              }
+            ],
+            "title": "Special Workshop“Bebop to Nu-Jazz”- From Barry Harris to Robert Glasper -",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "9834e893daa82e659a156d88835d3a952edee858ecaa0ce632c3eb9ee7fc79c6"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-02-26_legacy-393d72a58d",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_the_third_session_new.png",
+      "image_path": "flyer_the_third_session_new.png",
+      "image_sha256": "9829d37005e867a6d0d8d09eaaef01c8c5f102953c08a7b7da31192c26796ff6",
+      "covered_dates": [
+        "2026-02-26"
+      ],
+      "targets": {
+        "2026-02-26_legacy-393d72a58d": {
+          "facts": {
+            "id": "2026-02-26_legacy-393d72a58d",
+            "date": "2026-02-26",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "The Third Session 2",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "04b2c14681c5314ac7ebf7a7238263a3f9bad519da294743de74f27b7520fb22"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-03-05_legacy-11659c16e6",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260305.jpg",
+      "image_path": "flyer_20260305.jpg",
+      "image_sha256": "d87b63609ae8df3a996532701bb79ff0a9dea85200cd7407e50aa918fffd1bf3",
+      "covered_dates": [
+        "2026-03-05"
+      ],
+      "targets": {
+        "2026-03-05_legacy-11659c16e6": {
+          "facts": {
+            "id": "2026-03-05_legacy-11659c16e6",
+            "date": "2026-03-05",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "羽田正英",
+                "artist_id": "masahide-haneda"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Open Groove Night Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "3511680050bdb9a0f170b3dcdf724f3db6a435a4a12124fffbd283edb65e64eb"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-03-07_legacy-3ed8229c16",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260307.jpg",
+      "image_path": "flyer_20260307.jpg",
+      "image_sha256": "84dbfc325d71d4378bde04fb7b5857eb73d47754d618a3099689bcad4124cc0d",
+      "covered_dates": [
+        "2026-03-07"
+      ],
+      "targets": {
+        "2026-03-07_legacy-3ed8229c16": {
+          "facts": {
+            "id": "2026-03-07_legacy-3ed8229c16",
+            "date": "2026-03-07",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "Charge ¥2,000 +2Drink Order / 学生 ¥1,000 +1Drink Order",
+            "performers": [
+              {
+                "instrument": "Sax",
+                "name": "吉田茉莉花"
+              },
+              {
+                "instrument": "Gt",
+                "name": "増田勇人"
+              },
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Ba",
+                "name": "那須仁哉"
+              },
+              {
+                "instrument": "Dr",
+                "name": "西村涼太"
+              }
+            ],
+            "title": "Saturday Jam Session 1",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "65e17f2916fdd0a147a3dc7e6df907a78361a264fadc03057d928dd586494e6b"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-03-12_legacy-a587681ac7",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260312.jpg",
+      "image_path": "flyer_20260312.jpg",
+      "image_sha256": "7788fb8af234eff8c07ac5c5bdc0592bdf8e38efbe2f14a95beb9f67185dd0f7",
+      "covered_dates": [
+        "2026-03-12"
+      ],
+      "targets": {
+        "2026-03-12_legacy-a587681ac7": {
+          "facts": {
+            "id": "2026-03-12_legacy-a587681ac7",
+            "date": "2026-03-12",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "前売り ¥4,000 / 当日 ¥4,500",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "スガダイロー",
+                "artist_id": "sugadairo"
+              }
+            ],
+            "title": "スガダイロー Solo Piano Live",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "6992f6f07320b350b7579725386d2d81ca782c2a22783e60a68dab5e93d8d431"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-03-18_legacy-fe04a03a65",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260318.jpg",
+      "image_path": "flyer_20260318.jpg",
+      "image_sha256": "da7625c9e82028775bd377e39a97da1cc94413a85c16a9bd4f310f4f0a6fbc38",
+      "covered_dates": [
+        "2026-03-18"
+      ],
+      "targets": {
+        "2026-03-18_legacy-fe04a03a65": {
+          "facts": {
+            "id": "2026-03-18_legacy-fe04a03a65",
+            "date": "2026-03-18",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 +2Drink Order / 学生 ¥1,000 +1Drink Order",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "西村岳大"
+              },
+              {
+                "instrument": "Ba",
+                "name": "清水徹也"
+              }
+            ],
+            "title": "祝！卒業 卒業ライブ＆セッション\"New Beginnings!\"",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "ee8478010ae7e874345cd64f5758f893138b7fd4f1ac6bc9f48bcd0d554d77c2"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-03-19_legacy-c95b965b4b",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260319.jpg",
+      "image_path": "flyer_20260319.jpg",
+      "image_sha256": "097f778bb00ed7079d257d9cd073e49a87cdfc0700d97fe811c7cd86e2858473",
+      "covered_dates": [
+        "2026-03-19"
+      ],
+      "targets": {
+        "2026-03-19_legacy-c95b965b4b": {
+          "facts": {
+            "id": "2026-03-19_legacy-c95b965b4b",
+            "date": "2026-03-19",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "黒川薫",
+                "artist_id": "kaoru-kurokawa"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Monthly Voices 〜Vocal Session〜",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "8c5adbd563cbdacd88094dcc10cb67480b439088a0cc398fcdd07bd047fd3dfd"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-03-21_legacy-64abc4201b",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260321.jpg",
+      "image_path": "flyer_20260321.jpg",
+      "image_sha256": "28a8add60b2b9a93bbda21fa90adcd1987f4261976c083ee982fb94a648f8f74",
+      "covered_dates": [
+        "2026-03-21"
+      ],
+      "targets": {
+        "2026-03-21_legacy-64abc4201b": {
+          "facts": {
+            "id": "2026-03-21_legacy-64abc4201b",
+            "date": "2026-03-21",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Saturday Jam Session 2",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "ff097e0217c4c10cb4850788c1a72ec2c9d6f635f3b0271347b02c856d72eab1"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-03-22_legacy-6da8a095ca",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260322.jpg",
+      "image_path": "flyer_20260322.jpg",
+      "image_sha256": "3d510a690001e3480cac53729ce7ba7fda97c9882869ba192def33ca26681bde",
+      "covered_dates": [
+        "2026-03-22"
+      ],
+      "targets": {
+        "2026-03-22_legacy-6da8a095ca": {
+          "facts": {
+            "id": "2026-03-22_legacy-6da8a095ca",
+            "date": "2026-03-22",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥2,000 +2Drink Order / 学生 ¥1,000 +1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "増田勇人"
+              },
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Ba",
+                "name": "ヤマト"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Tribute to Pat Metheny Live&Session",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "2b333c3953bbbd4a02f96fc42a85f8387a61481475c4d27246a915c4c604c19f"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-03-26_legacy-642ca2519f",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260326.jpg",
+      "image_path": "flyer_20260326.jpg",
+      "image_sha256": "0fc0c11fdc0635f93073cb4dd9006eadb750d7e2171992104404ab12eed0e9f7",
+      "covered_dates": [
+        "2026-03-26"
+      ],
+      "targets": {
+        "2026-03-26_legacy-642ca2519f": {
+          "facts": {
+            "id": "2026-03-26_legacy-642ca2519f",
+            "date": "2026-03-26",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "The Third Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "61eaefed6718b72660396a68dd1adc8f056e2cb437d730bde8a21a9fbcd3e3bf"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-03-27_legacy-c3700d724e",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260327.png",
+      "image_path": "flyer_20260327.png",
+      "image_sha256": "49c7d6ba52c8a09609c4d7236a534b7174e717c70773bc4197a976dc53cbbfed",
+      "covered_dates": [
+        "2026-03-27"
+      ],
+      "targets": {
+        "2026-03-27_legacy-c3700d724e": {
+          "facts": {
+            "id": "2026-03-27_legacy-c3700d724e",
+            "date": "2026-03-27",
+            "end_date": null,
+            "open": null,
+            "start": "19:30",
+            "charge": "Charge: ¥1,000 ＋投げ銭",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "彼谷宏"
+              },
+              {
+                "instrument": "Ba",
+                "name": "那須仁哉"
+              },
+              {
+                "instrument": "Dr",
+                "name": "ナカジマケント"
+              }
+            ],
+            "title": "Hybrid Jazz Night",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "63755c6929eab3659788a2d0373eb6198c8492a5465d4a9a9d32c0aff5ababc8"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-03-29_legacy-6b9388661b",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260329.jpg",
+      "image_path": "flyer_20260329.jpg",
+      "image_sha256": "f21efceca01d12bb70c3aad9a446f54bf9fff7bd2135c9f63caa91dcbaf496e0",
+      "covered_dates": [
+        "2026-03-29"
+      ],
+      "targets": {
+        "2026-03-29_legacy-6b9388661b": {
+          "facts": {
+            "id": "2026-03-29_legacy-6b9388661b",
+            "date": "2026-03-29",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge: ¥3,500",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "永武幹子",
+                "artist_id": "mikiko-nagami"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "永武幹子 Special Live&Session",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "964a6fd76c9b6cb0a522808f052b5f5810facbec8e9faa7f4135f79f4ada13b1"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-04-02_legacy-7248dbac7e",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260402.png",
+      "image_path": "flyer_20260402.png",
+      "image_sha256": "3e4eab2cc515a63124792c28e08da7fee2f2b3d9fd7e3a1adb2e7dd2b98524d5",
+      "covered_dates": [
+        "2026-04-02"
+      ],
+      "targets": {
+        "2026-04-02_legacy-7248dbac7e": {
+          "facts": {
+            "id": "2026-04-02_legacy-7248dbac7e",
+            "date": "2026-04-02",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "羽田正英",
+                "artist_id": "masahide-haneda"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Open Groove Night Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "614f70dbe0d59f6a654f91372c59ae0bb25394a4bb1d3af22b86aa113613c7e6"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-04-04_legacy-7d4e513cdd",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260404.jpg",
+      "image_path": "flyer_20260404.jpg",
+      "image_sha256": "3885cca1039513e9ff9bb7fc88bacf0f47403b18f1a9e6d1403d420124a814fa",
+      "covered_dates": [
+        "2026-04-04"
+      ],
+      "targets": {
+        "2026-04-04_legacy-7d4e513cdd": {
+          "facts": {
+            "id": "2026-04-04_legacy-7d4e513cdd",
+            "date": "2026-04-04",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "Charge ¥2,000 +2Drink Order / 学生 ¥1,000 +1Drink Order",
+            "performers": [
+              {
+                "instrument": "Sax",
+                "name": "吉田茉莉花"
+              },
+              {
+                "instrument": "Gt",
+                "name": "増田勇人"
+              },
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Ba",
+                "name": "Ami"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Saturday Jam Session 1",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "d3e5b1a42257033a29b5f8be8c1a032d66322e22b8e9c6b9f7640fd209e3830f"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-04-09_legacy-4335f6e1e0",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260409_23.jpg",
+      "image_path": "flyer_20260409_23.jpg",
+      "image_sha256": "b22da6596773baffb8c45e25fbe3a15b8e5dc5adf58a76d54c0eee7f80f6ade0",
+      "covered_dates": [
+        "2026-04-09"
+      ],
+      "targets": {
+        "2026-04-09_legacy-4335f6e1e0": {
+          "facts": {
+            "id": "2026-04-09_legacy-4335f6e1e0",
+            "date": "2026-04-09",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Kiraku Jam",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "9cf6a1bd881157aaeccac785ab3009aea48bcff5ecfb4a08197b50e1985b0e92"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-04-16_legacy-185f4361d6",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260416.png",
+      "image_path": "flyer_20260416.png",
+      "image_sha256": "c7ab55e581a35a7728591cf135e8ec93c46de0913b129a88cc15f9831a728c65",
+      "covered_dates": [
+        "2026-04-16"
+      ],
+      "targets": {
+        "2026-04-16_legacy-185f4361d6": {
+          "facts": {
+            "id": "2026-04-16_legacy-185f4361d6",
+            "date": "2026-04-16",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "黒川薫",
+                "artist_id": "kaoru-kurokawa"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Monthly Voices 〜Vocal Session〜",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "fdd435cf5dec051f9977b15e1d46519bd83acf04a40a991c119d8bdb3f504e3f"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-04-18_legacy-7385db4f5e",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260418.png",
+      "image_path": "flyer_20260418.png",
+      "image_sha256": "74eed3ccf9dcc369f51e2bcce49537b5d153023baafa10141c9c281634476f4a",
+      "covered_dates": [
+        "2026-04-18"
+      ],
+      "targets": {
+        "2026-04-18_legacy-7385db4f5e": {
+          "facts": {
+            "id": "2026-04-18_legacy-7385db4f5e",
+            "date": "2026-04-18",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Saturday Jam Session 2",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "f5ffd80cf907b5c5c5b61fd9b8b58d46e2e19cd6ee994d23ee80a384417f97e5"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-04-23_legacy-a587a4774b",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260409_23.jpg",
+      "image_path": "flyer_20260409_23.jpg",
+      "image_sha256": "b22da6596773baffb8c45e25fbe3a15b8e5dc5adf58a76d54c0eee7f80f6ade0",
+      "covered_dates": [
+        "2026-04-23"
+      ],
+      "targets": {
+        "2026-04-23_legacy-a587a4774b": {
+          "facts": {
+            "id": "2026-04-23_legacy-a587a4774b",
+            "date": "2026-04-23",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Kiraku Jam",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "40992d73722bb0f8d43986e27816a32047889300319b12b1442a15d4a2b951c0"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-04-24_legacy-5543541a60",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260424.jpg",
+      "image_path": "flyer_20260424.jpg",
+      "image_sha256": "38a3d32418505064d0ef0fc3d2a8384807b84d24bc450592069037869feb863a",
+      "covered_dates": [
+        "2026-04-24"
+      ],
+      "targets": {
+        "2026-04-24_legacy-5543541a60": {
+          "facts": {
+            "id": "2026-04-24_legacy-5543541a60",
+            "date": "2026-04-24",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "前売 ¥4,000 / 当日 ¥4,500",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "古谷淳",
+                "artist_id": "jun-furuya"
+              },
+              {
+                "instrument": "Ba",
+                "name": "工藤精"
+              },
+              {
+                "instrument": "Dr",
+                "name": "大村亘"
+              }
+            ],
+            "title": "古谷淳トリオ",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "a40e862187b32265183795a40465616c69c224fcc4a179bc0ffef6b518711506"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-05-01_legacy-895fa5214f",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260501.png",
+      "image_path": "flyer_20260501.png",
+      "image_sha256": "a3eae08e2d1f596c7f10eecde387808ca884c851ffce758e5efd1c7544edd146",
+      "covered_dates": [
+        "2026-05-01"
+      ],
+      "targets": {
+        "2026-05-01_legacy-895fa5214f": {
+          "facts": {
+            "id": "2026-05-01_legacy-895fa5214f",
+            "date": "2026-05-01",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "Charge ¥2,000 +2Drink Order / 学生 ¥1,000 +1Drink Order",
+            "performers": [
+              {
+                "instrument": "Sax",
+                "name": "吉田茉莉花"
+              },
+              {
+                "instrument": "Gt",
+                "name": "増田勇人"
+              },
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Ba",
+                "name": "Ami"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "GW Special Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "d96d7c99429dafe17465ac0fba2e193f9d2b9966ca4f01fcc05d48b2c6793271"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-05-02_legacy-e04efa6aaf",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260502.jpg",
+      "image_path": "flyer_20260502.jpg",
+      "image_sha256": "236de95ec6487129da1da78de51aeab5d60f8296246efe821b8602d973a2cf68",
+      "covered_dates": [
+        "2026-05-02"
+      ],
+      "targets": {
+        "2026-05-02_legacy-e04efa6aaf": {
+          "facts": {
+            "id": "2026-05-02_legacy-e04efa6aaf",
+            "date": "2026-05-02",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "前売 ¥5,000 / 当日 ¥5,500",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "スガダイロー",
+                "artist_id": "sugadairo"
+              },
+              {
+                "instrument": "Dr",
+                "name": "中村達也"
+              }
+            ],
+            "title": "赤斬月",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "a6eb1c7457cee6c3fdc846914089eb9c8e810a41de735b31a7e6b2e242217f06"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-05-04_legacy-9fdc416572",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260504.jpg",
+      "image_path": "flyer_20260504.jpg",
+      "image_sha256": "cf2289f9dae5a7393a5342358dce47a653afc9d8e29f11694ffcae82de467327",
+      "covered_dates": [
+        "2026-05-04"
+      ],
+      "targets": {
+        "2026-05-04_legacy-9fdc416572": {
+          "facts": {
+            "id": "2026-05-04_legacy-9fdc416572",
+            "date": "2026-05-04",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge: ¥5,000",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "Aaron Choulai",
+                "artist_id": "aaron-choulai"
+              }
+            ],
+            "title": "Aaron Choulai Piano Solo Set",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "86be19b32536dcea718d4664ab104e40e6791b95491a65848664a20044bb7514"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-05-07_legacy-471cbd9bfa",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260507.png",
+      "image_path": "flyer_20260507.png",
+      "image_sha256": "afc34686b87cd096a86f9cce2e863dd94da8c797d2d3007df71e203e3c6c37a4",
+      "covered_dates": [
+        "2026-05-07"
+      ],
+      "targets": {
+        "2026-05-07_legacy-471cbd9bfa": {
+          "facts": {
+            "id": "2026-05-07_legacy-471cbd9bfa",
+            "date": "2026-05-07",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "羽田正英",
+                "artist_id": "masahide-haneda"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Open Groove Night Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "93faed3cbb1bcb2ef51405e26dccb1f044d11476ce54031da8898c6ec3eff36f"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-05-09_legacy-cdbf275c70",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260509.jpg",
+      "image_path": "flyer_20260509.jpg",
+      "image_sha256": "9642c72b7b60e035f5908d0626539a2f6f8faabfe52f38e311b7f250de1443a0",
+      "covered_dates": [
+        "2026-05-09"
+      ],
+      "targets": {
+        "2026-05-09_legacy-cdbf275c70": {
+          "facts": {
+            "id": "2026-05-09_legacy-cdbf275c70",
+            "date": "2026-05-09",
+            "end_date": null,
+            "open": null,
+            "start": "19:30",
+            "charge": "Charge: MC ¥2,000",
+            "performers": [
+              {
+                "instrument": "Vo",
+                "name": "KAZU"
+              },
+              {
+                "instrument": "Pf",
+                "name": "安部誠彦"
+              },
+              {
+                "instrument": "Ba",
+                "name": "山内健司"
+              }
+            ],
+            "title": "Tribute to Anita O'Day",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "5eb8141654477bfa3d0175d1cc82568c4db43c029b4914f5f83a10ab27212e41"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-05-14_legacy-cc138c6072",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260514_28.jpg",
+      "image_path": "flyer_20260514_28.jpg",
+      "image_sha256": "5b6c6feaac4eff3d632eeb7b0990e82c5c0b586fcdcbf2030b3cb6494816680f",
+      "covered_dates": [
+        "2026-05-14"
+      ],
+      "targets": {
+        "2026-05-14_legacy-cc138c6072": {
+          "facts": {
+            "id": "2026-05-14_legacy-cc138c6072",
+            "date": "2026-05-14",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Kiraku Jam",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "2e408ddbca92c1153cdf41298b8adb14a66336b3d255f20830ac7675b2ffe9c0"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-05-16_legacy-9834340f92",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260516.png",
+      "image_path": "flyer_20260516.png",
+      "image_sha256": "a64c85ef8f25a1c20789488a9491b5d19891c9c172eed4fe4ca2695b7fae1886",
+      "covered_dates": [
+        "2026-05-16"
+      ],
+      "targets": {
+        "2026-05-16_legacy-9834340f92": {
+          "facts": {
+            "id": "2026-05-16_legacy-9834340f92",
+            "date": "2026-05-16",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Saturday Jam Session 2",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "4800ebb92dbefb5c501b2bb1e13dc3234b3d984193b50f5f90b59daa611684df"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-05-21_legacy-f3253ce96e",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260521.png",
+      "image_path": "flyer_20260521.png",
+      "image_sha256": "e67439edf023bbf40389b4c61e5c9d129ae4324f8849f6f8dea5cb84acc45023",
+      "covered_dates": [
+        "2026-05-21"
+      ],
+      "targets": {
+        "2026-05-21_legacy-f3253ce96e": {
+          "facts": {
+            "id": "2026-05-21_legacy-f3253ce96e",
+            "date": "2026-05-21",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "黒川薫",
+                "artist_id": "kaoru-kurokawa"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Monthly Voices 〜Vocal Session〜",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "49f53055a3da72bfc94a02ff08e5a4bbcd6d4bb6659b3d18798148fb629681af"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-05-28_legacy-092701831e",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260514_28.jpg",
+      "image_path": "flyer_20260514_28.jpg",
+      "image_sha256": "5b6c6feaac4eff3d632eeb7b0990e82c5c0b586fcdcbf2030b3cb6494816680f",
+      "covered_dates": [
+        "2026-05-28"
+      ],
+      "targets": {
+        "2026-05-28_legacy-092701831e": {
+          "facts": {
+            "id": "2026-05-28_legacy-092701831e",
+            "date": "2026-05-28",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Kiraku Jam",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "4937b875fab90236e15535d24f49b6b81f546700d91fe3c0858cc889397c1faf"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-05-29_legacy-de572348e2",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260529.png",
+      "image_path": "flyer_20260529.png",
+      "image_sha256": "50495ec9400dcada8282da7110772ec5896c4eb0fbefc21c77b79ec70383e5f9",
+      "covered_dates": [
+        "2026-05-29"
+      ],
+      "targets": {
+        "2026-05-29_legacy-de572348e2": {
+          "facts": {
+            "id": "2026-05-29_legacy-de572348e2",
+            "date": "2026-05-29",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "Charge: ¥2,000",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "MOJO ODA"
+              },
+              {
+                "instrument": "Pf",
+                "name": "平尾隆"
+              },
+              {
+                "instrument": "Ba",
+                "name": "武田悟"
+              },
+              {
+                "instrument": "Dr",
+                "name": "ナカジマケント"
+              }
+            ],
+            "title": "JAZZ TONIGHT",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "94ee2a6828a53071f40d2a2e602b914f8a58c4192490f03d53724a8c1fe8ec83"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-05-30_legacy-97fad6cf65",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260530.png",
+      "image_path": "flyer_20260530.png",
+      "image_sha256": "d22df95208e229fd9497f6b416dd58a643648ec51ef55005f55262cdaafea05b",
+      "covered_dates": [
+        "2026-05-30"
+      ],
+      "targets": {
+        "2026-05-30_legacy-97fad6cf65": {
+          "facts": {
+            "id": "2026-05-30_legacy-97fad6cf65",
+            "date": "2026-05-30",
+            "end_date": null,
+            "open": null,
+            "start": "20:30",
+            "charge": "Charge ¥2,000",
+            "performers": [
+              {
+                "instrument": "Sax",
+                "name": "カワシマミキオ"
+              },
+              {
+                "instrument": "Gt",
+                "name": "久保幹尚"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "やまごん"
+              }
+            ],
+            "title": "Mikio Kawashima Birthday Live&Session",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "e841cd267969f00e40496bfc6cdeded1d6b75e2cbe4ee22c7a1f8c4755788551"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-06-04_legacy-55eb8628ba",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260604.png",
+      "image_path": "flyer_20260604.png",
+      "image_sha256": "38c352d73e04b6cf3acb50ae4c8018518897987ad837b4bc16903b3edfdc7ce2",
+      "covered_dates": [
+        "2026-06-04"
+      ],
+      "targets": {
+        "2026-06-04_legacy-55eb8628ba": {
+          "facts": {
+            "id": "2026-06-04_legacy-55eb8628ba",
+            "date": "2026-06-04",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "羽田正英",
+                "artist_id": "masahide-haneda"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Open Groove Night Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "83b47e188acb378f793253b00cbf1a35f30adeba076a09ee4fbe936142e349c7"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-06-06_legacy-cddf81d4ec",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260606.jpg",
+      "image_path": "flyer_20260606.jpg",
+      "image_sha256": "71605bdc29fcc0adbf4b09000604d97b10b888f8eb5888ccf78b89314696e492",
+      "covered_dates": [
+        "2026-06-06"
+      ],
+      "targets": {
+        "2026-06-06_legacy-cddf81d4ec": {
+          "facts": {
+            "id": "2026-06-06_legacy-cddf81d4ec",
+            "date": "2026-06-06",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "Charge ¥2,000",
+            "performers": [
+              {
+                "instrument": "Sax",
+                "name": "本間昌晃"
+              },
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Ba",
+                "name": "Ami"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Saturday Jam Session 1",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "5786627b00484530689a6b773d45966535a4b5ccf900b3b7c187f999a2a176ed"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-06-11_legacy-ddf849dcd9",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260611.jpg",
+      "image_path": "flyer_20260611.jpg",
+      "image_sha256": "77b52940ebc9b8ea94dfca90c6263e37e103da0a4cbc610ebeb573a7a98964c6",
+      "covered_dates": [
+        "2026-06-11"
+      ],
+      "targets": {
+        "2026-06-11_legacy-ddf849dcd9": {
+          "facts": {
+            "id": "2026-06-11_legacy-ddf849dcd9",
+            "date": "2026-06-11",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Kiraku Jam",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "5c7cb5051be46a3fc03205e461e35d8ff72146faf410433fa2aa975c5c7dd250"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-06-18_legacy-0b5e25f283",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260618.png",
+      "image_path": "flyer_20260618.png",
+      "image_sha256": "4e79908ae73e9c02c3dd204322ccb8c01e51c5e498888e7b3481a19fe8ad179a",
+      "covered_dates": [
+        "2026-06-18"
+      ],
+      "targets": {
+        "2026-06-18_legacy-0b5e25f283": {
+          "facts": {
+            "id": "2026-06-18_legacy-0b5e25f283",
+            "date": "2026-06-18",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "黒川薫",
+                "artist_id": "kaoru-kurokawa"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Monthly Voices 〜Vocal Session〜",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "c29401334deaa3db2ef9018496b03f37b030b609b7cae6872ae2de8484160ab8"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-06-20_legacy-05b52a16c1",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260620.png",
+      "image_path": "flyer_20260620.png",
+      "image_sha256": "12dfcb1ad3259acdc1aa9a3555fed00ccffdd5d4a1067da73eed1812d04a91e8",
+      "covered_dates": [
+        "2026-06-20"
+      ],
+      "targets": {
+        "2026-06-20_legacy-05b52a16c1": {
+          "facts": {
+            "id": "2026-06-20_legacy-05b52a16c1",
+            "date": "2026-06-20",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "MC ¥2,000 +2Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Saturday Jam Session 2",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "08c8c5a5b20d751883251e413539172fbd7e766a9ae299d9ab93aad53f8c263d"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-06-25_legacy-789be84bef",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260625.jpg",
+      "image_path": "flyer_20260625.jpg",
+      "image_sha256": "a0e24317c2039772c7eaf1ea0688cca6d255ef078281604698a875ed65d318ad",
+      "covered_dates": [
+        "2026-06-25"
+      ],
+      "targets": {
+        "2026-06-25_legacy-789be84bef": {
+          "facts": {
+            "id": "2026-06-25_legacy-789be84bef",
+            "date": "2026-06-25",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "MC ¥2,500",
+            "performers": [
+              {
+                "instrument": "Sax",
+                "name": "濱西公博"
+              },
+              {
+                "instrument": "Gt",
+                "name": "彼谷宏"
+              },
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "ナカジマケント"
+              },
+              {
+                "instrument": "Vo",
+                "name": "Yukari Kawada"
+              }
+            ],
+            "title": "Odd Pulse Lab",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "bd5ffd59b497f02aa9f1be2765e5d1ba181caa60084ac3b799c50a7372aa5501"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-06-27_legacy-ba5bc5800f",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260627.jpg",
+      "image_path": "flyer_20260627.jpg",
+      "image_sha256": "508131ac9eaebdb7a25e5d7609d0297d2cd7bb56721cb7de85df1e5509baa526",
+      "covered_dates": [
+        "2026-06-27"
+      ],
+      "targets": {
+        "2026-06-27_legacy-ba5bc5800f": {
+          "facts": {
+            "id": "2026-06-27_legacy-ba5bc5800f",
+            "date": "2026-06-27",
+            "end_date": null,
+            "open": null,
+            "start": "20:30",
+            "charge": "Charge ¥2,000",
+            "performers": [
+              {
+                "instrument": "Sax",
+                "name": "吉田茉莉花"
+              },
+              {
+                "instrument": "Sax",
+                "name": "芳沢彩喜"
+              },
+              {
+                "instrument": "Pf",
+                "name": "村中千晶"
+              },
+              {
+                "instrument": "Ba",
+                "name": "吉村葵"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Tribute to Benny Golson",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "155bf84209f0727c98bca8ff5f0813447838a48a3a306849103bde28e4d3f8b3"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-06-28_legacy-ca0767d750",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260628.png",
+      "image_path": "flyer_20260628.png",
+      "image_sha256": "f88afb0365ff34a6f694b768a88cc18681d1f93503f2bff7f265a0cfeef5ba53",
+      "covered_dates": [
+        "2026-06-28"
+      ],
+      "targets": {
+        "2026-06-28_legacy-ca0767d750": {
+          "facts": {
+            "id": "2026-06-28_legacy-ca0767d750",
+            "date": "2026-06-28",
+            "end_date": null,
+            "open": null,
+            "start": "13:00",
+            "charge": "参加費 ¥5,000",
+            "performers": [
+              {
+                "instrument": "講師",
+                "name": "大村亘"
+              }
+            ],
+            "title": "Rhythm Workshop",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "f76ae8afa32993c8d493d656af9aa680e70e4e41ff39473b85b8a8bc973703de"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-07-02_legacy-f734677e60",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260702.png",
+      "image_path": "flyer_20260702.png",
+      "image_sha256": "ba9ac1b2d67c403c125b390751e2fbbf54f985c25f71edadb4b43bc30d9cb5f4",
+      "covered_dates": [
+        "2026-07-02"
+      ],
+      "targets": {
+        "2026-07-02_legacy-f734677e60": {
+          "facts": {
+            "id": "2026-07-02_legacy-f734677e60",
+            "date": "2026-07-02",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "羽田正英",
+                "artist_id": "masahide-haneda"
+              },
+              {
+                "instrument": "Ba",
+                "name": "川東優紀"
+              }
+            ],
+            "title": "Open Groove Night Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "93a143523ef0aeb63470d726ff1dd46d4b03e4c732fee07680ee234487be34c2"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-07-04_legacy-69ea151ade",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260704.png",
+      "image_path": "flyer_20260704.png",
+      "image_sha256": "ce55ee4fb745ad145e600c0b64720999af9aafdcd3265d34d197761f976f2628",
+      "covered_dates": [
+        "2026-07-04"
+      ],
+      "targets": {
+        "2026-07-04_legacy-69ea151ade": {
+          "facts": {
+            "id": "2026-07-04_legacy-69ea151ade",
+            "date": "2026-07-04",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "Charge ¥2,000",
+            "performers": [
+              {
+                "instrument": "Sax",
+                "name": "吉田茉莉花"
+              },
+              {
+                "instrument": "Pf",
+                "name": "宇野秀哉"
+              },
+              {
+                "instrument": "Gt",
+                "name": "増田隼人"
+              },
+              {
+                "instrument": "Ba",
+                "name": "Ami"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Saturday Jam Session 1",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "465e740aaed4299ab207a60e3ceb855ce100e4d3fc5fce3dc88a1d9b766de81e"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-07-09_legacy-a1a653222d",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260709_23.jpg",
+      "image_path": "flyer_20260709_23.jpg",
+      "image_sha256": "aa41bd96caf95c6f583a7c27d0d38b5c7a6a6ce6df8d6d90f83c7c760a53735f",
+      "covered_dates": [
+        "2026-07-09"
+      ],
+      "targets": {
+        "2026-07-09_legacy-a1a653222d": {
+          "facts": {
+            "id": "2026-07-09_legacy-a1a653222d",
+            "date": "2026-07-09",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Kiraku Jam",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "fad18108efb90e2bf25845d85493bd77ac35e6acf9c48eb12997a4d9248b8e3e"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-07-10_legacy-04fc97c3d8",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260710_11.jpg",
+      "image_path": "flyer_20260710_11.jpg",
+      "image_sha256": "db00cc3bae0a10dc804dab4f65809ed430cb63addeb15d6edeac0d7d7d976a07",
+      "covered_dates": [
+        "2026-07-10"
+      ],
+      "targets": {
+        "2026-07-10_legacy-04fc97c3d8": {
+          "facts": {
+            "id": "2026-07-10_legacy-04fc97c3d8",
+            "date": "2026-07-10",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge: ¥4,000",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "魚返明未",
+                "artist_id": "akemi-uogashi"
+              },
+              {
+                "instrument": "Vo",
+                "name": "中本美智子"
+              }
+            ],
+            "title": "魚返明未 Solo & Duo",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "8a22376e82fee6ff889839a876b8fd9aefde8d0d1e7f7228b7e84d3cb6ad321b"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-07-11_legacy-aec948fc88",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260710_11.jpg",
+      "image_path": "flyer_20260710_11.jpg",
+      "image_sha256": "db00cc3bae0a10dc804dab4f65809ed430cb63addeb15d6edeac0d7d7d976a07",
+      "covered_dates": [
+        "2026-07-11"
+      ],
+      "targets": {
+        "2026-07-11_legacy-aec948fc88": {
+          "facts": {
+            "id": "2026-07-11_legacy-aec948fc88",
+            "date": "2026-07-11",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge: ¥4,000",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "魚返明未",
+                "artist_id": "akemi-uogashi"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "魚返明未 Live＆Session",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "f385a3535130ad866787f6f8b0dc49594165514513765406e1f1be7f76903ea1"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-07-16_legacy-df86aeee1e",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260716.png",
+      "image_path": "flyer_20260716.png",
+      "image_sha256": "5f6be2ec842b3e3d3a3c3eb16770a5f82616e24df8d71961433e997077519695",
+      "covered_dates": [
+        "2026-07-16"
+      ],
+      "targets": {
+        "2026-07-16_legacy-df86aeee1e": {
+          "facts": {
+            "id": "2026-07-16_legacy-df86aeee1e",
+            "date": "2026-07-16",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "黒川薫",
+                "artist_id": "kaoru-kurokawa"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Monthly Voices 〜Vocal Session〜",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "6c15a1aadf710442ec101a6d384ccd384409cd9205ce283e0cd48fadd1c53d65"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-07-18_legacy-a590fec1d8",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260718.png",
+      "image_path": "flyer_20260718.png",
+      "image_sha256": "1c3027fb0a983295ecad95c42992802f33b6b227316dc048ecb9cf97861905ed",
+      "covered_dates": [
+        "2026-07-18"
+      ],
+      "targets": {
+        "2026-07-18_legacy-a590fec1d8": {
+          "facts": {
+            "id": "2026-07-18_legacy-a590fec1d8",
+            "date": "2026-07-18",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "Charge ¥2,000 + 2Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "那須仁哉"
+              }
+            ],
+            "title": "Saturday Jam Session 2",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "06296f360917336a8054d0d971bdba6ee91441221492ee7eb8bc8e3ef2ed41af"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-07-23_legacy-dcf1d870d5",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260709_23.jpg",
+      "image_path": "flyer_20260709_23.jpg",
+      "image_sha256": "aa41bd96caf95c6f583a7c27d0d38b5c7a6a6ce6df8d6d90f83c7c760a53735f",
+      "covered_dates": [
+        "2026-07-23"
+      ],
+      "targets": {
+        "2026-07-23_legacy-dcf1d870d5": {
+          "facts": {
+            "id": "2026-07-23_legacy-dcf1d870d5",
+            "date": "2026-07-23",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Kiraku Jam",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "11f7830e5da99d78ca464d47bb0f0048eeeafcbe1d8ea608c82fabb21bed7d28"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-07-24_legacy-93a0557c22",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260724.jpg",
+      "image_path": "flyer_20260724.jpg",
+      "image_sha256": "c21dee99afffa16fca31f0ad923e8338a52394638f302b7889f427839010664f",
+      "covered_dates": [
+        "2026-07-24"
+      ],
+      "targets": {
+        "2026-07-24_legacy-93a0557c22": {
+          "facts": {
+            "id": "2026-07-24_legacy-93a0557c22",
+            "date": "2026-07-24",
+            "end_date": null,
+            "open": null,
+            "start": "20:30",
+            "charge": "MC ¥2,000",
+            "performers": [
+              {
+                "instrument": "Tp",
+                "name": "丸杉俊彦"
+              },
+              {
+                "instrument": "Sax",
+                "name": "黒田忍"
+              },
+              {
+                "instrument": "Gt",
+                "name": "彼谷宏"
+              },
+              {
+                "instrument": "Ba",
+                "name": "岡本勝之"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Tribute to Miles Davis",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "fa894ab240a3b992d66038dac935848a55eeb96c288b2bc2ff2d61304f1ce336"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-08-01_legacy-a13adc2927",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260801.png",
+      "image_path": "flyer_20260801.png",
+      "image_sha256": "8ee4d9e137e5759e7811bf102afabf3f875711adb88b8f55fb491a51a9753329",
+      "covered_dates": [
+        "2026-08-01"
+      ],
+      "targets": {
+        "2026-08-01_legacy-a13adc2927": {
+          "facts": {
+            "id": "2026-08-01_legacy-a13adc2927",
+            "date": "2026-08-01",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "Charge ¥2,000 + 2Drink Order",
+            "performers": [
+              {
+                "instrument": "Sax",
+                "name": "吉田茉莉花"
+              },
+              {
+                "instrument": "Pf",
+                "name": "西田楓"
+              },
+              {
+                "instrument": "Gt",
+                "name": "増田勇人"
+              },
+              {
+                "instrument": "Ba",
+                "name": "吉村葵"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Saturday Jam Session 1",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "e90441fb793f2694e40b91ed30d061c5dae975b16f5c55fb0a7d6d70f2db1f16"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-08-06_legacy-72951f8757",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260806.png",
+      "image_path": "flyer_20260806.png",
+      "image_sha256": "695a60fa134b1b202c838bf55b4bc4e8f75f4308330eddf8397416052d7433ca",
+      "covered_dates": [
+        "2026-08-06"
+      ],
+      "targets": {
+        "2026-08-06_legacy-72951f8757": {
+          "facts": {
+            "id": "2026-08-06_legacy-72951f8757",
+            "date": "2026-08-06",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "羽田正英",
+                "artist_id": "masahide-haneda"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Open Groove Night Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "851f44878b1eec01495296d639c5ed6a4072c5190ed5f8cd69eb97b48d4d44ee"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-08-07_legacy-5fffd921aa",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260807.jpg",
+      "image_path": "flyer_20260807.jpg",
+      "image_sha256": "d7084b81f074ddc6a112e776af9420ba6716c6150251ecebd0bf51c6efa767a6",
+      "covered_dates": [
+        "2026-08-07"
+      ],
+      "targets": {
+        "2026-08-07_legacy-5fffd921aa": {
+          "facts": {
+            "id": "2026-08-07_legacy-5fffd921aa",
+            "date": "2026-08-07",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥4,000",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "菊池太光",
+                "artist_id": "taiko-kikuchi"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "菊池太光 Live & Session",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "e116b076821bfa9bb88749e9d4160e711a333785bf0cd15bdfc1853c95323620"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-08-11_legacy-5389f9027d",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260811.png",
+      "image_path": "flyer_20260811.png",
+      "image_sha256": "e88a9c47ae776e1f06c6e62c58168f80a6d0acf26fe48b193547c5317b5527ca",
+      "covered_dates": [
+        "2026-08-11"
+      ],
+      "targets": {
+        "2026-08-11_legacy-5389f9027d": {
+          "facts": {
+            "id": "2026-08-11_legacy-5389f9027d",
+            "date": "2026-08-11",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥1,000 + Choose Your Price",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "岩田朋子"
+              },
+              {
+                "instrument": "Ba",
+                "name": "畝村幸長"
+              },
+              {
+                "instrument": "Dr",
+                "name": "Takezo"
+              }
+            ],
+            "title": "ADvance",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "3ac93588b570bf8cef9f0b374dac39aadbb54f28e481255edd3bde439213d43d"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-08-13_legacy-430c12529c",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260813.png",
+      "image_path": "flyer_20260813.png",
+      "image_sha256": "997d314330796f71964207e678587862259ef011e9c1822668807f992de31fa3",
+      "covered_dates": [
+        "2026-08-13"
+      ],
+      "targets": {
+        "2026-08-13_legacy-430c12529c": {
+          "facts": {
+            "id": "2026-08-13_legacy-430c12529c",
+            "date": "2026-08-13",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "山根幸二"
+              }
+            ],
+            "title": "Kiraku Jam",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "930e1476095ace57c94c8f9c34b730a4cef3a70094b5db467e51569036dba464"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-08-15_legacy-3166a80ca1",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260815.jpg",
+      "image_path": "flyer_20260815.jpg",
+      "image_sha256": "a61f3ec6122b27db7f23ca214c80aae0af9baab614b54a36e2bc4463e8b159a7",
+      "covered_dates": [
+        "2026-08-15"
+      ],
+      "targets": {
+        "2026-08-15_legacy-3166a80ca1": {
+          "facts": {
+            "id": "2026-08-15_legacy-3166a80ca1",
+            "date": "2026-08-15",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥2,000",
+            "performers": [
+              {
+                "instrument": "Dr",
+                "name": "ナカジマケント"
+              },
+              {
+                "instrument": "Gt",
+                "name": "増田勇人"
+              },
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Odd Pulse Quartet Tribute to Ofri Nehemya",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "be05b9ed5ab73a88b56fa31e1934760fe650fab44b8e99ea718507c895e8301c"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-08-20_legacy-01c931add7",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260820.png",
+      "image_path": "flyer_20260820.png",
+      "image_sha256": "e5f2dd3ea9321eaa03482850166af9240f620bf8c77faf27f408e5834607abe7",
+      "covered_dates": [
+        "2026-08-20"
+      ],
+      "targets": {
+        "2026-08-20_legacy-01c931add7": {
+          "facts": {
+            "id": "2026-08-20_legacy-01c931add7",
+            "date": "2026-08-20",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "黒川薫",
+                "artist_id": "kaoru-kurokawa"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Monthly Voices 〜Vocal Session〜",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "ca1f76b222a4144cf9f9c9251035b339272aa0c8bda237f154a3b99c5bb9737d"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-08-21_legacy-7b13fc225d",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260821.png",
+      "image_path": "flyer_20260821.png",
+      "image_sha256": "521538e4292ea93c6f3ef3ee88cc856f70566c40076de197e1e2bc2575802b07",
+      "covered_dates": [
+        "2026-08-21"
+      ],
+      "targets": {
+        "2026-08-21_legacy-7b13fc225d": {
+          "facts": {
+            "id": "2026-08-21_legacy-7b13fc225d",
+            "date": "2026-08-21",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥1,000 + Choose Your Price",
+            "performers": [
+              {
+                "instrument": "Dr",
+                "name": "緑川柊麻",
+                "artist_id": "shuma-midorikawa"
+              },
+              {
+                "instrument": "Sax",
+                "name": "紺野壮一朗"
+              },
+              {
+                "instrument": "Pf",
+                "name": "中口航志"
+              },
+              {
+                "instrument": "Ba",
+                "name": "吉村葵"
+              }
+            ],
+            "title": "緑川柊麻 Quartet",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "eafce7cf5078df85a703d02057d683d0a94d28912da2d5bb659dddc4b9d3f2f3"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-08-22_legacy-5719ad1823",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260822.png",
+      "image_path": "flyer_20260822.png",
+      "image_sha256": "07a547e7c2462f640bae75dee8d4cb7fd35b29c6108c3ddda0d60cf5caff920c",
+      "covered_dates": [
+        "2026-08-22"
+      ],
+      "targets": {
+        "2026-08-22_legacy-5719ad1823": {
+          "facts": {
+            "id": "2026-08-22_legacy-5719ad1823",
+            "date": "2026-08-22",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥1,000 + Choose Your Price",
+            "performers": [
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              },
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "永見拓也 26th Birthday Live & Session",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "7d4ee80a964a608a360ea847f800431371e9d123a073587078f821f8cdcb9d4d"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-08-27_legacy-d274d068c5",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260827.png",
+      "image_path": "flyer_20260827.png",
+      "image_sha256": "9b0e1218bb516c27ddee080187d9615c3dc15825b16f747c14bed661d59611b9",
+      "covered_dates": [
+        "2026-08-27"
+      ],
+      "targets": {
+        "2026-08-27_legacy-d274d068c5": {
+          "facts": {
+            "id": "2026-08-27_legacy-d274d068c5",
+            "date": "2026-08-27",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥1,000 + Choose Your Price",
+            "performers": [
+              {
+                "instrument": "",
+                "name": "A.Sax 上野大摂"
+              },
+              {
+                "instrument": "",
+                "name": "T.Sax 小山淳一"
+              },
+              {
+                "instrument": "Pf",
+                "name": "東たかお"
+              },
+              {
+                "instrument": "Ba",
+                "name": "吉村葵"
+              },
+              {
+                "instrument": "Dr",
+                "name": "清水靖博"
+              }
+            ],
+            "title": "Sax Madness",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "bd99d9485a6e3357dea1ecf93788ecf1ada3c823d9d798f0d430d4e0df2c62c9"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-09-03_legacy-48e28f3e34",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260903.png",
+      "image_path": "flyer_20260903.png",
+      "image_sha256": "53495244b8bf75701f357a6f1919e9377077acff5163e30d9abb9dec1d279ab0",
+      "covered_dates": [
+        "2026-09-03"
+      ],
+      "targets": {
+        "2026-09-03_legacy-48e28f3e34": {
+          "facts": {
+            "id": "2026-09-03_legacy-48e28f3e34",
+            "date": "2026-09-03",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "羽田正英",
+                "artist_id": "masahide-haneda"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Open Groove Night Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "c23b1ede218e4c44a6d7b451035e511301c33ce67084f9cda30fd796e729d07d"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-09-05_legacy-2b1fce0ef6",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260905.png",
+      "image_path": "flyer_20260905.png",
+      "image_sha256": "f77f126366becb660ff0f71e45dcfa45eec672a98aa8ab2f360d4090639c2260",
+      "covered_dates": [
+        "2026-09-05"
+      ],
+      "targets": {
+        "2026-09-05_legacy-2b1fce0ef6": {
+          "facts": {
+            "id": "2026-09-05_legacy-2b1fce0ef6",
+            "date": "2026-09-05",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "Charge ¥2,000 + 2Drink Order",
+            "performers": [
+              {
+                "instrument": "Sax",
+                "name": "本間昌晃"
+              },
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Ba",
+                "name": "川場莉佳"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Saturday Jam Session 1",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "5dc916cd7ea369f4225212870de6c59ab11c2b80c0a6715d93de8b3e5486fb70"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-09-10_legacy-ab7dad0fe3",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260910_24.png",
+      "image_path": "flyer_20260910_24.png",
+      "image_sha256": "471dbf98d5b8dfe5b273ed76665cc684b970f0d30e823ea1330f4c44d00f50d7",
+      "covered_dates": [
+        "2026-09-10"
+      ],
+      "targets": {
+        "2026-09-10_legacy-ab7dad0fe3": {
+          "facts": {
+            "id": "2026-09-10_legacy-ab7dad0fe3",
+            "date": "2026-09-10",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Kiraku Jam",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "25b7a0d8e531ba0796e2c98efe48b97dd69b93b12ce6e4669336f7b94a691bc3"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-09-17_legacy-0b59053438",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260917.png",
+      "image_path": "flyer_20260917.png",
+      "image_sha256": "0e3bb596ba26c87e4cf695050698bdef20a1058f05c1ed977e42fd3b51df067e",
+      "covered_dates": [
+        "2026-09-17"
+      ],
+      "targets": {
+        "2026-09-17_legacy-0b59053438": {
+          "facts": {
+            "id": "2026-09-17_legacy-0b59053438",
+            "date": "2026-09-17",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "黒川薫",
+                "artist_id": "kaoru-kurokawa"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Monthly Voices 〜Vocal Session〜",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "a89c2d2546d2ba99080e1801edab91343a71255fcf6823919243ca13fa815b40"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-09-19_legacy-860e02187a",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "https://static.metricool.com/planner/202609/6910064-file-11328815618760498529.png",
+      "image_path": "assets/flyers/migration/20260919.png",
+      "image_sha256": "5149f061dab31d21569b34f9553be7650576264f2957608009558dfa629d13b6",
+      "covered_dates": [
+        "2026-09-19"
+      ],
+      "targets": {
+        "2026-09-19_legacy-860e02187a": {
+          "facts": {
+            "id": "2026-09-19_legacy-860e02187a",
+            "date": "2026-09-19",
+            "end_date": "2026-09-21",
+            "open": "19:00",
+            "start": "20:00",
+            "charge": "DAY ¥1,500 / NIGHT ¥2,500 / DAY & NIGHT ¥3,000 / 1DAY ¥3,500 / 3DAYS ¥7,000",
+            "performers": [],
+            "title": "Jazz Street 〜Day&Night Jam Session〜",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": {
+              "badge": "SPECIAL EVENT",
+              "intro": "9/19（土）はNIGHT SESSIONのみ。9/20（日）・9/21（月）はDAY & NIGHTで開催します。",
+              "detail_lines": [
+                {
+                  "icon": "info",
+                  "text": "9/19（土） NIGHT SESSION ONLY"
+                },
+                {
+                  "icon": "clock",
+                  "text": "NIGHT：Open 19:00 / Start 20:00 / Until Close（Charge ¥2,500）"
+                },
+                {
+                  "icon": "info",
+                  "text": "9/20（日）・9/21（月） DAY & NIGHT"
+                },
+                {
+                  "icon": "clock",
+                  "text": "DAY：Open 11:00 / Start 12:00 / Close 18:00（Charge ¥1,500）"
+                },
+                {
+                  "icon": "clock",
+                  "text": "NIGHT：Open 19:00 / Start 20:00 / Until Close（Charge ¥2,500）"
+                },
+                {
+                  "icon": "info",
+                  "text": "DAY & NIGHT ¥3,000 / 1DAY ¥3,500 / 3DAYS ¥7,000"
+                }
+              ]
+            }
+          },
+          "fingerprint": "1674e38fda6ff60cc1fb25a7a2ff5e4c9dbf7afc98a2f3a471c13c7d7e443724"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-09-24_legacy-6e79ceec7f",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260910_24.png",
+      "image_path": "flyer_20260910_24.png",
+      "image_sha256": "471dbf98d5b8dfe5b273ed76665cc684b970f0d30e823ea1330f4c44d00f50d7",
+      "covered_dates": [
+        "2026-09-24"
+      ],
+      "targets": {
+        "2026-09-24_legacy-6e79ceec7f": {
+          "facts": {
+            "id": "2026-09-24_legacy-6e79ceec7f",
+            "date": "2026-09-24",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Kiraku Jam",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "c306aa862e211e1c8dfa8f3644effea66b1b575f4cf6f28aacbbbf4ad3f88af6"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-09-25_legacy-403238edb9",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20260925.jpg",
+      "image_path": "flyer_20260925.jpg",
+      "image_sha256": "557b4378dbc0441d40de5cf36829b117b04bb68d8fa323a65148ba5ee56efddf",
+      "covered_dates": [
+        "2026-09-25"
+      ],
+      "targets": {
+        "2026-09-25_legacy-403238edb9": {
+          "facts": {
+            "id": "2026-09-25_legacy-403238edb9",
+            "date": "2026-09-25",
+            "end_date": null,
+            "open": null,
+            "start": "20:30",
+            "charge": "Charge ¥2,500",
+            "performers": [
+              {
+                "instrument": "",
+                "name": "Vl. Vaughan Hughes"
+              },
+              {
+                "instrument": "Ba",
+                "name": ". 中山とも"
+              },
+              {
+                "instrument": "Pf",
+                "name": ". 岩村入吹"
+              },
+              {
+                "instrument": "Dr",
+                "name": ". 永見拓也"
+              }
+            ],
+            "title": "Stephane Grappelli Tribute Live",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "84f4d7c43ab784ecb8be3ea0d207b2d6714dd84a62b64cc7d6efb63a78e0d4b8"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-10-01_legacy-c322e0c8f2",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20261001.png",
+      "image_path": "flyer_20261001.png",
+      "image_sha256": "d16162c824a2ec7243b51b00a52124a43c4d57c9a225b71bbf6dc00fa25668cf",
+      "covered_dates": [
+        "2026-10-01"
+      ],
+      "targets": {
+        "2026-10-01_legacy-c322e0c8f2": {
+          "facts": {
+            "id": "2026-10-01_legacy-c322e0c8f2",
+            "date": "2026-10-01",
+            "end_date": null,
+            "open": "19:00",
+            "start": "20:00",
+            "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "羽田正英",
+                "artist_id": "masahide-haneda"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Open Groove Night Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "95953dceb229c4fb1326b58bb20120cf5ac60c92f05e0250ba3d6ef61dff8769"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-10-03_legacy-e6cea4b32b",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "https://static.metricool.com/planner/202609/6910064-file-10790965137575817615.png",
+      "image_path": "assets/flyers/migration/20261003.png",
+      "image_sha256": "876e4e810ca1ce2bc5ff6b00e763cf9abf4d8adfef519ca67bdd98b6cc22067c",
+      "covered_dates": [
+        "2026-10-03"
+      ],
+      "targets": {
+        "2026-10-03_legacy-e6cea4b32b": {
+          "facts": {
+            "id": "2026-10-03_legacy-e6cea4b32b",
+            "date": "2026-10-03",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000",
+            "performers": [
+              {
+                "instrument": "Sax",
+                "name": "吉田茉莉花"
+              },
+              {
+                "instrument": "Pf",
+                "name": "中口航志"
+              },
+              {
+                "instrument": "Ba",
+                "name": "吉村葵"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Saturday Jam Session 1",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "7b6fb365f413eea00e60bff12d50bae393d1f4c48b6c110d06e2f561201e90f6"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-10-06_free-improvisation-jam-session",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "assets/flyers/flyer_20261006_free-improvisation-jam-session.png",
+      "image_path": "assets/flyers/flyer_20261006_free-improvisation-jam-session.png",
+      "image_sha256": "cbef078844d21bf7cb54068c647ee81a5e9993270fb0c39d7438d1e389f51ced",
+      "covered_dates": [
+        "2026-10-06"
+      ],
+      "targets": {
+        "2026-10-06_free-improvisation-jam-session": {
+          "facts": {
+            "id": "2026-10-06_free-improvisation-jam-session",
+            "date": "2026-10-06",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥1,500",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Free Improvisation Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "6d83320a071f974c404ef697fc12d7da4403ffe7212fac1dee6336f99ff43621"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-10-09_legacy-6c888cbbf2",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20261009.png",
+      "image_path": "flyer_20261009.png",
+      "image_sha256": "11b12dc3a910a47cd272d026bbb3f82d28d04a03ca0402b3945aebd1df56a5a5",
+      "covered_dates": [
+        "2026-10-09"
+      ],
+      "targets": {
+        "2026-10-09_legacy-6c888cbbf2": {
+          "facts": {
+            "id": "2026-10-09_legacy-6c888cbbf2",
+            "date": "2026-10-09",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥1,000 + 投げ銭",
+            "performers": [
+              {
+                "instrument": "Dr",
+                "name": "ums 青木駿"
+              },
+              {
+                "instrument": "",
+                "name": "Electronics 東山一二三"
+              }
+            ],
+            "title": "Towards No Words",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": {
+              "intro": "西田幾多郎記念哲学館　展示並行パフォーマンス"
+            }
+          },
+          "fingerprint": "d7cef7bc4e51245bead01f188109b444b47612e480e5a42f46320ceccce28889"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-10-10_legacy-67df69dc7c",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20261010.jpg",
+      "image_path": "flyer_20261010.jpg",
+      "image_sha256": "1c7a08b03ec678d4879e949787b7f844243a9a64509a97e97237331d44a7df36",
+      "covered_dates": [
+        "2026-10-10"
+      ],
+      "targets": {
+        "2026-10-10_legacy-67df69dc7c": {
+          "facts": {
+            "id": "2026-10-10_legacy-67df69dc7c",
+            "date": "2026-10-10",
+            "end_date": null,
+            "open": null,
+            "start": "19:30",
+            "charge": "Charge ¥3,000",
+            "performers": [
+              {
+                "instrument": "Pf.",
+                "name": "安部誠彦"
+              },
+              {
+                "instrument": "Ba.",
+                "name": "山内健司"
+              },
+              {
+                "instrument": "Dr.",
+                "name": "川北隆博"
+              },
+              {
+                "instrument": "Vo.",
+                "name": "村上恵"
+              },
+              {
+                "instrument": "Vo.",
+                "name": "宮下美貴子"
+              },
+              {
+                "instrument": "Sax.",
+                "name": "芳沢彩喜"
+              },
+              {
+                "instrument": "Sax.",
+                "name": "吉田茉莉花"
+              },
+              {
+                "instrument": "Tb.",
+                "name": "谷村佳之"
+              },
+              {
+                "instrument": "Tp.",
+                "name": "木下力"
+              }
+            ],
+            "title": "ABEma Special LIVE and SESSION",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": {
+              "badge": "SPECIAL EVENT",
+              "intro": "〜トリオ＆昭和歌謡＆ミニビッグバンド祭〜",
+              "detail_lines": [
+                {
+                  "icon": "clock",
+                  "text": "Start 19:30"
+                },
+                {
+                  "icon": "users",
+                  "text": "① ABEmaトリオ：Pf. 安部誠彦 / Ba. 山内健司 / Dr. 川北隆博"
+                },
+                {
+                  "icon": "users",
+                  "text": "② 唱和姉妹：Vo. 村上恵 / Vo. 宮下美貴子 / Pf. 安部誠彦 / Ba. 山内健司"
+                },
+                {
+                  "icon": "users",
+                  "text": "③ あ・カウントベイシー楽団：Sax. 芳沢彩喜 / Sax. 吉田茉莉花 / Tb. 谷村佳之 / Tp. 木下力 / Pf. 安部誠彦 / Ba. 山内健司 / Dr. 川北隆博"
+                }
+              ]
+            }
+          },
+          "fingerprint": "f8a53885062556974edda4ca00b2e259eaa52ea5a07803cbb988ad42e9d4dc2f"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-10-11_chiaki-suzuki-quartet-live-session",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "assets/flyers/flyer_20261011_chiaki-suzuki-quartet-live-session.png",
+      "image_path": "assets/flyers/flyer_20261011_chiaki-suzuki-quartet-live-session.png",
+      "image_sha256": "1314178faa299e58a5e12546088ed82abd2cf7351f43d00293f51c7984f3ec42",
+      "covered_dates": [
+        "2026-10-11"
+      ],
+      "targets": {
+        "2026-10-11_chiaki-suzuki-quartet-live-session": {
+          "facts": {
+            "id": "2026-10-11_chiaki-suzuki-quartet-live-session",
+            "date": "2026-10-11",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥1,000 + 投げ銭",
+            "performers": [
+              {
+                "instrument": "Tp",
+                "name": "鈴木千明",
+                "artist_id": "chiaki-suzuki"
+              },
+              {
+                "instrument": "Pf",
+                "name": "宮本葉月"
+              },
+              {
+                "instrument": "Ba",
+                "name": "那須仁哉"
+              },
+              {
+                "instrument": "Dr",
+                "name": "緑川柊麻",
+                "artist_id": "shuma-midorikawa"
+              }
+            ],
+            "title": "鈴木千明 Quartet Live & Session",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "5904d4f2eff82c2ffdba1e8038af75a5785a05e315e8e31c3f0378a37a387f3c"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-10-13_legacy-25e2d5dd60",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20261013.jpg",
+      "image_path": "flyer_20261013.jpg",
+      "image_sha256": "a3d439f74dba9afb44ae2f4ac64faa501443b10b2ed113f96606102154dca2d1",
+      "covered_dates": [
+        "2026-10-13"
+      ],
+      "targets": {
+        "2026-10-13_legacy-25e2d5dd60": {
+          "facts": {
+            "id": "2026-10-13_legacy-25e2d5dd60",
+            "date": "2026-10-13",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥4,500",
+            "performers": [
+              {
+                "instrument": "Dr",
+                "name": ". 橋本現輝"
+              },
+              {
+                "instrument": "Pf",
+                "name": ". 小室響"
+              },
+              {
+                "instrument": "Ba",
+                "name": ". 中山とも"
+              }
+            ],
+            "title": "Dolphin 1st Anniversary Special Live #4",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": {
+              "badge": "SPECIAL EVENT",
+              "subtitle": "Special Jam Session Featuring 橋本現輝・小室響",
+              "intro": "ジャズを中心に様々なフィールドで活躍する二人の俊英を迎えるスペシャルなジャムセッション。"
+            }
+          },
+          "fingerprint": "571fc7880520fca778ae6690446fcd922c2309e3dac64f3b4ffd0467050e9560"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-10-15_stakes-is-high",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "assets/flyers/flyer_20261015_stakes-is-high.jpg",
+      "image_path": "assets/flyers/flyer_20261015_stakes-is-high.jpg",
+      "image_sha256": "d5c6214eed8d817b11ece2aa7c672681b7dc49098425ece7625d0066ecf00dad",
+      "covered_dates": [
+        "2026-10-15"
+      ],
+      "targets": {
+        "2026-10-15_stakes-is-high": {
+          "facts": {
+            "id": "2026-10-15_stakes-is-high",
+            "date": "2026-10-15",
+            "end_date": null,
+            "open": "20:00",
+            "start": "20:30",
+            "charge": "Charge ¥3,000",
+            "performers": [
+              {
+                "instrument": "Keys",
+                "name": "小室響"
+              },
+              {
+                "instrument": "Vo",
+                "name": "momo（from momoholic）"
+              },
+              {
+                "instrument": "Bass",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Drum",
+                "name": "沢田周一"
+              }
+            ],
+            "title": "Stakes Is High",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": {
+              "badge": "SPECIAL EVENT",
+              "subtitle": "The Music Of Robert Glasper",
+              "intro": "Jazz × Hip-Hop × Neo Soul"
+            }
+          },
+          "fingerprint": "067a9cc3593a2be23ab3a765e4643b44c04e37d42089c6824acd23e5613a36d3"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-10-31_sounds-demo-after-session",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "assets/flyers/flyer_20261031_sounds-demo-after-session.png",
+      "image_path": "assets/flyers/flyer_20261031_sounds-demo-after-session.png",
+      "image_sha256": "82ae76b858709074812cbe981509dbc725cb4cef9c9856df39224a0df51ce06e",
+      "covered_dates": [
+        "2026-10-31"
+      ],
+      "targets": {
+        "2026-10-31_sounds-demo-after-session": {
+          "facts": {
+            "id": "2026-10-31_sounds-demo-after-session",
+            "date": "2026-10-31",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥4,000",
+            "performers": [
+              {
+                "instrument": "Sax",
+                "name": "高木沙耶"
+              },
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Gt",
+                "name": "増田勇人"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Sounds Demo / After Session",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": {
+              "badge": "SPECIAL EVENT",
+              "intro": "10月最後の夜、Sounds DemoからそのままAfter Sessionへ。Sounds Demoの熱量を、Dolphinでゆっくりお楽しみください。「ISHIKAWA BRILLIANT SOUNDS DEMO」のイベントチケットをDolphinで購入した方は、本ライブのチャージ無料。"
+            }
+          },
+          "fingerprint": "98abc34f4a5222b278ae887a87b096beceedfb02cf60ba5d506cf335718cf5d4"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-11-03_legacy-4985767288",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "assets/flyers/flyer_20261103_mikiko-grigoris-trio.png",
+      "image_path": "assets/flyers/flyer_20261103_mikiko-grigoris-trio.png",
+      "image_sha256": "3928f00fcf90915934c3749ab14f305babb3081b08c9e15c7a3f845216527536",
+      "covered_dates": [
+        "2026-11-03"
+      ],
+      "targets": {
+        "2026-11-03_legacy-4985767288": {
+          "facts": {
+            "id": "2026-11-03_legacy-4985767288",
+            "date": "2026-11-03",
+            "end_date": null,
+            "open": "19:00",
+            "start": "19:30",
+            "charge": "Charge 予約 ¥5,000 / 当日 ¥5,500",
+            "performers": [
+              {
+                "name": "永武幹子"
+              },
+              {
+                "name": "Grigoris Theodoridis"
+              },
+              {
+                "name": "服部正嗣"
+              }
+            ],
+            "title": "MIKIKO & GRIGORIS TRIO JAPAN TOUR 2026",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": {
+              "intro": "2026年11月3日（火・祝）／会場：Jazz & Bar DOLPHIN（金沢市片町2丁目13-11 ミリオンビル4階）／お問い合わせ：080-3895-0821",
+              "subtitle": "Live & Session"
+            }
+          },
+          "fingerprint": "81123af3927ce52041abd0e3316d0dd86e57008284c6281853810e249b5409f2"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-11-13_legacy-54c9cb6b6b",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "assets/flyers/flyer_20261113_b-slope.png",
+      "image_path": "assets/flyers/flyer_20261113_b-slope.png",
+      "image_sha256": "94255a070d1bd3bb44e8c0f3dcb44b7d635851510beeff0f1645cb3225f8ac9b",
+      "covered_dates": [
+        "2026-11-13"
+      ],
+      "targets": {
+        "2026-11-13_legacy-54c9cb6b6b": {
+          "facts": {
+            "id": "2026-11-13_legacy-54c9cb6b6b",
+            "date": "2026-11-13",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000",
+            "performers": [
+              {
+                "instrument": "AS",
+                "name": "大谷俊久"
+              },
+              {
+                "instrument": "Gt",
+                "name": "Mojo Oda"
+              },
+              {
+                "instrument": "P",
+                "name": "今村さゆる"
+              },
+              {
+                "instrument": "Ba",
+                "name": "板坂正豪"
+              },
+              {
+                "instrument": "Ds",
+                "name": "伊藤昇"
+              }
+            ],
+            "title": "B. Slope",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": {
+              "subtitle": "Jazz live at Dolphin"
+            }
+          },
+          "fingerprint": "8eeea7c8a4b1d662427663dd8d933b5f69a70c00790cef34065ee44f97df20cd"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-11-20_legacy-9a3be933aa",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "assets/flyers/flyer_20261120_wakai-yuya-special-2days.jpg",
+      "image_path": "assets/flyers/flyer_20261120_wakai-yuya-special-2days.jpg",
+      "image_sha256": "86375f48eae21b2b584bbd27aafbcc218ff9e02feca8aa82005302d29a6f2f1c",
+      "covered_dates": [
+        "2026-11-20"
+      ],
+      "targets": {
+        "2026-11-20_legacy-9a3be933aa": {
+          "facts": {
+            "id": "2026-11-20_legacy-9a3be933aa",
+            "date": "2026-11-20",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥5,000",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "若井優也"
+              }
+            ],
+            "title": "若井優也 Solo",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": {
+              "badge": "SPECIAL EVENT",
+              "subtitle": "Dolphin 1st Anniversary Special Live #5",
+              "intro": "椎名林檎を感嘆させたテクニックと豊かな音楽的知性。ジャズとクラシックの伝統を受け継ぎながら、常に新しい表現へと挑み続ける若きマエストロが金沢ドルフィンに初登場。"
+            }
+          },
+          "fingerprint": "c0be58c3fd35c9d0b31e917896e002d20743a09198f0e4900ba0e52e210cf807"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-11-21_legacy-3369aef530",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "assets/flyers/flyer_20261120_wakai-yuya-special-2days.jpg",
+      "image_path": "assets/flyers/flyer_20261120_wakai-yuya-special-2days.jpg",
+      "image_sha256": "86375f48eae21b2b584bbd27aafbcc218ff9e02feca8aa82005302d29a6f2f1c",
+      "covered_dates": [
+        "2026-11-21"
+      ],
+      "targets": {
+        "2026-11-21_legacy-3369aef530": {
+          "facts": {
+            "id": "2026-11-21_legacy-3369aef530",
+            "date": "2026-11-21",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥5,000",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "若井優也"
+              },
+              {
+                "instrument": "Bass",
+                "name": "那須仁哉"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "若井優也 Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": {
+              "badge": "SPECIAL EVENT",
+              "subtitle": "Dolphin 1st Anniversary Special Live #5",
+              "intro": "椎名林檎を感嘆させたテクニックと豊かな音楽的知性。ジャズとクラシックの伝統を受け継ぎながら、常に新しい表現へと挑み続ける若きマエストロが金沢ドルフィンに初登場。"
+            }
+          },
+          "fingerprint": "b4f7256b94699fdb575da3e00244aece091564d60f55187cb3f5969bc17ff921"
+        }
+      }
+    },
+    {
+      "record_id": "website-baseline-2026-11-22_big-apple-after-session",
+      "kind": "website_baseline_unverified",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "assets/flyers/flyer_20261122_big-apple-after-session.png",
+      "image_path": "assets/flyers/flyer_20261122_big-apple-after-session.png",
+      "image_sha256": "f700c2ebc267ec9ca906529531bd54b5d2f71585e7580358280c9deb8387c6e8",
+      "covered_dates": [
+        "2026-11-22"
+      ],
+      "targets": {
+        "2026-11-22_big-apple-after-session": {
+          "facts": {
+            "id": "2026-11-22_big-apple-after-session",
+            "date": "2026-11-22",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも"
+              }
+            ],
+            "title": "BIG APPLE AFTER SESSION",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "d2c3bd13b6c0c5201385bd75bc454e8ed96ea8857ca5e45843a67ebb09cbc9ee"
+        }
+      }
+    }
+  ]
+}

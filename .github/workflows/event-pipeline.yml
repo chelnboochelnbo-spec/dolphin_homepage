@@ -5,6 +5,8 @@ on:
     paths:
       - 'data/events.json'
       - 'data/flyer_verifications.json'
+      - 'data/website_image_baseline.json'
+      - 'data/october_kiraku_migration.json'
       - 'data/publication_tombstones.json'
       - 'data/social_publications.json'
       - 'automation/publication_guard.py'
@@ -48,6 +50,8 @@ on:
     paths:
       - 'data/events.json'
       - 'data/flyer_verifications.json'
+      - 'data/website_image_baseline.json'
+      - 'data/october_kiraku_migration.json'
       - 'data/publication_tombstones.json'
       - 'data/social_publications.json'
       - 'automation/publication_guard.py'
