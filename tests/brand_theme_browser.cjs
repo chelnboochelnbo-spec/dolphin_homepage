@@ -37,10 +37,20 @@ async function checkContrast(locator, label) {
       await page.locator('.brand-hero-logo').waitFor();
       assert(await page.locator('.brand-nav-logo').first().evaluate(el=>el.complete&&el.naturalWidth>0),'Logo failed to load');
       assert.equal(await page.locator('.hero').evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(11, 11, 11)');
-      checks.push(await checkContrast(page.locator('.hero-btn-primary'),`home CTA ${width}`));
-      checks.push(await checkContrast(page.locator('.hero-lead'),`home lead ${width}`));
+      checks.push(await checkContrast(page.locator('.hero .hero-btn-primary'),`home CTA ${width}`));
+      checks.push(await checkContrast(page.locator('.hero .hero-lead'),`home lead ${width}`));
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`homepage overflow ${width}`);
-      if(width<1100){await page.locator('.menu-toggle').click();const box=await page.locator('.nav-links').boundingBox();assert(box.x>=-1&&box.x+box.width<=width+1,'Mobile navigation overflow');await page.locator('.menu-toggle').click();}
+      if(width<1100){
+        await page.locator('.menu-toggle').click();
+        await page.waitForFunction(()=>{
+          const box=document.querySelector('.nav-links').getBoundingClientRect();
+          return box.x>=-1 && box.right<=innerWidth+1;
+        });
+        const box=await page.locator('.nav-links').boundingBox();
+        assert(box.x>=-1&&box.x+box.width<=width+1,'Mobile navigation overflow');
+        await page.locator('.menu-toggle').click();
+        await page.waitForFunction(()=>document.querySelector('.nav-links').getBoundingClientRect().x>=innerWidth);
+      }
       await page.screenshot({path:`${out}/home-${width}.png`});
       await page.goto(`${origin}/schedule.html`,{waitUntil:'networkidle'});
       assert.equal(await page.locator('h1').textContent(),'SCHEDULE');
@@ -60,6 +70,8 @@ async function checkContrast(locator, label) {
         await page.goto(`${origin}/${lang}/`,{waitUntil:'networkidle'});
         assert(await page.locator('.brand-nav-logo').first().evaluate(el=>el.complete&&el.naturalWidth>0));
         checks.push(await checkContrast(page.locator('.inbound-hero .btn.primary'),`${lang} CTA ${width}`));
+        const reservationHeading=page.locator('#reservation h2').first();
+        if(await reservationHeading.count()) checks.push(await checkContrast(reservationHeading,`${lang} reservation heading ${width}`));
         assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${lang} overflow ${width}`);
       }
       await page.goto(`${origin}/artists/`,{waitUntil:'networkidle'});
