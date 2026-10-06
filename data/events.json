@@ -4889,6 +4889,42 @@
         "instagram": "",
         "external_links": []
       }
+    },
+    {
+      "id": "2026-12-31_countdown-session",
+      "date": "2026-12-31",
+      "title": "2026→2027 countdown session",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": null,
+      "charge": "Charge ¥2,500",
+      "performers": [],
+      "description": "開始時刻未定 / Start time to be announced.",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "display": {
+        "detail_lines": [
+          {
+            "icon": "clock",
+            "text": "開始時刻未定 / Start time to be announced."
+          }
+        ]
+      }
     }
   ]
 }
