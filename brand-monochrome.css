@@ -50,7 +50,7 @@ body[data-brand-theme="monochrome"]:has(.lineup-wrapper) { background-color: #ff
   opacity: 1;
 }
 /* Light reading surfaces are retained for schedules, prices and reservations. */
-.visit-basics-section, #reservation { background: #f2f2f2; }
+.visit-basics-section, body:not(.inbound-page) #reservation { background: #f2f2f2; }
 .visit-basic-card { background: #fff; border-top-color: #171717; }
 .visit-basic-card span, .visit-basic-card p, .section-subtitle,
 .item-desc, .lineup-month-header span, .operating-schedule-note { color: #5c5c5c; }
