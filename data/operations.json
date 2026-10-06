@@ -16,9 +16,6 @@
   "photography": "allowed",
   "overrides": {
     "2026-10-14": { "state": "closed" },
-    "2026-10-25": { "state": "closed" },
-    "2026-10-26": { "state": "closed" },
-    "2026-10-27": { "state": "closed" },
-    "2026-10-28": { "state": "closed" }
+    "2026-10-25": { "state": "closed" }
   }
 }
