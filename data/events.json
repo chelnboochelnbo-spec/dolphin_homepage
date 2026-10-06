@@ -3855,9 +3855,9 @@
       "flyer": {
         "mode": "human",
         "status": "ready",
-        "source": "legacy_schedule_migration",
-        "github_path": "logo_new.png",
-        "canva_design_id": null
+        "source": "approved_canva_png",
+        "github_path": "assets/flyers/flyer_20261105_open-groove-night.png",
+        "canva_design_id": "DAHXG_0YCck"
       },
       "archive": {
         "gallery": [],
