@@ -24,7 +24,10 @@
     "daily_rebuild_jst": "03:30"
   },
   "flyer": {
-    "modes": ["canva_ai", "human"],
+    "modes": [
+      "canva_ai",
+      "human"
+    ],
     "default_mode": "canva_ai",
     "filename_pattern": "flyer_YYYYMMDD_slug.png",
     "social_aspect_ratio": "4:5",
@@ -36,11 +39,83 @@
     "live_session": "LIVE & SESSION"
   },
   "publishing": {
-    "normal_live": [30, 7],
-    "important_live": [30, 14, 3],
-    "session": [7],
+    "normal_live": [
+      30,
+      7
+    ],
+    "important_live": [
+      30,
+      14,
+      3
+    ],
+    "session": [
+      7
+    ],
     "post_time": "18:00",
-    "channels": ["instagram", "facebook"]
+    "channels": [
+      "instagram",
+      "facebook"
+    ],
+    "recurring_series": [
+      {
+        "id": "monthly-voices",
+        "titles": [
+          "Monthly Voices 〜Vocal Session〜"
+        ],
+        "days_before": [
+          14
+        ]
+      },
+      {
+        "id": "kiraku-jam",
+        "titles": [
+          "Kiraku Jam"
+        ],
+        "days_before": [
+          14
+        ]
+      },
+      {
+        "id": "open-groove-night",
+        "titles": [
+          "Open Groove Night Jam Session",
+          "Open Groove Jam Session"
+        ],
+        "days_before": [
+          14
+        ]
+      },
+      {
+        "id": "saturday-jam",
+        "titles": [
+          "Saturday Jam Session 1",
+          "Saturday Jam Session 2"
+        ],
+        "days_before": [
+          14
+        ]
+      },
+      {
+        "id": "third-session",
+        "titles": [
+          "The Third Session",
+          "The Third Session 1",
+          "The Third Session 2"
+        ],
+        "days_before": [
+          14
+        ]
+      },
+      {
+        "id": "free-improvisation",
+        "titles": [
+          "Free Improvisation Jam Session"
+        ],
+        "days_before": [
+          14
+        ]
+      }
+    ]
   },
   "safety": {
     "use_pull_request_for_structural_changes": true,

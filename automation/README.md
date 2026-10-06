@@ -33,6 +33,10 @@ A new event starts from one compact instruction containing as much of the follow
 
 Missing non-critical fields may remain null. Do not invent factual event information.
 
+## Publication verification
+
+All website media and SNS packages must pass [PUBLICATION_GUARD.md](PUBLICATION_GUARD.md). A ready flag or filename is not verification. Unverified images stay hidden while event text remains.
+
 ## Flyer branches
 
 ### Canva AI
@@ -68,7 +72,8 @@ Default publication rules are stored in `automation/config.json`.
 
 - normal LIVE: 30 and 7 days before the event
 - important LIVE: 30, 14 and 3 days before the event
-- SESSION: 7 days before the event
+- Approved recurring series: 14 days before, at 18:00 Asia/Tokyo (exact title allowlist in config)
+- Other one-off SESSION: 7 days before the event
 - default publish time: 18:00 Asia/Tokyo
 
 For each planned slot:
@@ -78,7 +83,7 @@ For each planned slot:
 4. Schedule each post through the connected social scheduler.
 5. Record scheduled state and external IDs in the event object when available.
 
-Do not schedule a social post before the flyer is final.
+Do not schedule a social post before the flyer is visually verified. Use the guarded SNS package and readback contract; this repository has no connected production sender.
 
 ## Archive lifecycle
 After the event date has passed:

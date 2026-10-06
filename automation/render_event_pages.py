@@ -8,6 +8,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 from event_utils import event_end_date, event_is_past, event_type_label
+from publication_guard import event_publishable, verified_flyer_path
 
 ROOT = Path(__file__).resolve().parents[1]
 EVENTS_FILE = ROOT / "data" / "events.json"
@@ -29,10 +30,7 @@ def root_asset(path: str) -> str:
 
 
 def event_flyer_path(event: dict) -> str:
-    path = (event.get("flyer") or {}).get("github_path") or ""
-    if event.get("legacy_imported") and path.lstrip("/") == "logo_new.png":
-        return ""
-    return root_asset(path)
+    return root_asset(verified_flyer_path(event, ROOT))
 
 
 def event_url(event: dict) -> str:
@@ -94,7 +92,7 @@ def render(event: dict, artists_by_id: dict[str, dict]) -> str:
     fallback = f"{start.year}年{start.month}月{start.day}日、Jazz & Bar DOLPHIN（金沢）で開催{'した' if is_past else '予定の'}「{event['title']}」。"
     description = event.get("description") or fallback
     flyer = event_flyer_path(event)
-    og_image = f"{BASE_URL}{flyer}" if flyer else f"{BASE_URL}/logo_new.png"
+    og_image = f"{BASE_URL}{flyer}" if flyer else ""
 
     if flyer:
         media = f'<img class="event-flyer" src="{escape(flyer, quote=True)}" alt="{escape(event["title"], quote=True)} Flyer">'
@@ -159,7 +157,7 @@ def render(event: dict, artists_by_id: dict[str, dict]) -> str:
         f'<meta property="og:title" content="{escape(title, quote=True)}">',
         f'<meta property="og:description" content="{escape(description, quote=True)}">',
         f'<meta property="og:url" content="{canonical}">',
-        f'<meta property="og:image" content="{og_image}">',
+        *([f'<meta property="og:image" content="{og_image}">'] if og_image else []),
         '<link rel="preconnect" href="https://fonts.googleapis.com">',
         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
         '<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet">',
@@ -196,7 +194,7 @@ def render(event: dict, artists_by_id: dict[str, dict]) -> str:
 
 
 def main() -> None:
-    events = [event for event in load(EVENTS_FILE).get("events", []) if event.get("status") != "draft"]
+    events = [event for event in load(EVENTS_FILE).get("events", []) if event_publishable(event, ROOT)]
     artists = load(ARTISTS_FILE).get("artists", [])
     artists_by_id = {artist["id"]: artist for artist in artists}
     EVENTS_DIR.mkdir(exist_ok=True)

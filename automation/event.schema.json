@@ -51,13 +51,13 @@
       }
     },
     "reservation_url": {"type": ["string", "null"]},
-    "status": {"enum": ["draft", "ready", "published", "archived"]},
+    "status": {"enum": ["draft", "ready", "published", "archived", "cancelled"]},
     "flyer": {
       "type": "object",
       "required": ["mode", "status"],
       "properties": {
         "mode": {"enum": ["canva_ai", "human"]},
-        "status": {"enum": ["missing", "generating", "ready"]},
+        "status": {"enum": ["missing", "generating", "unverified", "ready"]},
         "source": {"type": ["string", "null"]},
         "github_path": {"type": ["string", "null"]},
         "canva_design_id": {"type": ["string", "null"]}

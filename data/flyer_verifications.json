@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "note": "Only the seven image files actually viewed by this worker are attested. Other media stays unverified. Event snapshots bind source facts; transcription records visible words and omissions.",
+  "reviews": [
+    {
+      "review_id": "visual-20261007-2026-10-29",
+      "kind": "visual_review",
+      "reviewer": "Codex: DAIV execution, source thread 01a0ff6e-9ade-764a-b581-2c4245320039",
+      "reviewed_at": "2026-10-06T17:57:11.544472+00:00",
+      "pixels_inspected": true,
+      "transcription": "MONTHLY VOICES / VOCAL SESSION; 2026.10.29 THU; START 20:00; CHARGE ¥2,000 2DRINK ORDER; STUDENT ¥1,000 1DRINK ORDER; PF KAORU KUROKAWA; BA TOMO NAKAYAMA; DR TAKUYA NAGAMI. No OPEN time printed.",
+      "image_path": "assets/flyers/flyer_20261029_monthly-voices.png",
+      "image_sha256": "ac6b2c3b397c5c6d159087278a61177aa18a4e23c257c2c970c6cc2f8ffd6424",
+      "covered_dates": [
+        "2026-10-29"
+      ],
+      "targets": {
+        "2026-10-29_legacy-9db856b953": {
+          "facts": {
+            "id": "2026-10-29_legacy-9db856b953",
+            "date": "2026-10-29",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "kaoru kurokawa",
+                "artist_id": "kaoru-kurokawa"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Monthly Voices 〜Vocal Session〜",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "776cf783d10600b1ea1a9c669dddfc80dab5d25dbb9bd003884cab4d6acce480",
+          "observed_text": "MONTHLY VOICES / VOCAL SESSION; 2026.10.29 THU; START 20:00; CHARGE ¥2,000 2DRINK ORDER; STUDENT ¥1,000 1DRINK ORDER; PF KAORU KUROKAWA; BA TOMO NAKAYAMA; DR TAKUYA NAGAMI. No OPEN time printed."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261007-2026-11-19",
+      "kind": "visual_review",
+      "reviewer": "Codex: DAIV execution, source thread 01a0ff6e-9ade-764a-b581-2c4245320039",
+      "reviewed_at": "2026-10-06T17:57:11.544472+00:00",
+      "pixels_inspected": true,
+      "transcription": "MONTHLY VOICES / VOCAL SESSION; 2026.11.19 THU; START 20:00; CHARGE ¥2,000 2DRINK ORDER; STUDENT ¥1,000 1DRINK ORDER; PF KAORU KUROKAWA; BA TOMO NAKAYAMA; DR TAKUYA NAGAMI. No OPEN time printed. Verified in Chrome-rendered screenshot after inconsistent tool preview.",
+      "image_path": "assets/flyers/flyer_20261119_monthly-voices.png",
+      "image_sha256": "e84979268c6ffc4d23e56b614031185e9d18a51d6931401bf6a534ed9f534e3b",
+      "covered_dates": [
+        "2026-11-19"
+      ],
+      "targets": {
+        "2026-11-19_legacy-99e2aaedcf": {
+          "facts": {
+            "id": "2026-11-19_legacy-99e2aaedcf",
+            "date": "2026-11-19",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "kaoru kurokawa",
+                "artist_id": "kaoru-kurokawa"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Monthly Voices 〜Vocal Session〜",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "c9098e179f1585aa6ca6fbcae0a6b9876671d90cf9725e2ccded4d4cfb2df5e2",
+          "observed_text": "MONTHLY VOICES / VOCAL SESSION; 2026.11.19 THU; START 20:00; CHARGE ¥2,000 2DRINK ORDER; STUDENT ¥1,000 1DRINK ORDER; PF KAORU KUROKAWA; BA TOMO NAKAYAMA; DR TAKUYA NAGAMI. No OPEN time printed. Verified in Chrome-rendered screenshot after inconsistent tool preview."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261007-2026-12-17",
+      "kind": "visual_review",
+      "reviewer": "Codex: DAIV execution, source thread 01a0ff6e-9ade-764a-b581-2c4245320039",
+      "reviewed_at": "2026-10-06T17:57:11.544472+00:00",
+      "pixels_inspected": true,
+      "transcription": "MONTHLY VOICES / VOCAL SESSION; 2026.12.17 THU; START 20:00; CHARGE ¥2,000 2DRINK ORDER; STUDENT ¥1,000 1DRINK ORDER; PF KAORU KUROKAWA; BA TOMO NAKAYAMA; DR TAKUYA NAGAMI. No OPEN time printed.",
+      "image_path": "assets/flyers/flyer_20261217_monthly-voices.png",
+      "image_sha256": "6d29cd1c7af9fa8df070c188219fe9fadab952f5ea1f97fbd6968b6a91c75c2a",
+      "covered_dates": [
+        "2026-12-17"
+      ],
+      "targets": {
+        "2026-12-17_legacy-8372a6f691": {
+          "facts": {
+            "id": "2026-12-17_legacy-8372a6f691",
+            "date": "2026-12-17",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "kaoru kurokawa",
+                "artist_id": "kaoru-kurokawa"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Monthly Voices 〜Vocal Session〜",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "fa94f704b290ed83455362bdcdf5c37aada18dd4cb785f4820ac874d9c9d4525",
+          "observed_text": "MONTHLY VOICES / VOCAL SESSION; 2026.12.17 THU; START 20:00; CHARGE ¥2,000 2DRINK ORDER; STUDENT ¥1,000 1DRINK ORDER; PF KAORU KUROKAWA; BA TOMO NAKAYAMA; DR TAKUYA NAGAMI. No OPEN time printed."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261007-2026-11-05",
+      "kind": "visual_review",
+      "reviewer": "Codex: DAIV execution, source thread 01a0ff6e-9ade-764a-b581-2c4245320039",
+      "reviewed_at": "2026-10-06T17:57:11.544472+00:00",
+      "pixels_inspected": true,
+      "transcription": "OPEN GROOVE NIGHT / JAM SESSION; 11/5 THU; GT MASAHIDE HANEDA; BA TOMO NAKAYAMA; OPEN 7:00PM START 8PM; CHARGE ¥2,000 2DRINK ORDER STUDENT ¥1,000. Year comes from approved 2026 event context; no student drink condition printed.",
+      "image_path": "assets/flyers/flyer_20261105_open-groove-night.png",
+      "image_sha256": "1c1d159365ca404bb5afbae578b0a9419e74078b43d6724f61dfb934aa4aa584",
+      "covered_dates": [
+        "2026-11-05"
+      ],
+      "targets": {
+        "2026-11-05_legacy-b9d9d68919": {
+          "facts": {
+            "id": "2026-11-05_legacy-b9d9d68919",
+            "date": "2026-11-05",
+            "end_date": null,
+            "open": "19:00",
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
+            "performers": [
+              {
+                "instrument": "gt",
+                "name": "masahide haneda",
+                "artist_id": "masahide-haneda"
+              },
+              {
+                "instrument": "ba",
+                "name": "tomo nakayama",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Open Groove Night Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "db762a9253f18bc601c58db84a403c09e7c732b2bb10b6a1ec946cad6e626f44",
+          "observed_text": "OPEN GROOVE NIGHT / JAM SESSION; 11/5 THU; GT MASAHIDE HANEDA; BA TOMO NAKAYAMA; OPEN 7:00PM START 8PM; CHARGE ¥2,000 2DRINK ORDER STUDENT ¥1,000. Year comes from approved 2026 event context; no student drink condition printed."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261007-2026-11-12",
+      "kind": "visual_review",
+      "reviewer": "Codex: DAIV execution, source thread 01a0ff6e-9ade-764a-b581-2c4245320039",
+      "reviewed_at": "2026-10-06T17:57:11.544472+00:00",
+      "pixels_inspected": true,
+      "transcription": "KIRAKU JAM / 気楽ジャム; 2026.11 12 THU; START 20:00; Charge ¥2,000 + 2Drink Order; 学生 ¥1,000 + 1Drink Order; 櫻井祐二 (Gt); 中山とも (Ba). No OPEN time printed.",
+      "image_path": "assets/flyers/flyer_20261112_kiraku-jam.png",
+      "image_sha256": "747ec8bfef7cfbd8a17696971156ed452fc35903a0f55729a14d2cf000e118c1",
+      "covered_dates": [
+        "2026-11-12"
+      ],
+      "targets": {
+        "2026-11-12_legacy-fdb0f9e98b": {
+          "facts": {
+            "id": "2026-11-12_legacy-fdb0f9e98b",
+            "date": "2026-11-12",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Kiraku Jam",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "386a6b21d4676fc77ae00274157eca19b721e7caaea0d6f32c013221f41f2bf0",
+          "observed_text": "KIRAKU JAM / 気楽ジャム; 2026.11 12 THU; START 20:00; Charge ¥2,000 + 2Drink Order; 学生 ¥1,000 + 1Drink Order; 櫻井祐二 (Gt); 中山とも (Ba). No OPEN time printed."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261007-2026-11-26",
+      "kind": "visual_review",
+      "reviewer": "Codex: DAIV execution, source thread 01a0ff6e-9ade-764a-b581-2c4245320039",
+      "reviewed_at": "2026-10-06T17:57:11.544472+00:00",
+      "pixels_inspected": true,
+      "transcription": "KIRAKU JAM / 気楽ジャム; 2026.11 26 THU; START 20:00; Charge ¥2,000 + 2Drink Order; 学生 ¥1,000 + 1Drink Order; 櫻井祐二 (Gt); 中山とも (Ba). No OPEN time printed.",
+      "image_path": "assets/flyers/flyer_20261126_kiraku-jam.png",
+      "image_sha256": "ae892f157039ddf215a8e78684328e1d6e4ce1c0f10dcd77b12aabd3a4082a92",
+      "covered_dates": [
+        "2026-11-26"
+      ],
+      "targets": {
+        "2026-11-26_legacy-b780fe732c": {
+          "facts": {
+            "id": "2026-11-26_legacy-b780fe732c",
+            "date": "2026-11-26",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Kiraku Jam",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "8f8b15e90960509cfb6ed58343e653bd589f57d01c1fd8fe6bcfc94a3dbb0ebd",
+          "observed_text": "KIRAKU JAM / 気楽ジャム; 2026.11 26 THU; START 20:00; Charge ¥2,000 + 2Drink Order; 学生 ¥1,000 + 1Drink Order; 櫻井祐二 (Gt); 中山とも (Ba). No OPEN time printed."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261007-2026-11-20",
+      "kind": "visual_review",
+      "reviewer": "Codex: DAIV execution, source thread 01a0ff6e-9ade-764a-b581-2c4245320039",
+      "reviewed_at": "2026-10-06T17:57:11.544472+00:00",
+      "pixels_inspected": true,
+      "transcription": "若井優也 Special 2days 11.20 → 11.21; 2026.11.20 fri Solo; open 19:30 / start 20:00 / charge ¥5000; 若井優也 (piano).\n若井優也 Special 2days 11.20 → 11.21; 2026.11.21 sat Jam Session; w.那須仁哉(bass) 永見拓也(drum); open 19:30 / start 20:00 / charge ¥5000; 若井優也 (piano).",
+      "image_path": "assets/flyers/flyer_20261120_wakai-yuya-special-2days.jpg",
+      "image_sha256": "86375f48eae21b2b584bbd27aafbcc218ff9e02feca8aa82005302d29a6f2f1c",
+      "covered_dates": [
+        "2026-11-20",
+        "2026-11-21"
+      ],
+      "targets": {
+        "2026-11-20_legacy-9a3be933aa": {
+          "facts": {
+            "id": "2026-11-20_legacy-9a3be933aa",
+            "date": "2026-11-20",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥5,000",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "若井優也"
+              }
+            ],
+            "title": "若井優也 Solo",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": {
+              "badge": "SPECIAL EVENT",
+              "subtitle": "Dolphin 1st Anniversary Special Live #5",
+              "intro": "椎名林檎を感嘆させたテクニックと豊かな音楽的知性。ジャズとクラシックの伝統を受け継ぎながら、常に新しい表現へと挑み続ける若きマエストロが金沢ドルフィンに初登場。"
+            }
+          },
+          "fingerprint": "c0be58c3fd35c9d0b31e917896e002d20743a09198f0e4900ba0e52e210cf807",
+          "observed_text": "若井優也 Special 2days 11.20 → 11.21; 2026.11.20 fri Solo; open 19:30 / start 20:00 / charge ¥5000; 若井優也 (piano)."
+        },
+        "2026-11-21_legacy-3369aef530": {
+          "facts": {
+            "id": "2026-11-21_legacy-3369aef530",
+            "date": "2026-11-21",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥5,000",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "若井優也"
+              },
+              {
+                "instrument": "Bass",
+                "name": "那須仁哉"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "若井優也 Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": {
+              "badge": "SPECIAL EVENT",
+              "subtitle": "Dolphin 1st Anniversary Special Live #5",
+              "intro": "椎名林檎を感嘆させたテクニックと豊かな音楽的知性。ジャズとクラシックの伝統を受け継ぎながら、常に新しい表現へと挑み続ける若きマエストロが金沢ドルフィンに初登場。"
+            }
+          },
+          "fingerprint": "b4f7256b94699fdb575da3e00244aece091564d60f55187cb3f5969bc17ff921",
+          "observed_text": "若井優也 Special 2days 11.20 → 11.21; 2026.11.21 sat Jam Session; w.那須仁哉(bass) 永見拓也(drum); open 19:30 / start 20:00 / charge ¥5000; 若井優也 (piano)."
+        }
+      },
+      "shared_approval": {
+        "type": "special_two_day",
+        "target_event_ids": [
+          "2026-11-20_legacy-9a3be933aa",
+          "2026-11-21_legacy-3369aef530"
+        ],
+        "approved_by": "Owner, as explicitly relayed by parent ARIA",
+        "recorded_at": "2026-10-06T17:57:11.544472+00:00",
+        "reference": "Delegated instruction: explicitly approved Wakai November 20/21 two-day flyer exception. This is the recording time, not a fabricated historical approval time."
+      }
+    }
+  ]
+}

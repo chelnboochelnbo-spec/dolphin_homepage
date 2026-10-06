@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "events": [
+    {
+      "event_id": "2027-01-02_saturday-jam-session-1",
+      "date": "2027-01-02",
+      "title": "Saturday Jam Session 1",
+      "reason": "Owner cancellation; retain draft record and prevent stale import or schedule regeneration from reviving it."
+    }
+  ]
+}

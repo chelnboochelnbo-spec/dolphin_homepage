@@ -8,6 +8,7 @@ from html import escape
 from urllib.parse import quote
 
 from event_utils import current_jst_date, event_end_date, event_is_past, event_type_label, normalize_event_type
+from publication_guard import event_publishable, verified_flyer_path
 
 ROOT = Path(__file__).resolve().parents[1]
 EVENTS_FILE = ROOT / "data" / "events.json"
@@ -69,8 +70,7 @@ def time_text(event: dict) -> str:
 
 
 def flyer_path(event: dict) -> str:
-    flyer = event.get("flyer") or {}
-    return flyer.get("github_path") or ""
+    return verified_flyer_path(event, ROOT)
 
 
 def event_page_url(event: dict) -> str:
@@ -296,7 +296,7 @@ def rebuild_home_preview(index_html: str, schedule_html: str) -> str:
 def sync_reservation_options(html: str, events: list[dict]) -> str:
     options = ['<option value="" data-month="all">公演を選択してください</option>']
     for event in sorted(events, key=lambda item: (item["date"], item["title"])):
-        if event.get("status") not in {"ready", "published", "archived"} or event_is_past(event):
+        if not event_publishable(event, ROOT) or event_is_past(event):
             continue
         month = MONTH_IDS[int(event["date"][5:7]) - 1]
         subtitle = (event.get('display') or {}).get('subtitle')
@@ -315,7 +315,7 @@ def sync_month_years(html: str, events: list[dict]) -> str:
     for month, month_id in enumerate(MONTH_IDS, 1):
         years = sorted({event['date'][:4] for event in events
                         if int(event['date'][5:7]) == month
-                        and event.get('status') in {'ready', 'published', 'archived'}
+                        and event_publishable(event, ROOT)
                         and not event_is_past(event)})
         if not years:
             continue
@@ -334,7 +334,7 @@ def main() -> None:
         schedule_html = remove_auto_article(schedule_html, event["id"])
 
     for event in sorted(events, key=lambda item: (item["date"], item["title"])):
-        if event.get("status") not in {"ready", "published", "archived"}:
+        if not event_publishable(event, ROOT):
             continue
         if event_is_past(event):
             continue
