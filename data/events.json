@@ -4925,6 +4925,43 @@
           }
         ]
       }
+    },
+    {
+      "id": "2026-11-22_big-apple-after-session",
+      "date": "2026-11-22",
+      "title": "BIG APPLE AFTER SESSION",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも"
+        }
+      ],
+      "description": "ホスト：櫻井祐二（ギター）／中山とも（ベース）",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "owner_supplied",
+        "github_path": "assets/flyers/flyer_20261122_big-apple-after-session.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
     }
   ]
 }
