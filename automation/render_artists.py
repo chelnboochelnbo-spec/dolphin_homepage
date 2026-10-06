@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from publication_guard import event_publishable
+
 import json
 import re
 import shutil
@@ -86,7 +88,7 @@ def merged_appearances(artist: dict, events: list[dict]) -> list[dict]:
     for event in events:
         if artist["id"] not in artist_event_ids(event):
             continue
-        if event.get("status") == "draft":
+        if not event_publishable(event, ROOT):
             continue
         key = (event.get("date"), event.get("title"))
         if key in seen:
@@ -335,52 +337,9 @@ def event_type_label(event: dict) -> str:
 
 
 def render_event_detail(event: dict, artists_by_id: dict[str, dict]) -> str:
-    d = date.fromisoformat(event["date"])
-    canonical = f"{BASE_URL}{event_url(event)}"
-    title = f"{event['title']} | Jazz & Bar DOLPHIN 金沢"
-    description = event.get("description") or f"{d.year}年{d.month}月{d.day}日、Jazz & Bar DOLPHIN（金沢）で開催する「{event['title']}」の公演情報。"
-    flyer = (event.get("flyer") or {}).get("github_path") or "logo_new.png"
-    performers = []
-    for performer in event.get("performers") or []:
-        label = " ".join(filter(None, [performer.get("instrument"), performer.get("name")]))
-        artist_id = performer.get("artist_id")
-        if artist_id and artist_id in artists_by_id:
-            performers.append(f'<li><a href="/artists/{escape(artist_id, quote=True)}/">{escape(label)}</a></li>')
-        else:
-            performers.append(f'<li>{escape(label)}</li>')
-    performer_html = "".join(performers) or "<li>出演者情報は準備中です。</li>"
-    time_bits = []
-    if event.get("open"):
-        time_bits.append(f"OPEN {event['open']}")
-    if event.get("start"):
-        time_bits.append(f"START {event['start']}")
-    time_label = " / ".join(time_bits)
-    reservation = event.get("reservation_url") or "/#reservation"
-    inline_css = '''<style>
-.event-page{background:#0f0f0f;color:#eee;min-height:100vh}.event-detail{max-width:1000px;margin:0 auto;padding:9rem 1.5rem 7rem}.event-detail-grid{display:grid;grid-template-columns:minmax(280px,.85fr) minmax(0,1.15fr);gap:4rem;align-items:start}.event-flyer{width:100%;background:#171717}.event-detail h1{color:#fff;font-size:clamp(2.2rem,6vw,4.7rem);line-height:1.05;margin:1rem 0}.event-meta{color:#aaa;line-height:2}.event-performers{list-style:none;padding:0;margin:2rem 0}.event-performers li{padding:.55rem 0;border-bottom:1px solid #252525}.event-performers a{color:#eee;text-decoration:none}.event-performers a:hover{color:var(--color-primary)}.event-description{color:#aaa;line-height:2;white-space:pre-wrap}.event-reserve{display:inline-block;margin-top:2rem;padding:.75rem 1rem;border:1px solid var(--color-primary);color:#fff;text-decoration:none}.event-type-badge{position:static;margin-bottom:.7rem;background:transparent;color:var(--color-primary);border-color:#444}@media(max-width:760px){.event-detail-grid{grid-template-columns:1fr;gap:2rem}}
-</style>'''
-    return f'''<!-- GENERATED: DOLPHIN EVENT -->
-{shell_head(title, description, canonical, f'{BASE_URL}{root_asset(flyer)}', '<link rel="stylesheet" href="/event-types.css">' + inline_css)}
-<body class="event-page">
-{nav_block('schedule')}
-<main class="event-detail">
-    <div class="event-detail-grid">
-        <div><img class="event-flyer" src="{escape(root_asset(flyer), quote=True)}" alt="{escape(event['title'], quote=True)} Flyer"></div>
-        <div>
-            <span class="event-type-badge">{event_type_label(event)}</span>
-            <p class="artists-kicker">{d.year}.{d.month:02d}.{d.day:02d}</p>
-            <h1>{escape(event['title'])}</h1>
-            <p class="event-meta">{escape(time_label)}{'<br>' if time_label and event.get('charge') else ''}{escape(event.get('charge') or '')}</p>
-            <ul class="event-performers">{performer_html}</ul>
-            <p class="event-description">{escape(event.get('description') or '')}</p>
-            <a class="event-reserve" href="{escape(reservation, quote=True)}">RESERVATION</a>
-        </div>
-    </div>
-</main>
-<script src="/script.js"></script>
-</body>
-</html>
-'''
+    # One canonical event renderer owns media, OG and JSON-LD decisions.
+    from render_event_pages import render
+    return render(event, artists_by_id)
 
 
 def write_generated_pages(artists: list[dict], events: list[dict]) -> None:
@@ -401,14 +360,14 @@ def write_generated_pages(artists: list[dict], events: list[dict]) -> None:
 
     EVENTS_DIR.mkdir(exist_ok=True)
     artists_by_id = {artist["id"]: artist for artist in artists}
-    valid_event_ids = {event["id"] for event in events if event.get("status") != "draft"}
+    valid_event_ids = {event["id"] for event in events if event_publishable(event, ROOT)}
     for child in EVENTS_DIR.iterdir():
         if child.is_dir() and child.name not in valid_event_ids:
             marker = child / "index.html"
             if marker.exists() and "GENERATED: DOLPHIN EVENT" in marker.read_text(encoding="utf-8-sig"):
                 shutil.rmtree(child)
     for event in events:
-        if event.get("status") == "draft":
+        if not event_publishable(event, ROOT):
             continue
         target = EVENTS_DIR / event["id"]
         target.mkdir(exist_ok=True)

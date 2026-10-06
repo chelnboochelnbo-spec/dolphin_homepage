@@ -56,3 +56,8 @@ build/
 # --- PowerShell一時ファイル ---
 # crop_image.ps1 はリポジトリに含めるが、実行結果は除外
 *.ps1.tmp
+
+# Python and publication process state locks
+__pycache__/
+*.pyc
+*.lock

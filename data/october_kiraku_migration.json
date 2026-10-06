@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "record_id": "october-kiraku-existing-20261008-22",
+      "kind": "october_existing_publication",
+      "approval_reference": "Owner scope relayed by parent thread 01a0ff6e-9ade-764a-b581-2c4245320039: new single-date rule begins November; preserve this October asset only.",
+      "source_commit": "94d5cb7c6f85d0e48be44127f3a0c544fedbebba",
+      "source_path": "flyer_20261008_22.png",
+      "image_path": "flyer_20261008_22.png",
+      "image_sha256": "ba62c83f63e540a795bf94dcd5202ea5b47f147d6d26609ed607e22abf28bb25",
+      "covered_dates": [
+        "2026-10-08",
+        "2026-10-22"
+      ],
+      "targets": {
+        "2026-10-08_legacy-532326f862": {
+          "facts": {
+            "id": "2026-10-08_legacy-532326f862",
+            "date": "2026-10-08",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Kiraku Jam",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "2373c206be8c6122d9e47c4f9c21e12e2cf15d15b609b3b58e76eeb9c4fd9f83"
+        },
+        "2026-10-22_legacy-a52e331b05": {
+          "facts": {
+            "id": "2026-10-22_legacy-a52e331b05",
+            "date": "2026-10-22",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Kiraku Jam",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "996c43af05299daabfc889d6445f28eab93cd2f0342efa6a48c0ff3e18e0ba68"
+        }
+      },
+      "existing_posts": [
+        {
+          "channel": "instagram",
+          "channel_id": "dolphin_kanazawa",
+          "provider": "metricool",
+          "provider_account_id": "6910064",
+          "provider_uuid": "-5433884878909716328",
+          "external_id": "389093625",
+          "slot_id": "october-22-existing",
+          "event_ids": [
+            "2026-10-22_legacy-a52e331b05"
+          ],
+          "days_before": 14,
+          "publish_at": "2026-10-08T18:00:00+09:00",
+          "caption": "気楽に集って、その瞬間の音楽を楽しむジャム・セッション。\n\nKiraku Jam\n2026.10.22 Thu.\nStart 20:00\nCharge ¥2,000 + 2Drink Order\n学生 ¥1,000 + 1Drink Order\n\nGt. 櫻井祐二\nBa. 中山とも\n\nご予約\nhttps://www.bardolphin-kanazawa.com/#reservation\n\nJazz & Bar Dolphin\n石川県金沢市片町2-13-11 ミリオンビル4階\n080-3895-0821\n\nLive Schedule\nhttps://www.bardolphin-kanazawa.com/schedule.html\n\n#KirakuJam #JamSession #金沢ジャズ #ジャムセッション #金沢バー #ジャズバー #JazzBarDolphin",
+          "caption_sha256": "65c7b4a74852a1a2304422782a11b367dfd9dc3b9712df0196d8b90b911c0982",
+          "image_sha256": "ba62c83f63e540a795bf94dcd5202ea5b47f147d6d26609ed607e22abf28bb25",
+          "source_media_url": "https://static.metricool.com/planner/202610/6910064-file-2762760382192746673.png",
+          "read_at": "2026-10-06T18:33:03.512197+00:00",
+          "evidence": "Direct Metricool getBrandSettings/getScheduledPosts read; downloaded media SHA matches pinned HP asset. Existing reservation preservation only; not a new copy approval."
+        },
+        {
+          "channel": "facebook",
+          "channel_id": "586660311198862",
+          "provider": "metricool",
+          "provider_account_id": "6910064",
+          "provider_uuid": "-5433884878909716328",
+          "external_id": "389093625",
+          "slot_id": "october-22-existing",
+          "event_ids": [
+            "2026-10-22_legacy-a52e331b05"
+          ],
+          "days_before": 14,
+          "publish_at": "2026-10-08T18:00:00+09:00",
+          "caption": "気楽に集って、その瞬間の音楽を楽しむジャム・セッション。\n\nKiraku Jam\n2026.10.22 Thu.\nStart 20:00\nCharge ¥2,000 + 2Drink Order\n学生 ¥1,000 + 1Drink Order\n\nGt. 櫻井祐二\nBa. 中山とも\n\nご予約\nhttps://www.bardolphin-kanazawa.com/#reservation\n\nJazz & Bar Dolphin\n石川県金沢市片町2-13-11 ミリオンビル4階\n080-3895-0821\n\nLive Schedule\nhttps://www.bardolphin-kanazawa.com/schedule.html\n\n#KirakuJam #JamSession #金沢ジャズ #ジャムセッション #金沢バー #ジャズバー #JazzBarDolphin",
+          "caption_sha256": "65c7b4a74852a1a2304422782a11b367dfd9dc3b9712df0196d8b90b911c0982",
+          "image_sha256": "ba62c83f63e540a795bf94dcd5202ea5b47f147d6d26609ed607e22abf28bb25",
+          "source_media_url": "https://static.metricool.com/planner/202610/6910064-file-2762760382192746673.png",
+          "read_at": "2026-10-06T18:33:03.512212+00:00",
+          "evidence": "Direct Metricool getBrandSettings/getScheduledPosts read; downloaded media SHA matches pinned HP asset. Existing reservation preservation only; not a new copy approval."
+        }
+      ],
+      "social_note": "Only existing October 22 reservation, unchanged copy/time/image, on its two resolved accounts. No new reservation or October 8 reservation inferred."
+    }
+  ]
+}

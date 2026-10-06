@@ -4,6 +4,17 @@ on:
   pull_request:
     paths:
       - 'data/events.json'
+      - 'data/flyer_verifications.json'
+      - 'data/website_image_baseline.json'
+      - 'data/october_kiraku_migration.json'
+      - 'data/publication_tombstones.json'
+      - 'data/social_publications.json'
+      - 'automation/publication_guard.py'
+      - 'automation/audit_rendered_publication.py'
+      - 'automation/social_package.py'
+      - 'automation/config.json'
+      - 'automation/import_legacy_events.py'
+      - 'flyer_*'
       - 'data/artists.json'
       - 'data/operations.json'
       - 'assets/flyers/**'
@@ -38,6 +49,17 @@ on:
     branches: [main]
     paths:
       - 'data/events.json'
+      - 'data/flyer_verifications.json'
+      - 'data/website_image_baseline.json'
+      - 'data/october_kiraku_migration.json'
+      - 'data/publication_tombstones.json'
+      - 'data/social_publications.json'
+      - 'automation/publication_guard.py'
+      - 'automation/audit_rendered_publication.py'
+      - 'automation/social_package.py'
+      - 'automation/config.json'
+      - 'automation/import_legacy_events.py'
+      - 'flyer_*'
       - 'data/artists.json'
       - 'data/operations.json'
       - 'assets/flyers/**'
@@ -87,6 +109,9 @@ jobs:
       - name: Test reservation dates and translation
         run: node --test tests/*.test.cjs
 
+      - name: Audit flyer reviews and cancellation tombstones
+        run: python automation/publication_guard.py > "$RUNNER_TEMP/flyer-publication-audit.json"
+
       - name: Render current and future schedule from EVENT database
         run: python automation/render_events.py
 
@@ -123,6 +148,17 @@ jobs:
           path: ${{ runner.temp }}/dolphin-theme-previews
           retention-days: 7
           if-no-files-found: ignore
+
+      - name: Verify rendered event media
+        run: python automation/audit_rendered_publication.py
+
+      - name: Save flyer publication hold report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: flyer-publication-audit
+          path: ${{ runner.temp }}/flyer-publication-audit.json
+          retention-days: 7
 
       - name: Validate rendered diff
         run: git diff --check

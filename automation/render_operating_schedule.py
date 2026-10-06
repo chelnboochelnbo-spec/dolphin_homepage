@@ -12,6 +12,7 @@ from datetime import date, timedelta
 from html import escape
 from pathlib import Path
 from typing import Callable
+from publication_guard import event_publishable
 
 ROOT = Path(__file__).resolve().parents[1]
 MONTH_IDS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
@@ -77,7 +78,7 @@ def build_days(events: list[dict], operations: dict, today: date,
     overrides = operations.get('overrides', {})
     visible = []
     for event in events:
-        if event.get('status') not in VISIBLE_STATUSES:
+        if not event_publishable(event, ROOT):
             continue
         start = date.fromisoformat(event['date'])
         end = date.fromisoformat(event.get('end_date') or event['date'])

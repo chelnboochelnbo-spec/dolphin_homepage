@@ -7,6 +7,7 @@ from html import escape
 from pathlib import Path
 
 from event_utils import event_is_past, event_type_label, normalize_event_type
+from publication_guard import event_publishable, verified_flyer_path
 
 ROOT = Path(__file__).resolve().parents[1]
 EVENTS_FILE = ROOT / "data" / "events.json"
@@ -18,7 +19,7 @@ BASE_URL = "https://www.bardolphin-kanazawa.com"
 
 def load_events() -> list[dict]:
     payload = json.loads(EVENTS_FILE.read_text(encoding="utf-8-sig"))
-    return [event for event in payload.get("events", []) if event.get("status") != "draft"]
+    return [event for event in payload.get("events", []) if event_publishable(event, ROOT)]
 
 
 def root_asset(path: str) -> str:
@@ -30,12 +31,7 @@ def root_asset(path: str) -> str:
 
 
 def event_flyer_path(event: dict) -> str:
-    path = (event.get("flyer") or {}).get("github_path") or ""
-    # Some old schedule cards used the DOLPHIN logo as an image fallback.
-    # Treat that as "no event image" in the archive rather than presenting it as a live photo/flyer.
-    if event.get("legacy_imported") and path.lstrip("/") == "logo_new.png":
-        return ""
-    return root_asset(path)
+    return root_asset(verified_flyer_path(event, ROOT))
 
 
 def performer_labels(event: dict) -> list[str]:
@@ -95,7 +91,7 @@ def event_card(event: dict) -> str:
         performers_html = f'<p class="archive-card-performers">{escape(" / ".join(performers))}</p>'
 
     card_lines = [
-        f'<article class="{card_class}" data-archive-card data-year="{start.year}" data-event-type="{normalize_event_type(event)}" data-search="{escape(search_text, quote=True)}">',
+        f'<article class="{card_class}" data-event-id="{escape(event["id"], quote=True)}" data-archive-card data-year="{start.year}" data-event-type="{normalize_event_type(event)}" data-search="{escape(search_text, quote=True)}">',
     ]
     if media:
         card_lines.append(media)

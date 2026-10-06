@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from publication_guard import is_tombstoned
+
 import hashlib
 import json
 import re
@@ -142,7 +144,7 @@ def parse_article(article: str, artist_ids_by_name: dict[str, str]) -> dict | No
         "reservation_url": reservation_url,
         "flyer": {
             "mode": "human",
-            "status": "ready" if flyer_path else "missing",
+            "status": "unverified" if flyer_path else "missing",
             "source": "legacy_schedule_migration",
             "github_path": flyer_path,
             "canva_design_id": None
@@ -160,6 +162,8 @@ def parse_article(article: str, artist_ids_by_name: dict[str, str]) -> dict | No
     end_date = parse_end_date(article, event_date)
     if end_date:
         event["end_date"] = end_date
+    if is_tombstoned(event, ROOT):
+        event["status"] = "cancelled"
     return event
 
 
