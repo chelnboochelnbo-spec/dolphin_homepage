@@ -3680,15 +3680,18 @@
       "performers": [
         {
           "instrument": "Pf",
-          "name": ". 黒川薫"
+          "name": "kaoru kurokawa",
+          "artist_id": "kaoru-kurokawa"
         },
         {
           "instrument": "Ba",
-          "name": ". 中山とも"
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
         },
         {
           "instrument": "Dr",
-          "name": ". 永見拓也"
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
         }
       ],
       "description": "",
@@ -3904,14 +3907,24 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
         "status": "ready",
-        "source": "legacy_schedule_migration",
-        "github_path": "logo_new.png",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20261112_26_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -3986,7 +3999,23 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "kaoru kurokawa",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
@@ -4138,14 +4167,24 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
         "status": "ready",
-        "source": "legacy_schedule_migration",
-        "github_path": "logo_new.png",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20261112_26_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4236,14 +4275,24 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
         "status": "ready",
-        "source": "legacy_schedule_migration",
-        "github_path": "logo_new.png",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20261210_24_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4265,7 +4314,23 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "kaoru kurokawa",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
@@ -4333,14 +4398,24 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
         "status": "ready",
-        "source": "legacy_schedule_migration",
-        "github_path": "logo_new.png",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20261210_24_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4390,14 +4465,24 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270114_28_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4456,7 +4541,23 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "kaoru kurokawa",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
@@ -4484,14 +4585,24 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270114_28_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4540,14 +4651,24 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270211_25_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4568,7 +4689,23 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "kaoru kurokawa",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
@@ -4634,14 +4771,24 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270211_25_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4690,14 +4837,24 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270311_25_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4718,7 +4875,23 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "kaoru kurokawa",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
@@ -4784,14 +4957,24 @@
       "open": null,
       "start": "20:00",
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
-      "performers": [],
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270311_25_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
