@@ -4223,8 +4223,8 @@
       "flyer": {
         "mode": "human",
         "status": "ready",
-        "source": "legacy_schedule_migration",
-        "github_path": "logo_new.png",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20261203_open-groove-night.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4292,7 +4292,7 @@
         "mode": "human",
         "status": "ready",
         "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20261210_24_kiraku-jam.png",
+        "github_path": "assets/flyers/flyer_20261210_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4415,7 +4415,7 @@
         "mode": "human",
         "status": "ready",
         "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20261210_24_kiraku-jam.png",
+        "github_path": "assets/flyers/flyer_20261224_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4482,7 +4482,7 @@
         "mode": "human",
         "status": "ready",
         "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270114_28_kiraku-jam.png",
+        "github_path": "assets/flyers/flyer_20270114_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4602,7 +4602,7 @@
         "mode": "human",
         "status": "ready",
         "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270114_28_kiraku-jam.png",
+        "github_path": "assets/flyers/flyer_20270128_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4668,7 +4668,7 @@
         "mode": "human",
         "status": "ready",
         "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270211_25_kiraku-jam.png",
+        "github_path": "assets/flyers/flyer_20270211_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4788,7 +4788,7 @@
         "mode": "human",
         "status": "ready",
         "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270211_25_kiraku-jam.png",
+        "github_path": "assets/flyers/flyer_20270225_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4854,7 +4854,7 @@
         "mode": "human",
         "status": "ready",
         "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270311_25_kiraku-jam.png",
+        "github_path": "assets/flyers/flyer_20270311_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4974,7 +4974,7 @@
         "mode": "human",
         "status": "ready",
         "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270311_25_kiraku-jam.png",
+        "github_path": "assets/flyers/flyer_20270325_kiraku-jam.png",
         "canva_design_id": null
       },
       "archive": {
@@ -5011,9 +5011,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270107_open-groove-night.png",
         "canva_design_id": null
       },
       "archive": {
@@ -5050,9 +5050,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270204_open-groove-night.png",
         "canva_design_id": null
       },
       "archive": {
@@ -5089,9 +5089,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270304_open-groove-night.png",
         "canva_design_id": null
       },
       "archive": {
