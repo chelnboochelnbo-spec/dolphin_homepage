@@ -3699,9 +3699,9 @@
       "flyer": {
         "mode": "human",
         "status": "ready",
-        "source": "legacy_schedule_migration",
-        "github_path": "flyer_20261029.png",
-        "canva_design_id": null
+        "source": "approved_canva_png",
+        "github_path": "assets/flyers/flyer_20261029_monthly-voices.png",
+        "canva_design_id": "DAHJIxR8Fd4"
       },
       "archive": {
         "gallery": [],
@@ -4021,9 +4021,9 @@
       "flyer": {
         "mode": "human",
         "status": "ready",
-        "source": "legacy_schedule_migration",
-        "github_path": "flyer_20260820.png",
-        "canva_design_id": null
+        "source": "approved_canva_png",
+        "github_path": "assets/flyers/flyer_20261119_monthly-voices.png",
+        "canva_design_id": "DAHXG5g8HXY"
       },
       "archive": {
         "gallery": [],
