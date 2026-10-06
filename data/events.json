@@ -4293,11 +4293,11 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 + 2Drink Order",
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
       "performers": [
         {
           "instrument": "Gt",
-          "name": "桜井祐二"
+          "name": "櫻井祐二"
         },
         {
           "instrument": "Ba",
@@ -4310,8 +4310,8 @@
       "flyer": {
         "mode": "human",
         "status": "ready",
-        "source": "legacy_schedule_migration",
-        "github_path": "logo_new.png",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20261219_saturday-jam-session-2.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4417,15 +4417,25 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 + 2Drink Order",
-      "performers": [],
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270116_saturday-jam-session-2.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4585,15 +4595,25 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 + 2Drink Order",
-      "performers": [],
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270220_saturday-jam-session-2.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4725,15 +4745,25 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 + 2Drink Order",
-      "performers": [],
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
       "description": "",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270320_saturday-jam-session-2.png",
         "canva_design_id": null
       },
       "archive": {
