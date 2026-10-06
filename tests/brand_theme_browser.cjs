@@ -51,6 +51,10 @@ async function checkContrast(locator, label) {
         await page.locator('.menu-toggle').click();
         await page.waitForFunction(()=>document.querySelector('.nav-links').getBoundingClientRect().x>=innerWidth);
       }
+      await page.evaluate(async()=>{
+        await document.fonts.ready;
+        await Promise.all(document.getAnimations().filter(a=>a.effect.getTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>{})));
+      });
       await page.screenshot({path:`${out}/home-${width}.png`});
       await page.goto(`${origin}/schedule.html`,{waitUntil:'networkidle'});
       assert.equal(await page.locator('h1').textContent(),'SCHEDULE');
@@ -63,6 +67,7 @@ async function checkContrast(locator, label) {
         await card.hover();
         checks.push(await checkContrast(card.locator('.lineup-artist'),`event hover title ${width}`));
         checks.push(await checkContrast(card.locator('.lineup-reserve-btn'),`event reserve ${width}`));
+        checks.push(await checkContrast(card.locator('.weekday'),`event weekday on hover ${width}`));
       }
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`schedule overflow ${width}`);
       await page.screenshot({path:`${out}/schedule-${width}.png`});
