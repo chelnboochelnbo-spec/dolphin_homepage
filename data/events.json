@@ -4336,8 +4336,8 @@
       "flyer": {
         "mode": "human",
         "status": "ready",
-        "source": "legacy_schedule_migration",
-        "github_path": "flyer_20260820.png",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20261217_monthly-voices.png",
         "canva_design_id": null
       },
       "archive": {
