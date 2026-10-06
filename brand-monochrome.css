@@ -1,0 +1,162 @@
+/* DOLPHIN monochrome identity. Presentation only; no event/price/booking changes.
+   Loaded last so legacy page-local styles cannot reintroduce the green palette. */
+:root {
+  --brand-black: #0b0b0b;
+  --brand-panel: #181818;
+  --brand-white: #f5f5f5;
+  --brand-paper: #ffffff;
+  --brand-ink: #171717;
+  --brand-muted-light: #5c5c5c;
+  --brand-muted-dark: #b3b3b3;
+  --color-primary: #171717;
+  --color-primary-dark: #3d3d3d;
+  --bg-body: #0b0b0b;
+  --bg-content: #ffffff;
+  --bg-content-alt: #f2f2f2;
+  --bg-footer: #0b0b0b;
+  --color-text-body: #303030;
+  --color-text-heading: #171717;
+}
+/* Accent is contextual: dark ink on paper, white on dark backgrounds. */
+:where(.main-nav, .hero, .tonight-section, .english-guide-section, footer,
+  .artists-page, .artist-detail-page, .event-page, .live-archive-page,
+  .inbound-page, .artists-hero, .artists-section, .artists-controls,
+  .artists-preview-section) {
+  --color-primary: #f5f5f5;
+  --color-primary-dark: #d6d6d6;
+}
+html { accent-color: #171717; }
+body[data-brand-theme="monochrome"]:has(.lineup-wrapper) { background-color: #fff; }
+.main-nav, .hero, .tonight-section, .english-guide-section, footer {
+  background-color: var(--brand-black);
+}
+.main-nav { border-bottom-color: #353535; }
+.hero { background: var(--brand-black); }
+.hero-bg, .artists-hero::before { background-image: none; }
+.hero-kicker, .tonight-eyebrow, .english-eyebrow, .ticker-wrap {
+  color: var(--brand-white);
+}
+.ticker-wrap { background: var(--brand-black); border-bottom-color: #353535; }
+#opening-overlay { background: var(--brand-black); }
+.opening-content, .opening-tagline, .scroll-text { color: var(--brand-white); }
+.scroll-indicator .line { background: var(--brand-white); }
+.brand-nav-logo { display: block; width: 100px; height: auto; max-height: 66px; object-fit: contain; }
+.brand-hero-logo { display: block; width: clamp(190px, 26vw, 310px); height: auto; margin: 0 0 2rem; }
+.hero-lead { color: #d6d6d6; }
+.nav-links a:hover, .nav-links a.active, .nav-active {
+  color: #fff !important;
+  text-decoration: underline;
+  text-underline-offset: .4em;
+  opacity: 1;
+}
+/* Light reading surfaces are retained for schedules, prices and reservations. */
+.visit-basics-section, #reservation { background: #f2f2f2; }
+.visit-basic-card { background: #fff; border-top-color: #171717; }
+.visit-basic-card span, .visit-basic-card p, .section-subtitle,
+.item-desc, .lineup-month-header span, .operating-schedule-note { color: #5c5c5c; }
+.menu-cat-title, .lineup-month-header { color: #171717; border-color: #171717; }
+.section-title::after { background: #171717; }
+.english-guide-section .section-title::after { background: #f5f5f5; }
+/* Schedule cards stay light on hover: text never flips to white on white. */
+body .lineup-item, body #schedule-preview .lineup-item { border-bottom-color: #ccc; }
+body .lineup-item:hover { background: #f2f2f2 !important; }
+body .lineup-item .lineup-artist,
+body .lineup-item:hover .lineup-artist,
+body .lineup-item .lineup-date,
+body .lineup-item:hover .lineup-date,
+body .lineup-item .lineup-price,
+body .lineup-item:hover .lineup-price { color: #171717 !important; }
+body .lineup-item .lineup-details,
+body .lineup-item:hover .lineup-details,
+body .lineup-item .lineup-intro,
+body .lineup-item:hover .lineup-intro,
+body .lineup-item .weekday,
+body .lineup-item:hover .weekday,
+body .lineup-item .lineup-details i { color: #5c5c5c !important; }
+body .lineup-item .performer-link:hover,
+body .lineup-item .lineup-artist > a:hover { color: #171717; text-decoration: underline; }
+body .lineup-item.is-today { background: #f2f2f2 !important; border-left-color: #171717; }
+body .badge-today { background: #171717 !important; color: #fff !important; animation: none; }
+body .lineup-badge { background: #e6e6e6 !important; color: #171717 !important; }
+body .event-type-badge, body .lineup-item:hover .event-type-badge {
+  background: #fff; color: #454545; border-color: #8a8a8a;
+}
+body .month-link { color: #5c5c5c; }
+body .month-link:hover { color: #171717; text-decoration: underline; }
+body .month-link.active { color: #fff !important; background: #171717 !important; }
+body .lineup-item.operating-day { flex-direction: row; }
+body .lineup-item.operating-day--closed { background: #e6e6e6; border-left: 4px solid #4d4d4d; }
+body .lineup-item.operating-day--private { background: #f2f2f2; border-left: 4px dashed #4d4d4d; }
+body .lineup-flyer-empty::after, .event-flyer-empty { color: #b3b3b3; }
+/* Actions are identified by filled/outlined shape and labels, not hue alone. */
+body .lineup-reserve-btn, body .submit-btn {
+  background: #171717; color: #fff; border: 1px solid #171717;
+}
+body .lineup-reserve-btn:hover, body .submit-btn:hover {
+  background: #3d3d3d; color: #fff; border-color: #3d3d3d;
+}
+.hero-btn { color: #f5f5f5; border-color: #858585; }
+.hero-btn-primary, .tonight-link {
+  color: #111; background: #f5f5f5; border-color: #f5f5f5;
+}
+.hero-btn-primary:hover, .tonight-link:hover { color: #111; background: #d6d6d6; border-color: #d6d6d6; }
+.hero-btn:not(.hero-btn-primary):hover { color: #fff; background: #272727; border-color: #fff; }
+.tonight-card { background: #181818; border-color: #454545; border-left-color: #f5f5f5; }
+.tonight-card[data-state="closed"], .tonight-card[data-state="private"] { border-left-color: #b3b3b3; }
+.tonight-type { color: #f5f5f5; }
+.tonight-date, .tonight-caution, .tonight-facts span { color: #b3b3b3; }
+.tonight-card p { color: #c9c9c9; }
+/* Neutral, visible boundaries and focus indicators for forms and searches. */
+.form-group input, .form-group select, .form-group textarea {
+  color-scheme: light; color: #171717; background: #fff; border-color: #767676;
+}
+.form-group :is(input,textarea)::placeholder { color: #666; opacity: 1; }
+body[data-brand-theme] :is(a,button,input,select,textarea,summary,[tabindex]):focus-visible {
+  outline: 2px solid currentColor !important; outline-offset: 4px;
+}
+body[data-brand-theme] :is(input,select,textarea):focus-visible { outline-offset: 2px; }
+/* Existing dark event/artist/archive pages use the same white accent. */
+.artists-page, .artist-detail-page, .event-page, .live-archive-page {
+  background: #0b0b0b; color: #f5f5f5; color-scheme: dark;
+}
+.artist-photo-placeholder { background: #181818; color: #b3b3b3; }
+.artist-photo-placeholder .initials, .artist-photo-placeholder .instrument-icon,
+.artist-profile.is-empty, .artists-empty, .artist-card-en, .artist-card-count,
+.artist-detail-name-en, .artist-back, .artist-filter, .archive-filter,
+.archive-card-meta, .archive-no-results, .archive-empty-state,
+.artists-hero-subtitle, .artists-hero-desc, .artists-preview-subtitle,
+.artists-count, .artists-no-results { color: #b3b3b3; }
+.artist-filter.active, .archive-filter.active { color: #fff; border-bottom-color: #fff; }
+.artist-search, .artist-search-input, .archive-search { border-color: #858585; color: #f5f5f5; }
+.artist-search::placeholder, .artist-search-input::placeholder, .archive-search::placeholder { color: #b3b3b3; opacity: 1; }
+.event-meta { color: #b3b3b3; }
+.event-action { background: #f5f5f5; color: #171717; border-color: #f5f5f5; }
+.event-action:hover { background: #d6d6d6; color: #171717; border-color: #d6d6d6; }
+/* English and Traditional Chinese keep their own layout and functional code. */
+body.inbound-page { background: #0b0b0b; color: #f5f5f5; color-scheme: dark; }
+.inbound-page .card, .inbound-page .arrival-step { background: #181818; border-color: #454545; }
+.inbound-page .btn.primary { background: #f5f5f5; color: #171717; border-color: #f5f5f5; }
+.inbound-page .btn.primary:hover { background: #d6d6d6; color: #171717; }
+.inbound-page .btn:not(.primary):hover { background: #272727; color: #fff; }
+.inbound-page .english-reservation :is(input,select,textarea) { border-color: #858585; }
+.inbound-page .english-reservation :is(input,textarea)::placeholder { color: #b3b3b3; opacity: 1; }
+/* No page-wide grayscale filter: retain performer photographs and flyer colours. */
+@media (max-width:1100px) {
+  .main-nav { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .main-nav .menu-toggle { display: block; }
+  .main-nav .nav-links { position: fixed; top: var(--header-height,80px); right: -110%; width: 100%; height: calc(100vh - var(--header-height,80px)); background: #0b0b0b; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; z-index: 999; }
+  .main-nav .nav-links.active { right: 0; }
+  .main-nav .nav-links a { font-size: 1.1rem; }
+  .main-nav .nav-right { gap: .7rem; }
+  .main-nav .language-link { margin-right: 0; }
+}
+@media (max-width:480px) {
+  .brand-nav-logo { width: 78px; }
+  .main-nav .nav-right { gap: .45rem; }
+  .main-nav .language-link { font-size: .73rem; }
+  .inbound-brand .brand-nav-logo { width: 78px; }
+  .operating-day .lineup-body, .operating-day .lineup-info { min-width: 0; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .ticker-content { animation: none; padding-left: 1rem; }
+}

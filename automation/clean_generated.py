@@ -1,5 +1,6 @@
 from pathlib import Path
 import re
+from apply_brand_theme import main as apply_brand_theme
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -18,3 +19,5 @@ def clean_navigation(path: Path) -> None:
 
 for filename in ("index.html", "schedule.html", "archive.html"):
     clean_navigation(ROOT / filename)
+
+apply_brand_theme(ROOT)

@@ -7,6 +7,8 @@ on:
       - 'data/artists.json'
       - 'data/operations.json'
       - 'assets/flyers/**'
+      - 'assets/brand/**'
+      - 'brand-monochrome.css'
       - 'artists/**'
       - 'archive/**'
       - 'artists.css'
@@ -19,6 +21,7 @@ on:
       - 'reservations.js'
       - 'script.js'
       - 'en/**'
+      - 'zh-tw/**'
       - 'tests/**'
       - 'automation/event_utils.py'
       - 'automation/render_events.py'
@@ -27,6 +30,7 @@ on:
       - 'automation/render_event_pages.py'
       - 'automation/render_archive.py'
       - 'automation/clean_generated.py'
+      - 'automation/apply_brand_theme.py'
       - 'automation/event.schema.json'
       - 'automation/artist.schema.json'
       - '.github/workflows/event-pipeline.yml'
@@ -37,6 +41,8 @@ on:
       - 'data/artists.json'
       - 'data/operations.json'
       - 'assets/flyers/**'
+      - 'assets/brand/**'
+      - 'brand-monochrome.css'
       - 'artists.css'
       - 'artists.js'
       - 'archive.css'
@@ -47,6 +53,7 @@ on:
       - 'reservations.js'
       - 'script.js'
       - 'en/**'
+      - 'zh-tw/**'
       - 'tests/**'
       - 'automation/event_utils.py'
       - 'automation/render_events.py'
@@ -55,6 +62,7 @@ on:
       - 'automation/render_event_pages.py'
       - 'automation/render_archive.py'
       - 'automation/clean_generated.py'
+      - 'automation/apply_brand_theme.py'
       - 'automation/event.schema.json'
       - 'automation/artist.schema.json'
       - '.github/workflows/event-pipeline.yml'
@@ -69,6 +77,7 @@ permissions:
 jobs:
   render:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -99,18 +108,34 @@ jobs:
       - name: Validate reservation options against event data
         run: python -m unittest discover -s tests -p "test_*.py"
 
+      - name: Verify monochrome desktop and mobile
+        if: github.event_name == 'pull_request'
+        run: |
+          npm install --prefix "$RUNNER_TEMP/dolphin-brand-qa" --no-package-lock playwright@1.56.1
+          "$RUNNER_TEMP/dolphin-brand-qa/node_modules/.bin/playwright" install --with-deps chromium
+          NODE_PATH="$RUNNER_TEMP/dolphin-brand-qa/node_modules" node tests/brand_theme_browser.cjs
+
+      - name: Save monochrome verification previews
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dolphin-monochrome-previews
+          path: ${{ runner.temp }}/dolphin-theme-previews
+          retention-days: 7
+          if-no-files-found: ignore
+
       - name: Validate rendered diff
         run: git diff --check
 
       - name: Commit generated views
         if: github.event_name != 'pull_request'
         run: |
-          if git diff --quiet -- index.html schedule.html archive.html archive artists events; then
+          if git diff --quiet -- '*.html'; then
             echo "No generated view changes."
             exit 0
           fi
           git config user.name "dolphin-content-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add index.html schedule.html archive.html archive artists events
+          git add -- '*.html'
           git commit -m "chore: render DOLPHIN schedule and live archive"
           git push
