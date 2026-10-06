@@ -5175,6 +5175,47 @@
         "instagram": "",
         "external_links": []
       }
+    },
+    {
+      "id": "2026-11-28_balloon-vine-trio",
+      "date": "2026-11-28",
+      "title": "Balloon vine Trio",
+      "event_type": "live_session",
+      "importance": "normal",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000",
+      "performers": [
+        {
+          "instrument": "Piano",
+          "name": "宇野秀哉"
+        },
+        {
+          "instrument": "Bass",
+          "name": "帆苅拓哉"
+        },
+        {
+          "instrument": "Drums",
+          "name": "横山隼斗"
+        }
+      ],
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "github_path": "",
+        "source": null,
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
     }
   ]
 }
