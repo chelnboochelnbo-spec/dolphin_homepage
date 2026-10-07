@@ -3870,6 +3870,40 @@
       "legacy_imported": true
     },
     {
+      "id": "2026-11-06_contemporary-jazz-listening",
+      "date": "2026-11-06",
+      "title": "現代ジャズを聴く会",
+      "event_type": "session",
+      "importance": "normal",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥500",
+      "performers": [],
+      "description": "レコードやCDを持ち寄って現代ジャズを聴きながら、気軽に話すリスニング／交流会です。演奏ライブではありません。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "github_path": "",
+        "source": null,
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "display": {
+        "badge": "リスニング／交流会",
+        "subtitle": "演奏ライブではありません",
+        "intro": "レコードやCDを持ち寄って現代ジャズを聴きながら、気軽に話すリスニング／交流会です。演奏ライブではありません。"
+      }
+    },
+    {
       "id": "2026-11-07_legacy-36889e2bc9",
       "date": "2026-11-07",
       "title": "Saturday Jam Session 1",
@@ -4159,6 +4193,43 @@
       }
     },
     {
+      "id": "2026-11-22_big-apple-after-session",
+      "date": "2026-11-22",
+      "title": "BIG APPLE AFTER SESSION",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも"
+        }
+      ],
+      "description": "ホスト：櫻井祐二（ギター）／中山とも（ベース）",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "owner_supplied",
+        "github_path": "assets/flyers/flyer_20261122_big-apple-after-session.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
       "id": "2026-11-26_legacy-b780fe732c",
       "date": "2026-11-26",
       "title": "Kiraku Jam",
@@ -4196,6 +4267,47 @@
         "external_links": []
       },
       "legacy_imported": true
+    },
+    {
+      "id": "2026-11-28_balloon-vine-trio",
+      "date": "2026-11-28",
+      "title": "Balloon vine Trio",
+      "event_type": "live_session",
+      "importance": "normal",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000",
+      "performers": [
+        {
+          "instrument": "Piano",
+          "name": "宇野秀哉"
+        },
+        {
+          "instrument": "Bass",
+          "name": "帆苅拓哉"
+        },
+        {
+          "instrument": "Drums",
+          "name": "横山隼斗"
+        }
+      ],
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "github_path": "assets/flyers/flyer_20261128_balloon-vine-trio.png",
+        "source": null,
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
     },
     {
       "id": "2026-12-03_legacy-29f4da2759",
@@ -4429,6 +4541,98 @@
       "legacy_imported": true
     },
     {
+      "id": "2026-12-26_nakayama-takumi-2days-live-session",
+      "date": "2026-12-26",
+      "title": "中山拓海2DAYS Live&Session",
+      "event_type": "live_session",
+      "importance": "normal",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥4,000",
+      "performers": [],
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "github_path": "",
+        "source": null,
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2026-12-27_nakayama-takumi-2days-workshop",
+      "date": "2026-12-27",
+      "title": "中山拓海2DAYS WorkShop",
+      "event_type": "session",
+      "importance": "normal",
+      "status": "published",
+      "open": null,
+      "start": "13:00",
+      "charge": "Charge ¥4,000",
+      "performers": [],
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "github_path": "",
+        "source": null,
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2026-12-31_countdown-session",
+      "date": "2026-12-31",
+      "title": "2026→2027 countdown session",
+      "event_type": "session",
+      "status": "published",
+      "open": null,
+      "start": null,
+      "charge": "Charge ¥2,500",
+      "performers": [],
+      "description": "開始時刻未定 / Start time to be announced.",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "display": {
+        "detail_lines": [
+          {
+            "icon": "clock",
+            "text": "開始時刻未定 / Start time to be announced."
+          }
+        ]
+      }
+    },
+    {
       "id": "2027-01-02_saturday-jam-session-1",
       "date": "2027-01-02",
       "title": "Saturday Jam Session 1",
@@ -4445,6 +4649,45 @@
         "status": "missing",
         "source": null,
         "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-01-07_open-groove-night-jam-session",
+      "date": "2027-01-07",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:00",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
+      "performers": [
+        {
+          "instrument": "gt",
+          "name": "masahide haneda",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "ba",
+          "name": "tomo nakayama",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270107_open-groove-night.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4603,6 +4846,45 @@
         "status": "ready",
         "source": "owner_approved_template",
         "github_path": "assets/flyers/flyer_20270128_kiraku-jam.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-04_open-groove-night-jam-session",
+      "date": "2027-02-04",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:00",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
+      "performers": [
+        {
+          "instrument": "gt",
+          "name": "masahide haneda",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "ba",
+          "name": "tomo nakayama",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270204_open-groove-night.png",
         "canva_design_id": null
       },
       "archive": {
@@ -4801,6 +5083,45 @@
       }
     },
     {
+      "id": "2027-03-04_open-groove-night-jam-session",
+      "date": "2027-03-04",
+      "title": "Open Groove Night Jam Session",
+      "event_type": "session",
+      "status": "published",
+      "open": "19:00",
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
+      "performers": [
+        {
+          "instrument": "gt",
+          "name": "masahide haneda",
+          "artist_id": "masahide-haneda"
+        },
+        {
+          "instrument": "ba",
+          "name": "tomo nakayama",
+          "artist_id": "tomo-nakayama"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "owner_approved_template",
+        "github_path": "assets/flyers/flyer_20270304_open-groove-night.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
       "id": "2027-03-06_saturday-jam-session-1",
       "date": "2027-03-06",
       "title": "Saturday Jam Session 1",
@@ -4975,293 +5296,6 @@
         "status": "ready",
         "source": "owner_approved_template",
         "github_path": "assets/flyers/flyer_20270325_kiraku-jam.png",
-        "canva_design_id": null
-      },
-      "archive": {
-        "gallery": [],
-        "setlist": [],
-        "comment": "",
-        "youtube": "",
-        "instagram": "",
-        "external_links": []
-      }
-    },
-    {
-      "id": "2027-01-07_open-groove-night-jam-session",
-      "date": "2027-01-07",
-      "title": "Open Groove Night Jam Session",
-      "event_type": "session",
-      "status": "published",
-      "open": "19:00",
-      "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
-      "performers": [
-        {
-          "instrument": "gt",
-          "name": "masahide haneda",
-          "artist_id": "masahide-haneda"
-        },
-        {
-          "instrument": "ba",
-          "name": "tomo nakayama",
-          "artist_id": "tomo-nakayama"
-        }
-      ],
-      "description": "",
-      "reservation_url": "index.html#reservation",
-      "flyer": {
-        "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270107_open-groove-night.png",
-        "canva_design_id": null
-      },
-      "archive": {
-        "gallery": [],
-        "setlist": [],
-        "comment": "",
-        "youtube": "",
-        "instagram": "",
-        "external_links": []
-      }
-    },
-    {
-      "id": "2027-02-04_open-groove-night-jam-session",
-      "date": "2027-02-04",
-      "title": "Open Groove Night Jam Session",
-      "event_type": "session",
-      "status": "published",
-      "open": "19:00",
-      "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
-      "performers": [
-        {
-          "instrument": "gt",
-          "name": "masahide haneda",
-          "artist_id": "masahide-haneda"
-        },
-        {
-          "instrument": "ba",
-          "name": "tomo nakayama",
-          "artist_id": "tomo-nakayama"
-        }
-      ],
-      "description": "",
-      "reservation_url": "index.html#reservation",
-      "flyer": {
-        "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270204_open-groove-night.png",
-        "canva_design_id": null
-      },
-      "archive": {
-        "gallery": [],
-        "setlist": [],
-        "comment": "",
-        "youtube": "",
-        "instagram": "",
-        "external_links": []
-      }
-    },
-    {
-      "id": "2027-03-04_open-groove-night-jam-session",
-      "date": "2027-03-04",
-      "title": "Open Groove Night Jam Session",
-      "event_type": "session",
-      "status": "published",
-      "open": "19:00",
-      "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000",
-      "performers": [
-        {
-          "instrument": "gt",
-          "name": "masahide haneda",
-          "artist_id": "masahide-haneda"
-        },
-        {
-          "instrument": "ba",
-          "name": "tomo nakayama",
-          "artist_id": "tomo-nakayama"
-        }
-      ],
-      "description": "",
-      "reservation_url": "index.html#reservation",
-      "flyer": {
-        "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270304_open-groove-night.png",
-        "canva_design_id": null
-      },
-      "archive": {
-        "gallery": [],
-        "setlist": [],
-        "comment": "",
-        "youtube": "",
-        "instagram": "",
-        "external_links": []
-      }
-    },
-    {
-      "id": "2026-12-31_countdown-session",
-      "date": "2026-12-31",
-      "title": "2026→2027 countdown session",
-      "event_type": "session",
-      "status": "published",
-      "open": null,
-      "start": null,
-      "charge": "Charge ¥2,500",
-      "performers": [],
-      "description": "開始時刻未定 / Start time to be announced.",
-      "reservation_url": "index.html#reservation",
-      "flyer": {
-        "mode": "human",
-        "status": "missing",
-        "source": null,
-        "github_path": "",
-        "canva_design_id": null
-      },
-      "archive": {
-        "gallery": [],
-        "setlist": [],
-        "comment": "",
-        "youtube": "",
-        "instagram": "",
-        "external_links": []
-      },
-      "display": {
-        "detail_lines": [
-          {
-            "icon": "clock",
-            "text": "開始時刻未定 / Start time to be announced."
-          }
-        ]
-      }
-    },
-    {
-      "id": "2026-11-22_big-apple-after-session",
-      "date": "2026-11-22",
-      "title": "BIG APPLE AFTER SESSION",
-      "event_type": "session",
-      "status": "published",
-      "open": null,
-      "start": "20:00",
-      "charge": "Charge ¥2,000",
-      "performers": [
-        {
-          "instrument": "Gt",
-          "name": "櫻井祐二"
-        },
-        {
-          "instrument": "Ba",
-          "name": "中山とも"
-        }
-      ],
-      "description": "ホスト：櫻井祐二（ギター）／中山とも（ベース）",
-      "reservation_url": "index.html#reservation",
-      "flyer": {
-        "mode": "human",
-        "status": "ready",
-        "source": "owner_supplied",
-        "github_path": "assets/flyers/flyer_20261122_big-apple-after-session.png",
-        "canva_design_id": null
-      },
-      "archive": {
-        "gallery": [],
-        "setlist": [],
-        "comment": "",
-        "youtube": "",
-        "instagram": "",
-        "external_links": []
-      }
-    },
-    {
-      "id": "2026-11-28_balloon-vine-trio",
-      "date": "2026-11-28",
-      "title": "Balloon vine Trio",
-      "event_type": "live_session",
-      "importance": "normal",
-      "status": "published",
-      "open": null,
-      "start": "20:00",
-      "charge": "Charge ¥2,000",
-      "performers": [
-        {
-          "instrument": "Piano",
-          "name": "宇野秀哉"
-        },
-        {
-          "instrument": "Bass",
-          "name": "帆苅拓哉"
-        },
-        {
-          "instrument": "Drums",
-          "name": "横山隼斗"
-        }
-      ],
-      "reservation_url": "index.html#reservation",
-      "flyer": {
-        "mode": "human",
-        "status": "ready",
-        "github_path": "assets/flyers/flyer_20261128_balloon-vine-trio.png",
-        "source": null,
-        "canva_design_id": null
-      },
-      "archive": {
-        "gallery": [],
-        "setlist": [],
-        "comment": "",
-        "youtube": "",
-        "instagram": "",
-        "external_links": []
-      }
-    },
-    {
-      "id": "2026-12-26_nakayama-takumi-2days-live-session",
-      "date": "2026-12-26",
-      "title": "中山拓海2DAYS Live&Session",
-      "event_type": "live_session",
-      "importance": "normal",
-      "status": "published",
-      "open": null,
-      "start": "20:00",
-      "charge": "Charge ¥4,000",
-      "performers": [],
-      "reservation_url": "index.html#reservation",
-      "flyer": {
-        "mode": "human",
-        "status": "missing",
-        "github_path": "",
-        "source": null,
-        "canva_design_id": null
-      },
-      "archive": {
-        "gallery": [],
-        "setlist": [],
-        "comment": "",
-        "youtube": "",
-        "instagram": "",
-        "external_links": []
-      }
-    },
-    {
-      "id": "2026-12-27_nakayama-takumi-2days-workshop",
-      "date": "2026-12-27",
-      "title": "中山拓海2DAYS WorkShop",
-      "event_type": "session",
-      "importance": "normal",
-      "status": "published",
-      "open": null,
-      "start": "13:00",
-      "charge": "Charge ¥4,000",
-      "performers": [],
-      "reservation_url": "index.html#reservation",
-      "flyer": {
-        "mode": "human",
-        "status": "missing",
-        "github_path": "",
-        "source": null,
         "canva_design_id": null
       },
       "archive": {
