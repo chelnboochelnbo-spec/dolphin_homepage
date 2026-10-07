@@ -1,5 +1,5 @@
 (() => {
-  const measurementId = window.DOLPHIN_GA4_ID || '';
+  const measurementId = '';
   if (!/^G-[A-Z0-9]+$/i.test(measurementId)) return;
 
   window.dataLayer = window.dataLayer || [];

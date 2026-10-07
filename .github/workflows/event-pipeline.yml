@@ -31,6 +31,11 @@ on:
       - 'event-runtime.js'
       - 'reservations.js'
       - 'script.js'
+      - 'analytics-*.js'
+      - 'analytics-*.css'
+      - 'analytics-frame.html'
+      - 'inbound-analytics.js'
+      - 'automation/install_analytics.py'
       - 'home-calendar.js'
       - 'home-calendar.css'
       - 'automation/home_calendar.py'
@@ -77,6 +82,11 @@ on:
       - 'event-runtime.js'
       - 'reservations.js'
       - 'script.js'
+      - 'analytics-*.js'
+      - 'analytics-*.css'
+      - 'analytics-frame.html'
+      - 'inbound-analytics.js'
+      - 'automation/install_analytics.py'
       - 'home-calendar.js'
       - 'home-calendar.css'
       - 'automation/home_calendar.py'
@@ -146,6 +156,7 @@ jobs:
           "$RUNNER_TEMP/dolphin-brand-qa/node_modules/.bin/playwright" install --with-deps chromium
           NODE_PATH="$RUNNER_TEMP/dolphin-brand-qa/node_modules" node tests/brand_theme_browser.cjs
           NODE_PATH="$RUNNER_TEMP/dolphin-brand-qa/node_modules" node tests/home_calendar_browser.cjs
+          NODE_PATH="$RUNNER_TEMP/dolphin-brand-qa/node_modules" node tests/analytics_consent_browser.cjs
 
       - name: Save monochrome verification previews
         if: github.event_name == 'pull_request' && always()
