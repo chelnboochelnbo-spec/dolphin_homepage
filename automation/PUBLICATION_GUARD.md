@@ -55,6 +55,12 @@ a fresh owner approval or send/update anything remotely.
 
 ## Offline SNS contract — not production connected
 
+The read-only Metricool reconciliation adapter is documented in
+`METRICOOL_VERIFICATION.md`. It consumes independent GET captures and actual
+downloaded image bytes, coalesces the shared Instagram/Facebook UUID, and
+persists verified existing identities. It emits previews only; the production
+write transport and ordinary approval migration remain gated.
+
 There is no network sender in this repository. External automation and its
 prompt are unchanged. Do not report this CLI as a completed live integration.
 The external adapter must adopt and independently verify the contract.

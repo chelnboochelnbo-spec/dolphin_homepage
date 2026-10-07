@@ -1,4 +1,81 @@
 {
   "schema_version": 2,
-  "records": []
+  "records": [
+    {
+      "event_ids": [
+        "2026-10-22_legacy-a52e331b05"
+      ],
+      "channel": "instagram",
+      "channel_id": "dolphin_kanazawa",
+      "publish_at": "2026-10-08T18:00:00+09:00",
+      "caption": "気楽に集って、その瞬間の音楽を楽しむジャム・セッション。\n\nKiraku Jam\n2026.10.22 Thu.\nStart 20:00\nCharge ¥2,000 + 2Drink Order\n学生 ¥1,000 + 1Drink Order\n\nGt. 櫻井祐二\nBa. 中山とも\n\nご予約\nhttps://www.bardolphin-kanazawa.com/#reservation\n\nJazz & Bar Dolphin\n石川県金沢市片町2-13-11 ミリオンビル4階\n080-3895-0821\n\nLive Schedule\nhttps://www.bardolphin-kanazawa.com/schedule.html\n\n#KirakuJam #JamSession #金沢ジャズ #ジャムセッション #金沢バー #ジャズバー #JazzBarDolphin",
+      "image_path": "flyer_20261008_22.png",
+      "image_sha256": "ba62c83f63e540a795bf94dcd5202ea5b47f147d6d26609ed607e22abf28bb25",
+      "event_fingerprints": {
+        "2026-10-08_legacy-532326f862": "2373c206be8c6122d9e47c4f9c21e12e2cf15d15b609b3b58e76eeb9c4fd9f83",
+        "2026-10-22_legacy-a52e331b05": "996c43af05299daabfc889d6445f28eab93cd2f0342efa6a48c0ff3e18e0ba68"
+      },
+      "key": "0730f147ff418948d95d79c7e6561b503c67a1606e80c5827e3a52248deea020",
+      "package_hash": "623f63b0c61196e259631bb8412eee186308a9117f29316371ac719e73979ffd",
+      "slot_id": "october-22-existing",
+      "days_before": 14,
+      "review_id": "october-kiraku-existing-20261008-22",
+      "evidence_kind": "october_existing_publication",
+      "provider": "metricool",
+      "provider_account_id": "6910064",
+      "provider_uuid": "-5433884878909716328",
+      "external_id": "389093625",
+      "action": "update",
+      "allowed_days_before": [
+        14
+      ],
+      "state": "confirmed",
+      "prepared_at": "2026-10-07T09:39:19.405538+00:00",
+      "integration": "external_adapter_required",
+      "verified_at": "2026-10-07T09:40:07.565Z",
+      "remote_status": "scheduled",
+      "public_url": null
+    },
+    {
+      "event_ids": [
+        "2026-10-22_legacy-a52e331b05"
+      ],
+      "channel": "facebook",
+      "channel_id": "586660311198862",
+      "publish_at": "2026-10-08T18:00:00+09:00",
+      "caption": "気楽に集って、その瞬間の音楽を楽しむジャム・セッション。\n\nKiraku Jam\n2026.10.22 Thu.\nStart 20:00\nCharge ¥2,000 + 2Drink Order\n学生 ¥1,000 + 1Drink Order\n\nGt. 櫻井祐二\nBa. 中山とも\n\nご予約\nhttps://www.bardolphin-kanazawa.com/#reservation\n\nJazz & Bar Dolphin\n石川県金沢市片町2-13-11 ミリオンビル4階\n080-3895-0821\n\nLive Schedule\nhttps://www.bardolphin-kanazawa.com/schedule.html\n\n#KirakuJam #JamSession #金沢ジャズ #ジャムセッション #金沢バー #ジャズバー #JazzBarDolphin",
+      "image_path": "flyer_20261008_22.png",
+      "image_sha256": "ba62c83f63e540a795bf94dcd5202ea5b47f147d6d26609ed607e22abf28bb25",
+      "event_fingerprints": {
+        "2026-10-08_legacy-532326f862": "2373c206be8c6122d9e47c4f9c21e12e2cf15d15b609b3b58e76eeb9c4fd9f83",
+        "2026-10-22_legacy-a52e331b05": "996c43af05299daabfc889d6445f28eab93cd2f0342efa6a48c0ff3e18e0ba68"
+      },
+      "key": "eec1f37abd3567641c9369a5a6f008cb5b3d777d890aee438fa196e290fa50fd",
+      "package_hash": "acda9e591a85a4ac56476b17b765d1aa771cc5f6eaa925ff73f10510a818e5f4",
+      "slot_id": "october-22-existing",
+      "days_before": 14,
+      "review_id": "october-kiraku-existing-20261008-22",
+      "evidence_kind": "october_existing_publication",
+      "provider": "metricool",
+      "provider_account_id": "6910064",
+      "provider_uuid": "-5433884878909716328",
+      "external_id": "389093625",
+      "action": "update",
+      "allowed_days_before": [
+        14
+      ],
+      "state": "confirmed",
+      "prepared_at": "2026-10-07T09:39:19.412791+00:00",
+      "integration": "external_adapter_required",
+      "verified_at": "2026-10-07T09:40:07.565Z",
+      "remote_status": "scheduled",
+      "public_url": null
+    }
+  ],
+  "migration": {
+    "source_main_commit": "071ab91b7e8b5e9c63b8e432e7b14be0dde49c40",
+    "kind": "verified_existing_reservation_read_only",
+    "remote_write_count": 0,
+    "approval_scope": "Preserve the frozen October 22 Kiraku reservation only; no fresh approval inferred"
+  }
 }
