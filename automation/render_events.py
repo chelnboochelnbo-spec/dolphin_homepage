@@ -268,31 +268,6 @@ def ensure_event_assets(html: str) -> str:
     return html
 
 
-def rebuild_home_preview(index_html: str, schedule_html: str) -> str:
-    today = current_jst_date().isoformat()
-    articles = []
-    for match in re.finditer(
-        r'(<article class="lineup-item"[^>]*data-date="(\d{4}-\d{2}-\d{2})"[^>]*>.*?</article>)',
-        schedule_html,
-        re.S,
-    ):
-        article = match.group(1)
-        end_match = re.search(r'data-end-date="(\d{4}-\d{2}-\d{2})"', article)
-        end_date = end_match.group(1) if end_match else match.group(2)
-        if end_date >= today:
-            articles.append((match.group(2), article))
-    articles.sort(key=lambda item: item[0])
-    preview = "\n\n".join(article for _, article in articles[:3])
-
-    pattern = re.compile(
-        r'(<div class="lineup-list" style="margin-bottom: 3rem;">)(.*?)(\n\s*</div>\n\s*<div style="text-align: center;">)',
-        re.S,
-    )
-    if not pattern.search(index_html):
-        raise ValueError("Could not find home lineup preview block")
-    return pattern.sub(lambda match: match.group(1) + "\n\n" + preview + match.group(3), index_html, count=1)
-
-
 def sync_reservation_options(html: str, events: list[dict]) -> str:
     options = ['<option value="" data-month="all">公演を選択してください</option>']
     for event in sorted(events, key=lambda item: (item["date"], item["title"])):
@@ -345,7 +320,9 @@ def main() -> None:
     schedule_html = sync_month_years(schedule_html, events)
 
     index_html = INDEX_FILE.read_text(encoding="utf-8-sig")
-    index_html = rebuild_home_preview(index_html, schedule_html)
+    from home_calendar import rebuild_home_calendar
+    operations = json.loads((ROOT / 'data/operations.json').read_text(encoding='utf-8-sig'))
+    index_html = rebuild_home_calendar(index_html, events, operations, current_jst_date(), ROOT)
     index_html = ensure_event_assets(index_html)
     index_html = sync_reservation_options(index_html, events)
 

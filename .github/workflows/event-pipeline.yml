@@ -31,6 +31,9 @@ on:
       - 'event-runtime.js'
       - 'reservations.js'
       - 'script.js'
+      - 'home-calendar.js'
+      - 'home-calendar.css'
+      - 'automation/home_calendar.py'
       - 'en/**'
       - 'zh-tw/**'
       - 'tests/**'
@@ -74,6 +77,9 @@ on:
       - 'event-runtime.js'
       - 'reservations.js'
       - 'script.js'
+      - 'home-calendar.js'
+      - 'home-calendar.css'
+      - 'automation/home_calendar.py'
       - 'en/**'
       - 'zh-tw/**'
       - 'tests/**'
@@ -139,13 +145,16 @@ jobs:
           npm install --prefix "$RUNNER_TEMP/dolphin-brand-qa" --no-package-lock playwright@1.56.1
           "$RUNNER_TEMP/dolphin-brand-qa/node_modules/.bin/playwright" install --with-deps chromium
           NODE_PATH="$RUNNER_TEMP/dolphin-brand-qa/node_modules" node tests/brand_theme_browser.cjs
+          NODE_PATH="$RUNNER_TEMP/dolphin-brand-qa/node_modules" node tests/home_calendar_browser.cjs
 
       - name: Save monochrome verification previews
         if: github.event_name == 'pull_request' && always()
         uses: actions/upload-artifact@v4
         with:
           name: dolphin-monochrome-previews
-          path: ${{ runner.temp }}/dolphin-theme-previews
+          path: |
+            ${{ runner.temp }}/dolphin-theme-previews
+            ${{ runner.temp }}/dolphin-calendar-previews
           retention-days: 7
           if-no-files-found: ignore
 
