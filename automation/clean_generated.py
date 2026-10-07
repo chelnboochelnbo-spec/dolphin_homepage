@@ -21,3 +21,5 @@ for filename in ("index.html", "schedule.html", "archive.html"):
     clean_navigation(ROOT / filename)
 
 apply_brand_theme(ROOT)
+from install_analytics import main as install_analytics
+install_analytics(ROOT)
