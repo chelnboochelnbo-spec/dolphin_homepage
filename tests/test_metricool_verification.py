@@ -133,6 +133,22 @@ class MetricoolVerification(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'Duplicate'):
             adapter.prepare_batch(self.root,self.state,[self.request,self.request],self.snapshot)
 
+    def test_duplicate_reservation_on_another_uuid_is_not_adopted(self):
+        other=copy.deepcopy(self.capture['posts'][0])
+        other.update(uuid='SECOND-UUID',id=789)
+        self.capture['posts'].append(other)
+        state,result=self.run_capture()
+        self.assertEqual([],state['records']); self.assertTrue(result['holds'])
+
+    def test_missing_actual_bytes_and_unsupported_settings_hold(self):
+        original=copy.deepcopy(self.capture)
+        for change in [lambda c:c['media'][0].update(local_path=str(self.root/'absent.png')),
+                       lambda c:c['posts'][0].update(autoPublish=False),
+                       lambda c:c['posts'][0].update(firstCommentText='EXISTING COMMENT')]:
+            self.capture=copy.deepcopy(original);change(self.capture)
+            state,result=self.run_capture()
+            self.assertEqual([],state['records']);self.assertTrue(result['holds'])
+
 
 if __name__=='__main__':
     unittest.main()
