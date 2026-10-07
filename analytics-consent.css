@@ -1,0 +1,9 @@
+#analytics-consent{position:fixed;bottom:3.7rem;right:1rem;left:1rem;margin:auto;max-width:660px;padding:1.2rem;background:#fff;color:#171717;border:2px solid #171717;box-shadow:0 4px 25px #0003;z-index:10000;font:14px/1.6 sans-serif;max-height:75vh;overflow:auto}
+#analytics-consent[hidden]{display:none!important}
+#analytics-consent h2{font-size:18px;margin:0 0 .6rem;color:#171717}
+#analytics-consent p{margin:0 0 1rem}
+#analytics-consent button,#analytics-settings{background:#fff;color:#171717;border:1px solid #171717;padding:.65rem .8rem;font:inherit;cursor:pointer;min-height:44px}
+#analytics-consent button{margin:0 .6rem .6rem 0}
+#analytics-consent a{color:#171717;text-decoration:underline;display:block}
+#analytics-settings{position:fixed;bottom:.5rem;right:.5rem;z-index:9999;font:12px sans-serif}
+#analytics-consent :focus-visible,#analytics-settings:focus-visible{outline:3px solid #555;outline-offset:3px}
