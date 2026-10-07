@@ -3870,6 +3870,40 @@
       "legacy_imported": true
     },
     {
+      "id": "2026-11-06_contemporary-jazz-listening",
+      "date": "2026-11-06",
+      "title": "現代ジャズを聴く会",
+      "event_type": "session",
+      "importance": "normal",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥500",
+      "performers": [],
+      "description": "レコードやCDを持ち寄り、現代ジャズとは何か、若い世代への広がりなどについて、実際に音楽を聴きながら気軽に語り合うリスニング・交流会。演奏ライブではありません。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "github_path": "",
+        "source": null,
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "display": {
+        "badge": "リスニング／交流会",
+        "subtitle": "演奏ライブではありません",
+        "intro": "レコードやCDを持ち寄り、現代ジャズとは何か、若い世代への広がりなどについて、実際に音楽を聴きながら気軽に語り合うリスニング・交流会。演奏ライブではありません。"
+      }
+    },
+    {
       "id": "2026-11-07_legacy-36889e2bc9",
       "date": "2026-11-07",
       "title": "Saturday Jam Session 1",
