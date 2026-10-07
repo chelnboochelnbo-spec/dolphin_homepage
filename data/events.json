@@ -5216,6 +5216,62 @@
         "instagram": "",
         "external_links": []
       }
+    },
+    {
+      "id": "2026-12-26_nakayama-takumi-2days-live-session",
+      "date": "2026-12-26",
+      "title": "中山拓海2DAYS Live&Session",
+      "event_type": "live_session",
+      "importance": "normal",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥4,000",
+      "performers": [],
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "github_path": "",
+        "source": null,
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2026-12-27_nakayama-takumi-2days-workshop",
+      "date": "2026-12-27",
+      "title": "中山拓海2DAYS WorkShop",
+      "event_type": "session",
+      "importance": "normal",
+      "status": "published",
+      "open": null,
+      "start": "13:00",
+      "charge": "Charge ¥4,000",
+      "performers": [],
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "github_path": "",
+        "source": null,
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
     }
   ]
 }
