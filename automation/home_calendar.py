@@ -5,7 +5,7 @@ from datetime import date, timedelta
 from html import escape
 
 from publication_guard import event_publishable
-from render_operating_schedule import validate_operations
+from render_operating_schedule import validate_operations, regular_closure
 
 
 def month_shift(day, offset):
@@ -45,9 +45,11 @@ def render_calendar(events, operations, today, root):
                 iso = day.isoformat()
                 state = overrides.get(iso, {}).get('state')
                 matches = [e for e in visible if e['date'] <= iso <= (e.get('end_date') or e['date'])]
+                if not state and not matches and regular_closure(day, operations):
+                    state = 'closed'
                 if state in {'closed', 'private'}:
                     content = '<span class="calendar-state">' + ('休業' if state == 'closed' else '貸切営業') + '</span>'
-                    note = overrides[iso].get('note')
+                    note = overrides.get(iso, {}).get('note')
                     if note:
                         content += '<small>' + escape(note) + '</small>'
                 elif matches:

@@ -59,6 +59,27 @@ function formatTonightDate(dateString) {
     }).format(date);
 }
 
+function isRegularClosure(day, operations) {
+    if (operations.closed_policy !== 'sunday_holiday_end') return false;
+    const rule = operations.closure_rule;
+    if (day < rule.effective_from) return false;
+    const calendar = rule.holiday_calendar;
+    if (day < calendar.valid_from || day > calendar.valid_through) {
+        throw new Error('Verified Japanese holiday calendar needs updating');
+    }
+    const holidays = new Set(calendar.dates);
+    const closure = new Date(day + 'T12:00:00Z');
+    closure.setUTCDate(closure.getUTCDate() - closure.getUTCDay());
+    const iso = value => value.toISOString().slice(0, 10);
+    while (true) {
+        const next = new Date(closure);
+        next.setUTCDate(next.getUTCDate() + 1);
+        if (!holidays.has(iso(next))) break;
+        closure.setTime(next.getTime());
+    }
+    return iso(closure) === day;
+}
+
 async function initTonight() {
     const card = document.getElementById('tonight-card');
     if (!card) return;
@@ -84,11 +105,14 @@ async function initTonight() {
 
         const operations = await operationsResponse.json();
         const eventData = await eventsResponse.json();
-        const override = operations.overrides?.[today] || null;
+        let override = operations.overrides?.[today] || null;
         const event = (eventData.events || []).find(item => {
             const end = item.end_date || item.date;
-            return ['ready', 'published'].includes(item.status) && item.date <= today && end >= today;
+            return ['ready', 'published'].includes(item.status) && !item.cancelled && !item.cancellation && item.date <= today && end >= today;
         });
+        if (!override && !event && isRegularClosure(today, operations)) {
+            override = { state: 'closed' };
+        }
 
         if (override?.state === 'closed' || override?.state === 'private') {
             const isClosed = override.state === 'closed';
