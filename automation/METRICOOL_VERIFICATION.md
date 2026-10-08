@@ -1,81 +1,66 @@
-# Read-only Metricool verification adapter
+# Read-only Metricool verification
 
-This draft connects Metricool GET results and downloaded media bytes to
-`publication_guard` and `social_package`. It does not call create/update tools,
-change automation prompts, or authorize new captions. A wire request is a
-reviewable preview only. Changed remote content fails closed; it is not repaired.
+The adapter checks a fresh independent provider read and actual media bytes
+against current public event facts, visual reviews and private approval metadata.
+It does not call a sender or change an automation. Both intended destinations
+must match before their persistent state is updated together.
 
-Use one explicitly initialized persistent version-2 state file. Do not recreate
-it between runs. The CLI serializes local writes and replaces state atomically.
-The repository's initial migration contains only the two independently checked
-destinations of the retained October 22 Kiraku reservation.
+## Public and private boundary
 
-## Workflow
+Public code contains validators, schemas and synthetic tests. Public event facts
+and image bytes remain pinned to the latest main commit. Real captions, approval
+references, conversation text, account mappings, provider IDs, captures, state,
+plans and readback proofs belong outside every public checkout and deployment.
+Do not paste these values into PR descriptions, comments, CI logs or artifacts.
 
-1. Fetch `origin/main`, then prepare against files whose bytes match that latest
-   remote main. The adapter checks remote main before and after reconciliation.
-2. Run `prepare` with a request list and persistent state.
-3. Read brand settings and scheduled posts through the authorized connector.
-   Read after preparation; include the entire relevant scheduling window so
-   duplicate detection can work. Capture freshness is limited to five minutes.
-4. Download each returned media URL, retain the actual local bytes, and build the
-   capture below. Do not use claimed hashes in place of a download.
-5. Run `reconcile`. Both Instagram and Facebook must match before either state
-   record is committed. Re-prepare to observe `noop`.
+Both CLIs require an explicit external state path. The adapter additionally
+requires external request/plan, capture and output paths. Approval metadata is
+loaded only with `--approvals`; there is no repository-relative fallback. The
+legacy reservation exception requires `--october-reservations` outside the repo.
+Symlinks resolving inside the checkout are rejected. Downloaded capture media
+must also be external. Private input hashes are checked before and after each
+operation and belong only in private output proofs. Console output is counts.
 
 ```sh
-python automation/metricool_verification.py prepare --state /persistent/social.json --input requests.json --output plan.json
-python automation/metricool_verification.py reconcile --state /persistent/social.json --input plan.json --capture capture.json --output proof.json
+python automation/metricool_verification.py prepare --state /private/state.json --approvals /private/approvals.json --input /private/requests.json --output /private/plan.json
+python automation/metricool_verification.py reconcile --state /private/state.json --approvals /private/approvals.json --input /private/plan.json --capture /private/capture.json --output /private/proof.json
 ```
 
-Request shape:
+The operator must initialize a persistent schema-version-2 state file once.
+Do not substitute an empty state on subsequent runs. A lock and atomic local
+replace protect one writer; they do not coordinate multiple machines.
+
+Request schema (synthetic placeholders):
 
 ```json
-{"requests":[{"event_id":"2026-10-22_legacy-a52e331b05","days_before":14,"slot_id":"october-22-existing","brand_id":"6910064","accounts":{"instagram":"dolphin_kanazawa","facebook":"586660311198862"}}]}
+{"requests":[{"event_id":"TEST-EVENT","days_before":14,"brand_id":"TEST-BRAND","accounts":{"instagram":"TEST-IG","facebook":"TEST-FB"}}]}
 ```
 
-Capture shape (values come from the actual independent reads):
+Captures contain `fetched_at`, `brand_id`, returned `brands`, returned `posts`,
+and `media` entries with exact URL, local downloaded path and fetch timestamp.
+Capture after preparation and include the full relevant scheduling window.
+Freshness is limited to five minutes. Captures are trusted operator input, not
+cryptographically authenticated API receipts. Never collect cookie values or
+authorization headers for this workflow.
 
-```json
-{"fetched_at":"ISO timestamp after prepare","brand_id":"resolved brand ID","brands":["brand objects from getBrandSettings"],"posts":["all post objects from getScheduledPosts for the relevant window"],"media":[{"url":"exact post media URL","local_path":"absolute downloaded file path","fetched_at":"ISO timestamp after GET"}]}
-```
+Approval records bind event fingerprint, image path/SHA, review ID, exact caption
+SHA, approver, recording time, actual source references and existing identities.
+Standing approval is an explicit instruction source, not scheduler existence.
+Canonical public facts are not modified; social metadata is applied in memory.
+Changed facts, image bytes, caption or identity fail closed for that event.
 
-The adapter reads IDs, destinations, caption, publication time and image hash
-from the provider capture. Event IDs are a local binding proved by the approved
-caption/image/fact package; Metricool itself does not return event IDs. Captures
-are trusted operator inputs, not cryptographically authenticated responses.
+One shared UUID produces one allowlisted preview with both destinations and the
+current numeric ID. It never echoes provider GET defaults such as `twitterData`.
+The preview is not sent. After independent matching readback, re-preparation is
+`noop`; missing or conflicting identities never trigger blind recreation.
 
-Each shared UUID yields one allowlisted preview, retaining both destinations
-and the current numeric ID. It never echoes `twitterData`, creator fields,
-status fields or other GET defaults. Unsupported formats or additional settings
-hold the group. Missing facts/approval hold only the affected event.
+## Remaining production gates
 
-## Approval migration and remaining rollout gates
+Production transport, a fresh pre-action read, one coalesced write, independent
+post-action readback, recovery of ambiguous results, and owner notification are
+not connected. Keep live automation unchanged until these pass separate review.
+Public CI uses synthetic SNS data only; real-account dry runs stay local.
 
-Ordinary captions require the existing caption SHA, review ID, approver and
-timestamp plus `source_reference` pointing to a real approval message/document.
-No ordinary approval was invented or migrated: the parent has been asked for
-one actual approved 14-day case. Synthetic tests exercise this path separately.
-The October exception retains its narrow recorded preservation permission.
-
-New reservations are prepared but cannot be adopted or sent by this adapter.
-They require reviewed remote discovery and a trusted identity migration. Remote
-updates and their post-write verification still need a production transport;
-do not claim that this draft automates posting. Before enabling one, wire fresh
-pre-action reads, one coalesced update and independent post-action readback of
-both destinations and actual bytes, retaining pending state across failures.
-Do not change automation prompts until a real ordinary approval case and these
-transport gates pass. January 2 cancellation and January 16 announcement remain
-separate event identities; no automation task was modified.
-
-## Observed read-only run, 2026-10-07
-
-- Source main: `071ab91b7e8b5e9c63b8e432e7b14be0dde49c40`.
-- Brand `6910064`, numeric ID `389093625`, UUID `-5433884878909716328`.
-- Scheduled October 8, 18:00 Asia/Tokyo; Instagram + Facebook.
-- Actual media: 930198 bytes, SHA256
-  `ba62c83f63e540a795bf94dcd5202ea5b47f147d6d26609ed607e22abf28bb25`.
-- Both destinations verified; one shared preview; subsequent prepare returned
-  `noop` for both; remote write count zero.
-- Ordinary 14-day synthetic case passes. Actual ordinary case remains held
-  until the real caption approval source is supplied.
+Previously tracked operational data and documentation still exist in public
+history. Ignore rules do not remove tracked data or history. Cleanup requires a
+separately reviewed action; this local code change does not perform it.

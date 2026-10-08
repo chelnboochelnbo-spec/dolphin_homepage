@@ -8,6 +8,7 @@ from datetime import date, datetime, time, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 from publication_guard import ROOT, assess, aware_timestamp, fingerprint, migration_decision, read_json, strict_website_scope
+from social_approval_migration import approved_events, apply_approval, external_path
 
 
 def digest(value):
@@ -24,8 +25,10 @@ def lead_days(event, config):
     return publishing[key]
 
 
-def october_post(root, review_id, channel, channel_id, slot_id):
-    records = read_json(root / "data/october_kiraku_migration.json", {"records": []})["records"]
+def october_post(root, review_id, channel, channel_id, slot_id, october_path=None):
+    if october_path is None or not Path(october_path).is_file():
+        raise ValueError("Explicit private October reservation file required")
+    records = read_json(external_path(root, october_path), {})["records"]
     matches = [p for r in records if r["record_id"] == review_id for p in r.get("existing_posts", [])
                if p.get("channel") == channel and p.get("channel_id") == channel_id and p.get("slot_id") == slot_id]
     if len(matches) != 1:
@@ -33,13 +36,14 @@ def october_post(root, review_id, channel, channel_id, slot_id):
     return matches[0]
 
 
-def content(event_id, channel, channel_id, days, root=ROOT, slot_id=None):
+def content(event_id, channel, channel_id, days, root=ROOT, slot_id=None, *, approvals_path=None, october_path=None):
     """Check facts/bytes/approval only, independently of trusted identity."""
     if channel not in {"instagram", "facebook"} or not channel_id.strip():
         raise ValueError("Resolved channel and channel ID required")
-    events = read_json(root / "data/events.json", {"events": []})["events"]
+    events = approved_events(root, approvals_path)
     by_id = {e["id"]: e for e in events}
     event = by_id[event_id]
+    apply_approval(event, root)
     review = assess(event, root, events=events)
     if not review.allowed:
         review = migration_decision(event, root, october=True)
@@ -49,12 +53,15 @@ def content(event_id, channel, channel_id, days, root=ROOT, slot_id=None):
     if days not in lead_days(event, config):
         raise ValueError("Unapproved lead time for this series")
     targets = list(review.targets)
+    for target_id in targets:
+        if target_id != event_id:
+            apply_approval(by_id[target_id], root)
     fact_targets = list(targets)
     anchor = min(date.fromisoformat(by_id[i]["date"]) for i in targets)
     publish_at = datetime.combine(anchor-timedelta(days=days), time.fromisoformat(config["publishing"]["post_time"]),
                                   ZoneInfo(config["timezone"])).isoformat()
     if review.evidence_kind == "october_existing_publication":
-        existing = october_post(root, review.review_id, channel, channel_id, slot_id)
+        existing = october_post(root, review.review_id, channel, channel_id, slot_id, october_path)
         if (event_id not in existing["event_ids"] or days != existing["days_before"]
                 or not set(existing["event_ids"]).issubset(targets)
                 or existing["image_sha256"] != review.sha256
@@ -117,10 +124,12 @@ def collision_check(package, records):
             raise ValueError("Duplicate media for channel/account/target or time")
 
 
-def october_identity_allowed(package, root):
+def october_identity_allowed(package, root, october_path=None):
     if package["evidence_kind"] != "october_existing_publication":
         return
-    records = read_json(root / "data/october_kiraku_migration.json", {"records": []})["records"]
+    if october_path is None or not Path(october_path).is_file():
+        raise ValueError("Explicit private October reservation file required")
+    records = read_json(external_path(root, october_path), {})["records"]
     record = next(r for r in records if r["record_id"] == package["review_id"])
     if not any(p.get("channel") == package["channel"] and p.get("channel_id") == package["channel_id"]
                and p.get("provider_account_id") == package.get("provider_account_id")
@@ -129,8 +138,8 @@ def october_identity_allowed(package, root):
 
 
 def prepare(event_id, channel, channel_id, days, state, root=ROOT, slot_id=None,
-            *, provider=None, provider_account_id=None):
-    package, events = content(event_id, channel, channel_id, days, root, slot_id)
+            *, provider=None, provider_account_id=None, approvals_path=None, october_path=None):
+    package, events = content(event_id, channel, channel_id, days, root, slot_id, approvals_path=approvals_path, october_path=october_path)
     records = state.get("records", [])
     matches = [r for r in records if r["key"] == package["key"]]
     if len(matches) > 1:
@@ -149,7 +158,7 @@ def prepare(event_id, channel, channel_id, days, state, root=ROOT, slot_id=None,
         raise ValueError("Reminder cadence migration needs an explicit slot mapping")
     identity = dict(previous or {})
     if package["evidence_kind"] == "october_existing_publication" and not identity:
-        identity = dict(october_post(root, package["review_id"], channel, channel_id, package["slot_id"]))
+        identity = dict(october_post(root, package["review_id"], channel, channel_id, package["slot_id"], october_path))
     for slot in slots:
         trusted = previous and same_remote(previous, slot) and previous.get("channel_id") == channel_id
         if slot.get("channel_id") != channel_id and not trusted:
@@ -180,7 +189,7 @@ def prepare(event_id, channel, channel_id, days, state, root=ROOT, slot_id=None,
     package.update(provider=provider, provider_account_id=provider_account_id, provider_uuid=uuid, external_id=external_id, action=action,
         allowed_days_before=identity.get("allowed_days_before", [days]), state="prepared",
         prepared_at=datetime.now(ZoneInfo("UTC")).isoformat(), integration="external_adapter_required")
-    october_identity_allowed(package, root)
+    october_identity_allowed(package, root, october_path)
     collision_check(package, records)
     return package
 
@@ -254,7 +263,9 @@ def state_lock(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=ROOT)
-    parser.add_argument("--state", type=Path)
+    parser.add_argument("--state", type=Path, required=True)
+    parser.add_argument("--approvals", type=Path)
+    parser.add_argument("--october-reservations", type=Path)
     sub = parser.add_subparsers(dest="command", required=True)
     create = sub.add_parser("prepare")
     for name in ("event-id", "channel", "channel-id"):
@@ -269,12 +280,17 @@ def main():
         command.add_argument("--package", type=Path, required=True)
         command.add_argument("--response", type=Path, required=True)
     args = parser.parse_args()
-    state_path = args.state or args.root / "data/social_publications.json"
+    for key in ('state','approvals','october_reservations','output','package','response'):
+        value = getattr(args,key,None)
+        if value is not None:
+            setattr(args,key,external_path(args.root,value))
+    state_path = args.state
     with state_lock(state_path.with_suffix(".lock")):
         state = read_json(state_path, {"schema_version": 2, "records": []})
         if args.command == "prepare":
             package = prepare(args.event_id, args.channel, args.channel_id, args.days_before, state, args.root, args.slot_id,
-                              provider=args.provider, provider_account_id=args.provider_account_id)
+                              provider=args.provider, provider_account_id=args.provider_account_id,
+                              approvals_path=args.approvals, october_path=args.october_reservations)
         else:
             package = read_json(args.package, {})
             response = read_json(args.response, {})
@@ -283,11 +299,12 @@ def main():
                 raise ValueError("No unique saved request")
             existing = matches[0]
             checked, _ = content(package["event_ids"][0], package["channel"], package["channel_id"],
-                package["days_before"], args.root, package["slot_id"])
+                package["days_before"], args.root, package["slot_id"],
+                approvals_path=args.approvals, october_path=args.october_reservations)
             validate_pending_package(package, existing, checked)
             # Keep trusted state across acknowledgements, including numeric ID changes.
             package = {**package, **{k: existing.get(k) for k in ("provider", "provider_account_id", "provider_uuid", "external_id")}}
-            october_identity_allowed(package, args.root)
+            october_identity_allowed(package, args.root, args.october_reservations)
             if args.command == "confirm":
                 package = verify_readback(package, response)
             else:

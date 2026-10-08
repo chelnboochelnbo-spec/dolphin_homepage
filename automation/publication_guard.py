@@ -129,13 +129,12 @@ def assess(event: dict, root: Path = ROOT, *, events=None, ledger=None) -> Decis
             recurring_titles = {title for item in series for title in item["titles"]}
             if any(by_id[event_id].get("title") in recurring_titles for event_id in targets):
                 raise ValueError("recurring flyers must be single-date")
-            approval = review.get("shared_approval") or {}
+            approval = review.get("shared_publication") or {}
             if (approval.get("type") != "special_two_day" or len(dates) != 2
                     or sorted(approval.get("target_event_ids", [])) != sorted(targets)
-                    or not approval.get("approved_by") or not approval.get("reference")
-                    or not aware_timestamp(approval.get("recorded_at"))
+                    or approval.get("policy_version") != 1
                     or (date.fromisoformat(max(dates))-date.fromisoformat(min(dates))).days != 1):
-                raise ValueError("shared image requires explicit two-day target approval")
+                raise ValueError("shared image requires exact two-day publication scope")
         # A second attestation cannot silently reuse this media for another date.
         if any(r is not review and (r.get("image_sha256") == digest or r.get("review_id") == review["review_id"])
                for r in ledger["reviews"]):
@@ -166,7 +165,8 @@ def migration_decision(event: dict, root: Path = ROOT, *, october=False) -> Deci
         if not october and strict_website_scope(event, root):
             raise ValueError("future recurring image requires visual verification")
         if october and (set(record.get("covered_dates", [])) != {"2026-10-08", "2026-10-22"}
-                        or not record.get("approval_reference")):
+                        or record.get("website_preservation") != {
+                            "policy_version": 1, "scope": "exact_existing_asset_and_dates"}):
             raise ValueError("not the approved October exception")
         events = {e["id"]: e for e in read_json(root / "data/events.json", {"events": []})["events"]}
         events[event["id"]] = event

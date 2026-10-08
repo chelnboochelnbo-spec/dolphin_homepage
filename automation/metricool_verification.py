@@ -12,6 +12,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 import social_package as social
+from social_approval_migration import approved_events, apply_approval, external_path
 from publication_guard import read_json, aware_timestamp
 
 INPUTS = ('data/events.json', 'data/flyer_verifications.json',
@@ -38,8 +39,17 @@ def snapshot(root, paths=()):
     return {'main_commit': remote, 'sha256': hashes}
 
 
-def prepare_batch(root, state, requests, snapshotter=snapshot):
-    initial = snapshotter(root)
+def private_snapshot(root, paths, snapshotter, approvals_path, october_path=None):
+    result = snapshotter(root, paths)
+    digest = (hashlib.sha256(external_path(root, approvals_path).read_bytes()).hexdigest()
+              if approvals_path is not None else None)
+    october_digest = (hashlib.sha256(external_path(root, october_path).read_bytes()).hexdigest()
+                      if october_path is not None else None)
+    return {**result, 'approval_overlay_sha256': digest, 'october_reservations_sha256': october_digest}
+
+
+def prepare_batch(root, state, requests, snapshotter=snapshot, *, approvals_path=None, october_path=None):
+    initial = private_snapshot(root, (), snapshotter, approvals_path, october_path)
     packages, holds = [], []
     for request in requests:
         try:
@@ -49,17 +59,19 @@ def prepare_batch(root, state, requests, snapshotter=snapshot):
                     raise ValueError('Only Instagram/Facebook are supported')
                 package = social.prepare(request['event_id'], channel, channel_id,
                     request['days_before'], state, root, request.get('slot_id'),
-                    provider='metricool', provider_account_id=request['brand_id'])
-                require_caption_source(root, package)
+                    provider='metricool', provider_account_id=request['brand_id'], approvals_path=approvals_path, october_path=october_path)
+                require_caption_source(root, package, approvals_path)
                 pair.append(package)
             if {p['channel'] for p in pair} != {'instagram', 'facebook'}:
                 raise ValueError('Both intended destinations required')
             packages.extend(pair)
         except (ValueError, KeyError) as error:
             holds.append({'event_id': request.get('event_id'), 'reason': str(error)})
-    final = snapshotter(root, [p['image_path'] for p in packages])
-    if initial['main_commit'] != final['main_commit']:
-        raise ValueError('Main changed during preparation')
+    final = private_snapshot(root, [p['image_path'] for p in packages], snapshotter, approvals_path, october_path)
+    if (initial['main_commit'] != final['main_commit']
+            or initial.get('approval_overlay_sha256') != final.get('approval_overlay_sha256')
+            or initial.get('october_reservations_sha256') != final.get('october_reservations_sha256')):
+        raise ValueError('Main or approval overlay changed during preparation')
     keys = [p['key'] for p in packages]
     if len(keys) != len(set(keys)):
         raise ValueError('Duplicate requested publication slot')
@@ -67,12 +79,13 @@ def prepare_batch(root, state, requests, snapshotter=snapshot):
             'remote_write_count': 0, 'mode': 'read_only'}
 
 
-def require_caption_source(root, package):
+def require_caption_source(root, package, approvals_path=None):
     if package['evidence_kind'] == 'october_existing_publication':
         return  # Frozen preservation exception, not a new caption approval.
-    events = read_json(root/'data/events.json', {})['events']
+    events = approved_events(root, approvals_path)
     for event in events:
         if event['id'] in package['event_ids']:
+            apply_approval(event, root)
             approval = event['social']['approvals'][package['channel']]
             if not str(approval.get('source_reference') or '').strip():
                 raise ValueError('Real caption approval source_reference required')
@@ -147,9 +160,9 @@ def wire_preview(packages, post):
             'uuid': str(post['uuid']), 'info': json.dumps(info, ensure_ascii=False)}
 
 
-def reconcile(root, state, plan, capture, snapshotter=snapshot):
+def reconcile(root, state, plan, capture, snapshotter=snapshot, *, approvals_path=None, october_path=None):
     packages = plan['packages']
-    current = snapshotter(root, [p['image_path'] for p in packages])
+    current = private_snapshot(root, [p['image_path'] for p in packages], snapshotter, approvals_path, october_path)
     if current != plan['snapshot']:
         raise ValueError('Main or input bytes changed after preparation')
     groups = {}
@@ -166,16 +179,16 @@ def reconcile(root, state, plan, capture, snapshotter=snapshot):
                 if accounts[p['channel']] != p['channel_id']:
                     raise ValueError('Connected destination account changed')
                 checked, _ = social.content(p['event_ids'][0], p['channel'], p['channel_id'],
-                                            p['days_before'], root, p['slot_id'])
+                                            p['days_before'], root, p['slot_id'], approvals_path=approvals_path, october_path=october_path)
                 social.validate_pending_package(p, p, checked)
-                require_caption_source(root, p)
+                require_caption_source(root, p, approvals_path)
                 trusted = social.prepare(p['event_ids'][0], p['channel'], p['channel_id'],
                     p['days_before'], state, root, p['slot_id'], provider='metricool',
-                    provider_account_id=brand)
+                    provider_account_id=brand, approvals_path=approvals_path, october_path=october_path)
                 for field in ('provider_uuid', 'external_id', 'key', 'package_hash', 'action'):
                     if trusted.get(field) != p.get(field):
                         raise ValueError('Plan differs from persistent identity: '+field)
-                social.october_identity_allowed(p, root)
+                social.october_identity_allowed(p, root, october_path)
                 social.collision_check(p, records)
             matches = [post for post in capture['posts'] if str(post['uuid']) == uuid]
             if not pair[0]['provider_uuid']:
@@ -203,7 +216,7 @@ def reconcile(root, state, plan, capture, snapshotter=snapshot):
                             'action': 'noop', 'wire_preview': preview, 'image_sha256': fields['image_sha256']})
         except (ValueError, KeyError, OSError) as error:
             holds.append({'event_ids': pair[0]['event_ids'], 'reason': str(error)})
-    if snapshotter(root, [p['image_path'] for p in packages]) != current:
+    if private_snapshot(root, [p['image_path'] for p in packages], snapshotter, approvals_path, october_path) != current:
         raise ValueError('Inputs changed while reconciling')
     return {**state, 'records': records}, {'snapshot': current, 'results': results,
         'holds': holds, 'remote_write_count': 0, 'mode': 'read_only'}
@@ -216,8 +229,14 @@ def main():
     parser.add_argument('--state', type=Path, required=True)
     parser.add_argument('--input', type=Path, required=True)
     parser.add_argument('--capture', type=Path)
+    parser.add_argument('--approvals', type=Path, help='Explicit private approval file outside checkout')
+    parser.add_argument('--october-reservations', type=Path)
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
+    for key in ('state', 'input', 'output', 'capture', 'approvals', 'october_reservations'):
+        value = getattr(args, key)
+        if value is not None:
+            setattr(args, key, external_path(args.root, value))
     # Explicit, persistent state required; never silently substitute empty state.
     if not args.state.is_file():
         raise ValueError('Initialize a persistent schema_version=2 state explicitly')
@@ -226,12 +245,15 @@ def main():
         if state.get('schema_version') != 2 or not isinstance(state.get('records'), list):
             raise ValueError('Invalid persistent state')
         if args.command == 'prepare':
-            result = prepare_batch(args.root, state, read_json(args.input, {})['requests'])
+            result = prepare_batch(args.root, state, read_json(args.input, {})['requests'], approvals_path=args.approvals, october_path=args.october_reservations)
         else:
-            state, result = reconcile(args.root, state, read_json(args.input, {}), read_json(args.capture, {}))
+            capture = read_json(args.capture, {})
+            for media in capture.get('media', []):
+                external_path(args.root, media['local_path'])
+            state, result = reconcile(args.root, state, read_json(args.input, {}), capture, approvals_path=args.approvals, october_path=args.october_reservations)
             social.write_json(args.state, state)
         social.write_json(args.output, result)
-        print(json.dumps({'remote_write_count': 0, 'holds': result['holds'],
+        print(json.dumps({'remote_write_count': 0, 'held_count': len(result['holds']),
                           'verified_groups': len(result.get('results', []))}))
 
 

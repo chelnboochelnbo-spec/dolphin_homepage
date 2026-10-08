@@ -4,6 +4,7 @@ import hashlib
 import json
 import sys
 import unittest
+import tempfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -18,6 +19,9 @@ class MetricoolVerification(unittest.TestCase):
         self.fixture.setUp()
         self.addCleanup(self.fixture.doCleanups)
         self.root = self.fixture.root
+        private = tempfile.TemporaryDirectory()
+        self.addCleanup(private.cleanup)
+        self.private = Path(private.name)
         event = self.fixture.events[0]
         approval = event['social']['approvals']['instagram']
         approval['source_reference'] = 'SYNTHETIC TEST APPROVAL SOURCE'
@@ -148,6 +152,59 @@ class MetricoolVerification(unittest.TestCase):
             self.capture=copy.deepcopy(original);change(self.capture)
             state,result=self.run_capture()
             self.assertEqual([],state['records']);self.assertTrue(result['holds'])
+
+    def test_standing_approval_migration_requires_sources_and_exact_facts(self):
+        import publication_guard as guard
+        event=copy.deepcopy(self.fixture.events[0])
+        caption=event['social']['instagram_caption']
+        review=self.fixture.ledger['reviews'][0]
+        record=dict(event_id=event['id'],event_fingerprint=guard.fingerprint(event),
+            image_path=review['image_path'],image_sha256=review['image_sha256'],
+            review_id=review['review_id'],caption=caption,
+            caption_sha256=hashlib.sha256(caption.encode()).hexdigest(),
+            approved_by='SYNTHETIC OWNER',recorded_at=datetime.now(timezone.utc).isoformat(),
+            source_references=['SYNTHETIC USER INSTRUCTION'],approval_basis='TEST standing template',
+            existing_schedule=event['social']['schedule'])
+        event.pop('social')
+        (self.root/'data/events.json').write_text(json.dumps({'events':[event]}))
+        path=self.private/'approvals.json'
+        path.write_text(json.dumps({'records':[record]}))
+        plan=adapter.prepare_batch(self.root,self.state,[self.request],self.snapshot,approvals_path=path)
+        self.assertEqual(2,len(plan['packages']));self.assertEqual([],plan['holds'])
+        for field,value in [('source_references',[]),('caption','UNAPPROVED'),
+                            ('event_fingerprint','CHANGED'),('image_sha256','CHANGED')]:
+            changed={**record,field:value}
+            path.write_text(json.dumps({'records':[changed]}))
+            plan=adapter.prepare_batch(self.root,self.state,[self.request],self.snapshot,approvals_path=path)
+            self.assertEqual([],plan['packages']);self.assertTrue(plan['holds'])
+
+    def test_unrelated_stale_approval_does_not_block_other_event(self):
+        path=self.private/'approvals.json'
+        path.write_text(json.dumps({'records':[{'event_id':self.fixture.events[1]['id'],
+                                              'event_fingerprint':'INVALID'}]}))
+        plan=adapter.prepare_batch(self.root,self.state,[self.request],self.snapshot,approvals_path=path)
+        self.assertEqual(2,len(plan['packages']));self.assertEqual([],plan['holds'])
+
+    def test_private_paths_inside_repository_are_rejected(self):
+        from social_approval_migration import external_path
+        for path in (self.root/'data/approvals.json',self.root/'state.json',self.root/'private'/'capture.json'):
+            with self.assertRaisesRegex(ValueError,'outside repository'):
+                external_path(self.root,path)
+        self.assertEqual(self.private/'state.json',external_path(self.root,self.private/'state.json'))
+
+    def test_in_repository_approval_is_not_implicitly_loaded(self):
+        (self.root/'data/social_approval_migrations.json').write_text('INVALID PRIVATE DATA')
+        plan=adapter.prepare_batch(self.root,self.state,[self.request],self.snapshot)
+        self.assertEqual(2,len(plan['packages']))
+
+    def test_private_approval_path_cannot_follow_symlink_into_repository(self):
+        from social_approval_migration import external_path
+        target=self.root/'data/events.json'
+        link=self.private/'link.json'
+        try:link.symlink_to(target)
+        except OSError:self.skipTest('Symlinks unavailable on this host')
+        with self.assertRaisesRegex(ValueError,'outside repository'):
+            external_path(self.root,link)
 
 
 if __name__=='__main__':
