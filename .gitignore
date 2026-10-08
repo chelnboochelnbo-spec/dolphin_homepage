@@ -61,3 +61,7 @@ build/
 __pycache__/
 *.pyc
 *.lock
+
+# Operational data belongs outside this public checkout.
+/data/social_approval_migrations.json
+/private-operations/

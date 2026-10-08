@@ -23,7 +23,7 @@ class Migration(unittest.TestCase):
         return {"record_id": "TEST-MIGRATION", "source_path": review["image_path"],
                 "image_path": review["image_path"], "image_sha256": review["image_sha256"],
                 "covered_dates": review["covered_dates"], "targets": review["targets"],
-                "approval_reference": "SYNTHETIC TEST ONLY", "existing_posts": []}
+                "website_preservation": {"policy_version": 1, "scope": "exact_existing_asset_and_dates"}, "existing_posts": []}
 
     def test_baseline_keeps_hp_but_never_approves_new_social(self):
         self.events[0]["title"] = "Historical or out-of-scope live"
@@ -59,29 +59,30 @@ class Migration(unittest.TestCase):
         package={'evidence_kind':'october_existing_publication','review_id':record['record_id'],
                  'channel':'instagram','channel_id':'TEST-ACCOUNT','slot_id':'existing-october',
                  'provider':'metricool','provider_uuid':'TEST-UUID','external_id':'100'}
-        with self.assertRaises(ValueError): social.october_identity_allowed(package,self.root)
+        with self.assertRaises(ValueError): social.october_identity_allowed(package,self.root,self.private/'october.json')
         record['existing_posts']=[copy.deepcopy(package)]
+        social.write_json(self.private/'october.json',{'records':[record]})
         social.write_json(self.root/'data/october_kiraku_migration.json',{'records':[record]})
-        social.october_identity_allowed({**package,'external_id':'200'},self.root)
+        social.october_identity_allowed({**package,'external_id':'200'},self.root,self.private/'october.json')
         for key,value in [('provider_uuid','OTHER'),('channel_id','OTHER'),('slot_id','new')]:
-            with self.assertRaises(ValueError): social.october_identity_allowed({**package,key:value},self.root)
+            with self.assertRaises(ValueError): social.october_identity_allowed({**package,key:value},self.root,self.private/'october.json')
         changed={**self.events[0],'date':'2026-11-12'}
         self.assertFalse(guard.website_decision(changed,self.root).allowed)
 
     def invoke(self,*args):
-        with patch.object(sys,'argv',['social_package','--root',str(self.root),*args]), patch('sys.stdout',new_callable=io.StringIO):
+        with patch.object(sys,'argv',['social_package','--root',str(self.root),'--state',str(self.private/'state.json'),*args]), patch('sys.stdout',new_callable=io.StringIO):
             social.main()
 
     def test_reconciled_legacy_account_survives_full_metricool_roundtrip(self):
         seed=self.package()
         seed.update(external_id='100',provider='metricool',provider_account_id='TEST-BRAND',provider_uuid='TEST-UUID',state='confirmed',package_hash='OLDER')
-        state_path=self.root/'data/social_publications.json'
+        state_path=self.private/'state.json'
         social.write_json(state_path,{'records':[seed]})
         # Legacy account is absent; trusted saved state supplies it.
         self.events[0]['social']['schedule']=[{'channel':'instagram','external_id':'100','provider':'metricool',
             'provider_uuid':'TEST-UUID','status':'scheduled','days_before':14}]
         self.persist()
-        package_path=self.root/'package.json'; response_path=self.root/'response.json'
+        package_path=self.private/'package.json'; response_path=self.private/'response.json'
         self.invoke('prepare','--event-id',self.events[0]['id'],'--channel','instagram','--channel-id','TEST-ACCOUNT',
                     '--days-before','14','--output',str(package_path))
         package=json.loads(package_path.read_text())
@@ -140,19 +141,33 @@ class Migration(unittest.TestCase):
         with self.assertRaises(ValueError):
             social.prepare(self.events[0]['id'],'instagram','TEST-ACCOUNT',14,{'records':[seed]},self.root,'lead-7')
 
-    def test_production_october_record_only_prepares_existing_october_22_post(self):
-        root=fixtures.ROOT
-        package=social.prepare('2026-10-22_legacy-a52e331b05','instagram','dolphin_kanazawa',14,
-            {'records':[]},root,'october-22-existing')
-        self.assertEqual(package['action'],'update')
-        self.assertEqual(package['provider_uuid'],'-5433884878909716328')
-        self.assertEqual(package['external_id'],'389093625')
-        self.assertEqual(package['event_ids'],['2026-10-22_legacy-a52e331b05'])
-        self.assertEqual(package['publish_at'],'2026-10-08T18:00:00+09:00')
-        for event_id,slot in [('2026-10-08_legacy-532326f862','october-22-existing'),
-                              ('2026-10-22_legacy-a52e331b05','new-slot')]:
+    def test_synthetic_october_reservation_uses_only_explicit_private_file(self):
+        import hashlib
+        self.events = [self.event('2026-10-08'), self.event('2026-10-22')]
+        for event in self.events:
+            event['flyer']['github_path']='assets/october.png'
+        (self.root/'assets/october.png').write_bytes(b'SYNTHETIC OCTOBER IMAGE')
+        self.ledger['reviews']=[]; self.persist()
+        record=self.migration_record(self.events)
+        social.write_json(self.root/'data/october_kiraku_migration.json',{'records':[record]})
+        caption='SYNTHETIC OCTOBER CAPTION'
+        record['existing_posts']=[dict(channel='instagram',channel_id='TEST-ACCOUNT',
+            provider='metricool',provider_account_id='TEST-BRAND',provider_uuid='TEST-UUID',
+            external_id='TEST-ID',slot_id='existing-slot',days_before=14,
+            event_ids=[self.events[1]['id']],image_sha256=record['image_sha256'],
+            caption=caption,caption_sha256=hashlib.sha256(caption.encode()).hexdigest(),
+            publish_at='2026-10-08T18:00:00+09:00')]
+        path=self.private/'october.json'
+        social.write_json(path,{'records':[record]})
+        with self.assertRaises(ValueError):
+            social.prepare(self.events[1]['id'],'instagram','TEST-ACCOUNT',14,{'records':[]},self.root,'existing-slot')
+        package=social.prepare(self.events[1]['id'],'instagram','TEST-ACCOUNT',14,
+            {'records':[]},self.root,'existing-slot',october_path=path)
+        self.assertEqual(package['provider_uuid'],'TEST-UUID')
+        self.assertEqual(package['external_id'],'TEST-ID')
+        for event_id,slot in [(self.events[0]['id'],'existing-slot'),(self.events[1]['id'],'new-slot')]:
             with self.assertRaises(ValueError):
-                social.prepare(event_id,'instagram','dolphin_kanazawa',14,{'records':[]},root,slot)
+                social.prepare(event_id,'instagram','TEST-ACCOUNT',14,{'records':[]},self.root,slot,october_path=path)
 
     def test_approved_production_images_and_cancellation_remain_guarded(self):
         events=guard.read_json(fixtures.ROOT/'data/events.json',{})['events']

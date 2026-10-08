@@ -25,6 +25,9 @@ class PublicationGuard(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
+        private = tempfile.TemporaryDirectory()
+        self.addCleanup(private.cleanup)
+        self.private = Path(private.name)
         (self.root / "data").mkdir()
         (self.root / "automation").mkdir()
         (self.root / "assets").mkdir()
@@ -117,7 +120,7 @@ class PublicationGuard(unittest.TestCase):
         review = self.review(self.events)
         self.ledger = {"reviews": [review]}; self.persist()
         self.assertFalse(self.assess().allowed)
-        review["shared_approval"] = {"type": "special_two_day", "target_event_ids": [e["id"] for e in self.events],
+        review["shared_publication"] = {"type": "special_two_day", "policy_version": 1, "target_event_ids": [e["id"] for e in self.events],
             "approved_by": "TEST", "recorded_at": "2026-10-07T00:00:00+09:00", "reference": "TEST ONLY"}
         self.persist(); self.assertTrue(self.assess().allowed)
         self.events[1]["charge"] = "changed"; self.persist()
@@ -127,7 +130,7 @@ class PublicationGuard(unittest.TestCase):
         self.events[1] = self.event("2026-11-13")
         self.events[1]["flyer"] = copy.deepcopy(self.events[0]["flyer"])
         review = self.review(self.events)
-        review["shared_approval"] = {"type": "special_two_day", "target_event_ids": [e["id"] for e in self.events],
+        review["shared_publication"] = {"type": "special_two_day", "policy_version": 1, "target_event_ids": [e["id"] for e in self.events],
             "approved_by": "TEST", "recorded_at": "2026-10-07T00:00:00+09:00", "reference": "TEST ONLY"}
         self.ledger = {"reviews": [review]}; self.persist()
         self.assertFalse(self.assess().allowed)
@@ -199,17 +202,17 @@ class PublicationGuard(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "account unresolved"): self.package()
 
     def test_cli_accept_requires_matching_independent_readback(self):
-        package_path = self.root / "package.json"
-        response_path = self.root / "response.json"
+        package_path = self.private / "package.json"
+        response_path = self.private / "response.json"
         def invoke(*args):
-            with patch.object(sys, "argv", ["social_package", "--root", str(self.root), *args]), patch("sys.stdout", new_callable=io.StringIO):
+            with patch.object(sys, "argv", ["social_package", "--root", str(self.root), "--state", str(self.private/"state.json"), *args]), patch("sys.stdout", new_callable=io.StringIO):
                 social.main()
         invoke("prepare", "--event-id", self.events[0]["id"], "--channel", "instagram",
                "--channel-id", "TEST-ACCOUNT", "--days-before", "14", "--output", str(package_path))
         package = json.loads(package_path.read_text())
         response_path.write_text(json.dumps({"external_id": "REMOTE", "channel": "instagram", "channel_id": "TEST-ACCOUNT"}))
         invoke("accept", "--package", str(package_path), "--response", str(response_path))
-        state_path = self.root / "data/social_publications.json"
+        state_path = self.private / "state.json"
         self.assertEqual(json.loads(state_path.read_text())["records"][0]["state"], "accepted_pending_readback")
         with self.assertRaises(ValueError):
             invoke("confirm", "--package", str(package_path), "--response", str(response_path))

@@ -5,7 +5,7 @@
     {
       "review_id": "visual-20261007-2026-10-29",
       "kind": "visual_review",
-      "reviewer": "Codex: DAIV execution, source thread 01a0ff6e-9ade-764a-b581-2c4245320039",
+      "reviewer": "Recorded local pixel inspection",
       "reviewed_at": "2026-10-06T17:57:11.544472+00:00",
       "pixels_inspected": true,
       "transcription": "MONTHLY VOICES / VOCAL SESSION; 2026.10.29 THU; START 20:00; CHARGE ¥2,000 2DRINK ORDER; STUDENT ¥1,000 1DRINK ORDER; PF KAORU KUROKAWA; BA TOMO NAKAYAMA; DR TAKUYA NAGAMI. No OPEN time printed.",
@@ -55,7 +55,7 @@
     {
       "review_id": "visual-20261007-2026-11-19",
       "kind": "visual_review",
-      "reviewer": "Codex: DAIV execution, source thread 01a0ff6e-9ade-764a-b581-2c4245320039",
+      "reviewer": "Recorded local pixel inspection",
       "reviewed_at": "2026-10-06T17:57:11.544472+00:00",
       "pixels_inspected": true,
       "transcription": "MONTHLY VOICES / VOCAL SESSION; 2026.11.19 THU; START 20:00; CHARGE ¥2,000 2DRINK ORDER; STUDENT ¥1,000 1DRINK ORDER; PF KAORU KUROKAWA; BA TOMO NAKAYAMA; DR TAKUYA NAGAMI. No OPEN time printed. Verified in Chrome-rendered screenshot after inconsistent tool preview.",
@@ -105,7 +105,7 @@
     {
       "review_id": "visual-20261007-2026-12-17",
       "kind": "visual_review",
-      "reviewer": "Codex: DAIV execution, source thread 01a0ff6e-9ade-764a-b581-2c4245320039",
+      "reviewer": "Recorded local pixel inspection",
       "reviewed_at": "2026-10-06T17:57:11.544472+00:00",
       "pixels_inspected": true,
       "transcription": "MONTHLY VOICES / VOCAL SESSION; 2026.12.17 THU; START 20:00; CHARGE ¥2,000 2DRINK ORDER; STUDENT ¥1,000 1DRINK ORDER; PF KAORU KUROKAWA; BA TOMO NAKAYAMA; DR TAKUYA NAGAMI. No OPEN time printed.",
@@ -155,7 +155,7 @@
     {
       "review_id": "visual-20261007-2026-11-05",
       "kind": "visual_review",
-      "reviewer": "Codex: DAIV execution, source thread 01a0ff6e-9ade-764a-b581-2c4245320039",
+      "reviewer": "Recorded local pixel inspection",
       "reviewed_at": "2026-10-06T17:57:11.544472+00:00",
       "pixels_inspected": true,
       "transcription": "OPEN GROOVE NIGHT / JAM SESSION; 11/5 THU; GT MASAHIDE HANEDA; BA TOMO NAKAYAMA; OPEN 7:00PM START 8PM; CHARGE ¥2,000 2DRINK ORDER STUDENT ¥1,000. Year comes from approved 2026 event context; no student drink condition printed.",
@@ -200,7 +200,7 @@
     {
       "review_id": "visual-20261007-2026-11-12",
       "kind": "visual_review",
-      "reviewer": "Codex: DAIV execution, source thread 01a0ff6e-9ade-764a-b581-2c4245320039",
+      "reviewer": "Recorded local pixel inspection",
       "reviewed_at": "2026-10-06T17:57:11.544472+00:00",
       "pixels_inspected": true,
       "transcription": "KIRAKU JAM / 気楽ジャム; 2026.11 12 THU; START 20:00; Charge ¥2,000 + 2Drink Order; 学生 ¥1,000 + 1Drink Order; 櫻井祐二 (Gt); 中山とも (Ba). No OPEN time printed.",
@@ -244,7 +244,7 @@
     {
       "review_id": "visual-20261007-2026-11-26",
       "kind": "visual_review",
-      "reviewer": "Codex: DAIV execution, source thread 01a0ff6e-9ade-764a-b581-2c4245320039",
+      "reviewer": "Recorded local pixel inspection",
       "reviewed_at": "2026-10-06T17:57:11.544472+00:00",
       "pixels_inspected": true,
       "transcription": "KIRAKU JAM / 気楽ジャム; 2026.11 26 THU; START 20:00; Charge ¥2,000 + 2Drink Order; 学生 ¥1,000 + 1Drink Order; 櫻井祐二 (Gt); 中山とも (Ba). No OPEN time printed.",
@@ -288,7 +288,7 @@
     {
       "review_id": "visual-20261007-2026-11-20",
       "kind": "visual_review",
-      "reviewer": "Codex: DAIV execution, source thread 01a0ff6e-9ade-764a-b581-2c4245320039",
+      "reviewer": "Recorded local pixel inspection",
       "reviewed_at": "2026-10-06T17:57:11.544472+00:00",
       "pixels_inspected": true,
       "transcription": "若井優也 Special 2days 11.20 → 11.21; 2026.11.20 fri Solo; open 19:30 / start 20:00 / charge ¥5000; 若井優也 (piano).\n若井優也 Special 2days 11.20 → 11.21; 2026.11.21 sat Jam Session; w.那須仁哉(bass) 永見拓也(drum); open 19:30 / start 20:00 / charge ¥5000; 若井優也 (piano).",
@@ -365,15 +365,13 @@
           "observed_text": "若井優也 Special 2days 11.20 → 11.21; 2026.11.21 sat Jam Session; w.那須仁哉(bass) 永見拓也(drum); open 19:30 / start 20:00 / charge ¥5000; 若井優也 (piano)."
         }
       },
-      "shared_approval": {
+      "shared_publication": {
         "type": "special_two_day",
         "target_event_ids": [
           "2026-11-20_legacy-9a3be933aa",
           "2026-11-21_legacy-3369aef530"
         ],
-        "approved_by": "Owner, as explicitly relayed by parent ARIA",
-        "recorded_at": "2026-10-06T17:57:11.544472+00:00",
-        "reference": "Delegated instruction: explicitly approved Wakai November 20/21 two-day flyer exception. This is the recording time, not a fabricated historical approval time."
+        "policy_version": 1
       }
     },
     {
