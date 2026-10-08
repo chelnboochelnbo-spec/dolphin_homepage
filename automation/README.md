@@ -6,7 +6,7 @@ This directory defines the operating contract for automating event publication a
 ## Single source of truth
 New events are registered in `data/events.json` and must conform to `automation/event.schema.json`.
 
-Store-wide facts and the day-by-day operating state are registered in `data/operations.json`. The homepage Tonight panel treats the standard state as `BAR NIGHT`, unless a published event exists or the date is listed under `overrides`.
+Store-wide facts and the day-by-day operating state are registered in `data/operations.json`. The homepage Tonight panel, home calendar, and full schedule share the operating policy. From 2026-10-08, Sunday is normally closed; if consecutive Japanese public holidays follow Sunday, the closure moves to their final day. Published events remain open exceptions. Explicit date overrides take precedence, including a confirmed closure or private booking. Standard hours remain 19:00–01:00 the following day.
 
 For an irregular closure or private booking, add the date before publication:
 
@@ -14,7 +14,9 @@ For an irregular closure or private booking, add the date before publication:
 "2026-09-30": { "state": "closed", "note": "臨時休業" }
 ```
 
-Allowed override states are `closed` and `private`. Do not leave a known closure unregistered, because an unlisted date is displayed as regular BAR NIGHT.
+Allowed override states are `closed`, `private`, `open`, and `bar`. Explicit `open` / `bar` overrides can open a normally closed date. Do not add routine Sunday closures to `overrides`; they are calculated so newly published events remain visible. Do not cancel an event merely because it falls on a normal closure date.
+
+The official Cabinet Office holiday data is embedded in `data/operations.json` under `closure_rule.holiday_calendar`, verified from https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html on 2026-10-08 and covering 2026–2027. It includes substitute holidays and citizens’ holidays. Update and verify this data before extending publication into 2028; the renderers refuse to guess dates beyond verified coverage, and Tonight shows an unconfirmed state. The policy does not rewrite dates before its effective date.
 
 Existing legacy events in `index.html` / `schedule.html` are preserved during migration. New automated events are managed from `data/events.json`.
 

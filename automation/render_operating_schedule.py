@@ -40,8 +40,18 @@ def rename_schedule(html: str) -> str:
 def validate_operations(operations: dict) -> None:
     if operations.get('timezone') != 'Asia/Tokyo':
         raise ValueError('Operations timezone must be Asia/Tokyo')
-    if operations.get('closed_policy') != 'irregular':
+    if operations.get('closed_policy') not in {'irregular', 'sunday_holiday_end'}:
         raise ValueError('A changed closure policy needs an explicit schedule rule')
+    if operations.get('closed_policy') == 'sunday_holiday_end':
+        rule = operations['closure_rule']
+        date.fromisoformat(rule['effective_from'])
+        holidays = rule['holiday_calendar']
+        first, last = date.fromisoformat(holidays['valid_from']), date.fromisoformat(holidays['valid_through'])
+        if first > last or not holidays.get('source'):
+            raise ValueError('Verified holiday calendar coverage is required')
+        for value in holidays['dates']:
+            if not first <= date.fromisoformat(value) <= last:
+                raise ValueError('Holiday outside verified calendar coverage')
     hours = operations.get('standard_hours', {})
     for key in ('open', 'close'):
         if not re.fullmatch(r'(?:[01]\d|2[0-3]):[0-5]\d', str(hours.get(key, ''))):
@@ -54,6 +64,27 @@ def validate_operations(operations: dict) -> None:
             raise ValueError('Override dates must use YYYY-MM-DD')
         if not isinstance(override, dict) or override.get('state') not in {'closed', 'private', 'open', 'bar'}:
             raise ValueError(f'Unknown operating state for {day}')
+
+
+def regular_closure(day: date, operations: dict) -> bool:
+    """Sunday closes unless contiguous public holidays move it to their last day.
+
+    Explicit overrides and published events are resolved by callers first.
+    Do not retroactively change historical operating days or guess future holidays.
+    """
+    if operations.get('closed_policy') != 'sunday_holiday_end':
+        return False
+    rule = operations['closure_rule']
+    if day < date.fromisoformat(rule['effective_from']):
+        return False
+    calendar_data = rule['holiday_calendar']
+    if not date.fromisoformat(calendar_data['valid_from']) <= day <= date.fromisoformat(calendar_data['valid_through']):
+        raise ValueError('Update the verified Japanese holiday calendar before publishing this date')
+    holidays = set(calendar_data['dates'])
+    closure = day - timedelta(days=(day.weekday() + 1) % 7)
+    while (closure + timedelta(days=1)).isoformat() in holidays:
+        closure += timedelta(days=1)
+    return day == closure
 
 
 def operating_row(day: date, state: str, title: str, note: str = '', event_id: str = '') -> str:
@@ -112,7 +143,10 @@ def build_days(events: list[dict], operations: dict, today: date,
                 else:
                     rows.append(operating_row(day, 'event', event['title'], '開催日・詳細はイベントページをご確認ください。', event['id']))
             if not rows:
-                rows = [operating_row(day, 'bar', '通常営業', normal_hours)]
+                if state not in {'open', 'bar'} and regular_closure(day, operations):
+                    rows = [operating_row(day, 'closed', '休業')]
+                else:
+                    rows = [operating_row(day, 'bar', '通常営業', normal_hours)]
         months[day.month].append((day, '\n'.join(rows)))
         day += timedelta(days=1)
     return dict(months)
@@ -145,9 +179,12 @@ def render_schedule(html: str, events: list[dict], operations: dict, today: date
         raise ValueError('Schedule head is missing')
     html = html.replace('</head>', STYLES + '\n</head>', 1)
     html = re.sub(r'<p id="operating-schedule-note"[^>]*>.*?</p>\s*', '', html, flags=re.S)
+    policy_note = ('原則日曜休業。翌日から祝日・休日が続く場合は連休最終日を休業とします。'
+                   'ライブ・イベント開催日は営業します。'
+                   if operations.get('closed_policy') == 'sunday_holiday_end' else '不定休。')
     note = ('<p id="operating-schedule-note" class="operating-schedule-note">'
             'ライブ・セッション・通常営業・休業日をご案内します。日付は営業開始日を表示しています。'
-            '休業日は「休業」と表示します（不定休）。</p>\n')
+            + policy_note + '休業日は「休業」と表示します。</p>\n')
     marker = '<!-- Month Navigation -->'
     if marker not in html:
         raise ValueError('Schedule month navigation marker is missing')
