@@ -13,7 +13,8 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 import social_package as social
 from social_approval_migration import approved_events, apply_approval, external_path
-from publication_guard import read_json, aware_timestamp
+from publication_guard import read_json, aware_timestamp, image_file
+from media_delivery import record_for
 
 INPUTS = ('data/events.json', 'data/flyer_verifications.json',
           'data/october_kiraku_migration.json', 'data/publication_tombstones.json',
@@ -31,7 +32,15 @@ def snapshot(root, paths=()):
     if git(root, 'rev-parse', 'origin/main') != remote:
         raise ValueError('Fetch latest main before preparing or reconciling')
     hashes = {}
-    for path in sorted(set(INPUTS) | set(paths)):
+    inputs = set(INPUTS)
+    if (root/'data/media_delivery.json').exists():
+        inputs.add('data/media_delivery.json')
+    for path in sorted(inputs | set(paths)):
+        if path in paths and not (root/path).exists() and record_for(path, root):
+            # The manifest is compared with remote main as a separate input;
+            # approval checks continue to use original bytes, never website WebP.
+            hashes[path] = hashlib.sha256(image_file(path, root).read_bytes()).hexdigest()
+            continue
         expected = git(root, 'rev-parse', remote+':'+path)
         if git(root, 'hash-object', path) != expected:
             raise ValueError('Local input differs from main: '+path)
