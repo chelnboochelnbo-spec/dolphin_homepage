@@ -9,6 +9,10 @@ on:
       - 'data/october_kiraku_migration.json'
       - 'data/publication_tombstones.json'
       - 'data/social_publications.json'
+      - 'data/media_delivery.json'
+      - 'automation/media_delivery.py'
+      - 'assets/delivery/**'
+      - 'vercel.json'
       - 'automation/publication_guard.py'
       - 'automation/audit_rendered_publication.py'
       - 'automation/social_package.py'
@@ -64,6 +68,10 @@ on:
       - 'data/october_kiraku_migration.json'
       - 'data/publication_tombstones.json'
       - 'data/social_publications.json'
+      - 'data/media_delivery.json'
+      - 'automation/media_delivery.py'
+      - 'assets/delivery/**'
+      - 'vercel.json'
       - 'automation/publication_guard.py'
       - 'automation/audit_rendered_publication.py'
       - 'automation/social_package.py'
@@ -128,6 +136,11 @@ jobs:
 
       - name: Test reservation dates and translation
         run: node --test tests/*.test.cjs
+
+      - name: Verify lossless website media against immutable originals
+        run: |
+          python -m pip install Pillow==12.3.0
+          python automation/media_delivery.py
 
       - name: Audit flyer reviews and cancellation tombstones
         run: python automation/publication_guard.py > "$RUNNER_TEMP/flyer-publication-audit.json"

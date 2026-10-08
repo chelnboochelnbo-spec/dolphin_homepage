@@ -1,0 +1,385 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/assets/flyers/flyer_20261006_free-improvisation-jam-session.png",
+      "destination": "/assets/delivery/flyer_20261006_free-improvisation-jam-session-cbef078844.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261011_chiaki-suzuki-quartet-live-session.png",
+      "destination": "/assets/delivery/flyer_20261011_chiaki-suzuki-quartet-live-session-1314178faa.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261029_monthly-voices.png",
+      "destination": "/assets/delivery/flyer_20261029_monthly-voices-ac6b2c3b39.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261031_sounds-demo-after-session.png",
+      "destination": "/assets/delivery/flyer_20261031_sounds-demo-after-session-82ae76b858.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261103_mikiko-grigoris-trio.png",
+      "destination": "/assets/delivery/flyer_20261103_mikiko-grigoris-trio-3928f00fcf.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261105_open-groove-night.png",
+      "destination": "/assets/delivery/flyer_20261105_open-groove-night-1c1d159365.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261112_kiraku-jam.png",
+      "destination": "/assets/delivery/flyer_20261112_kiraku-jam-747ec8bfef.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261113_b-slope.png",
+      "destination": "/assets/delivery/flyer_20261113_b-slope-94255a070d.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261119_monthly-voices.png",
+      "destination": "/assets/delivery/flyer_20261119_monthly-voices-e84979268c.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261122_big-apple-after-session.png",
+      "destination": "/assets/delivery/flyer_20261122_big-apple-after-session-f700c2ebc2.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261126_kiraku-jam.png",
+      "destination": "/assets/delivery/flyer_20261126_kiraku-jam-ae892f1570.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261128_balloon-vine-trio.png",
+      "destination": "/assets/delivery/flyer_20261128_balloon-vine-trio-3eaed17997.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261203_open-groove-night.png",
+      "destination": "/assets/delivery/flyer_20261203_open-groove-night-9e13f603fa.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261210_kiraku-jam.png",
+      "destination": "/assets/delivery/flyer_20261210_kiraku-jam-c706a0bf4a.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261217_monthly-voices.png",
+      "destination": "/assets/delivery/flyer_20261217_monthly-voices-6d29cd1c7a.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261219_saturday-jam-session-2.png",
+      "destination": "/assets/delivery/flyer_20261219_saturday-jam-session-2-62f74a63d7.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20261224_kiraku-jam.png",
+      "destination": "/assets/delivery/flyer_20261224_kiraku-jam-871c36001c.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270107_open-groove-night.png",
+      "destination": "/assets/delivery/flyer_20270107_open-groove-night-0c0746fb52.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270114_kiraku-jam.png",
+      "destination": "/assets/delivery/flyer_20270114_kiraku-jam-33c86ec580.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270116_saturday-jam-session-2.png",
+      "destination": "/assets/delivery/flyer_20270116_saturday-jam-session-2-ca0803ec9d.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270121_monthly-voices.png",
+      "destination": "/assets/delivery/flyer_20270121_monthly-voices-43472ac2b9.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270128_kiraku-jam.png",
+      "destination": "/assets/delivery/flyer_20270128_kiraku-jam-3a0d6a054d.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270204_open-groove-night.png",
+      "destination": "/assets/delivery/flyer_20270204_open-groove-night-77341a1e41.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270211_kiraku-jam.png",
+      "destination": "/assets/delivery/flyer_20270211_kiraku-jam-10feecfed2.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270218_monthly-voices.png",
+      "destination": "/assets/delivery/flyer_20270218_monthly-voices-98ee968c33.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270220_saturday-jam-session-2.png",
+      "destination": "/assets/delivery/flyer_20270220_saturday-jam-session-2-4113da2c7a.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270225_kiraku-jam.png",
+      "destination": "/assets/delivery/flyer_20270225_kiraku-jam-7d878e970d.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270304_open-groove-night.png",
+      "destination": "/assets/delivery/flyer_20270304_open-groove-night-c9a6e36a49.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270311_kiraku-jam.png",
+      "destination": "/assets/delivery/flyer_20270311_kiraku-jam-9c3bd1540d.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270318_monthly-voices.png",
+      "destination": "/assets/delivery/flyer_20270318_monthly-voices-1f0abcc3d2.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270320_saturday-jam-session-2.png",
+      "destination": "/assets/delivery/flyer_20270320_saturday-jam-session-2-29a31fc689.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/flyer_20270325_kiraku-jam.png",
+      "destination": "/assets/delivery/flyer_20270325_kiraku-jam-f3a154e515.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/migration/20260919.png",
+      "destination": "/assets/delivery/20260919-5149f061da.webp",
+      "permanent": false
+    },
+    {
+      "source": "/assets/flyers/migration/20261003.png",
+      "destination": "/assets/delivery/20261003-876e4e810c.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260205.png",
+      "destination": "/assets/delivery/flyer_20260205-6672761098.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260207.png",
+      "destination": "/assets/delivery/flyer_20260207-4599ab468a.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260214.png",
+      "destination": "/assets/delivery/flyer_20260214-5db48884f1.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260219.png",
+      "destination": "/assets/delivery/flyer_20260219-5c1ca8e198.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260221.png",
+      "destination": "/assets/delivery/flyer_20260221-a4dd411077.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260305.jpg",
+      "destination": "/assets/delivery/flyer_20260305-d87b63609a.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260307.jpg",
+      "destination": "/assets/delivery/flyer_20260307-84dbfc325d.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260318.jpg",
+      "destination": "/assets/delivery/flyer_20260318-da7625c9e8.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260319.jpg",
+      "destination": "/assets/delivery/flyer_20260319-097f778bb0.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260321.jpg",
+      "destination": "/assets/delivery/flyer_20260321-28a8add60b.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260322.jpg",
+      "destination": "/assets/delivery/flyer_20260322-3d510a6900.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260327.png",
+      "destination": "/assets/delivery/flyer_20260327-49c7d6ba52.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260402.png",
+      "destination": "/assets/delivery/flyer_20260402-3e4eab2cc5.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260416.png",
+      "destination": "/assets/delivery/flyer_20260416-c7ab55e581.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260501.png",
+      "destination": "/assets/delivery/flyer_20260501-a3eae08e2d.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260502.jpg",
+      "destination": "/assets/delivery/flyer_20260502-236de95ec6.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260507.png",
+      "destination": "/assets/delivery/flyer_20260507-afc34686b8.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260516.png",
+      "destination": "/assets/delivery/flyer_20260516-a64c85ef8f.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260521.png",
+      "destination": "/assets/delivery/flyer_20260521-e67439edf0.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260529.png",
+      "destination": "/assets/delivery/flyer_20260529-50495ec940.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260530.png",
+      "destination": "/assets/delivery/flyer_20260530-d22df95208.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260604.png",
+      "destination": "/assets/delivery/flyer_20260604-38c352d73e.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260618.png",
+      "destination": "/assets/delivery/flyer_20260618-4e79908ae7.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260620.png",
+      "destination": "/assets/delivery/flyer_20260620-12dfcb1ad3.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260628.png",
+      "destination": "/assets/delivery/flyer_20260628-f88afb0365.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260702.png",
+      "destination": "/assets/delivery/flyer_20260702-ba9ac1b2d6.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260704.png",
+      "destination": "/assets/delivery/flyer_20260704-ce55ee4fb7.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260716.png",
+      "destination": "/assets/delivery/flyer_20260716-5f6be2ec84.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260718.png",
+      "destination": "/assets/delivery/flyer_20260718-1c3027fb0a.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260801.png",
+      "destination": "/assets/delivery/flyer_20260801-8ee4d9e137.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260806.png",
+      "destination": "/assets/delivery/flyer_20260806-695a60fa13.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260821.png",
+      "destination": "/assets/delivery/flyer_20260821-521538e429.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260827.png",
+      "destination": "/assets/delivery/flyer_20260827-9b0e1218bb.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260903.png",
+      "destination": "/assets/delivery/flyer_20260903-53495244b8.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260905.png",
+      "destination": "/assets/delivery/flyer_20260905-f77f126366.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260910_24.png",
+      "destination": "/assets/delivery/flyer_20260910_24-471dbf98d5.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20260917.png",
+      "destination": "/assets/delivery/flyer_20260917-0e3bb596ba.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20261001.png",
+      "destination": "/assets/delivery/flyer_20261001-d16162c824.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20261008_22.png",
+      "destination": "/assets/delivery/flyer_20261008_22-ba62c83f63.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20261009.png",
+      "destination": "/assets/delivery/flyer_20261009-11b12dc3a9.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_20261017.png",
+      "destination": "/assets/delivery/flyer_20261017-6cb0468fc0.webp",
+      "permanent": false
+    },
+    {
+      "source": "/flyer_the_third_session_new.png",
+      "destination": "/assets/delivery/flyer_the_third_session_new-9829d37005.webp",
+      "permanent": false
+    }
+  ]
+}

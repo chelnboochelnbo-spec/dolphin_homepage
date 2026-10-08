@@ -11,6 +11,7 @@ import json
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 from pathlib import Path
+from media_delivery import archived_original, website_asset
 
 ROOT = Path(__file__).resolve().parents[1]
 FACT_FIELDS = ("id", "date", "end_date", "open", "start", "charge", "performers",
@@ -54,11 +55,11 @@ def image_file(path: str, root: Path) -> Path:
     if ".." in relative.parts or "logo" in relative.name.casefold():
         raise ValueError("fallback or unsafe image")
     resolved = (root / relative).resolve()
-    if not resolved.is_relative_to(root.resolve()) or not resolved.is_file():
+    if not resolved.is_relative_to(root.resolve()):
         raise ValueError("missing or unsafe image")
     if resolved.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp"}:
         raise ValueError("unsupported image")
-    return resolved
+    return resolved if resolved.is_file() else archived_original(str(relative).replace('\\', '/'), root)
 
 
 def image_sha(path: Path) -> str:
@@ -194,12 +195,14 @@ def migration_decision(event: dict, root: Path = ROOT, *, october=False) -> Deci
 
 def website_decision(event: dict, root: Path = ROOT, *, events=None) -> Decision:
     verified = assess(event, root, events=events)
-    if verified.allowed:
-        return verified
-    october = migration_decision(event, root, october=True)
-    if october.allowed:
-        return october
-    return migration_decision(event, root)
+    if not verified.allowed:
+        verified = migration_decision(event, root, october=True)
+    if not verified.allowed:
+        verified = migration_decision(event, root)
+    try:
+        return website_asset(verified, root)
+    except (ValueError, KeyError, TypeError, OSError) as exc:
+        return Decision(False, str(exc))
 
 
 def verified_flyer_path(event: dict, root: Path = ROOT) -> str:
