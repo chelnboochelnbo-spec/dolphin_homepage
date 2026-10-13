@@ -377,3 +377,24 @@ test('DOM native form prefill preserves an edited multi-day date without reloadi
   assert.equal(new URL(frame.src).searchParams.get('entry.1102411826'), 'Bar visit / other enquiry');
   assert.equal(new URL(frame.src).searchParams.has('entry.1475276432'), false);
 });
+
+test('DOM a failed background refresh never reloads a partly completed native Form', async () => {
+  const data = fixtures(); let eventReads = 0;
+  const h = harness({data, fetch: request => request.url === '/data/events.json' && ++eventReads > 1
+    ? {ok:false,status:503,json:async()=>({})} : response(data[request.url])});
+  const frame = h.elements.reservationFrame = new Element('iframe');
+  h.elements.openReservationForm = new Element('a');
+  let src = '', loads = 0;
+  Object.defineProperty(frame,'src',{get:()=>src,set:value=>{src=value;loads++;}});
+  await h.start(); h.choose('TEST-student');
+  const original = {src:frame.src, link:h.elements.openReservationForm.href, loads};
+  h.setNow('2026-10-14T03:00:00Z'); h.runIntervals(); await flush();
+  assert.equal(frame.src,original.src);
+  assert.equal(h.elements.openReservationForm.href,original.link);
+  assert.equal(loads,original.loads);
+  assert.deepEqual(states(h),Array(7).fill('unknown'));
+  assert.match(h.elements.reservationStatus.textContent,/has not been reloaded/);
+  h.choose('Normal');
+  assert.equal(new URL(frame.src).searchParams.get('entry.1102411826'),'Bar visit / other enquiry');
+  assert.equal(loads,original.loads+1,'Only an explicit new choice reloads the Form after failure');
+});

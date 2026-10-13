@@ -251,10 +251,12 @@
                 events = [];
                 // Keep the contact route usable, but never label a failed event load a bar night.
                 if (english) fill(select?.value === 'Normal' ? 'Normal' : '');
-                syncWebForm();
+                // A background outage must not erase answers inside Google's iframe.
+                // Keep its last URL until the visitor explicitly changes their choice.
+                if (initial) syncWebForm();
                 if (list) list.textContent = 'The schedule could not be loaded. Please call +81-80-3895-0821 or visit the Japanese schedule.';
                 renderWeek(false);
-                say(english ? 'Could not refresh event information. Please confirm your date with us.' : '最新公演情報を取得できませんでした。ご希望日をお店へご確認ください。');
+                say(english ? (initial ? 'Could not refresh event information. Please confirm your date with us.' : 'Could not refresh event information. Your request form has not been reloaded; please confirm your date with Dolphin.') : '最新公演情報を取得できませんでした。ご希望日をお店へご確認ください。');
             } finally { loadedDay = todayJST(); loading = false; }
         }
         month?.addEventListener('change', () => fill(select.value));
