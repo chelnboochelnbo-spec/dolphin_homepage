@@ -101,10 +101,11 @@ fs.mkdirSync(out, { recursive: true });
     }
     // Preserve a newer user choice made while a midnight refresh is pending.
     {
-      const context = await browser.newContext(); let reads=0, pending;
+      const context = await browser.newContext(); let reads=0, pending, signalRefresh;
+      const refreshStarted = new Promise(resolve => { signalRefresh = resolve; });
       await context.route('**/*', route => {
         const url = new URL(route.request().url());
-        if(url.pathname==='/data/operations.json' && ++reads>1) { pending=route; return; }
+        if(url.pathname==='/data/operations.json' && ++reads>1) { pending=route; signalRefresh(); return; }
         return url.origin===origin ? route.continue() : route.abort();
       });
       const page = await context.newPage();
@@ -114,7 +115,12 @@ fs.mkdirSync(out, { recursive: true });
       await page.selectOption('#event','2026-10-15_stakes-is-high');
       await page.clock.setSystemTime(new Date('2026-10-14T03:00:00Z'));
       await page.clock.runFor(60001);
-      assert(pending,'No midnight refresh was triggered');
+      // Browser network events reach the test process after the clock command.
+      // Wait for interception rather than racing its asynchronous route callback.
+      let refreshTimeout;
+      await Promise.race([refreshStarted, new Promise((_,reject) => {
+        refreshTimeout=setTimeout(()=>reject(new Error('No midnight refresh was triggered')),10000);
+      })]).finally(()=>clearTimeout(refreshTimeout));
       await page.selectOption('#event','2026-10-22_legacy-a52e331b05');
       await pending.fulfill({status:200,contentType:'application/json',body:fs.readFileSync('data/operations.json','utf8')});
       await page.waitForFunction(()=>document.querySelector('#englishWeek > article').dataset.date==='2026-10-14');
