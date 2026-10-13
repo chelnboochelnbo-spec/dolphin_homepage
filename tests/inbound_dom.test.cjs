@@ -398,3 +398,18 @@ test('DOM a failed background refresh never reloads a partly completed native Fo
   assert.equal(new URL(frame.src).searchParams.get('entry.1102411826'),'Bar visit / other enquiry');
   assert.equal(loads,original.loads+1,'Only an explicit new choice reloads the Form after failure');
 });
+
+test('DOM iframe updates replace child history entries rather than assigning src', async () => {
+  const h=harness(); const replaced=[];
+  const frame=h.elements.reservationFrame=new Element('iframe');
+  frame.src='https://test.example.invalid/initial-form';
+  frame.contentWindow={location:{replace:url=>replaced.push(url)}};
+  h.elements.openReservationForm=new Element('a');
+  await h.start();
+  h.choose('TEST-student');
+  assert.equal(new URL(replaced.at(-1)).searchParams.get('entry.1102411826'),'TEST student jam');
+  assert.equal(frame.src,'https://test.example.invalid/initial-form','No repeated src navigation may add child history entries');
+  const count=replaced.length;
+  h.choose('TEST-student');
+  assert.equal(replaced.length,count,'Same choice does not replace/reload again');
+});

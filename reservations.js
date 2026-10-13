@@ -137,7 +137,13 @@
             const chosenDate = selected ? date?.value : '';
             const embedded = webFormURL(title, chosenDate, true);
             // Do not reload an in-progress form if a data refresh left the choice unchanged.
-            if (reservationFrame.src !== embedded) reservationFrame.src = embedded;
+            if ((reservationFrame.dataset.formUrl || reservationFrame.src) !== embedded) {
+                // Replace the child entry: assigning src repeatedly otherwise adds
+                // iframe entries to the browser's Back/Forward history.
+                if (reservationFrame.contentWindow) reservationFrame.contentWindow.location.replace(embedded);
+                else reservationFrame.src = embedded;
+                reservationFrame.dataset.formUrl = embedded;
+            }
             openForm.href = webFormURL(title, chosenDate);
         }
         function fill(selected = '') {

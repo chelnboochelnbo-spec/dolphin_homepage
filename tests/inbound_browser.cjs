@@ -14,7 +14,12 @@ fs.mkdirSync(out, { recursive: true });
     browser = await chromium.launch({headless:true, ...(process.env.CHROMIUM_PATH ? {executablePath:process.env.CHROMIUM_PATH} : {})});
     for(const width of [1440,390,320]) {
       const context = await browser.newContext({viewport:{width,height:1000}, timezoneId:'America/Los_Angeles', reducedMotion:'reduce'});
-      await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+      await context.route('**/*', route => {
+        const url = new URL(route.request().url());
+        // A cross-origin local stub tests iframe history without contacting Google.
+        if(url.hostname === 'docs.google.com') return route.fulfill({status:200,contentType:'text/html',body:'<p>TEST form placeholder. No submission.</p>'});
+        return url.origin === origin ? route.continue() : route.abort();
+      });
       const page = await context.newPage(); const errors=[]; page.on('pageerror', e => errors.push(e.message));
       await page.clock.install({time:new Date('2026-10-13T03:00:00Z')});
       await page.goto(origin+'/en/', {waitUntil:'networkidle'});
@@ -33,8 +38,11 @@ fs.mkdirSync(out, { recursive: true });
       assert.equal(await page.locator('#event').inputValue(),'2026-10-17_legacy-24ea07afe6');
       assert.equal(await page.locator('#date').inputValue(),'2026-10-17');
       assert.match(await page.locator('#reservationFees').innerText(),/2-drink minimum/);
-      await page.goBack(); assert.equal(await page.locator('#event').inputValue(),'');
-      await page.goForward(); assert.equal(await page.locator('#event').inputValue(),'2026-10-17_legacy-24ea07afe6');
+      await page.evaluate(()=>history.back());
+      await page.waitForFunction(()=>!new URL(location.href).searchParams.has('event_id'));
+      assert.equal(await page.locator('#event').inputValue(),'');
+      await page.evaluate(()=>history.forward());
+      await page.waitForFunction(()=>document.querySelector('#event').value==='2026-10-17_legacy-24ea07afe6');
       const length=await page.evaluate(()=>history.length);
       await page.locator('#englishWeek [data-date="2026-10-17"] a').filter({hasText:'Request a reservation'}).click();
       assert.equal(await page.evaluate(()=>history.length),length,'Repeated request link adds duplicate history');
