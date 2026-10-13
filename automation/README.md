@@ -102,3 +102,48 @@ After the event date has passed:
 - Preserve rollback through commits.
 - Verify Vercel deployment after production changes.
 - If a social connector is unavailable, stop at `planned` rather than pretending a post is scheduled.
+
+
+## English visitor schedule and reservation fees
+
+`/en/` reads the existing `data/events.json`, `data/operations.json`, and
+`data/publication_tombstones.json`. `reservations.js` displays today plus six more
+operating dates in `Asia/Tokyo`, honors explicit closures/private bookings before
+events, and preserves the same Sunday/holiday rule as the Python renderer. The
+canonical records stay unchanged. The page refreshes after the Japan date changes.
+Failed or timed-out schedule reads show an unconfirmed state rather than assuming
+the bar is open. Cancelled events remain excluded by the publication tombstones.
+
+Published charge strings are translated without rounding prices or supplying
+missing drink requirements. The selected event's admission and drink conditions
+are repeated before the request form.
+
+### Reservation delivery
+
+The English page embeds the existing Dolphin account's published Google Form,
+with a direct-open link if the embed is unavailable. Its confirmation wording
+states that a reservation is accepted only after Dolphin replies. The optional
+Google Maps / Hotel / SNS / Friend / Other discovery answer is collected inside
+that form. The Japanese email-draft flow is retained.
+
+`webFormURL` prefills only the public event title and date through the provider's
+verified entry IDs. Names, email addresses, guest counts, messages and discovery
+answers are never placed in website URLs, analytics events or browser storage.
+Changing the selected event/date can reload the embedded form; the English page
+warns visitors to select first. An unchanged refresh preserves its existing URL
+and does not reload an in-progress response. The Google Form owns submission,
+validation, response storage and its confirmation screen; client-side JavaScript
+does not infer success or send email. No credential is embedded in the site.
+
+### Verification
+
+- `node --test tests/*.test.cjs` includes prices, day boundaries, date/override
+  precedence, cancellation tombstones, and safe public-event Form prefilling.
+- `python -m unittest discover -s tests -p 'test_inbound_schedule.py'` compares the
+  JavaScript closure policy to the canonical Python rule for its verified range.
+- `node tests/inbound_browser.cjs` uses the existing Playwright QA setup, a local
+  server, desktop/mobile viewports, and a non-Japan visitor timezone. External
+  requests are blocked and the form is never submitted. This verifies the website
+  handoff, not Google’s anonymous submission or notification delivery. `CHROMIUM_PATH` can select
+  an existing local Chromium binary. PR CI runs this check with the other browser
+  checks and retains screenshots as `dolphin-monochrome-previews`.

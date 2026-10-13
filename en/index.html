@@ -52,14 +52,23 @@
       <p class="lead">Jazz & Bar Dolphin is a small jazz bar in Katamachi, Kanazawa. Some nights are live performances or jam sessions; other nights are relaxed bar nights with records, whisky, gin and conversation. You do not need to know jazz to enjoy the room.</p>
       <div class="cta-row">
         <a class="btn primary" data-track="maps_click" href="https://maps.google.com/maps?cid=519287684358445094" target="_blank" rel="noopener">Open Google Maps</a>
-        <a class="btn" data-track="schedule_click" href="#schedule">Tonight & Schedule</a>
+        <a class="btn" data-track="schedule_click" href="#tonight">Tonight & Next 7 Days</a>
         <a class="btn" data-track="reservation_click" href="#reservation">Reservation / Contact</a>
       </div>
     </header>
 
+    <section class="section english-week" id="tonight" aria-labelledby="tonight-heading">
+      <p class="eyebrow">PLAN YOUR VISIT</p>
+      <h2 id="tonight-heading">Tonight &amp; the next 7 days</h2>
+      <p class="small">Today and the following six days, in Japan Standard Time (JST, UTC+9). Dates refer to the day the evening begins. Hours after midnight are on the following day.</p>
+      <div id="englishWeek" class="event-grid" aria-live="polite" aria-busy="true"><p>Checking the schedule…</p></div>
+      <noscript><p>Please <a href="/schedule.html">check the full schedule</a> or call <a href="tel:+818038950821">+81-80-3895-0821</a> before visiting.</p></noscript>
+      <p class="small"><a href="#schedule">All upcoming events and prices</a></p>
+    </section>
+
     <section class="info-grid" aria-label="Visit basics">
       <article class="card"><h2>Hours</h2><p><strong>19:00–01:00</strong></p><p class="small">Normally closed Sundays. When public holidays follow Sunday consecutively, we close on the last holiday instead. Published events remain open. Check the schedule before visiting.</p></article>
-      <article class="card"><h2>Price</h2><p><strong>Bar charge ¥500</strong></p><p class="small">Live / jam event admission starts from ¥1,000. Drinks and food are separate.</p></article>
+      <article class="card"><h2>Price</h2><p><strong>Bar charge ¥500 on regular bar nights</strong></p><p class="small">Event admission and drink minimums vary. Check the event price before requesting a reservation. Drinks and food are separate.</p></article>
       <article class="card"><h2>Welcome</h2><p><strong>Solo visitors welcome</strong></p><p class="small">Jazz beginners, listeners and musicians are all welcome. Listening only is completely fine.</p></article>
       <article class="card"><h2>Payment</h2><p><strong>Cash / Card / QR</strong></p><p class="small">Whisky, gin, cocktails and non-alcoholic drinks are available.</p></article>
     </section>
@@ -96,7 +105,7 @@
         <dt>Phone</dt><dd><a data-track="phone_click" href="tel:+818038950821" style="color:#fff">080-3895-0821</a></dd>
         <dt>Hours</dt><dd>19:00–01:00 / Normally closed Sundays; holiday and event exceptions apply</dd>
         <dt>Cover</dt><dd>¥500 on regular bar nights</dd>
-        <dt>Events</dt><dd>Live / jam admission from ¥1,000; exact price varies by event</dd>
+        <dt>Events</dt><dd>See the event's admission and drink minimum below. Drinks and food are separate.</dd>
         <dt>Payment</dt><dd>Cash, credit cards and QR-code payments</dd>
       </dl>
       <div class="cta-row">
@@ -108,24 +117,24 @@
     <section class="section" id="schedule">
       <h2>Upcoming live jazz &amp; sessions</h2>
       <p class="small">All dates and times are in Japan Standard Time (JST, UTC+9). Doors = admission begins; Starts = performance begins. Prices are in Japanese yen. Performer names and event titles are kept as officially listed.</p>
+      <p class="notice small">Event prices below are the published admission charges. A drink minimum means drinks must be ordered and paid for separately. Student and advance / at-the-door prices apply only where listed. If a condition is not listed, please ask us before your visit.</p>
       <div id="englishEvents" class="event-grid"><p>Loading the schedule…</p></div>
       <noscript><p>For the full schedule, <a href="/schedule.html">visit the Japanese schedule</a> or call +81-80-3895-0821.</p></noscript>
     </section>
     <section class="section" id="reservation">
       <h2>Request a reservation</h2>
-      <p>This form opens a draft in your email app. Please send the email and wait for Dolphin to confirm availability. Opening the draft does not complete a reservation.</p>
-      <p class="small">If you do not use an email app, contact <a href="mailto:bardolphinsince2016@gmail.com">bardolphinsince2016@gmail.com</a> or call <a href="tel:+818038950821">+81-80-3895-0821</a>.</p>
-      <form id="reserveForm" class="english-reservation">
-        <label for="event">Event (Japan time)</label><select id="event" name="event" required><option value="">Choose an event</option></select>
+      <p>Send a reservation request using the Google Form below. Your reservation is confirmed only after Dolphin replies by email.</p>
+      <p class="small">Choose an event first to check its fees and prefill the form. For a regular bar visit, choose “Bar visit / other enquiry” and enter your preferred date in the form. Changing the event or date reloads the form and may clear answers you have already entered.</p>
+      <div class="english-reservation">
+        <label for="event">Event (Japan time)</label><select id="event" name="event"><option value="">Choose an event</option></select>
+        <div id="reservationFees" class="reservation-fees" role="status">Choose an event to see its admission and drink conditions.</div>
         <label for="date">Event date (Japan time)</label><input id="date" name="date" type="date" readonly>
-        <label for="name">Name</label><input id="name" name="name" autocomplete="name" required>
-        <label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required>
-        <label for="people">Number of guests</label><select id="people" name="people"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option value="6+">6 or more (please specify below)</option></select>
-        <label for="tel">Phone (include country code)</label><input id="tel" name="tel" type="tel" autocomplete="tel">
-        <label for="message">Message / preferred date for a bar visit</label><textarea id="message" name="message" rows="4"></textarea>
-        <p id="reservationStatus" role="status">No request has been sent.</p>
-        <button class="btn primary" type="submit">Create reservation email</button>
-      </form>
+        <p id="reservationStatus" role="status"></p>
+      </div>
+      <div class="cta-row"><a id="openReservationForm" class="btn primary" data-track="reservation_click" href="https://docs.google.com/forms/d/e/1FAIpQLSdGlHzvaeYnQnrwqLqkeK-PyIePHlo4aI-AsOjuaE-W2cYk6Q/viewform?usp=publish-editor" target="_blank" rel="noopener">Open reservation form in a new tab</a></div>
+      <p class="small">The form asks for your name, email, visit date and number of guests. “How did you hear about Dolphin?” is optional. Please do not include payment details.</p>
+      <iframe id="reservationFrame" class="reservation-frame" title="Dolphin reservation request form" src="https://docs.google.com/forms/d/e/1FAIpQLSdGlHzvaeYnQnrwqLqkeK-PyIePHlo4aI-AsOjuaE-W2cYk6Q/viewform?embedded=true" loading="lazy" referrerpolicy="no-referrer">Use the reservation-form link above if the embedded form cannot be displayed.</iframe>
+      <p class="small">If you cannot use the form, email <a href="mailto:bardolphinsince2016@gmail.com">bardolphinsince2016@gmail.com</a> or call <a href="tel:+818038950821">+81-80-3895-0821</a>. A request does not guarantee availability; please wait for our reply.</p>
     </section>
     <footer class="footer">
       <p>Jazz & Bar Dolphin · Kanazawa, Ishikawa, Japan</p>
@@ -136,3 +145,4 @@
 <script defer src="/analytics-consent.js"></script>
 </body>
 </html>
+

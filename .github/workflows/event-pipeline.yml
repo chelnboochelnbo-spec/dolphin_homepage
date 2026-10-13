@@ -41,6 +41,7 @@ on:
       - 'analytics-*.css'
       - 'analytics-frame.html'
       - 'inbound-analytics.js'
+      - 'assets/inbound.css'
       - 'automation/install_analytics.py'
       - 'home-calendar.js'
       - 'home-calendar.css'
@@ -98,6 +99,7 @@ on:
       - 'analytics-*.css'
       - 'analytics-frame.html'
       - 'inbound-analytics.js'
+      - 'assets/inbound.css'
       - 'automation/install_analytics.py'
       - 'home-calendar.js'
       - 'home-calendar.css'
@@ -174,6 +176,7 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/dolphin-brand-qa/node_modules" node tests/brand_theme_browser.cjs
           NODE_PATH="$RUNNER_TEMP/dolphin-brand-qa/node_modules" node tests/home_calendar_browser.cjs
           NODE_PATH="$RUNNER_TEMP/dolphin-brand-qa/node_modules" node tests/analytics_consent_browser.cjs
+          NODE_PATH="$RUNNER_TEMP/dolphin-brand-qa/node_modules" node tests/inbound_browser.cjs
 
       - name: Save monochrome verification previews
         if: github.event_name == 'pull_request' && always()
@@ -183,6 +186,7 @@ jobs:
           path: |
             ${{ runner.temp }}/dolphin-theme-previews
             ${{ runner.temp }}/dolphin-calendar-previews
+            ${{ runner.temp }}/dolphin-inbound-previews
           retention-days: 7
           if-no-files-found: ignore
 
@@ -212,3 +216,4 @@ jobs:
           git add -- '*.html'
           git commit -m "chore: render DOLPHIN schedule and live archive"
           git push
+
