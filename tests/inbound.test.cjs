@@ -8,7 +8,7 @@ test('seven days include tonight, real closures, events and regular bar nights',
   const before = JSON.stringify([data, operations]);
   const days = nextSevenDays(data.events, operations, '2026-10-13');
   assert.deepEqual(days.map(d => d.date), ['2026-10-13','2026-10-14','2026-10-15','2026-10-16','2026-10-17','2026-10-18','2026-10-19']);
-  assert.deepEqual(days.map(d => d.state), ['event','closed','event','bar','event','closed','bar']);
+  assert.deepEqual(days.map(d => d.state), ['event','closed','event','bar','event','closed','closed']);
   assert.equal(days[0].events[0].charge, 'Charge ¥4,500');
   assert.equal(days[4].events[0].charge, 'Charge ¥2,000 + 2Drink Order');
   assert.equal(days[3].hours, '19:00–01:00 (next day)');

@@ -36,7 +36,8 @@ class ClosurePolicyTests(unittest.TestCase):
                 lambda event: event['title']).values() for day, value in month}
         closed = ['2026-10-12', '2026-10-14', '2026-10-18', '2026-10-25', '2026-11-23',
                   '2027-01-03', '2027-01-11', '2027-03-22']
-        opened = ['2026-10-26', '2026-10-27', '2026-10-28', '2027-01-10', '2027-03-21']
+        closed += ['2026-10-19', '2026-10-26', '2026-11-02', '2026-11-09', '2026-11-16', '2026-11-30']
+        opened = ['2026-10-27', '2026-10-28', '2026-12-14', '2026-12-21', '2027-01-10', '2027-03-21']
         for value in closed:
             self.assertIn('休業', cells[value])
             self.assertIn('休業', rows[value])
