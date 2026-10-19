@@ -38,6 +38,30 @@
     },
     "2026-12-09": {
       "state": "closed"
+    },
+    "2027-01-01": {
+      "state": "closed",
+      "note": "年始休業"
+    },
+    "2027-01-02": {
+      "state": "closed",
+      "note": "年始休業"
+    },
+    "2027-01-03": {
+      "state": "closed",
+      "note": "年始休業"
+    },
+    "2027-01-04": {
+      "state": "closed",
+      "note": "年始休業"
+    },
+    "2027-01-05": {
+      "state": "closed",
+      "note": "年始休業"
+    },
+    "2027-01-06": {
+      "state": "closed",
+      "note": "年始休業"
     }
   },
   "closure_rule": {
