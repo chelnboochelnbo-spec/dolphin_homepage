@@ -6,6 +6,12 @@
       "date": "2027-01-02",
       "title": "Saturday Jam Session 1",
       "reason": "Owner cancellation; retain draft record and prevent stale import or schedule regeneration from reviving it."
+    },
+    {
+      "event_id": "2026-11-06_contemporary-jazz-listening",
+      "date": "2026-11-06",
+      "title": "現代ジャズを聴く会",
+      "reason": "Owner cancellation on 2026-10-27; retain cancelled record and prevent stale import or schedule regeneration from reviving it."
     }
   ]
 }
