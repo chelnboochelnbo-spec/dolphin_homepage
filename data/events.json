@@ -5234,6 +5234,39 @@
         "instagram": "",
         "external_links": []
       }
+    },
+    {
+      "id": "2027-04-15_sugadairo",
+      "date": "2027-04-15",
+      "title": "スガダイロー",
+      "event_type": "live",
+      "status": "published",
+      "open": null,
+      "start": null,
+      "charge": null,
+      "performers": [
+        {
+          "name": "スガダイロー",
+          "artist_id": "sugadairo"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
     }
   ]
 }
