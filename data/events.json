@@ -5104,29 +5104,37 @@
     {
       "id": "2026-11-22_big-apple-after-session",
       "date": "2026-11-22",
-      "title": "BIG APPLE AFTER SESSION",
+      "title": "荻原亮 Special Twin Guitar Jam Session — Third Session 4th Anniversary",
       "event_type": "session",
       "status": "published",
-      "open": null,
+      "open": "19:30",
       "start": "20:00",
-      "charge": "Charge ¥2,000",
+      "charge": "Charge ¥3,500",
       "performers": [
         {
           "instrument": "Gt",
-          "name": "櫻井祐二"
+          "name": "荻原亮"
+        },
+        {
+          "instrument": "Gt",
+          "name": "Yuji Sakurai"
         },
         {
           "instrument": "Ba",
           "name": "中山とも"
+        },
+        {
+          "instrument": "Dr",
+          "name": "ナカジマケント"
         }
       ],
-      "description": "ホスト：櫻井祐二（ギター）／中山とも（ベース）",
+      "description": "Dolphin 1st Anniversary Special Live #6。Third Session 4周年！荻原亮を迎え、ツインギターを中心にグルーブと即興が交差するスペシャルなジャムセッション。+ Special Guests。",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
         "status": "ready",
         "source": "owner_supplied",
-        "github_path": "assets/flyers/flyer_20261122_big-apple-after-session.png",
+        "github_path": "assets/flyers/flyer_20261122_special-twin-guitar-jam-session.jpg",
         "canva_design_id": null
       },
       "archive": {

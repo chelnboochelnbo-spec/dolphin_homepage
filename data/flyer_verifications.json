@@ -1322,6 +1322,57 @@
           "observed_text": "Balloon vine Trio; LIVE & SESSION; 2026.11.28 SAT; START 20:00; ¥2,000; Piano: 宇野秀哉; Bass: 帆苅拓哉; Drums: 横山隼斗; Jazz & Bar Dolphin. No OPEN time or drink-order condition printed."
         }
       }
+    },
+    {
+      "review_id": "visual-20261028-2026-11-22-twin-guitar",
+      "kind": "visual_review",
+      "reviewer": "Recorded local pixel inspection",
+      "reviewed_at": "2026-10-28T02:29:17+00:00",
+      "pixels_inspected": true,
+      "transcription": "Dolphin 1st Anniversary Special Live #6; 荻原亮; Third Session 4th Anniversary: Special Twin Guitar Jam Session; w. Yuji Sakurai (guitar) / 中山とも (bass) / ナカジマケント (drum) + Special Guests; 2026.11.22 (SUN); open 19:30 / start 20:00 / charge ¥3500. No drink requirement or end time printed.",
+      "image_path": "assets/flyers/flyer_20261122_special-twin-guitar-jam-session.jpg",
+      "image_sha256": "e96fa4e8d102d14cdc9765ef15761ed870c198c635c6ab3c49a63d29780ea01c",
+      "covered_dates": [
+        "2026-11-22"
+      ],
+      "targets": {
+        "2026-11-22_big-apple-after-session": {
+          "facts": {
+            "id": "2026-11-22_big-apple-after-session",
+            "date": "2026-11-22",
+            "end_date": null,
+            "open": "19:30",
+            "start": "20:00",
+            "charge": "Charge ¥3,500",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "荻原亮"
+              },
+              {
+                "instrument": "Gt",
+                "name": "Yuji Sakurai"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも"
+              },
+              {
+                "instrument": "Dr",
+                "name": "ナカジマケント"
+              }
+            ],
+            "title": "荻原亮 Special Twin Guitar Jam Session — Third Session 4th Anniversary",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "cd3b4043121fb4da1e897392780a96d58e5a4af608f39dd617015c862af201a8",
+          "observed_text": "Dolphin 1st Anniversary Special Live #6; 荻原亮; Third Session 4th Anniversary: Special Twin Guitar Jam Session; w. Yuji Sakurai (guitar) / 中山とも (bass) / ナカジマケント (drum) + Special Guests; 2026.11.22 (SUN); open 19:30 / start 20:00 / charge ¥3500. No drink requirement or end time printed."
+        }
+      }
     }
   ]
 }

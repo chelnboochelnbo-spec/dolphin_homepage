@@ -45,7 +45,7 @@ class ClosurePolicyTests(unittest.TestCase):
         for value in opened:
             self.assertIn('通常営業', cells[value])
             self.assertIn('通常営業', rows[value])
-        for value, title in [('2026-10-11', '鈴木千明'), ('2026-11-22', 'BIG APPLE'),
+        for value, title in [('2026-10-11', '鈴木千明'), ('2026-11-22', '荻原亮'),
                              ('2026-12-27', '中山拓海')]:
             self.assertIn(title, cells[value])
             self.assertIn(title, rows[value])
