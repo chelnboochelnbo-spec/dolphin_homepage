@@ -1373,6 +1373,50 @@
           "observed_text": "Dolphin 1st Anniversary Special Live #6; 荻原亮; Third Session 4th Anniversary: Special Twin Guitar Jam Session; w. Yuji Sakurai (guitar) / 中山とも (bass) / ナカジマケント (drum) + Special Guests; 2026.11.22 (SUN); open 19:30 / start 20:00 / charge ¥3500. No drink requirement or end time printed."
         }
       }
+    },
+    {
+      "review_id": "visual-20261029-20261106-free-improvisation-owner-confirmed-v1",
+      "kind": "visual_review",
+      "reviewer": "ARIA: actual approved PNG pixel inspection",
+      "reviewed_at": "2026-10-29T04:54:13.069013+00:00",
+      "pixels_inspected": true,
+      "transcription": "FREE IMPROVISATION / JAM SESSION; 2026.11.06 FRI; START 20:00; CHARGE ¥1,500; HOST Pf 岩村入吹 / Dr 永見拓也; Jazz & Bar Dolphin. No OPEN time, end time, or drink condition printed.",
+      "image_path": "assets/flyers/flyer_20261106_free-improvisation-jam-session.png",
+      "image_sha256": "d25f356e244b7f00060bfce21d1402bf2c1a00e1f97747a51d9848ce71ba4225",
+      "covered_dates": [
+        "2026-11-06"
+      ],
+      "targets": {
+        "2026-11-06_free-improvisation-jam-session": {
+          "facts": {
+            "id": "2026-11-06_free-improvisation-jam-session",
+            "date": "2026-11-06",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥1,500",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "Free Improvisation Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "de0ffdb2855227222dae6cc36646815c443f8dbc3736213c9b15a9db32a2cb11",
+          "observed_text": "FREE IMPROVISATION / JAM SESSION; 2026.11.06 FRI; START 20:00; CHARGE ¥1,500; HOST Pf 岩村入吹 / Dr 永見拓也; Jazz & Bar Dolphin. No OPEN time, end time, or drink condition printed."
+        }
+      }
     }
   ]
 }
