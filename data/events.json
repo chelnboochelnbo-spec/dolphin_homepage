@@ -4027,6 +4027,49 @@
       }
     },
     {
+      "id": "2026-11-14_iwamura-ibuki-trio-live-session",
+      "date": "2026-11-14",
+      "title": "岩村入吹トリオ Live & Session",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "owner_supplied",
+        "github_path": "assets/flyers/flyer_20261114_iwamura-ibuki-trio-live-session.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
       "id": "2026-11-19_legacy-99e2aaedcf",
       "date": "2026-11-19",
       "title": "Monthly Voices 〜Vocal Session〜",

@@ -1417,6 +1417,55 @@
           "observed_text": "FREE IMPROVISATION / JAM SESSION; 2026.11.06 FRI; START 20:00; CHARGE ¥1,500; HOST Pf 岩村入吹 / Dr 永見拓也; Jazz & Bar Dolphin. No OPEN time, end time, or drink condition printed."
         }
       }
+    },
+    {
+      "review_id": "visual-20261029-20261114-iwamura-trio-final-v1",
+      "kind": "visual_review",
+      "reviewer": "ARIA: actual final PNG pixel inspection",
+      "reviewed_at": "2026-10-29T08:45:43.827479+00:00",
+      "pixels_inspected": true,
+      "transcription": "岩村入吹トリオ; LIVE & SESSION; 2026.11.14 SAT; START 20:00; Charge ¥2,000; Pf 岩村入吹 / Ba 中山とも / Dr 永見拓也; Jazz & Bar Dolphin; 金沢市片町2-13-11 ミリオンビル4階; TEL 080-3895-0821. No OPEN, end time, or drink condition printed. Draft label removed.",
+      "image_path": "assets/flyers/flyer_20261114_iwamura-ibuki-trio-live-session.png",
+      "image_sha256": "c9eecb438dc2b45b8fa9c5cf9bd2e751b67b8a7e5eee8d864b7fd31e0328894f",
+      "covered_dates": [
+        "2026-11-14"
+      ],
+      "targets": {
+        "2026-11-14_iwamura-ibuki-trio-live-session": {
+          "facts": {
+            "id": "2026-11-14_iwamura-ibuki-trio-live-session",
+            "date": "2026-11-14",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "岩村入吹トリオ Live & Session",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "72f8b294d742bd17376105a97250c9e82fbf3b93e56f29dc9b0ffedd64972459",
+          "observed_text": "岩村入吹トリオ; LIVE & SESSION; 2026.11.14 SAT; START 20:00; Charge ¥2,000; Pf 岩村入吹 / Ba 中山とも / Dr 永見拓也; Jazz & Bar Dolphin; 金沢市片町2-13-11 ミリオンビル4階; TEL 080-3895-0821. No OPEN, end time, or drink condition printed. Draft label removed."
+        }
+      }
     }
   ]
 }
