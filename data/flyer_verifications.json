@@ -1466,6 +1466,59 @@
           "observed_text": "岩村入吹トリオ; LIVE & SESSION; 2026.11.14 SAT; START 20:00; Charge ¥2,000; Pf 岩村入吹 / Ba 中山とも / Dr 永見拓也; Jazz & Bar Dolphin; 金沢市片町2-13-11 ミリオンビル4階; TEL 080-3895-0821. No OPEN, end time, or drink condition printed. Draft label removed."
         }
       }
+    },
+    {
+      "review_id": "visual-20261105-20261127-gakujam-final-v1",
+      "kind": "visual_review",
+      "reviewer": "ARIA: actual final PNG pixel inspection",
+      "reviewed_at": "2026-11-05T07:56:55.436938+00:00",
+      "pixels_inspected": true,
+      "transcription": "学ジャム; STUDENT JAM SESSION; 11.27 FRI; START 20:00; CHARGE ¥1,000＋投げ銭; JAZZ & BAR Dolphin. Four performance portraits. Year, host names, universities, OPEN time, end time, and drink conditions are not printed. Event year and host details are supplied separately in the event record.",
+      "image_path": "assets/flyers/flyer_20261127_gakujam.png",
+      "image_sha256": "0d40de5d33881e817007779d2488363622345d344a43673e2c0e786fb674900d",
+      "covered_dates": [
+        "2026-11-27"
+      ],
+      "targets": {
+        "2026-11-27_gakujam": {
+          "facts": {
+            "id": "2026-11-27_gakujam",
+            "date": "2026-11-27",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥1,000 + 投げ銭",
+            "performers": [
+              {
+                "instrument": "Dr",
+                "name": "榎園大熙"
+              },
+              {
+                "instrument": "Pf",
+                "name": "佐藤仁紀"
+              },
+              {
+                "instrument": "Gt",
+                "name": "倉地淳大"
+              },
+              {
+                "instrument": "Ba",
+                "name": "柳原としき"
+              }
+            ],
+            "title": "学ジャム",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": {
+              "intro": "福井大学・富山大学・金沢大学の学生ホストによるジャムセッション。"
+            }
+          },
+          "fingerprint": "bd00bab7dcf7946576ad31f3d0f80507a9fab8fa9cad17a068fa01ea3a0888c7",
+          "observed_text": "学ジャム; STUDENT JAM SESSION; 11.27 FRI; START 20:00; CHARGE ¥1,000＋投げ銭; JAZZ & BAR Dolphin. Four performance portraits. Year, host names, universities, OPEN time, end time, and drink conditions are not printed. Event year and host details are supplied separately in the event record."
+        }
+      }
     }
   ]
 }

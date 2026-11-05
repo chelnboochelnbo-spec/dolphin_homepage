@@ -5356,6 +5356,55 @@
         "instagram": "",
         "external_links": []
       }
+    },
+    {
+      "id": "2026-11-27_gakujam",
+      "date": "2026-11-27",
+      "title": "学ジャム",
+      "event_type": "session",
+      "importance": "normal",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥1,000 + 投げ銭",
+      "performers": [
+        {
+          "instrument": "Dr",
+          "name": "榎園大熙"
+        },
+        {
+          "instrument": "Pf",
+          "name": "佐藤仁紀"
+        },
+        {
+          "instrument": "Gt",
+          "name": "倉地淳大"
+        },
+        {
+          "instrument": "Ba",
+          "name": "柳原としき"
+        }
+      ],
+      "description": "ホスト：榎園大熙（Dr／福井大学）、佐藤仁紀（Pf／富山大学）、倉地淳大（Gt／金沢大学）、柳原としき（Ba／金沢大学）。",
+      "display": {
+        "intro": "福井大学・富山大学・金沢大学の学生ホストによるジャムセッション。"
+      },
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "owner_approved_generated_image",
+        "github_path": "assets/flyers/flyer_20261127_gakujam.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
     }
   ]
 }
