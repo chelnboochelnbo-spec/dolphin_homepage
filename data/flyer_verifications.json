@@ -1468,12 +1468,12 @@
       }
     },
     {
-      "review_id": "visual-20261105-20261127-gakujam-final-v1",
+      "review_id": "visual-20261105-20261127-gakujam-vol1-v2",
       "kind": "visual_review",
       "reviewer": "ARIA: actual final PNG pixel inspection",
-      "reviewed_at": "2026-11-05T07:56:55.436938+00:00",
+      "reviewed_at": "2026-11-05T08:30:25.003492+00:00",
       "pixels_inspected": true,
-      "transcription": "学ジャム; STUDENT JAM SESSION; 11.27 FRI; START 20:00; CHARGE ¥1,000＋投げ銭; JAZZ & BAR Dolphin. Four performance portraits. Year, host names, universities, OPEN time, end time, and drink conditions are not printed. Event year and host details are supplied separately in the event record.",
+      "transcription": "学ジャム; STUDENT JAM SESSION; 11.27 FRI; START 20:00; CHARGE ¥1,000＋投げ銭; JAZZ & BAR Dolphin. Four performance portraits. Year, host names, universities, OPEN time, end time, and drink conditions are not printed. Event year and host details are supplied separately in the event record. Website title includes the edition label Vol.1; this label is not printed in the unchanged flyer.",
       "image_path": "assets/flyers/flyer_20261127_gakujam.png",
       "image_sha256": "0d40de5d33881e817007779d2488363622345d344a43673e2c0e786fb674900d",
       "covered_dates": [
@@ -1506,7 +1506,7 @@
                 "name": "柳原としき"
               }
             ],
-            "title": "学ジャム",
+            "title": "学ジャム Vol.1",
             "event_type": "session",
             "status": "published",
             "cancelled": null,
@@ -1515,8 +1515,8 @@
               "intro": "福井大学・富山大学・金沢大学の学生ホストによるジャムセッション。"
             }
           },
-          "fingerprint": "bd00bab7dcf7946576ad31f3d0f80507a9fab8fa9cad17a068fa01ea3a0888c7",
-          "observed_text": "学ジャム; STUDENT JAM SESSION; 11.27 FRI; START 20:00; CHARGE ¥1,000＋投げ銭; JAZZ & BAR Dolphin. Four performance portraits. Year, host names, universities, OPEN time, end time, and drink conditions are not printed. Event year and host details are supplied separately in the event record."
+          "fingerprint": "2f5e28943033b2b713076cf41d3f17e322cea2e257833810cb14c589bbae4975",
+          "observed_text": "学ジャム; STUDENT JAM SESSION; 11.27 FRI; START 20:00; CHARGE ¥1,000＋投げ銭; JAZZ & BAR Dolphin. Four performance portraits. Year, host names, universities, OPEN time, end time, and drink conditions are not printed. Event year and host details are supplied separately in the event record. Website title includes the edition label Vol.1; this label is not printed in the unchanged flyer."
         }
       }
     }
