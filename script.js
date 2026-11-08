@@ -60,6 +60,9 @@ function formatTonightDate(dateString) {
 }
 
 function isRegularClosure(day, operations) {
+    const weekly = operations.weekly_closure;
+    const isoWeekday = new Date(day + 'T12:00:00Z').getUTCDay() || 7;
+    if (weekly && day >= weekly.effective_from && weekly.iso_weekdays.includes(isoWeekday)) return true;
     if (operations.closed_policy !== 'sunday_holiday_end') return false;
     const rule = operations.closure_rule;
     if (day < rule.effective_from) return false;

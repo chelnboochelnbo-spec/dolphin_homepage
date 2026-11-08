@@ -80,3 +80,13 @@ test('Google Form prefill contains only public event facts and uses verified ent
   assert.equal(new URL(webFormURL('', '', true)).search, '?embedded=true');
   assert(!new URL(webFormURL('TEST','not-a-date')).searchParams.has('entry.1475276432'));
 });
+
+test('approved closures and December 28 opening agree with the operating schedule', () => {
+  for (const day of ['2026-11-17','2026-11-18','2026-12-14','2026-12-21','2027-01-18']) {
+    assert.equal(operatingDay(day, data.events, operations).state, 'closed', day);
+  }
+  assert.equal(operatingDay('2026-12-28', data.events, operations).state, 'bar');
+  for (const day of ['2026-12-06','2026-12-09','2027-01-01','2027-01-06']) {
+    assert.equal(operatingDay(day, data.events, operations).state, 'closed', day);
+  }
+});

@@ -38,6 +38,9 @@
     // Mirrors the canonical Python operating-calendar rule. Parity is tested over
     // the full verified holiday range; no visitor-device time zone is used.
     function isRegularClosure(day, operations) {
+        const weekly = operations.weekly_closure;
+        const isoWeekday = new Date(day + 'T12:00:00Z').getUTCDay() || 7;
+        if (weekly && day >= weekly.effective_from && weekly.iso_weekdays.includes(isoWeekday)) return true;
         if (operations.closed_policy === 'irregular') return false;
         if (operations.closed_policy !== 'sunday_holiday_end') throw new Error('Unknown closure policy');
         const rule = operations.closure_rule;
