@@ -52,6 +52,11 @@ def validate_operations(operations: dict) -> None:
         for value in holidays['dates']:
             if not first <= date.fromisoformat(value) <= last:
                 raise ValueError('Holiday outside verified calendar coverage')
+    weekly = operations.get('weekly_closure')
+    if weekly is not None:
+        date.fromisoformat(weekly['effective_from'])
+        if not weekly.get('iso_weekdays') or any(type(day) is not int or day not in range(1, 8) for day in weekly['iso_weekdays']):
+            raise ValueError('Weekly closure weekdays must use ISO values 1 through 7')
     hours = operations.get('standard_hours', {})
     for key in ('open', 'close'):
         if not re.fullmatch(r'(?:[01]\d|2[0-3]):[0-5]\d', str(hours.get(key, ''))):
@@ -72,6 +77,9 @@ def regular_closure(day: date, operations: dict) -> bool:
     Explicit overrides and published events are resolved by callers first.
     Do not retroactively change historical operating days or guess future holidays.
     """
+    weekly = operations.get('weekly_closure', {})
+    if weekly and day >= date.fromisoformat(weekly['effective_from']) and day.isoweekday() in weekly['iso_weekdays']:
+        return True
     if operations.get('closed_policy') != 'sunday_holiday_end':
         return False
     rule = operations['closure_rule']
@@ -182,6 +190,8 @@ def render_schedule(html: str, events: list[dict], operations: dict, today: date
     policy_note = ('原則日曜休業。翌日から祝日・休日が続く場合は連休最終日を休業とします。'
                    'ライブ・イベント開催日は営業します。'
                    if operations.get('closed_policy') == 'sunday_holiday_end' else '不定休。')
+    if operations.get('weekly_closure', {}).get('iso_weekdays') == [1]:
+        policy_note += '月曜も休業します（2026年12月以降も継続。12月28日は営業）。'
     note = ('<p id="operating-schedule-note" class="operating-schedule-note">'
             'ライブ・セッション・通常営業・休業日をご案内します。日付は営業開始日を表示しています。'
             + policy_note + '休業日は「休業」と表示します。</p>\n')

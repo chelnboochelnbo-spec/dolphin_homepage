@@ -36,8 +36,8 @@ class ClosurePolicyTests(unittest.TestCase):
                 lambda event: event['title']).values() for day, value in month}
         closed = ['2026-10-12', '2026-10-14', '2026-10-18', '2026-10-25', '2026-11-23',
                   '2027-01-03', '2027-01-11', '2027-03-22']
-        closed += ['2026-10-19', '2026-10-26', '2026-11-02', '2026-11-09', '2026-11-16', '2026-11-30']
-        opened = ['2026-10-27', '2026-10-28', '2026-12-14', '2026-12-21', '2027-01-10', '2027-03-21']
+        closed += ['2026-10-19', '2026-10-26', '2026-11-02', '2026-11-09', '2026-11-16', '2026-11-30', '2026-11-17', '2026-11-18', '2026-12-14', '2026-12-21']
+        opened = ['2026-10-27', '2026-10-28', '2026-12-28', '2027-01-10', '2027-03-21']
         for value in closed:
             self.assertIn('休業', cells[value])
             self.assertIn('休業', rows[value])
@@ -64,6 +64,12 @@ class ClosurePolicyTests(unittest.TestCase):
         self.assertIn('休業', row)
         self.assertNotIn('中山拓海', row)
 
+    def test_permanent_monday_closure(self):
+        self.assertTrue(regular_closure(date(2028, 1, 3), OPS))
+        self.assertEqual(OPS['overrides']['2026-12-28']['state'], 'open')
+        for day in ('2026-12-06', '2026-12-09', '2027-01-01', '2027-01-06'):
+            self.assertEqual(OPS['overrides'][day]['state'], 'closed')
+
     def test_no_unverified_holiday_guesses(self):
         validate_operations(OPS)
         with self.assertRaises(ValueError):
@@ -84,11 +90,14 @@ const fs=require('fs'),vm=require('vm');
 const context={document:{addEventListener(){}},Intl,Date};vm.createContext(context);
 vm.runInContext(fs.readFileSync('script.js','utf8'),context);
 const data=JSON.parse(fs.readFileSync(0,'utf8'));
-process.stdout.write(JSON.stringify(data.days.map(day=>context.isRegularClosure(day,data.operations))));
+const reservations=require('./reservations.js');
+process.stdout.write(JSON.stringify({tonight:data.days.map(day=>context.isRegularClosure(day,data.operations)), reservations:data.days.map(day=>reservations.isRegularClosure(day,data.operations))}));
 """
         js = json.loads(subprocess.check_output(['node', '-e', program], cwd=ROOT,
                         input=json.dumps({'days': days, 'operations': OPS}), text=True))
-        self.assertEqual(js, [regular_closure(date.fromisoformat(day), OPS) for day in days])
+        expected = [regular_closure(date.fromisoformat(day), OPS) for day in days]
+        self.assertEqual(js['tonight'], expected)
+        self.assertEqual(js['reservations'], expected)
 
 
 if __name__ == '__main__':

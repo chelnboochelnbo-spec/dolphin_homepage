@@ -31,9 +31,12 @@ const fixtureDates=[...new Set([actualToday,'2026-10-07','2026-10-27','2027-01-0
    assert.equal(await active().locator('th').count(),7);
    await page.locator('[data-calendar-month="2026-10"]').click();
    assert.equal(await page.locator('[data-calendar-date="2026-10-14"]').innerText(),'14\n休業');
-   const expectedOctober26=fixtureDate>'2026-10-26'?'予定の登録なし':'通常営業';
-   assert((await page.locator('[data-calendar-date="2026-10-26"]').innerText()).includes(expectedOctober26));
+   assert((await page.locator('[data-calendar-date="2026-10-26"]').innerText()).includes('休業'));
+   await page.locator('[data-calendar-month="2026-11"]').click();
+   for(const date of ['2026-11-17','2026-11-18']) assert((await page.locator(`[data-calendar-date="${date}"]`).innerText()).includes('休業'));
    await page.locator('[data-calendar-month="2026-12"]').click();
+   for(const date of ['2026-12-14','2026-12-21']) assert((await page.locator(`[data-calendar-date="${date}"]`).innerText()).includes('休業'));
+   assert(!(await page.locator('[data-calendar-date="2026-12-28"]').innerText()).includes('休業'));
    await page.locator('[data-calendar-step="1"]').click();
    assert.equal(await active().getAttribute('data-calendar-panel'),'2027-01');
    assert(!(await page.locator('[data-calendar-date="2027-01-02"]').innerText()).includes('Saturday Jam'));
