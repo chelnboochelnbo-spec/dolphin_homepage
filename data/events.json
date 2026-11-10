@@ -5405,6 +5405,92 @@
         "instagram": "",
         "external_links": []
       }
+    },
+    {
+      "id": "2026-11-10_piano-trio-night",
+      "date": "2026-11-10",
+      "title": "ピアノトリオナイト",
+      "event_type": "live",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "generated_image",
+        "github_path": "assets/flyers/flyer_20261110_piano-trio-night.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2026-11-11_piano-trio-night",
+      "date": "2026-11-11",
+      "title": "ピアノトリオナイト",
+      "event_type": "live",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "generated_image",
+        "github_path": "assets/flyers/flyer_20261110_piano-trio-night.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
     }
   ]
 }

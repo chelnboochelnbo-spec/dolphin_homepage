@@ -1519,6 +1519,98 @@
           "observed_text": "学ジャム; STUDENT JAM SESSION; 11.27 FRI; START 20:00; CHARGE ¥1,000＋投げ銭; JAZZ & BAR Dolphin. Four performance portraits. Year, host names, universities, OPEN time, end time, and drink conditions are not printed. Event year and host details are supplied separately in the event record. Website title includes the edition label Vol.1; this label is not printed in the unchanged flyer."
         }
       }
+    },
+    {
+      "review_id": "visual-20261108-piano-trio-night-20261110-11-no-katakana-v2",
+      "kind": "visual_review",
+      "reviewer": "Recorded local pixel inspection",
+      "reviewed_at": "2026-11-08T06:32:30.853035+00:00",
+      "pixels_inspected": true,
+      "transcription": "Jazz & Bar Dolphin; PIANO TRIO NIGHT; 2026.11.10 TUE & 11.11 WED; START 20:00; CHARGE ¥2,000; Pf 岩村入吹; Ba 中山とも; Dr 永見拓也. Black, ivory and vermilion abstract keyboard, strings and percussion design. No katakana subtitle, OPEN time, end time, or drink condition printed. Website Japanese title is the translation of the printed English title.",
+      "image_path": "assets/flyers/flyer_20261110_piano-trio-night.png",
+      "image_sha256": "e4fb54bd701df54106015f937ffc6fa290390205dbe578c58b39026d540ffaac",
+      "covered_dates": [
+        "2026-11-10",
+        "2026-11-11"
+      ],
+      "targets": {
+        "2026-11-10_piano-trio-night": {
+          "facts": {
+            "id": "2026-11-10_piano-trio-night",
+            "date": "2026-11-10",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "ピアノトリオナイト",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "e2d3d47b8368eca852efb79fd1727d1b2cbdaabdb85e99b1b723ecc67c492359",
+          "observed_text": "Jazz & Bar Dolphin; PIANO TRIO NIGHT; 2026.11.10 TUE & 11.11 WED; START 20:00; CHARGE ¥2,000; Pf 岩村入吹; Ba 中山とも; Dr 永見拓也. Black, ivory and vermilion abstract keyboard, strings and percussion design. No katakana subtitle, OPEN time, end time, or drink condition printed. Website Japanese title is the translation of the printed English title."
+        },
+        "2026-11-11_piano-trio-night": {
+          "facts": {
+            "id": "2026-11-11_piano-trio-night",
+            "date": "2026-11-11",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "岩村入吹"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "ピアノトリオナイト",
+            "event_type": "live",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "bb51aca5e271af2f46631460f1e6839e435ee6f88f8a1d6d08a4bf74b7c7b41b",
+          "observed_text": "Jazz & Bar Dolphin; PIANO TRIO NIGHT; 2026.11.10 TUE & 11.11 WED; START 20:00; CHARGE ¥2,000; Pf 岩村入吹; Ba 中山とも; Dr 永見拓也. Black, ivory and vermilion abstract keyboard, strings and percussion design. No katakana subtitle, OPEN time, end time, or drink condition printed. Website Japanese title is the translation of the printed English title."
+        }
+      },
+      "shared_publication": {
+        "type": "special_two_day",
+        "target_event_ids": [
+          "2026-11-10_piano-trio-night",
+          "2026-11-11_piano-trio-night"
+        ],
+        "policy_version": 1
+      }
     }
   ]
 }
