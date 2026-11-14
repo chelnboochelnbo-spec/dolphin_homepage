@@ -37,7 +37,7 @@ class ClosurePolicyTests(unittest.TestCase):
         closed = ['2026-10-12', '2026-10-14', '2026-10-18', '2026-10-25', '2026-11-23',
                   '2027-01-03', '2027-01-11', '2027-03-22']
         closed += ['2026-10-19', '2026-10-26', '2026-11-02', '2026-11-09', '2026-11-16', '2026-11-30', '2026-11-17', '2026-11-18', '2026-12-14', '2026-12-21']
-        opened = ['2026-10-27', '2026-10-28', '2026-12-28', '2027-01-10', '2027-03-21']
+        opened = ['2026-10-27', '2026-10-28', '2026-12-28', '2027-03-21']
         for value in closed:
             self.assertIn('休業', cells[value])
             self.assertIn('休業', rows[value])
@@ -46,7 +46,8 @@ class ClosurePolicyTests(unittest.TestCase):
             self.assertIn('通常営業', cells[value])
             self.assertIn('通常営業', rows[value])
         for value, title in [('2026-10-11', '鈴木千明'), ('2026-11-22', '荻原亮'),
-                             ('2026-12-27', '中山拓海')]:
+                             ('2026-12-27', '中山拓海'),
+                             ('2027-01-10', 'マーティーホロベック')]:
             self.assertIn(title, cells[value])
             self.assertIn(title, rows[value])
             self.assertNotIn('休業', cells[value])
