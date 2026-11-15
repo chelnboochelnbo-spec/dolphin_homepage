@@ -5526,6 +5526,56 @@
         "instagram": "",
         "external_links": []
       }
+    },
+    {
+      "id": "2027-01-23_groovy-live-session",
+      "date": "2027-01-23",
+      "title": "Groovy Live&Session",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,500",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "坂本勇斗"
+        },
+        {
+          "instrument": "Pf",
+          "name": "矢田将大"
+        },
+        {
+          "instrument": "Gt",
+          "name": "上田雄也"
+        },
+        {
+          "instrument": "Ba",
+          "name": "麻生大稀"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
     }
   ]
 }
