@@ -4077,7 +4077,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "Pf",
@@ -4209,7 +4209,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "Gt",
@@ -4248,7 +4248,7 @@
       "status": "published",
       "open": "19:00",
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "gt",
@@ -4288,7 +4288,7 @@
       "status": "published",
       "open": "20:00",
       "start": "20:30",
-      "charge": "Charge ¥2,000 + 2Drink Order",
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
       "performers": [],
       "description": "",
       "reservation_url": "index.html#reservation",
@@ -4317,7 +4317,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "Gt",
@@ -4356,7 +4356,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "Pf",
@@ -4401,7 +4401,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 2Drink Order",
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
       "performers": [
         {
           "instrument": "Gt",
@@ -4440,7 +4440,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "Gt",
@@ -4507,7 +4507,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "Gt",
@@ -4545,7 +4545,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 2Drink Order",
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
       "performers": [
         {
           "instrument": "Gt",
@@ -4583,7 +4583,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "Pf",
@@ -4627,7 +4627,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "Gt",
@@ -4665,7 +4665,7 @@
       "status": "published",
       "open": "20:00",
       "start": "20:30",
-      "charge": "Charge ¥2,000 + 2Drink Order",
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
       "performers": [],
       "description": "",
       "reservation_url": "index.html#reservation",
@@ -4693,7 +4693,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "Gt",
@@ -4731,7 +4731,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "Pf",
@@ -4775,7 +4775,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 2Drink Order",
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
       "performers": [
         {
           "instrument": "Gt",
@@ -4813,7 +4813,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "Gt",
@@ -4851,7 +4851,7 @@
       "status": "published",
       "open": "20:00",
       "start": "20:30",
-      "charge": "Charge ¥2,000 + 2Drink Order",
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
       "performers": [],
       "description": "",
       "reservation_url": "index.html#reservation",
@@ -4879,7 +4879,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "Gt",
@@ -4917,7 +4917,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "Pf",
@@ -4961,7 +4961,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 2Drink Order",
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
       "performers": [
         {
           "instrument": "Gt",
@@ -4999,7 +4999,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "Gt",
@@ -5037,7 +5037,7 @@
       "status": "published",
       "open": "19:00",
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "gt",
@@ -5076,7 +5076,7 @@
       "status": "published",
       "open": "19:00",
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "gt",
@@ -5115,7 +5115,7 @@
       "status": "published",
       "open": "19:00",
       "start": "20:00",
-      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 2Drink Order",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
           "instrument": "gt",
@@ -5236,7 +5236,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥2,000 + 2Drink Order",
+      "charge": "Charge ¥2,000 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
       "performers": [
         {
           "instrument": "Piano",
@@ -5366,7 +5366,7 @@
       "status": "published",
       "open": null,
       "start": "20:00",
-      "charge": "Charge ¥1,000 + 投げ銭 + 2Drink Order",
+      "charge": "Charge ¥1,000 + 投げ銭 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
       "performers": [
         {
           "instrument": "Dr",
