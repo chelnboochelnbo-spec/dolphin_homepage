@@ -171,28 +171,13 @@ class Migration(unittest.TestCase):
 
     def test_approved_production_images_and_cancellation_remain_guarded(self):
         events=guard.read_json(fixtures.ROOT/'data/events.json',{})['events']
-        # Owner changed upcoming <= JPY 2,000 events to two drinks on 2026-11-16.
-        # Keep old artwork held, not re-approved against its changed charge.
-        two_drink_artwork_holds = {
-            "2026-11-19_legacy-99e2aaedcf",
-            "2026-11-26_legacy-b780fe732c",
+        # Owner's 2026-11-16 student-policy correction restores matching originals.
+        # Artwork whose charge still differs remains held; no verification is bypassed.
+        policy_artwork_holds = {
             "2026-12-03_legacy-29f4da2759",
-            "2026-12-10_legacy-79edb22069",
-            "2026-12-17_legacy-8372a6f691",
-            "2026-12-19_legacy-a1e1b5e732",
-            "2026-12-24_legacy-c1a6d03617",
-            "2027-01-14_kiraku-jam",
-            "2027-01-16_saturday-jam-session-2",
-            "2027-01-21_monthly-voices-vocal-session",
-            "2027-01-28_kiraku-jam",
-            "2027-02-11_kiraku-jam",
-            "2027-02-18_monthly-voices-vocal-session",
-            "2027-02-20_saturday-jam-session-2",
-            "2027-02-25_kiraku-jam",
-            "2027-03-11_kiraku-jam",
-            "2027-03-18_monthly-voices-vocal-session",
-            "2027-03-20_saturday-jam-session-2",
-            "2027-03-25_kiraku-jam",
+            "2026-12-05_legacy-b917c90b19",
+            "2027-02-06_saturday-jam-session-1",
+            "2027-03-06_saturday-jam-session-1",
             "2027-01-07_open-groove-night-jam-session",
             "2027-02-04_open-groove-night-jam-session",
             "2027-03-04_open-groove-night-jam-session",
@@ -205,9 +190,8 @@ class Migration(unittest.TestCase):
             if event['date']>='2026-10-07' and event['title'] in {
                 'Kiraku Jam','Open Groove Night Jam Session','Saturday Jam Session 2','Monthly Voices 〜Vocal Session〜'}:
                 with self.subTest(event=event['id']):
-                    if event['id'] in two_drink_artwork_holds:
-                        self.assertIn('2Drink Order', event['charge'])
-                        self.assertNotIn('1Drink Order', event['charge'])
+                    if event['id'] in policy_artwork_holds:
+                        self.assertIn('1Drink Order', event['charge'])
                         self.assertFalse(guard.website_decision(event).allowed)
                     else:
                         self.assertTrue(guard.website_decision(event).allowed)
