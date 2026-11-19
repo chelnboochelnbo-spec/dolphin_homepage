@@ -174,7 +174,6 @@ class Migration(unittest.TestCase):
         # Owner's 2026-11-16 student-policy correction restores matching originals.
         # Artwork whose charge still differs remains held; no verification is bypassed.
         policy_artwork_holds = {
-            "2026-12-03_legacy-29f4da2759",
             "2026-12-05_legacy-b917c90b19",
             "2027-02-06_saturday-jam-session-1",
             "2027-03-06_saturday-jam-session-1",

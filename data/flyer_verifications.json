@@ -1611,6 +1611,51 @@
         ],
         "policy_version": 1
       }
+    },
+    {
+      "review_id": "visual-20261116-student-policy-2026-12-03_legacy-29f4da2759",
+      "kind": "visual_review",
+      "reviewer": "ARIA image correction worker, direct pixel inspection",
+      "reviewed_at": "2026-11-16T07:14:41.307200+00:00",
+      "pixels_inspected": true,
+      "transcription": "OPEN GROOVE NIGHT JAM SESSION; 2026-12-03 THU; GT MASAHIDE HANEDA; BA TOMO NAKAYAMA; OPEN 7:00PM START 8PM; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER.",
+      "image_path": "assets/flyers/flyer_20261203_open-groove-night-student-policy-20261116.png",
+      "image_sha256": "264958557db2ea5ab8ac67e1ea14edd2af8d1b5efee27208f7cdcbe0b1a17ca8",
+      "covered_dates": [
+        "2026-12-03"
+      ],
+      "targets": {
+        "2026-12-03_legacy-29f4da2759": {
+          "facts": {
+            "id": "2026-12-03_legacy-29f4da2759",
+            "date": "2026-12-03",
+            "end_date": null,
+            "open": "19:00",
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "gt",
+                "name": "masahide haneda",
+                "artist_id": "masahide-haneda"
+              },
+              {
+                "instrument": "ba",
+                "name": "tomo nakayama",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "Open Groove Night Jam Session",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "4d9e1fd2ec6d5fdcda3b855d6b3dc6af4209d2a776c5b2f08c716dfe24b59870",
+          "observed_text": "OPEN GROOVE NIGHT JAM SESSION; 2026-12-03 THU; GT MASAHIDE HANEDA; BA TOMO NAKAYAMA; OPEN 7:00PM START 8PM; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER."
+        }
+      }
     }
   ]
 }
