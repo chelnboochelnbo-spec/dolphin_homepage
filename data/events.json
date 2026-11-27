@@ -5662,6 +5662,49 @@
         "instagram": "",
         "external_links": []
       }
+    },
+    {
+      "id": "2026-12-05_see-you-again-ando",
+      "date": "2026-12-05",
+      "title": "See you again、ANDO",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 + 2 Drink Order",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "安藤佳大"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ピアニスト・安藤佳大さんを音楽で送り出す一夜。ピアノトリオのライブに続いて、演奏で参加できるジャムセッションを開催します。聴くだけのご来店も歓迎です。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "event_flyer",
+        "github_path": "assets/flyers/flyer_20261205_see-you-again-ando.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
     }
   ]
 }

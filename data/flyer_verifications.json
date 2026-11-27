@@ -1656,6 +1656,55 @@
           "observed_text": "OPEN GROOVE NIGHT JAM SESSION; 2026-12-03 THU; GT MASAHIDE HANEDA; BA TOMO NAKAYAMA; OPEN 7:00PM START 8PM; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER."
         }
       }
+    },
+    {
+      "review_id": "visual-20261127-see-you-again-ando",
+      "kind": "visual_review",
+      "reviewer": "Recorded local pixel inspection",
+      "reviewed_at": "2026-11-27T06:41:01.405918+00:00",
+      "pixels_inspected": true,
+      "transcription": "DOLPHIN / KANAZAWA; LIVE & SESSION; See you again、ANDO; Saturday December 05, 2026; Start 20:00; Charge ¥2,000; 2 Drink Order; Pf 安藤佳大; Ba 中山とも; Dr 永見拓也. No opening time or student price printed.",
+      "image_path": "assets/flyers/flyer_20261205_see-you-again-ando.png",
+      "image_sha256": "0083d83a1c0b32f42aab84436dbda58b84fa021e8d9b86ae71b2110c7f0172b3",
+      "covered_dates": [
+        "2026-12-05"
+      ],
+      "targets": {
+        "2026-12-05_see-you-again-ando": {
+          "facts": {
+            "id": "2026-12-05_see-you-again-ando",
+            "date": "2026-12-05",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 + 2 Drink Order",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "安藤佳大"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "See you again、ANDO",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "e0ebf56cb79a263a17f8a25d3e965dad8029680bb1e83c47172083992d6dfeb3",
+          "observed_text": "DOLPHIN / KANAZAWA; LIVE & SESSION; See you again、ANDO; Saturday December 05, 2026; Start 20:00; Charge ¥2,000; 2 Drink Order; Pf 安藤佳大; Ba 中山とも; Dr 永見拓也. No opening time or student price printed."
+        }
+      }
     }
   ]
 }
