@@ -4243,7 +4243,7 @@
     {
       "id": "2026-12-03_legacy-29f4da2759",
       "date": "2026-12-03",
-      "title": "Open Groove Night Jam Session",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": "19:00",
@@ -4265,9 +4265,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20261203_open-groove-night-student-policy-20261116.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -4312,7 +4312,7 @@
     {
       "id": "2026-12-10_legacy-79edb22069",
       "date": "2026-12-10",
-      "title": "Kiraku Jam",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": null,
@@ -4333,9 +4333,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20261210_kiraku-jam.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -4351,7 +4351,7 @@
     {
       "id": "2026-12-17_legacy-8372a6f691",
       "date": "2026-12-17",
-      "title": "Monthly Voices 〜Vocal Session〜",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": null,
@@ -4378,9 +4378,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20261217_monthly-voices.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -4435,7 +4435,7 @@
     {
       "id": "2026-12-24_legacy-c1a6d03617",
       "date": "2026-12-24",
-      "title": "Kiraku Jam",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": null,
@@ -4456,9 +4456,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20261224_kiraku-jam.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -5695,6 +5695,265 @@
         "status": "ready",
         "source": "event_flyer",
         "github_path": "assets/flyers/flyer_20261205_see-you-again-ando.png",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2026-12-01_j-pop-live-session",
+      "date": "2026-12-01",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2026-12-15_j-pop-live-session",
+      "date": "2026-12-15",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2026-12-22_j-pop-live-session",
+      "date": "2026-12-22",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Pf",
+          "name": "黒川薫",
+          "artist_id": "kaoru-kurokawa"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2026-12-02_funk-live-session",
+      "date": "2026-12-02",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "櫻井祐二"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2026-12-16_funk-live-session",
+      "date": "2026-12-16",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Ba",
+          "name": "ハリモトナオキ"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2026-12-23_funk-live-session",
+      "date": "2026-12-23",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Gt",
+          "name": "楓太"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
