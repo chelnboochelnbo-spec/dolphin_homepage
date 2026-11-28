@@ -5147,6 +5147,42 @@
       }
     },
     {
+      "id": "2026-12-30_futaki-band",
+      "date": "2026-12-30",
+      "title": "二木幹弥バンド",
+      "event_type": "live",
+      "status": "published",
+      "open": null,
+      "start": null,
+      "charge": null,
+      "performers": [],
+      "description": "開演時間・料金は決まり次第お知らせします。",
+      "reservation_url": "",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      },
+      "display": {
+        "detail_lines": [
+          {
+            "icon": "clock",
+            "text": "開演時間・料金未定"
+          }
+        ]
+      }
+    },
+    {
       "id": "2026-12-31_countdown-session",
       "date": "2026-12-31",
       "title": "2026→2027 countdown session",
