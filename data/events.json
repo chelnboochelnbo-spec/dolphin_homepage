@@ -4502,7 +4502,7 @@
     {
       "id": "2027-01-14_kiraku-jam",
       "date": "2027-01-14",
-      "title": "Kiraku Jam",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": null,
@@ -4523,9 +4523,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270114_kiraku-jam.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -4578,7 +4578,7 @@
     {
       "id": "2027-01-21_monthly-voices-vocal-session",
       "date": "2027-01-21",
-      "title": "Monthly Voices 〜Vocal Session〜",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": null,
@@ -4605,9 +4605,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270121_monthly-voices.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -4622,7 +4622,7 @@
     {
       "id": "2027-01-28_kiraku-jam",
       "date": "2027-01-28",
-      "title": "Kiraku Jam",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": null,
@@ -4643,9 +4643,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270128_kiraku-jam.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -4688,7 +4688,7 @@
     {
       "id": "2027-02-11_kiraku-jam",
       "date": "2027-02-11",
-      "title": "Kiraku Jam",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": null,
@@ -4709,9 +4709,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270211_kiraku-jam.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -4726,7 +4726,7 @@
     {
       "id": "2027-02-18_monthly-voices-vocal-session",
       "date": "2027-02-18",
-      "title": "Monthly Voices 〜Vocal Session〜",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": null,
@@ -4753,9 +4753,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270218_monthly-voices.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -4808,7 +4808,7 @@
     {
       "id": "2027-02-25_kiraku-jam",
       "date": "2027-02-25",
-      "title": "Kiraku Jam",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": null,
@@ -4829,9 +4829,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270225_kiraku-jam.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -4874,7 +4874,7 @@
     {
       "id": "2027-03-11_kiraku-jam",
       "date": "2027-03-11",
-      "title": "Kiraku Jam",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": null,
@@ -4895,9 +4895,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270311_kiraku-jam.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -4912,7 +4912,7 @@
     {
       "id": "2027-03-18_monthly-voices-vocal-session",
       "date": "2027-03-18",
-      "title": "Monthly Voices 〜Vocal Session〜",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": null,
@@ -4939,9 +4939,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270318_monthly-voices.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -4994,7 +4994,7 @@
     {
       "id": "2027-03-25_kiraku-jam",
       "date": "2027-03-25",
-      "title": "Kiraku Jam",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": null,
@@ -5015,9 +5015,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270325_kiraku-jam.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -5032,7 +5032,7 @@
     {
       "id": "2027-01-07_open-groove-night-jam-session",
       "date": "2027-01-07",
-      "title": "Open Groove Night Jam Session",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": "19:00",
@@ -5054,9 +5054,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270107_open-groove-night.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -5071,7 +5071,7 @@
     {
       "id": "2027-02-04_open-groove-night-jam-session",
       "date": "2027-02-04",
-      "title": "Open Groove Night Jam Session",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": "19:00",
@@ -5093,9 +5093,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270204_open-groove-night.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -5110,7 +5110,7 @@
     {
       "id": "2027-03-04_open-groove-night-jam-session",
       "date": "2027-03-04",
-      "title": "Open Groove Night Jam Session",
+      "title": "JAZZ VOCAL SESSION",
       "event_type": "session",
       "status": "published",
       "open": "19:00",
@@ -5132,9 +5132,9 @@
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
-        "status": "ready",
-        "source": "owner_approved_template",
-        "github_path": "assets/flyers/flyer_20270304_open-groove-night.png",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
@@ -6004,6 +6004,942 @@
         "status": "ready",
         "source": "owner_template_date_cast_20261128",
         "github_path": "assets/flyers/dolphin_2026-12-23_funk.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-01-12_j-pop-live-session",
+      "date": "2027-01-12",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-01-13_funk-live-session",
+      "date": "2027-01-13",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-01-19_j-pop-live-session",
+      "date": "2027-01-19",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-01-20_funk-live-session",
+      "date": "2027-01-20",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-01-26_j-pop-live-session",
+      "date": "2027-01-26",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-01-27_funk-live-session",
+      "date": "2027-01-27",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-02_j-pop-live-session",
+      "date": "2027-02-02",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-03_funk-live-session",
+      "date": "2027-02-03",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-09_j-pop-live-session",
+      "date": "2027-02-09",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-10_funk-live-session",
+      "date": "2027-02-10",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-16_j-pop-live-session",
+      "date": "2027-02-16",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-17_funk-live-session",
+      "date": "2027-02-17",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-23_j-pop-live-session",
+      "date": "2027-02-23",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-02-24_funk-live-session",
+      "date": "2027-02-24",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-02_j-pop-live-session",
+      "date": "2027-03-02",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-03_funk-live-session",
+      "date": "2027-03-03",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-09_j-pop-live-session",
+      "date": "2027-03-09",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-10_funk-live-session",
+      "date": "2027-03-10",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-16_j-pop-live-session",
+      "date": "2027-03-16",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-17_funk-live-session",
+      "date": "2027-03-17",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-23_j-pop-live-session",
+      "date": "2027-03-23",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-24_funk-live-session",
+      "date": "2027-03-24",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-30_j-pop-live-session",
+      "date": "2027-03-30",
+      "title": "J-POP LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "J-POPやシティポップを中心に、ホストのライブと参加型セッションを楽しむ夜。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
+    },
+    {
+      "id": "2027-03-31_funk-live-session",
+      "date": "2027-03-31",
+      "title": "FUNK LIVE & SESSION",
+      "event_type": "live_session",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "永見拓也",
+          "artist_id": "takuya-nagami"
+        }
+      ],
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "missing",
+        "source": null,
+        "github_path": "",
         "canva_design_id": null
       },
       "archive": {
