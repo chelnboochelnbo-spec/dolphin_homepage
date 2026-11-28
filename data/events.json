@@ -6954,6 +6954,55 @@
         "instagram": "",
         "external_links": []
       }
+    },
+    {
+      "id": "2026-12-18_gakujam-vol-2",
+      "date": "2026-12-18",
+      "title": "学ジャム Vol.2",
+      "event_type": "session",
+      "importance": "normal",
+      "status": "published",
+      "open": null,
+      "start": "20:00",
+      "charge": "Charge ¥1,000 + 投げ銭 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+      "performers": [
+        {
+          "instrument": "Dr",
+          "name": "榎園大熙"
+        },
+        {
+          "instrument": "Pf",
+          "name": "佐藤仁紀"
+        },
+        {
+          "instrument": "Gt",
+          "name": "倉地淳大"
+        },
+        {
+          "instrument": "Ba",
+          "name": "柳原としき"
+        }
+      ],
+      "description": "ホスト：榎園大熙（Dr／福井大学）、佐藤仁紀（Pf／富山大学）、倉地淳大（Gt／金沢大学）、柳原としき（Ba／金沢大学）。",
+      "display": {
+        "intro": "福井大学・富山大学・金沢大学の学生ホストによるジャムセッション。"
+      },
+      "reservation_url": "index.html#reservation",
+      "flyer": {
+        "mode": "human",
+        "status": "ready",
+        "source": "owner_approved_vol2_flyer",
+        "github_path": "assets/flyers/dolphin_2026-12-18_gakujam-vol2.jpg",
+        "canva_design_id": null
+      },
+      "archive": {
+        "gallery": [],
+        "setlist": [],
+        "comment": "",
+        "youtube": "",
+        "instagram": "",
+        "external_links": []
+      }
     }
   ]
 }
