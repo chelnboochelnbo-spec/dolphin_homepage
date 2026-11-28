@@ -2183,6 +2183,59 @@
           "observed_text": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; THURSDAY JAZZ VOCAL SESSION; VOCAL / JAZZ / LIVE & SESSION; 2026.12.24 THU; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 櫻井祐二 / BA 中山とも. No EVERY-date or TBA placeholder remains."
         }
       }
+    },
+    {
+      "review_id": "visual-20261128-2026-12-18_gakujam-vol2",
+      "kind": "visual_review",
+      "reviewer": "ARIA: direct inspection of the final JPEG and comparison with owner-selected black and yellow draft",
+      "reviewed_at": "2026-11-28T06:12:05.590Z",
+      "pixels_inspected": true,
+      "transcription": "学ジャム; VOL. 02; STUDENT JAM SESSION; 12.18 2026 / FRI; START 20:00; CHARGE ¥1,000＋投げ銭; 一般：2ドリンクオーダー; 学生：¥1,000＋1ドリンク; Dr 榎園大熙（福井大学） / Pf 佐藤仁紀（富山大学） / Gt 倉地淳大（金沢大学） / Ba 柳原としき（金沢大学）; JAZZ & BAR DOLPHIN; 金沢市片町2-13-11 ミリオンビル4F。開場・終演時刻の印字なし。試作表示なし。",
+      "image_path": "assets/flyers/dolphin_2026-12-18_gakujam-vol2.jpg",
+      "image_sha256": "7f1c6d9f353c3286801f98f85b38c5c07fc7a1aa3aef978d29a2bab1a7374472",
+      "covered_dates": [
+        "2026-12-18"
+      ],
+      "targets": {
+        "2026-12-18_gakujam-vol-2": {
+          "facts": {
+            "id": "2026-12-18_gakujam-vol-2",
+            "date": "2026-12-18",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥1,000 + 投げ銭 + 2Drink Order / 学生 ¥1,000 + 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Dr",
+                "name": "榎園大熙"
+              },
+              {
+                "instrument": "Pf",
+                "name": "佐藤仁紀"
+              },
+              {
+                "instrument": "Gt",
+                "name": "倉地淳大"
+              },
+              {
+                "instrument": "Ba",
+                "name": "柳原としき"
+              }
+            ],
+            "title": "学ジャム Vol.2",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": {
+              "intro": "福井大学・富山大学・金沢大学の学生ホストによるジャムセッション。"
+            }
+          },
+          "fingerprint": "2ec88a4189a4d777af1d962527c5ca8d7c851d8e4535c10e6fbfe1e7d33a729e",
+          "observed_text": "学ジャム; VOL. 02; STUDENT JAM SESSION; 12.18 2026 / FRI; START 20:00; CHARGE ¥1,000＋投げ銭; 一般：2ドリンクオーダー; 学生：¥1,000＋1ドリンク; Dr 榎園大熙（福井大学） / Pf 佐藤仁紀（富山大学） / Gt 倉地淳大（金沢大学） / Ba 柳原としき（金沢大学）; JAZZ & BAR DOLPHIN; 金沢市片町2-13-11 ミリオンビル4F。開場・終演時刻の印字なし。試作表示なし。"
+        }
+      }
     }
   ]
 }
