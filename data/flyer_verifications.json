@@ -1705,6 +1705,484 @@
           "observed_text": "DOLPHIN / KANAZAWA; LIVE & SESSION; See you again、ANDO; Saturday December 05, 2026; Start 20:00; Charge ¥2,000; 2 Drink Order; Pf 安藤佳大; Ba 中山とも; Dr 永見拓也. No opening time or student price printed."
         }
       }
+    },
+    {
+      "review_id": "visual-20261128-2026-12-01_j-pop-live-session",
+      "kind": "visual_review",
+      "reviewer": "ARIA direct pixel inspection, date and host proof sheets",
+      "reviewed_at": "2026-11-28T04:39:57.249Z",
+      "pixels_inspected": true,
+      "transcription": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; TUESDAY J-POP SESSION; CITY POP / J-POP / LIVE & SESSION; 2026.12.01 TUE; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 櫻井祐二 / BA 中山とも / DR 永見拓也. No EVERY-date or TBA placeholder remains.",
+      "image_path": "assets/flyers/dolphin_2026-12-01_jpop.jpg",
+      "image_sha256": "d0a9fe422177bd23ccfc3ca0fd7ea8a65e3a796049e9d692c595739d0b8c2a88",
+      "covered_dates": [
+        "2026-12-01"
+      ],
+      "targets": {
+        "2026-12-01_j-pop-live-session": {
+          "facts": {
+            "id": "2026-12-01_j-pop-live-session",
+            "date": "2026-12-01",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "J-POP LIVE & SESSION",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "bfce71d1b666e23e9e8116b7dcee1e8b512723ceda5057cf687b7ec72e8282a8",
+          "observed_text": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; TUESDAY J-POP SESSION; CITY POP / J-POP / LIVE & SESSION; 2026.12.01 TUE; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 櫻井祐二 / BA 中山とも / DR 永見拓也. No EVERY-date or TBA placeholder remains."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261128-2026-12-02_funk-live-session",
+      "kind": "visual_review",
+      "reviewer": "ARIA direct pixel inspection, date and host proof sheets",
+      "reviewed_at": "2026-11-28T04:39:57.249Z",
+      "pixels_inspected": true,
+      "transcription": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; WEDNESDAY FUNK SESSION; FUNK / SOUL / GROOVE / LIVE & SESSION; 2026.12.02 WED; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 櫻井祐二 / BA 中山とも / DR 永見拓也. No EVERY-date or TBA placeholder remains.",
+      "image_path": "assets/flyers/dolphin_2026-12-02_funk.jpg",
+      "image_sha256": "f5d0ae67af0cd22d60aa0b3bccb1567f91cfbc3ee20442b2cc22018d692e8acf",
+      "covered_dates": [
+        "2026-12-02"
+      ],
+      "targets": {
+        "2026-12-02_funk-live-session": {
+          "facts": {
+            "id": "2026-12-02_funk-live-session",
+            "date": "2026-12-02",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "FUNK LIVE & SESSION",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "aceeb4c3ae5d5405fdce38112bc9aeb7a112b8aaa8d37a1f3536eb8434ab499c",
+          "observed_text": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; WEDNESDAY FUNK SESSION; FUNK / SOUL / GROOVE / LIVE & SESSION; 2026.12.02 WED; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 櫻井祐二 / BA 中山とも / DR 永見拓也. No EVERY-date or TBA placeholder remains."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261128-2026-12-03_legacy-29f4da2759",
+      "kind": "visual_review",
+      "reviewer": "ARIA direct pixel inspection, date and host proof sheets",
+      "reviewed_at": "2026-11-28T04:39:57.249Z",
+      "pixels_inspected": true,
+      "transcription": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; THURSDAY JAZZ VOCAL SESSION; VOCAL / JAZZ / LIVE & SESSION; 2026.12.03 THU; OPEN 19:00; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 羽田正英 / BA 中山とも. No EVERY-date or TBA placeholder remains.",
+      "image_path": "assets/flyers/dolphin_2026-12-03_vocal.jpg",
+      "image_sha256": "31f70e4f30f891c770b865a7fca64e7105a86b7496551a48256731828ef3c609",
+      "covered_dates": [
+        "2026-12-03"
+      ],
+      "targets": {
+        "2026-12-03_legacy-29f4da2759": {
+          "facts": {
+            "id": "2026-12-03_legacy-29f4da2759",
+            "date": "2026-12-03",
+            "end_date": null,
+            "open": "19:00",
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "gt",
+                "name": "masahide haneda",
+                "artist_id": "masahide-haneda"
+              },
+              {
+                "instrument": "ba",
+                "name": "tomo nakayama",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "JAZZ VOCAL SESSION",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "3f9020d17637ff034086c97d56b13eddad12caa34268f600c9d0bf37efd5f1d4",
+          "observed_text": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; THURSDAY JAZZ VOCAL SESSION; VOCAL / JAZZ / LIVE & SESSION; 2026.12.03 THU; OPEN 19:00; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 羽田正英 / BA 中山とも. No EVERY-date or TBA placeholder remains."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261128-2026-12-10_legacy-79edb22069",
+      "kind": "visual_review",
+      "reviewer": "ARIA direct pixel inspection, date and host proof sheets",
+      "reviewed_at": "2026-11-28T04:39:57.249Z",
+      "pixels_inspected": true,
+      "transcription": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; THURSDAY JAZZ VOCAL SESSION; VOCAL / JAZZ / LIVE & SESSION; 2026.12.10 THU; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 櫻井祐二 / BA 中山とも. No EVERY-date or TBA placeholder remains.",
+      "image_path": "assets/flyers/dolphin_2026-12-10_vocal.jpg",
+      "image_sha256": "3908373d11667ba8bc54992afcc7843156a46599f82323fcc2162bf9691111bc",
+      "covered_dates": [
+        "2026-12-10"
+      ],
+      "targets": {
+        "2026-12-10_legacy-79edb22069": {
+          "facts": {
+            "id": "2026-12-10_legacy-79edb22069",
+            "date": "2026-12-10",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "JAZZ VOCAL SESSION",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "5417330120b582023a1cd506019fd1e5c8aa6f64ca3a3f95a24d5295cfb2f890",
+          "observed_text": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; THURSDAY JAZZ VOCAL SESSION; VOCAL / JAZZ / LIVE & SESSION; 2026.12.10 THU; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 櫻井祐二 / BA 中山とも. No EVERY-date or TBA placeholder remains."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261128-2026-12-15_j-pop-live-session",
+      "kind": "visual_review",
+      "reviewer": "ARIA direct pixel inspection, date and host proof sheets",
+      "reviewed_at": "2026-11-28T04:39:57.249Z",
+      "pixels_inspected": true,
+      "transcription": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; TUESDAY J-POP SESSION; CITY POP / J-POP / LIVE & SESSION; 2026.12.15 TUE; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 櫻井祐二 / BA 中山とも / DR 永見拓也. No EVERY-date or TBA placeholder remains.",
+      "image_path": "assets/flyers/dolphin_2026-12-15_jpop.jpg",
+      "image_sha256": "7414f477b28b3b5694afae7506217831445033e3c331c8a7368ac28c673bf91e",
+      "covered_dates": [
+        "2026-12-15"
+      ],
+      "targets": {
+        "2026-12-15_j-pop-live-session": {
+          "facts": {
+            "id": "2026-12-15_j-pop-live-session",
+            "date": "2026-12-15",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "J-POP LIVE & SESSION",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "c5accaf266528bb3321e1d656e4009f1928490257c5ae31cad176be69ab39370",
+          "observed_text": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; TUESDAY J-POP SESSION; CITY POP / J-POP / LIVE & SESSION; 2026.12.15 TUE; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 櫻井祐二 / BA 中山とも / DR 永見拓也. No EVERY-date or TBA placeholder remains."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261128-2026-12-16_funk-live-session",
+      "kind": "visual_review",
+      "reviewer": "ARIA direct pixel inspection, date and host proof sheets",
+      "reviewed_at": "2026-11-28T04:39:57.249Z",
+      "pixels_inspected": true,
+      "transcription": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; WEDNESDAY FUNK SESSION; FUNK / SOUL / GROOVE / LIVE & SESSION; 2026.12.16 WED; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 中山とも / BA ハリモトナオキ / DR 永見拓也. No EVERY-date or TBA placeholder remains.",
+      "image_path": "assets/flyers/dolphin_2026-12-16_funk.jpg",
+      "image_sha256": "92800dce0571f1326cbcea1f24452224319790986413b4f087ba5adcedbaac2c",
+      "covered_dates": [
+        "2026-12-16"
+      ],
+      "targets": {
+        "2026-12-16_funk-live-session": {
+          "facts": {
+            "id": "2026-12-16_funk-live-session",
+            "date": "2026-12-16",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Ba",
+                "name": "ハリモトナオキ"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "FUNK LIVE & SESSION",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "9d71c740fa552db3adc1ff1a869a8fa08a8da60c15c8257db0a193ee1896d7a8",
+          "observed_text": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; WEDNESDAY FUNK SESSION; FUNK / SOUL / GROOVE / LIVE & SESSION; 2026.12.16 WED; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 中山とも / BA ハリモトナオキ / DR 永見拓也. No EVERY-date or TBA placeholder remains."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261128-2026-12-17_legacy-8372a6f691",
+      "kind": "visual_review",
+      "reviewer": "ARIA direct pixel inspection, date and host proof sheets",
+      "reviewed_at": "2026-11-28T04:39:57.249Z",
+      "pixels_inspected": true,
+      "transcription": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; THURSDAY JAZZ VOCAL SESSION; VOCAL / JAZZ / LIVE & SESSION; 2026.12.17 THU; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST PF 黒川薫 / BA 中山とも / DR 永見拓也. No EVERY-date or TBA placeholder remains.",
+      "image_path": "assets/flyers/dolphin_2026-12-17_vocal.jpg",
+      "image_sha256": "2fe0ee16c79367f3c6077b9b85fd3c022ef6dada1846675da58fd29ec7cc89ac",
+      "covered_dates": [
+        "2026-12-17"
+      ],
+      "targets": {
+        "2026-12-17_legacy-8372a6f691": {
+          "facts": {
+            "id": "2026-12-17_legacy-8372a6f691",
+            "date": "2026-12-17",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "kaoru kurokawa",
+                "artist_id": "kaoru-kurokawa"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "JAZZ VOCAL SESSION",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "05564ebdd2cfbbf4ac3a87f800c6d7454c12a2e3d92ef57b499c8b4db1ad997b",
+          "observed_text": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; THURSDAY JAZZ VOCAL SESSION; VOCAL / JAZZ / LIVE & SESSION; 2026.12.17 THU; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST PF 黒川薫 / BA 中山とも / DR 永見拓也. No EVERY-date or TBA placeholder remains."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261128-2026-12-22_j-pop-live-session",
+      "kind": "visual_review",
+      "reviewer": "ARIA direct pixel inspection, date and host proof sheets",
+      "reviewed_at": "2026-11-28T04:39:57.249Z",
+      "pixels_inspected": true,
+      "transcription": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; TUESDAY J-POP SESSION; CITY POP / J-POP / LIVE & SESSION; 2026.12.22 TUE; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST PF 黒川薫 / BA 中山とも / DR 永見拓也. No EVERY-date or TBA placeholder remains.",
+      "image_path": "assets/flyers/dolphin_2026-12-22_jpop.jpg",
+      "image_sha256": "cd10cb3a69b7fa420d93e89e3b77c36d51c3f0005250f15d806de64a163cb905",
+      "covered_dates": [
+        "2026-12-22"
+      ],
+      "targets": {
+        "2026-12-22_j-pop-live-session": {
+          "facts": {
+            "id": "2026-12-22_j-pop-live-session",
+            "date": "2026-12-22",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Pf",
+                "name": "黒川薫",
+                "artist_id": "kaoru-kurokawa"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "J-POP LIVE & SESSION",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "dd852b251dde04d6b25d081bdfb9ac127599e59e6993854fb0996c71804018c0",
+          "observed_text": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; TUESDAY J-POP SESSION; CITY POP / J-POP / LIVE & SESSION; 2026.12.22 TUE; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST PF 黒川薫 / BA 中山とも / DR 永見拓也. No EVERY-date or TBA placeholder remains."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261128-2026-12-23_funk-live-session",
+      "kind": "visual_review",
+      "reviewer": "ARIA direct pixel inspection, date and host proof sheets",
+      "reviewed_at": "2026-11-28T04:39:57.249Z",
+      "pixels_inspected": true,
+      "transcription": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; WEDNESDAY FUNK SESSION; FUNK / SOUL / GROOVE / LIVE & SESSION; 2026.12.23 WED; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 楓太 / BA 中山とも / DR 永見拓也. No EVERY-date or TBA placeholder remains.",
+      "image_path": "assets/flyers/dolphin_2026-12-23_funk.jpg",
+      "image_sha256": "c6aeb1509c8eaf8a5e719d837b1b41e172d6919bb78b6379990eb7f19a1315d0",
+      "covered_dates": [
+        "2026-12-23"
+      ],
+      "targets": {
+        "2026-12-23_funk-live-session": {
+          "facts": {
+            "id": "2026-12-23_funk-live-session",
+            "date": "2026-12-23",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "楓太"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              },
+              {
+                "instrument": "Dr",
+                "name": "永見拓也",
+                "artist_id": "takuya-nagami"
+              }
+            ],
+            "title": "FUNK LIVE & SESSION",
+            "event_type": "live_session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "e8f2030ef1562e66e0be6f861ef18268ce54c35c229310eb417329afdbe355f5",
+          "observed_text": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; WEDNESDAY FUNK SESSION; FUNK / SOUL / GROOVE / LIVE & SESSION; 2026.12.23 WED; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 楓太 / BA 中山とも / DR 永見拓也. No EVERY-date or TBA placeholder remains."
+        }
+      }
+    },
+    {
+      "review_id": "visual-20261128-2026-12-24_legacy-c1a6d03617",
+      "kind": "visual_review",
+      "reviewer": "ARIA direct pixel inspection, date and host proof sheets",
+      "reviewed_at": "2026-11-28T04:39:57.249Z",
+      "pixels_inspected": true,
+      "transcription": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; THURSDAY JAZZ VOCAL SESSION; VOCAL / JAZZ / LIVE & SESSION; 2026.12.24 THU; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 櫻井祐二 / BA 中山とも. No EVERY-date or TBA placeholder remains.",
+      "image_path": "assets/flyers/dolphin_2026-12-24_vocal.jpg",
+      "image_sha256": "01f3c1bc3946a463d5e6f2efba33166b09351718f8b745fc0cb85f5afeef6b63",
+      "covered_dates": [
+        "2026-12-24"
+      ],
+      "targets": {
+        "2026-12-24_legacy-c1a6d03617": {
+          "facts": {
+            "id": "2026-12-24_legacy-c1a6d03617",
+            "date": "2026-12-24",
+            "end_date": null,
+            "open": null,
+            "start": "20:00",
+            "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
+            "performers": [
+              {
+                "instrument": "Gt",
+                "name": "櫻井祐二"
+              },
+              {
+                "instrument": "Ba",
+                "name": "中山とも",
+                "artist_id": "tomo-nakayama"
+              }
+            ],
+            "title": "JAZZ VOCAL SESSION",
+            "event_type": "session",
+            "status": "published",
+            "cancelled": null,
+            "cancellation": null,
+            "display": null
+          },
+          "fingerprint": "e00d35b8ce435780ff5c4d24e75ae01be5b8c221746016b210be6c4a21b3fe79",
+          "observed_text": "WEEKLY SESSIONS; JAZZ & BAR Dolphin; THURSDAY JAZZ VOCAL SESSION; VOCAL / JAZZ / LIVE & SESSION; 2026.12.24 THU; START 20:00; CHARGE ¥2,000 + 2 DRINK ORDER; STUDENT ¥1,000 + 1 DRINK ORDER; HOST GT 櫻井祐二 / BA 中山とも. No EVERY-date or TBA placeholder remains."
+        }
+      }
     }
   ]
 }
