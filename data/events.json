@@ -5149,14 +5149,36 @@
     {
       "id": "2026-12-30_futaki-band",
       "date": "2026-12-30",
-      "title": "二木幹弥バンド",
+      "title": "Odd Pulse Lab",
       "event_type": "live",
       "status": "published",
       "open": null,
-      "start": null,
-      "charge": null,
-      "performers": [],
-      "description": "開演時間・料金は決まり次第お知らせします。",
+      "start": "20:00",
+      "charge": "Charge ¥2,500",
+      "performers": [
+        {
+          "instrument": "Sax",
+          "name": "濱西公博"
+        },
+        {
+          "instrument": "Pf",
+          "name": "岩村入吹"
+        },
+        {
+          "instrument": "Gt",
+          "name": "彼谷宏"
+        },
+        {
+          "instrument": "Ba",
+          "name": "中山とも",
+          "artist_id": "tomo-nakayama"
+        },
+        {
+          "instrument": "Dr",
+          "name": "ナカジマケント"
+        }
+      ],
+      "description": "",
       "reservation_url": "",
       "flyer": {
         "mode": "human",
@@ -5172,14 +5194,6 @@
         "youtube": "",
         "instagram": "",
         "external_links": []
-      },
-      "display": {
-        "detail_lines": [
-          {
-            "icon": "clock",
-            "text": "開演時間・料金未定"
-          }
-        ]
       }
     },
     {
