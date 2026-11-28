@@ -6143,6 +6143,10 @@
       "charge": "Charge ¥2,000 2Drink Order / 学生 ¥1,000 1Drink Order",
       "performers": [
         {
+          "instrument": "Gt・Vo",
+          "name": "楓太"
+        },
+        {
           "instrument": "Ba",
           "name": "中山とも",
           "artist_id": "tomo-nakayama"
@@ -6153,7 +6157,7 @@
           "artist_id": "takuya-nagami"
         }
       ],
-      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。\nベース・ドラム以外の出演者は決まり次第お知らせします。",
+      "description": "ファンクやソウルを中心に、グルーヴと即興演奏を楽しむライブ＆セッション。演奏での参加も、聴くだけのご来店も歓迎です。",
       "reservation_url": "index.html#reservation",
       "flyer": {
         "mode": "human",
